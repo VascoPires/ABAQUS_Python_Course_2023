@@ -17,8 +17,6 @@ h = 15
 amp = 4
 n_waves = 10
 
-radius = 5
-
 # Generate
 ModelName_Sin = 'Sin Model'
 my_model_sin = mdb.Model(name=ModelName_Sin)
