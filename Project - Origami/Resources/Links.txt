@@ -1,0 +1,29 @@
+https://docs.software.vt.edu/abaqusv2022/English/SIMACAEELMRefMap/simaelm-c-gasketinit.htm
+
+https://imechanica.org/node/11373
+
+Use connector elements - HINGE or MPC TIE/PIN
+
+
+https://www.youtube.com/watch?v=I5Uq3USDqd4
+
+Hinge Connector
+
+https://www.youtube.com/watch?v=nxFekk25k1k
+
+
+Actual hinge
+https://www.youtube.com/watch?v=O_d59dTv4T0
+
+Follow this reddit post
+https://www.reddit.com/r/Abaqus/comments/17lg4b3/abaqus_folding_model/
+
+
+https://www.youtube.com/watch?v=3_-VQU7zbM0
+
+
+https://www.youtube.com/watch?v=aqJMHGJocio
+
+
+OMG VE
+https://www.youtube.com/watch?v=eO-1iXWn64c
