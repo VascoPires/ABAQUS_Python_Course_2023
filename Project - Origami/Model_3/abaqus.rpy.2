@@ -1,0 +1,2586 @@
+# -*- coding: mbcs -*-
+#
+# Abaqus/CAE Release 2022 replay file
+# Internal Version: 2021_09_15-19.57.30 176069
+# Run by p2321038 on Wed Dec 20 16:47:08 2023
+#
+
+# from driverUtils import executeOnCaeGraphicsStartup
+# executeOnCaeGraphicsStartup()
+#: Executing "onCaeGraphicsStartup()" in the site directory ...
+from abaqus import *
+from abaqusConstants import *
+session.Viewport(name='Viewport: 1', origin=(0.0, 0.0), width=148.925003051758, 
+    height=223.020004272461)
+session.viewports['Viewport: 1'].makeCurrent()
+session.viewports['Viewport: 1'].maximize()
+from caeModules import *
+from driverUtils import executeOnCaeStartup
+executeOnCaeStartup()
+#: Executing "onCaeStartup()" in the site directory ...
+session.viewports['Viewport: 1'].partDisplay.geometryOptions.setValues(
+    referenceRepresentation=ON)
+openMdb(
+    pathName='C:/Users/p2321038/Documents/GitHub/ABAQUS_Python_Course_2023/Project - Origami/Model_3/Box.cae')
+#: The model database "C:\Users\p2321038\Documents\GitHub\ABAQUS_Python_Course_2023\Project - Origami\Model_3\Box.cae" has been opened.
+session.viewports['Viewport: 1'].setValues(displayedObject=None)
+#--- Recover file: 'Box.rec' ---
+# -*- coding: mbcs -*- 
+from part import *
+from material import *
+from section import *
+from assembly import *
+from step import *
+from interaction import *
+from load import *
+from mesh import *
+from optimization import *
+from job import *
+from sketch import *
+from visualization import *
+from connectorBehavior import *
+mdb.Model(name='Box_Implicit_Explicit', 
+    objectToCopy=mdb.models['Box_Implicit_Contact'])
+#: The model "Box_Implicit_Explicit" has been created.
+del mdb.models['Model-1']
+del mdb.models['Model-1-Constraint']
+del mdb.models['Model-1-Copy']
+del mdb.models['Box_Implicit_Contact_NonLinear']
+del mdb.models['Box_Implicit_Explicit'].steps['Step-2']
+del mdb.models['Box_Implicit_Explicit'].steps['Step-1']
+mdb.models['Box_Implicit_Explicit'].ExplicitDynamicsStep(improvedDtMethod=ON, 
+    name='Loading', previous='Initial')
+#* Interaction cannot be used with the current procedure.
+#* Interaction cannot be used with the current procedure. 
+del mdb.models['Box_Implicit_Explicit'].interactionProperties['IntProp-1']
+mdb.models['Box_Implicit_Explicit'].ExplicitDynamicsStep(improvedDtMethod=ON, 
+    name='Loading', previous='Initial')
+#* Interaction cannot be used with the current procedure.
+#* Interaction cannot be used with the current procedure. 
+del mdb.models['Box_Implicit_Explicit'].interactions['Int-1']
+mdb.models['Box_Implicit_Explicit'].ExplicitDynamicsStep(improvedDtMethod=ON, 
+    name='Loading', previous='Initial')
+mdb.models['Box_Implicit_Explicit'].ContactProperty('IntProp-1')
+#: The interaction property "IntProp-1" has been created.
+mdb.models['Box_Implicit_Explicit'].interactionProperties['IntProp-1'].TangentialBehavior(
+    dependencies=0, directionality=ISOTROPIC, elasticSlipStiffness=None, 
+    formulation=PENALTY, fraction=0.005, maximumElasticSlip=FRACTION, 
+    pressureDependency=OFF, shearStressLimit=None, slipRateDependency=OFF, 
+    table=((0.1, ), ), temperatureDependency=OFF)
+mdb.models['Box_Implicit_Explicit'].ContactExp(createStepName='Loading', 
+    name='General_Contact')
+#: The interaction "General_Contact" has been created.
+mdb.models['Box_Implicit_Explicit'].interactions['General_Contact'].includedPairs.setValuesInStep(
+    stepName='Loading', useAllstar=ON)
+mdb.models['Box_Implicit_Explicit'].interactions['General_Contact'].contactPropertyAssignments.appendInStep(
+    assignments=((GLOBAL, SELF, 'IntProp-1'), ), stepName='Loading')
+mdb.models['Box_Implicit_Explicit'].ExplicitDynamicsStep(improvedDtMethod=ON, 
+    name='Release', previous='Loading')
+del mdb.models['Box_Implicit_Explicit'].boundaryConditions['BC-1']
+mdb.models['Box_Implicit_Explicit'].DisplacementBC(amplitude='Amp-1', 
+    createStepName='Loading', distributionType=UNIFORM, fieldName='', 
+    fixed=OFF, localCsys=None, name='Disp_loading', 
+    region=mdb.models['Box_Implicit_Explicit'].rootAssembly.sets['Hinge-3-2'], 
+    u1=0.0, u2=UNSET, u3=-80.0, ur1=UNSET, ur2=UNSET, ur3=UNSET)
+mdb.models['Box_Implicit_Explicit'].parts['Part-1'].deleteMesh(
+    regions=mdb.models['Box_Implicit_Explicit'].parts['Part-1'].faces.findAt(((
+    21.666667, 21.666667, 0.0), )))
+mdb.models['Box_Implicit_Explicit'].ConstrainedSketch(gridSpacing=4.59, 
+    name='__profile__', sheetSize=183.84, 
+    transform=mdb.models['Box_Implicit_Explicit'].parts['Part-1'].MakeSketchTransform(
+    sketchPlane=mdb.models['Box_Implicit_Explicit'].parts['Part-1'].faces.findAt(
+    (21.666667, 21.666667, 0.0), (0.0, 0.0, 1.0)), sketchPlaneSide=SIDE1, 
+    sketchUpEdge=mdb.models['Box_Implicit_Explicit'].parts['Part-1'].edges.findAt(
+    (65.0, 48.75, 0.0), ), sketchOrientation=RIGHT, origin=(32.5, 32.5, 0.0)))
+mdb.models['Box_Implicit_Explicit'].parts['Part-1'].projectReferencesOntoSketch(
+    filter=COPLANAR_EDGES, 
+    sketch=mdb.models['Box_Implicit_Explicit'].sketches['__profile__'])
+mdb.models['Box_Implicit_Explicit'].sketches['__profile__'].Line(point1=(0.0, 
+    32.5), point2=(0.0, -32.5))
+mdb.models['Box_Implicit_Explicit'].sketches['__profile__'].geometry.findAt((
+    0.0, 0.0))
+mdb.models['Box_Implicit_Explicit'].sketches['__profile__'].VerticalConstraint(
+    addUndoState=False, 
+    entity=mdb.models['Box_Implicit_Explicit'].sketches['__profile__'].geometry.findAt(
+    (0.0, 0.0), ))
+mdb.models['Box_Implicit_Explicit'].sketches['__profile__'].geometry.findAt((
+    29.25, 32.5))
+mdb.models['Box_Implicit_Explicit'].sketches['__profile__'].geometry.findAt((
+    0.0, 0.0))
+mdb.models['Box_Implicit_Explicit'].sketches['__profile__'].PerpendicularConstraint(
+    addUndoState=False, 
+    entity1=mdb.models['Box_Implicit_Explicit'].sketches['__profile__'].geometry.findAt(
+    (29.25, 32.5), ), 
+    entity2=mdb.models['Box_Implicit_Explicit'].sketches['__profile__'].geometry.findAt(
+    (0.0, 0.0), ))
+mdb.models['Box_Implicit_Explicit'].sketches['__profile__'].vertices.findAt((
+    0.0, 32.5))
+mdb.models['Box_Implicit_Explicit'].sketches['__profile__'].geometry.findAt((
+    29.25, 32.5))
+mdb.models['Box_Implicit_Explicit'].sketches['__profile__'].CoincidentConstraint(
+    addUndoState=False, 
+    entity1=mdb.models['Box_Implicit_Explicit'].sketches['__profile__'].vertices.findAt(
+    (0.0, 32.5), ), 
+    entity2=mdb.models['Box_Implicit_Explicit'].sketches['__profile__'].geometry.findAt(
+    (29.25, 32.5), ))
+mdb.models['Box_Implicit_Explicit'].sketches['__profile__'].vertices.findAt((
+    32.5, 32.5))
+mdb.models['Box_Implicit_Explicit'].sketches['__profile__'].vertices.findAt((
+    -32.5, 32.5))
+mdb.models['Box_Implicit_Explicit'].sketches['__profile__'].vertices.findAt((
+    0.0, 32.5))
+mdb.models['Box_Implicit_Explicit'].sketches['__profile__'].EqualDistanceConstraint(
+    addUndoState=False, 
+    entity1=mdb.models['Box_Implicit_Explicit'].sketches['__profile__'].vertices.findAt(
+    (32.5, 32.5), ), 
+    entity2=mdb.models['Box_Implicit_Explicit'].sketches['__profile__'].vertices.findAt(
+    (-32.5, 32.5), ), 
+    midpoint=mdb.models['Box_Implicit_Explicit'].sketches['__profile__'].vertices.findAt(
+    (0.0, 32.5), ))
+mdb.models['Box_Implicit_Explicit'].sketches['__profile__'].vertices.findAt((
+    0.0, -32.5))
+mdb.models['Box_Implicit_Explicit'].sketches['__profile__'].geometry.findAt((
+    -29.25, -32.5))
+mdb.models['Box_Implicit_Explicit'].sketches['__profile__'].CoincidentConstraint(
+    addUndoState=False, 
+    entity1=mdb.models['Box_Implicit_Explicit'].sketches['__profile__'].vertices.findAt(
+    (0.0, -32.5), ), 
+    entity2=mdb.models['Box_Implicit_Explicit'].sketches['__profile__'].geometry.findAt(
+    (-29.25, -32.5), ))
+mdb.models['Box_Implicit_Explicit'].sketches['__profile__'].vertices.findAt((
+    -32.5, -32.5))
+mdb.models['Box_Implicit_Explicit'].sketches['__profile__'].vertices.findAt((
+    32.5, -32.5))
+mdb.models['Box_Implicit_Explicit'].sketches['__profile__'].vertices.findAt((
+    0.0, -32.5))
+mdb.models['Box_Implicit_Explicit'].sketches['__profile__'].EqualDistanceConstraint(
+    addUndoState=False, 
+    entity1=mdb.models['Box_Implicit_Explicit'].sketches['__profile__'].vertices.findAt(
+    (-32.5, -32.5), ), 
+    entity2=mdb.models['Box_Implicit_Explicit'].sketches['__profile__'].vertices.findAt(
+    (32.5, -32.5), ), 
+    midpoint=mdb.models['Box_Implicit_Explicit'].sketches['__profile__'].vertices.findAt(
+    (0.0, -32.5), ))
+mdb.models['Box_Implicit_Explicit'].sketches['__profile__'].Line(point1=(-32.5, 
+    0.0), point2=(32.5, 0.0))
+mdb.models['Box_Implicit_Explicit'].sketches['__profile__'].geometry.findAt((
+    -29.25, 0.0))
+mdb.models['Box_Implicit_Explicit'].sketches['__profile__'].HorizontalConstraint(
+    addUndoState=False, 
+    entity=mdb.models['Box_Implicit_Explicit'].sketches['__profile__'].geometry.findAt(
+    (-29.25, 0.0), ))
+mdb.models['Box_Implicit_Explicit'].sketches['__profile__'].geometry.findAt((
+    -32.5, 29.25))
+mdb.models['Box_Implicit_Explicit'].sketches['__profile__'].geometry.findAt((
+    -29.25, 0.0))
+mdb.models['Box_Implicit_Explicit'].sketches['__profile__'].PerpendicularConstraint(
+    addUndoState=False, 
+    entity1=mdb.models['Box_Implicit_Explicit'].sketches['__profile__'].geometry.findAt(
+    (-32.5, 29.25), ), 
+    entity2=mdb.models['Box_Implicit_Explicit'].sketches['__profile__'].geometry.findAt(
+    (-29.25, 0.0), ))
+mdb.models['Box_Implicit_Explicit'].sketches['__profile__'].vertices.findAt((
+    -32.5, 0.0))
+mdb.models['Box_Implicit_Explicit'].sketches['__profile__'].geometry.findAt((
+    -32.5, 29.25))
+mdb.models['Box_Implicit_Explicit'].sketches['__profile__'].CoincidentConstraint(
+    addUndoState=False, 
+    entity1=mdb.models['Box_Implicit_Explicit'].sketches['__profile__'].vertices.findAt(
+    (-32.5, 0.0), ), 
+    entity2=mdb.models['Box_Implicit_Explicit'].sketches['__profile__'].geometry.findAt(
+    (-32.5, 29.25), ))
+mdb.models['Box_Implicit_Explicit'].sketches['__profile__'].vertices.findAt((
+    -32.5, 32.5))
+mdb.models['Box_Implicit_Explicit'].sketches['__profile__'].vertices.findAt((
+    -32.5, -32.5))
+mdb.models['Box_Implicit_Explicit'].sketches['__profile__'].vertices.findAt((
+    -32.5, 0.0))
+mdb.models['Box_Implicit_Explicit'].sketches['__profile__'].EqualDistanceConstraint(
+    addUndoState=False, 
+    entity1=mdb.models['Box_Implicit_Explicit'].sketches['__profile__'].vertices.findAt(
+    (-32.5, 32.5), ), 
+    entity2=mdb.models['Box_Implicit_Explicit'].sketches['__profile__'].vertices.findAt(
+    (-32.5, -32.5), ), 
+    midpoint=mdb.models['Box_Implicit_Explicit'].sketches['__profile__'].vertices.findAt(
+    (-32.5, 0.0), ))
+mdb.models['Box_Implicit_Explicit'].sketches['__profile__'].vertices.findAt((
+    32.5, 0.0))
+mdb.models['Box_Implicit_Explicit'].sketches['__profile__'].geometry.findAt((
+    32.5, -29.25))
+mdb.models['Box_Implicit_Explicit'].sketches['__profile__'].CoincidentConstraint(
+    addUndoState=False, 
+    entity1=mdb.models['Box_Implicit_Explicit'].sketches['__profile__'].vertices.findAt(
+    (32.5, 0.0), ), 
+    entity2=mdb.models['Box_Implicit_Explicit'].sketches['__profile__'].geometry.findAt(
+    (32.5, -29.25), ))
+mdb.models['Box_Implicit_Explicit'].sketches['__profile__'].vertices.findAt((
+    32.5, -32.5))
+mdb.models['Box_Implicit_Explicit'].sketches['__profile__'].vertices.findAt((
+    32.5, 32.5))
+mdb.models['Box_Implicit_Explicit'].sketches['__profile__'].vertices.findAt((
+    32.5, 0.0))
+mdb.models['Box_Implicit_Explicit'].sketches['__profile__'].EqualDistanceConstraint(
+    addUndoState=False, 
+    entity1=mdb.models['Box_Implicit_Explicit'].sketches['__profile__'].vertices.findAt(
+    (32.5, -32.5), ), 
+    entity2=mdb.models['Box_Implicit_Explicit'].sketches['__profile__'].vertices.findAt(
+    (32.5, 32.5), ), 
+    midpoint=mdb.models['Box_Implicit_Explicit'].sketches['__profile__'].vertices.findAt(
+    (32.5, 0.0), ))
+mdb.models['Box_Implicit_Explicit'].parts['Part-1'].PartitionFaceBySketch(
+    faces=mdb.models['Box_Implicit_Explicit'].parts['Part-1'].faces.findAt(((
+    21.666667, 21.666667, 0.0), )), 
+    sketch=mdb.models['Box_Implicit_Explicit'].sketches['__profile__'], 
+    sketchUpEdge=mdb.models['Box_Implicit_Explicit'].parts['Part-1'].edges.findAt(
+    (65.0, 48.75, 0.0), ))
+del mdb.models['Box_Implicit_Explicit'].sketches['__profile__']
+mdb.models['Box_Implicit_Explicit'].parts['Part-2'].deleteMesh(
+    regions=mdb.models['Box_Implicit_Explicit'].parts['Part-2'].faces.findAt(((
+    21.666667, 21.666667, 0.0), )))
+mdb.models['Box_Implicit_Explicit'].ConstrainedSketch(gridSpacing=4.59, 
+    name='__profile__', sheetSize=183.84, 
+    transform=mdb.models['Box_Implicit_Explicit'].parts['Part-2'].MakeSketchTransform(
+    sketchPlane=mdb.models['Box_Implicit_Explicit'].parts['Part-2'].faces.findAt(
+    (21.666667, 21.666667, 0.0), (0.0, 0.0, 1.0)), sketchPlaneSide=SIDE1, 
+    sketchUpEdge=mdb.models['Box_Implicit_Explicit'].parts['Part-2'].edges.findAt(
+    (65.0, 48.75, 0.0), ), sketchOrientation=RIGHT, origin=(32.5, 32.5, 0.0)))
+mdb.models['Box_Implicit_Explicit'].parts['Part-2'].projectReferencesOntoSketch(
+    filter=COPLANAR_EDGES, 
+    sketch=mdb.models['Box_Implicit_Explicit'].sketches['__profile__'])
+mdb.models['Box_Implicit_Explicit'].sketches['__profile__'].Line(point1=(0.0, 
+    32.5), point2=(0.0, -32.5))
+mdb.models['Box_Implicit_Explicit'].sketches['__profile__'].geometry.findAt((
+    0.0, 0.0))
+mdb.models['Box_Implicit_Explicit'].sketches['__profile__'].VerticalConstraint(
+    addUndoState=False, 
+    entity=mdb.models['Box_Implicit_Explicit'].sketches['__profile__'].geometry.findAt(
+    (0.0, 0.0), ))
+mdb.models['Box_Implicit_Explicit'].sketches['__profile__'].geometry.findAt((
+    29.25, 32.5))
+mdb.models['Box_Implicit_Explicit'].sketches['__profile__'].geometry.findAt((
+    0.0, 0.0))
+mdb.models['Box_Implicit_Explicit'].sketches['__profile__'].PerpendicularConstraint(
+    addUndoState=False, 
+    entity1=mdb.models['Box_Implicit_Explicit'].sketches['__profile__'].geometry.findAt(
+    (29.25, 32.5), ), 
+    entity2=mdb.models['Box_Implicit_Explicit'].sketches['__profile__'].geometry.findAt(
+    (0.0, 0.0), ))
+mdb.models['Box_Implicit_Explicit'].sketches['__profile__'].vertices.findAt((
+    0.0, 32.5))
+mdb.models['Box_Implicit_Explicit'].sketches['__profile__'].geometry.findAt((
+    29.25, 32.5))
+mdb.models['Box_Implicit_Explicit'].sketches['__profile__'].CoincidentConstraint(
+    addUndoState=False, 
+    entity1=mdb.models['Box_Implicit_Explicit'].sketches['__profile__'].vertices.findAt(
+    (0.0, 32.5), ), 
+    entity2=mdb.models['Box_Implicit_Explicit'].sketches['__profile__'].geometry.findAt(
+    (29.25, 32.5), ))
+mdb.models['Box_Implicit_Explicit'].sketches['__profile__'].vertices.findAt((
+    32.5, 32.5))
+mdb.models['Box_Implicit_Explicit'].sketches['__profile__'].vertices.findAt((
+    -32.5, 32.5))
+mdb.models['Box_Implicit_Explicit'].sketches['__profile__'].vertices.findAt((
+    0.0, 32.5))
+mdb.models['Box_Implicit_Explicit'].sketches['__profile__'].EqualDistanceConstraint(
+    addUndoState=False, 
+    entity1=mdb.models['Box_Implicit_Explicit'].sketches['__profile__'].vertices.findAt(
+    (32.5, 32.5), ), 
+    entity2=mdb.models['Box_Implicit_Explicit'].sketches['__profile__'].vertices.findAt(
+    (-32.5, 32.5), ), 
+    midpoint=mdb.models['Box_Implicit_Explicit'].sketches['__profile__'].vertices.findAt(
+    (0.0, 32.5), ))
+mdb.models['Box_Implicit_Explicit'].sketches['__profile__'].vertices.findAt((
+    0.0, -32.5))
+mdb.models['Box_Implicit_Explicit'].sketches['__profile__'].geometry.findAt((
+    -29.25, -32.5))
+mdb.models['Box_Implicit_Explicit'].sketches['__profile__'].CoincidentConstraint(
+    addUndoState=False, 
+    entity1=mdb.models['Box_Implicit_Explicit'].sketches['__profile__'].vertices.findAt(
+    (0.0, -32.5), ), 
+    entity2=mdb.models['Box_Implicit_Explicit'].sketches['__profile__'].geometry.findAt(
+    (-29.25, -32.5), ))
+mdb.models['Box_Implicit_Explicit'].sketches['__profile__'].vertices.findAt((
+    -32.5, -32.5))
+mdb.models['Box_Implicit_Explicit'].sketches['__profile__'].vertices.findAt((
+    32.5, -32.5))
+mdb.models['Box_Implicit_Explicit'].sketches['__profile__'].vertices.findAt((
+    0.0, -32.5))
+mdb.models['Box_Implicit_Explicit'].sketches['__profile__'].EqualDistanceConstraint(
+    addUndoState=False, 
+    entity1=mdb.models['Box_Implicit_Explicit'].sketches['__profile__'].vertices.findAt(
+    (-32.5, -32.5), ), 
+    entity2=mdb.models['Box_Implicit_Explicit'].sketches['__profile__'].vertices.findAt(
+    (32.5, -32.5), ), 
+    midpoint=mdb.models['Box_Implicit_Explicit'].sketches['__profile__'].vertices.findAt(
+    (0.0, -32.5), ))
+mdb.models['Box_Implicit_Explicit'].sketches['__profile__'].Line(point1=(-32.5, 
+    0.0), point2=(32.5, 0.0))
+mdb.models['Box_Implicit_Explicit'].sketches['__profile__'].geometry.findAt((
+    -29.25, 0.0))
+mdb.models['Box_Implicit_Explicit'].sketches['__profile__'].HorizontalConstraint(
+    addUndoState=False, 
+    entity=mdb.models['Box_Implicit_Explicit'].sketches['__profile__'].geometry.findAt(
+    (-29.25, 0.0), ))
+mdb.models['Box_Implicit_Explicit'].sketches['__profile__'].geometry.findAt((
+    -32.5, 29.25))
+mdb.models['Box_Implicit_Explicit'].sketches['__profile__'].geometry.findAt((
+    -29.25, 0.0))
+mdb.models['Box_Implicit_Explicit'].sketches['__profile__'].PerpendicularConstraint(
+    addUndoState=False, 
+    entity1=mdb.models['Box_Implicit_Explicit'].sketches['__profile__'].geometry.findAt(
+    (-32.5, 29.25), ), 
+    entity2=mdb.models['Box_Implicit_Explicit'].sketches['__profile__'].geometry.findAt(
+    (-29.25, 0.0), ))
+mdb.models['Box_Implicit_Explicit'].sketches['__profile__'].vertices.findAt((
+    -32.5, 0.0))
+mdb.models['Box_Implicit_Explicit'].sketches['__profile__'].geometry.findAt((
+    -32.5, 29.25))
+mdb.models['Box_Implicit_Explicit'].sketches['__profile__'].CoincidentConstraint(
+    addUndoState=False, 
+    entity1=mdb.models['Box_Implicit_Explicit'].sketches['__profile__'].vertices.findAt(
+    (-32.5, 0.0), ), 
+    entity2=mdb.models['Box_Implicit_Explicit'].sketches['__profile__'].geometry.findAt(
+    (-32.5, 29.25), ))
+mdb.models['Box_Implicit_Explicit'].sketches['__profile__'].vertices.findAt((
+    -32.5, 32.5))
+mdb.models['Box_Implicit_Explicit'].sketches['__profile__'].vertices.findAt((
+    -32.5, -32.5))
+mdb.models['Box_Implicit_Explicit'].sketches['__profile__'].vertices.findAt((
+    -32.5, 0.0))
+mdb.models['Box_Implicit_Explicit'].sketches['__profile__'].EqualDistanceConstraint(
+    addUndoState=False, 
+    entity1=mdb.models['Box_Implicit_Explicit'].sketches['__profile__'].vertices.findAt(
+    (-32.5, 32.5), ), 
+    entity2=mdb.models['Box_Implicit_Explicit'].sketches['__profile__'].vertices.findAt(
+    (-32.5, -32.5), ), 
+    midpoint=mdb.models['Box_Implicit_Explicit'].sketches['__profile__'].vertices.findAt(
+    (-32.5, 0.0), ))
+mdb.models['Box_Implicit_Explicit'].sketches['__profile__'].vertices.findAt((
+    32.5, 0.0))
+mdb.models['Box_Implicit_Explicit'].sketches['__profile__'].geometry.findAt((
+    32.5, -29.25))
+mdb.models['Box_Implicit_Explicit'].sketches['__profile__'].CoincidentConstraint(
+    addUndoState=False, 
+    entity1=mdb.models['Box_Implicit_Explicit'].sketches['__profile__'].vertices.findAt(
+    (32.5, 0.0), ), 
+    entity2=mdb.models['Box_Implicit_Explicit'].sketches['__profile__'].geometry.findAt(
+    (32.5, -29.25), ))
+mdb.models['Box_Implicit_Explicit'].sketches['__profile__'].vertices.findAt((
+    32.5, -32.5))
+mdb.models['Box_Implicit_Explicit'].sketches['__profile__'].vertices.findAt((
+    32.5, 32.5))
+mdb.models['Box_Implicit_Explicit'].sketches['__profile__'].vertices.findAt((
+    32.5, 0.0))
+mdb.models['Box_Implicit_Explicit'].sketches['__profile__'].EqualDistanceConstraint(
+    addUndoState=False, 
+    entity1=mdb.models['Box_Implicit_Explicit'].sketches['__profile__'].vertices.findAt(
+    (32.5, -32.5), ), 
+    entity2=mdb.models['Box_Implicit_Explicit'].sketches['__profile__'].vertices.findAt(
+    (32.5, 32.5), ), 
+    midpoint=mdb.models['Box_Implicit_Explicit'].sketches['__profile__'].vertices.findAt(
+    (32.5, 0.0), ))
+mdb.models['Box_Implicit_Explicit'].parts['Part-2'].PartitionFaceBySketch(
+    faces=mdb.models['Box_Implicit_Explicit'].parts['Part-2'].faces.findAt(((
+    21.666667, 21.666667, 0.0), )), 
+    sketch=mdb.models['Box_Implicit_Explicit'].sketches['__profile__'], 
+    sketchUpEdge=mdb.models['Box_Implicit_Explicit'].parts['Part-2'].edges.findAt(
+    (65.0, 48.75, 0.0), ))
+del mdb.models['Box_Implicit_Explicit'].sketches['__profile__']
+mdb.models['Box_Implicit_Explicit'].rootAssembly.regenerate()
+del mdb.models['Box_Implicit_Explicit'].rootAssembly.features['Wire-1']
+mdb.models['Box_Implicit_Explicit'].rootAssembly.deleteFeatures(('RP-1', 
+    'RP-2'))
+mdb.models['Box_Implicit_Explicit'].rootAssembly.WirePolyLine(
+    mergeType=IMPRINT, meshable=OFF, points=((
+    mdb.models['Box_Implicit_Explicit'].rootAssembly.instances['Part-1-3'].vertices.findAt(
+    (110.961941, 32.5, 45.961941), ), 
+    mdb.models['Box_Implicit_Explicit'].rootAssembly.instances['Part-1-2'].vertices.findAt(
+    (19.038059, 32.5, 45.961941), )), ))
+mdb.models['Box_Implicit_Explicit'].rootAssembly.Set(
+    edges=mdb.models['Box_Implicit_Explicit'].rootAssembly.edges.findAt(((
+    87.98097, 32.5, 45.961941), )), name='Wire-1-Set-3')
+del mdb.models['Box_Implicit_Explicit'].rootAssembly.features['Datum csys-2']
+mdb.models['Box_Implicit_Explicit'].rootAssembly.sectionAssignments[0].setValues(
+    region=mdb.models['Box_Implicit_Explicit'].rootAssembly.sets['Wire-1-Set-3'])
+mdb.models['Box_Implicit_Explicit'].rootAssembly.sectionAssignments[0].getSet()
+mdb.models['Box_Implicit_Explicit'].rootAssembly.connectorOrientations[0].setValues(
+    region=mdb.models['Box_Implicit_Explicit'].rootAssembly.allSets['Wire-1-Set-3'])
+mdb.models['Box_Implicit_Explicit'].rootAssembly.DatumCsysByThreePoints(
+    coordSysType=CARTESIAN, name='Datum csys-2', 
+    origin=mdb.models['Box_Implicit_Explicit'].rootAssembly.instances['Part-1-3'].vertices.findAt(
+    (110.961941, 32.5, 45.961941), ), 
+    point1=mdb.models['Box_Implicit_Explicit'].rootAssembly.instances['Part-1-2'].vertices.findAt(
+    (19.038059, 32.5, 45.961941), ), 
+    point2=mdb.models['Box_Implicit_Explicit'].rootAssembly.instances['Part-1-3'].vertices.findAt(
+    (110.961941, 65.0, 45.961941), ))
+mdb.models['Box_Implicit_Explicit'].rootAssembly.connectorOrientations[0].setValues(
+    localCsys1=mdb.models['Box_Implicit_Explicit'].rootAssembly.datums[97])
+del mdb.jobs['Box_Implicit']
+del mdb.jobs['Box_Implicit-1-1-Spring']
+del mdb.jobs['Box_Implicit-1-1-Spring-Linear']
+del mdb.jobs['Box_Implicit-1-1-Spring-Non_Linear']
+del mdb.jobs['Box_Implicit-2']
+del mdb.jobs['Box_Implicit-3']
+del mdb.jobs['Box_Implicit-4_Spring']
+del mdb.jobs['Box_Implicit-5']
+del mdb.jobs['Box_Implicit-6']
+del mdb.jobs['Box_Implicit_Contact_1']
+del mdb.jobs['Box_Implicit_Contact_1_Gravity']
+del mdb.jobs['Box_Implicit_Contact_1_Gravity-Cop2y']
+del mdb.jobs['Box_Implicit_Contact_1_Gravity_2']
+del mdb.jobs['Box_Implicit_Contact_2_NonLine']
+del mdb.jobs['Box_Implicit_Contact_3_NonLin']
+del mdb.jobs['Box_Implicit_Contact_3_NonLin_Friction']
+del mdb.jobs['Box_Try_1']
+del mdb.jobs['Box_Try_2']
+del mdb.jobs['Box_Try_3']
+del mdb.jobs['Box_Try_4']
+del mdb.jobs['Box_Try_5']
+del mdb.jobs['Job-1']
+del mdb.jobs['Job-2']
+del mdb.jobs['Job-3-NoHinge_Const']
+mdb.Job(activateLoadBalancing=False, atTime=None, contactPrint=OFF, 
+    description='', echoPrint=OFF, explicitPrecision=SINGLE, historyPrint=OFF, 
+    memory=90, memoryUnits=PERCENTAGE, model='Box_Implicit_Explicit', 
+    modelPrint=OFF, multiprocessingMode=DEFAULT, name='Explicit_1', 
+    nodalOutputPrecision=SINGLE, numCpus=4, numDomains=4, 
+    numThreadsPerMpiProcess=1, parallelizationMethodExplicit=DOMAIN, 
+    queue=None, resultsFormat=ODB, scratch='', type=ANALYSIS, 
+    userSubroutine='', waitHours=0, waitMinutes=0)
+mdb.models['Box_Implicit_Explicit'].parts['Part-2'].generateMesh()
+mdb.models['Box_Implicit_Explicit'].parts['Part-1'].generateMesh()
+mdb.models['Box_Implicit_Explicit'].rootAssembly.regenerate()
+mdb.models['Box_Implicit_Explicit'].rootAssembly.Set(
+    edges=mdb.models['Box_Implicit_Explicit'].rootAssembly.instances['Part-2-1'].edges.findAt(
+    ((65.0, 40.625, 0.0), ), ((65.0, 8.125, 0.0), ), ), name='Hinge-1-1')
+mdb.models['Box_Implicit_Explicit'].rootAssembly.Set(
+    edges=mdb.models['Box_Implicit_Explicit'].rootAssembly.instances['Part-2-1'].edges.findAt(
+    ((110.961941, 56.875, 45.961941), ), ((110.961941, 24.375, 45.961941), ), 
+    ), name='Hinge-2-1')
+mdb.models['Box_Implicit_Explicit'].rootAssembly.Set(
+    edges=mdb.models['Box_Implicit_Explicit'].rootAssembly.instances['Part-1-1'].edges.findAt(
+    ((65.0, 56.875, 0.0), ), ((65.0, 24.375, 0.0), ), ), name='Hinge-1-2')
+mdb.models['Box_Implicit_Explicit'].rootAssembly.Set(
+    edges=mdb.models['Box_Implicit_Explicit'].rootAssembly.instances['Part-1-1'].edges.findAt(
+    ((19.038059, 40.625, 45.961941), ), ((19.038059, 8.125, 45.961941), ), ), 
+    name='Hinge-3-2')
+mdb.models['Box_Implicit_Explicit'].rootAssembly.Set(
+    edges=mdb.models['Box_Implicit_Explicit'].rootAssembly.instances['Part-1-3'].edges.findAt(
+    ((110.961941, 40.625, 45.961941), ), ((110.961941, 8.125, 45.961941), ), ), 
+    name='Hinge-2-3')
+mdb.models['Box_Implicit_Explicit'].rootAssembly.Set(
+    edges=mdb.models['Box_Implicit_Explicit'].rootAssembly.instances['Part-1-2'].edges.findAt(
+    ((19.038059, 40.625, 45.961941), ), ((19.038059, 8.125, 45.961941), ), ), 
+    name='Hinge-3-4')
+mdb.models['Box_Implicit_Explicit'].rootAssembly.Set(
+    edges=mdb.models['Box_Implicit_Explicit'].rootAssembly.instances['Part-1-2'].edges.findAt(
+    ((65.0, 56.875, 91.923882), ), ((65.0, 24.375, 91.923882), ), ), 
+    name='Hinge-4-4')
+mdb.models['Box_Implicit_Explicit'].rootAssembly.Set(
+    edges=mdb.models['Box_Implicit_Explicit'].rootAssembly.instances['Part-1-3'].edges.findAt(
+    ((65.0, 56.875, 91.923882), ), ((65.0, 24.375, 91.923882), ), ), 
+    name='Hinge-4-3')
+mdb.jobs['Explicit_1'].submit(consistencyChecking=OFF)
+mdb.jobs['Explicit_1']._Message(STARTED, {'phase': BATCHPRE_PHASE, 
+    'clientHost': 'kkv-pc-51', 'handle': 0, 'jobName': 'Explicit_1'})
+mdb.jobs['Explicit_1']._Message(ERROR, {'phase': BATCHPRE_PHASE, 
+    'message': 'in keyword *EQUATION, file "Explicit_1.inp", line 805: Unknown assembly set RF_1_SPRING', 
+    'jobName': 'Explicit_1'})
+mdb.jobs['Explicit_1']._Message(ERROR, {'phase': BATCHPRE_PHASE, 
+    'message': 'in keyword *EQUATION, file "Explicit_1.inp", line 805: Unknown assembly set NODE_1_SPRING', 
+    'jobName': 'Explicit_1'})
+mdb.jobs['Explicit_1']._Message(ERROR, {'phase': BATCHPRE_PHASE, 
+    'message': 'in keyword *EQUATION, file "Explicit_1.inp", line 810: Unknown assembly set RF_1_SPRING', 
+    'jobName': 'Explicit_1'})
+mdb.jobs['Explicit_1']._Message(ERROR, {'phase': BATCHPRE_PHASE, 
+    'message': 'in keyword *EQUATION, file "Explicit_1.inp", line 810: Unknown assembly set NODE_1_SPRING', 
+    'jobName': 'Explicit_1'})
+mdb.jobs['Explicit_1']._Message(ERROR, {'phase': BATCHPRE_PHASE, 
+    'message': 'in keyword *EQUATION, file "Explicit_1.inp", line 815: Unknown assembly set RF_1_SPRING', 
+    'jobName': 'Explicit_1'})
+mdb.jobs['Explicit_1']._Message(ERROR, {'phase': BATCHPRE_PHASE, 
+    'message': 'in keyword *EQUATION, file "Explicit_1.inp", line 815: Unknown assembly set NODE_1_SPRING', 
+    'jobName': 'Explicit_1'})
+mdb.jobs['Explicit_1']._Message(ERROR, {'phase': BATCHPRE_PHASE, 
+    'message': 'in keyword *EQUATION, file "Explicit_1.inp", line 820: Unknown assembly set RF_2_SPRING', 
+    'jobName': 'Explicit_1'})
+mdb.jobs['Explicit_1']._Message(ERROR, {'phase': BATCHPRE_PHASE, 
+    'message': 'in keyword *EQUATION, file "Explicit_1.inp", line 820: Unknown assembly set NODE_2_SPRING', 
+    'jobName': 'Explicit_1'})
+mdb.jobs['Explicit_1']._Message(ERROR, {'phase': BATCHPRE_PHASE, 
+    'message': 'in keyword *EQUATION, file "Explicit_1.inp", line 825: Unknown assembly set RF_2_SPRING', 
+    'jobName': 'Explicit_1'})
+mdb.jobs['Explicit_1']._Message(ERROR, {'phase': BATCHPRE_PHASE, 
+    'message': 'in keyword *EQUATION, file "Explicit_1.inp", line 825: Unknown assembly set NODE_2_SPRING', 
+    'jobName': 'Explicit_1'})
+mdb.jobs['Explicit_1']._Message(ERROR, {'phase': BATCHPRE_PHASE, 
+    'message': 'in keyword *EQUATION, file "Explicit_1.inp", line 830: Unknown assembly set RF_2_SPRING', 
+    'jobName': 'Explicit_1'})
+mdb.jobs['Explicit_1']._Message(ERROR, {'phase': BATCHPRE_PHASE, 
+    'message': 'in keyword *EQUATION, file "Explicit_1.inp", line 830: Unknown assembly set NODE_2_SPRING', 
+    'jobName': 'Explicit_1'})
+mdb.jobs['Explicit_1']._Message(ERROR, {'phase': BATCHPRE_PHASE, 
+    'message': 'NODE SET ASSEMBLY_RF_1_SPRING HAS NOT BEEN DEFINED', 
+    'jobName': 'Explicit_1'})
+mdb.jobs['Explicit_1']._Message(ERROR, {'phase': BATCHPRE_PHASE, 
+    'message': 'NODE SET ASSEMBLY_NODE_1_SPRING HAS NOT BEEN DEFINED', 
+    'jobName': 'Explicit_1'})
+mdb.jobs['Explicit_1']._Message(ERROR, {'phase': BATCHPRE_PHASE, 
+    'message': 'NODE SET ASSEMBLY_RF_1_SPRING HAS NOT BEEN DEFINED', 
+    'jobName': 'Explicit_1'})
+mdb.jobs['Explicit_1']._Message(ERROR, {'phase': BATCHPRE_PHASE, 
+    'message': 'NODE SET ASSEMBLY_NODE_1_SPRING HAS NOT BEEN DEFINED', 
+    'jobName': 'Explicit_1'})
+mdb.jobs['Explicit_1']._Message(ERROR, {'phase': BATCHPRE_PHASE, 
+    'message': 'NODE SET ASSEMBLY_RF_1_SPRING HAS NOT BEEN DEFINED', 
+    'jobName': 'Explicit_1'})
+mdb.jobs['Explicit_1']._Message(ERROR, {'phase': BATCHPRE_PHASE, 
+    'message': 'NODE SET ASSEMBLY_NODE_1_SPRING HAS NOT BEEN DEFINED', 
+    'jobName': 'Explicit_1'})
+mdb.jobs['Explicit_1']._Message(ERROR, {'phase': BATCHPRE_PHASE, 
+    'message': 'NODE SET ASSEMBLY_RF_2_SPRING HAS NOT BEEN DEFINED', 
+    'jobName': 'Explicit_1'})
+mdb.jobs['Explicit_1']._Message(ERROR, {'phase': BATCHPRE_PHASE, 
+    'message': 'NODE SET ASSEMBLY_NODE_2_SPRING HAS NOT BEEN DEFINED', 
+    'jobName': 'Explicit_1'})
+mdb.jobs['Explicit_1']._Message(ERROR, {'phase': BATCHPRE_PHASE, 
+    'message': 'NODE SET ASSEMBLY_RF_2_SPRING HAS NOT BEEN DEFINED', 
+    'jobName': 'Explicit_1'})
+mdb.jobs['Explicit_1']._Message(ERROR, {'phase': BATCHPRE_PHASE, 
+    'message': 'NODE SET ASSEMBLY_NODE_2_SPRING HAS NOT BEEN DEFINED', 
+    'jobName': 'Explicit_1'})
+mdb.jobs['Explicit_1']._Message(ERROR, {'phase': BATCHPRE_PHASE, 
+    'message': 'NODE SET ASSEMBLY_RF_2_SPRING HAS NOT BEEN DEFINED', 
+    'jobName': 'Explicit_1'})
+mdb.jobs['Explicit_1']._Message(ERROR, {'phase': BATCHPRE_PHASE, 
+    'message': 'NODE SET ASSEMBLY_NODE_2_SPRING HAS NOT BEEN DEFINED', 
+    'jobName': 'Explicit_1'})
+mdb.jobs['Explicit_1']._Message(ERROR, {'phase': BATCHPRE_PHASE, 
+    'message': 'NODE SET ASSEMBLY_RF_1_SPRING HAS NOT BEEN DEFINED', 
+    'jobName': 'Explicit_1'})
+mdb.jobs['Explicit_1']._Message(ERROR, {'phase': BATCHPRE_PHASE, 
+    'message': 'NODE SET ASSEMBLY_NODE_1_SPRING HAS NOT BEEN DEFINED', 
+    'jobName': 'Explicit_1'})
+mdb.jobs['Explicit_1']._Message(ERROR, {'phase': BATCHPRE_PHASE, 
+    'message': 'NODE SET ASSEMBLY_RF_1_SPRING HAS NOT BEEN DEFINED', 
+    'jobName': 'Explicit_1'})
+mdb.jobs['Explicit_1']._Message(ERROR, {'phase': BATCHPRE_PHASE, 
+    'message': 'NODE SET ASSEMBLY_RF_1_SPRING HAS NOT BEEN DEFINED', 
+    'jobName': 'Explicit_1'})
+mdb.jobs['Explicit_1']._Message(ERROR, {'phase': BATCHPRE_PHASE, 
+    'message': 'NODE SET ASSEMBLY_NODE_1_SPRING HAS NOT BEEN DEFINED', 
+    'jobName': 'Explicit_1'})
+mdb.jobs['Explicit_1']._Message(ERROR, {'phase': BATCHPRE_PHASE, 
+    'message': 'NODE SET ASSEMBLY_RF_1_SPRING HAS NOT BEEN DEFINED', 
+    'jobName': 'Explicit_1'})
+mdb.jobs['Explicit_1']._Message(ERROR, {'phase': BATCHPRE_PHASE, 
+    'message': 'NODE SET ASSEMBLY_RF_1_SPRING HAS NOT BEEN DEFINED', 
+    'jobName': 'Explicit_1'})
+mdb.jobs['Explicit_1']._Message(ERROR, {'phase': BATCHPRE_PHASE, 
+    'message': 'NODE SET ASSEMBLY_NODE_1_SPRING HAS NOT BEEN DEFINED', 
+    'jobName': 'Explicit_1'})
+mdb.jobs['Explicit_1']._Message(ERROR, {'phase': BATCHPRE_PHASE, 
+    'message': 'NODE SET ASSEMBLY_RF_1_SPRING HAS NOT BEEN DEFINED', 
+    'jobName': 'Explicit_1'})
+mdb.jobs['Explicit_1']._Message(ERROR, {'phase': BATCHPRE_PHASE, 
+    'message': 'NODE SET ASSEMBLY_RF_2_SPRING HAS NOT BEEN DEFINED', 
+    'jobName': 'Explicit_1'})
+mdb.jobs['Explicit_1']._Message(ERROR, {'phase': BATCHPRE_PHASE, 
+    'message': 'NODE SET ASSEMBLY_NODE_2_SPRING HAS NOT BEEN DEFINED', 
+    'jobName': 'Explicit_1'})
+mdb.jobs['Explicit_1']._Message(ERROR, {'phase': BATCHPRE_PHASE, 
+    'message': 'NODE SET ASSEMBLY_RF_2_SPRING HAS NOT BEEN DEFINED', 
+    'jobName': 'Explicit_1'})
+mdb.jobs['Explicit_1']._Message(ERROR, {'phase': BATCHPRE_PHASE, 
+    'message': 'NODE SET ASSEMBLY_RF_2_SPRING HAS NOT BEEN DEFINED', 
+    'jobName': 'Explicit_1'})
+mdb.jobs['Explicit_1']._Message(ERROR, {'phase': BATCHPRE_PHASE, 
+    'message': 'NODE SET ASSEMBLY_NODE_2_SPRING HAS NOT BEEN DEFINED', 
+    'jobName': 'Explicit_1'})
+mdb.jobs['Explicit_1']._Message(ERROR, {'phase': BATCHPRE_PHASE, 
+    'message': 'NODE SET ASSEMBLY_RF_2_SPRING HAS NOT BEEN DEFINED', 
+    'jobName': 'Explicit_1'})
+mdb.jobs['Explicit_1']._Message(ERROR, {'phase': BATCHPRE_PHASE, 
+    'message': 'NODE SET ASSEMBLY_RF_2_SPRING HAS NOT BEEN DEFINED', 
+    'jobName': 'Explicit_1'})
+mdb.jobs['Explicit_1']._Message(ERROR, {'phase': BATCHPRE_PHASE, 
+    'message': 'NODE SET ASSEMBLY_NODE_2_SPRING HAS NOT BEEN DEFINED', 
+    'jobName': 'Explicit_1'})
+mdb.jobs['Explicit_1']._Message(ERROR, {'phase': BATCHPRE_PHASE, 
+    'message': 'NODE SET ASSEMBLY_RF_2_SPRING HAS NOT BEEN DEFINED', 
+    'jobName': 'Explicit_1'})
+mdb.jobs['Explicit_1']._Message(ERROR, {'phase': BATCHPRE_PHASE, 
+    'message': 'NODE SET ASSEMBLY_RF_1_SPRING HAS NOT BEEN DEFINED', 
+    'jobName': 'Explicit_1'})
+mdb.jobs['Explicit_1']._Message(ERROR, {'phase': BATCHPRE_PHASE, 
+    'message': 'NODE SET ASSEMBLY_NODE_1_SPRING HAS NOT BEEN DEFINED', 
+    'jobName': 'Explicit_1'})
+mdb.jobs['Explicit_1']._Message(ERROR, {'phase': BATCHPRE_PHASE, 
+    'message': 'NODE SET ASSEMBLY_RF_1_SPRING HAS NOT BEEN DEFINED', 
+    'jobName': 'Explicit_1'})
+mdb.jobs['Explicit_1']._Message(ERROR, {'phase': BATCHPRE_PHASE, 
+    'message': 'NODE SET ASSEMBLY_RF_1_SPRING HAS NOT BEEN DEFINED', 
+    'jobName': 'Explicit_1'})
+mdb.jobs['Explicit_1']._Message(ERROR, {'phase': BATCHPRE_PHASE, 
+    'message': 'NODE SET ASSEMBLY_NODE_1_SPRING HAS NOT BEEN DEFINED', 
+    'jobName': 'Explicit_1'})
+mdb.jobs['Explicit_1']._Message(ERROR, {'phase': BATCHPRE_PHASE, 
+    'message': 'NODE SET ASSEMBLY_RF_1_SPRING HAS NOT BEEN DEFINED', 
+    'jobName': 'Explicit_1'})
+mdb.jobs['Explicit_1']._Message(ERROR, {'phase': BATCHPRE_PHASE, 
+    'message': 'NODE SET ASSEMBLY_RF_1_SPRING HAS NOT BEEN DEFINED', 
+    'jobName': 'Explicit_1'})
+mdb.jobs['Explicit_1']._Message(ERROR, {'phase': BATCHPRE_PHASE, 
+    'message': 'NODE SET ASSEMBLY_NODE_1_SPRING HAS NOT BEEN DEFINED', 
+    'jobName': 'Explicit_1'})
+mdb.jobs['Explicit_1']._Message(ERROR, {'phase': BATCHPRE_PHASE, 
+    'message': 'Error message limit reached. No further error messages will be reported.\nPlease see the dat file for more errors.', 
+    'jobName': 'Explicit_1'})
+mdb.jobs['Explicit_1']._Message(WARNING, {'phase': BATCHPRE_PHASE, 
+    'message': 'THE FIRST ORIENTATION SPECIFIED ON THE *CONNECTOR SECTION OPTION WILL BE IGNORED.', 
+    'jobName': 'Explicit_1'})
+mdb.jobs['Explicit_1']._Message(WARNING, {'phase': BATCHPRE_PHASE, 
+    'message': 'OUTPUT REQUEST STATUS IS NOT AVAILABLE FOR ELEMENT TYPE R3D4', 
+    'jobName': 'Explicit_1'})
+mdb.jobs['Explicit_1']._Message(WARNING, {'phase': BATCHPRE_PHASE, 
+    'message': 'OUTPUT REQUEST STATUS IS NOT AVAILABLE FOR ELEMENT TYPE R3D4', 
+    'jobName': 'Explicit_1'})
+mdb.jobs['Explicit_1']._Message(WARNING, {'phase': BATCHPRE_PHASE, 
+    'message': 'OUTPUT REQUEST STATUS IS NOT AVAILABLE FOR ELEMENT TYPE R3D4', 
+    'jobName': 'Explicit_1'})
+mdb.jobs['Explicit_1']._Message(WARNING, {'phase': BATCHPRE_PHASE, 
+    'message': 'OUTPUT REQUEST STATUS IS NOT AVAILABLE FOR ELEMENT TYPE R3D4', 
+    'jobName': 'Explicit_1'})
+mdb.jobs['Explicit_1']._Message(WARNING, {'phase': BATCHPRE_PHASE, 
+    'message': 'THE OPTION *BOUNDARY,TYPE=DISPLACEMENT HAS BEEN USED; CHECK STATUS FILE BETWEEN STEPS FOR WARNINGS ON ANY JUMPS PRESCRIBED ACROSS THE STEPS IN DISPLACEMENT VALUES OF TRANSLATIONAL DOF. FOR ROTATIONAL DOF MAKE SURE THAT THERE ARE NO SUCH JUMPS. ALL JUMPS IN DISPLACEMENTS ACROSS STEPS ARE IGNORED', 
+    'jobName': 'Explicit_1'})
+mdb.jobs['Explicit_1']._Message(WARNING, {'phase': BATCHPRE_PHASE, 
+    'message': '121 nodes have dof on which incorrect boundary conditions may have been specified. The nodes have been identified in node set WarnNodeBCIncorrectDof.', 
+    'jobName': 'Explicit_1'})
+mdb.jobs['Explicit_1']._Message(WARNING, {'phase': BATCHPRE_PHASE, 
+    'message': '121 nodes have dof on which incorrect boundary conditions may have been specified. The nodes have been identified in node set WarnNodeBCIncorrectDof.', 
+    'jobName': 'Explicit_1'})
+mdb.jobs['Explicit_1']._Message(ODB_FILE, {'phase': BATCHPRE_PHASE, 
+    'file': 'C:\\Users\\p2321038\\Documents\\GitHub\\ABAQUS_Python_Course_2023\\Project - Origami\\Model_3\\Explicit_1.odb', 
+    'jobName': 'Explicit_1'})
+mdb.jobs['Explicit_1']._Message(ABORTED, {'phase': BATCHPRE_PHASE, 
+    'message': 'Analysis phase failed due to errors', 'jobName': 'Explicit_1'})
+mdb.jobs['Explicit_1']._Message(ERROR, {
+    'message': 'Analysis Input File Processor exited with an error - Please see the  Explicit_1.dat file for possible error messages if the file exists.', 
+    'jobName': 'Explicit_1'})
+mdb.jobs['Explicit_1']._Message(JOB_ABORTED, {
+    'message': 'Analysis Input File Processor exited with an error - Please see the  Explicit_1.dat file for possible error messages if the file exists.', 
+    'jobName': 'Explicit_1'})
+mdb.models['Box_Implicit_Explicit'].constraints['Eq_1-1'].suppress()
+mdb.models['Box_Implicit_Explicit'].constraints['Eq_1-2'].suppress()
+mdb.models['Box_Implicit_Explicit'].constraints['Eq_1-3'].suppress()
+mdb.models['Box_Implicit_Explicit'].constraints['Eq_2-1'].suppress()
+mdb.models['Box_Implicit_Explicit'].constraints['Eq_2-2'].suppress()
+mdb.models['Box_Implicit_Explicit'].constraints['Eq_2-3'].suppress()
+mdb.jobs['Explicit_1'].submit(consistencyChecking=OFF)
+mdb.jobs['Explicit_1']._Message(STARTED, {'phase': BATCHPRE_PHASE, 
+    'clientHost': 'kkv-pc-51', 'handle': 0, 'jobName': 'Explicit_1'})
+mdb.jobs['Explicit_1']._Message(WARNING, {'phase': BATCHPRE_PHASE, 
+    'message': 'THE FIRST ORIENTATION SPECIFIED ON THE *CONNECTOR SECTION OPTION WILL BE IGNORED.', 
+    'jobName': 'Explicit_1'})
+mdb.jobs['Explicit_1']._Message(WARNING, {'phase': BATCHPRE_PHASE, 
+    'message': 'OUTPUT REQUEST STATUS IS NOT AVAILABLE FOR ELEMENT TYPE R3D4', 
+    'jobName': 'Explicit_1'})
+mdb.jobs['Explicit_1']._Message(WARNING, {'phase': BATCHPRE_PHASE, 
+    'message': 'OUTPUT REQUEST STATUS IS NOT AVAILABLE FOR ELEMENT TYPE R3D4', 
+    'jobName': 'Explicit_1'})
+mdb.jobs['Explicit_1']._Message(WARNING, {'phase': BATCHPRE_PHASE, 
+    'message': 'OUTPUT REQUEST STATUS IS NOT AVAILABLE FOR ELEMENT TYPE R3D4', 
+    'jobName': 'Explicit_1'})
+mdb.jobs['Explicit_1']._Message(WARNING, {'phase': BATCHPRE_PHASE, 
+    'message': 'OUTPUT REQUEST STATUS IS NOT AVAILABLE FOR ELEMENT TYPE R3D4', 
+    'jobName': 'Explicit_1'})
+mdb.jobs['Explicit_1']._Message(WARNING, {'phase': BATCHPRE_PHASE, 
+    'message': 'THE OPTION *BOUNDARY,TYPE=DISPLACEMENT HAS BEEN USED; CHECK STATUS FILE BETWEEN STEPS FOR WARNINGS ON ANY JUMPS PRESCRIBED ACROSS THE STEPS IN DISPLACEMENT VALUES OF TRANSLATIONAL DOF. FOR ROTATIONAL DOF MAKE SURE THAT THERE ARE NO SUCH JUMPS. ALL JUMPS IN DISPLACEMENTS ACROSS STEPS ARE IGNORED', 
+    'jobName': 'Explicit_1'})
+mdb.jobs['Explicit_1']._Message(WARNING, {'phase': BATCHPRE_PHASE, 
+    'message': '121 nodes have dof on which incorrect boundary conditions may have been specified. The nodes have been identified in node set WarnNodeBCIncorrectDof.', 
+    'jobName': 'Explicit_1'})
+mdb.jobs['Explicit_1']._Message(WARNING, {'phase': BATCHPRE_PHASE, 
+    'message': '121 nodes have dof on which incorrect boundary conditions may have been specified. The nodes have been identified in node set WarnNodeBCIncorrectDof.', 
+    'jobName': 'Explicit_1'})
+mdb.jobs['Explicit_1']._Message(COMPLETED, {'phase': BATCHPRE_PHASE, 
+    'message': 'Analysis phase complete', 'jobName': 'Explicit_1'})
+mdb.jobs['Explicit_1']._Message(STARTED, {'phase': PACKAGER_PHASE, 
+    'clientHost': 'kkv-pc-51', 'handle': 12376, 'jobName': 'Explicit_1'})
+mdb.jobs['Explicit_1']._Message(WARNING, {'phase': PACKAGER_PHASE, 
+    'message': 'There are 808 warning messages in the data (.dat) file.  Please check the data file for possible errors in the input file.', 
+    'jobName': 'Explicit_1'})
+mdb.jobs['Explicit_1']._Message(ERROR, {'phase': PACKAGER_PHASE, 
+    'message': 'The rigid bodies with the reference nodes contained in node set ErrNodeRefNodeNoMass have no mass associated with them and some degrees of freedom of the reference node are not restrained. Either mass must be defined or all of the translational degrees of freedom must be constrained. See the status file for further details.', 
+    'jobName': 'Explicit_1'})
+mdb.jobs['Explicit_1']._Message(ERROR, {'phase': PACKAGER_PHASE, 
+    'message': 'The rigid bodies with the reference nodes contained in node set ErrNodeRefNodeNoRot1Axis have atleast one axis about which the rotary inertia magnitude is zero, and the rigid bodies have atleast one rotational degree of freedom which is unconstrained. Either rotary inertia must be defined at the reference nodes or all of the rotational degrees of freedom at the reference nodes must be constrained. See the status file for further details.', 
+    'jobName': 'Explicit_1'})
+mdb.jobs['Explicit_1']._Message(WARNING, {'phase': PACKAGER_PHASE, 
+    'message': 'Each of the nodes in node set WarnNodeBcAtRbSecondaryNode have prescribed boundary conditions and belong to rigid bodies but are not rigid body reference nodes. The boundary conditions at these nodes will not constrain the motion of the rigid bodies. See the status file for further details.', 
+    'jobName': 'Explicit_1'})
+mdb.jobs['Explicit_1']._Message(WARNING, {'phase': PACKAGER_PHASE, 
+    'message': 'Disconnected surfaces in the general contact domains are tied together, but the the surface connectivity is not altered, creating a seam in the contact surface.  Nodes along the tied surface perimeters have been added to node set WarnNodePerimTieSeam.', 
+    'jobName': 'Explicit_1'})
+mdb.jobs['Explicit_1']._Message(ABORTED, {'phase': PACKAGER_PHASE, 
+    'message': 'Analysis failed due to Errors', 'jobName': 'Explicit_1'})
+mdb.jobs['Explicit_1']._Message(ERROR, {
+    'message': 'Abaqus/Explicit Packager exited with an error - Please see the  status file for possible error messages if the file exists.', 
+    'jobName': 'Explicit_1'})
+mdb.jobs['Explicit_1']._Message(JOB_ABORTED, {
+    'message': 'Abaqus/Explicit Packager exited with an error - Please see the  status file for possible error messages if the file exists.', 
+    'jobName': 'Explicit_1'})
+mdb.models['Box_Implicit_Explicit'].rootAssembly.Set(name='Set-45', 
+    referencePoints=(
+    mdb.models['Box_Implicit_Explicit'].rootAssembly.instances['Part-3-1'].referencePoints[2], 
+    ))
+mdb.models['Box_Implicit_Explicit'].EncastreBC(createStepName='Initial', 
+    localCsys=None, name='BC-4', 
+    region=mdb.models['Box_Implicit_Explicit'].rootAssembly.sets['Set-45'])
+mdb.jobs['Explicit_1'].submit(consistencyChecking=OFF)
+mdb.jobs['Explicit_1']._Message(STARTED, {'phase': BATCHPRE_PHASE, 
+    'clientHost': 'kkv-pc-51', 'handle': 0, 'jobName': 'Explicit_1'})
+mdb.jobs['Explicit_1']._Message(WARNING, {'phase': BATCHPRE_PHASE, 
+    'message': 'THE FIRST ORIENTATION SPECIFIED ON THE *CONNECTOR SECTION OPTION WILL BE IGNORED.', 
+    'jobName': 'Explicit_1'})
+mdb.jobs['Explicit_1']._Message(WARNING, {'phase': BATCHPRE_PHASE, 
+    'message': 'OUTPUT REQUEST STATUS IS NOT AVAILABLE FOR ELEMENT TYPE R3D4', 
+    'jobName': 'Explicit_1'})
+mdb.jobs['Explicit_1']._Message(WARNING, {'phase': BATCHPRE_PHASE, 
+    'message': 'OUTPUT REQUEST STATUS IS NOT AVAILABLE FOR ELEMENT TYPE R3D4', 
+    'jobName': 'Explicit_1'})
+mdb.jobs['Explicit_1']._Message(WARNING, {'phase': BATCHPRE_PHASE, 
+    'message': 'OUTPUT REQUEST STATUS IS NOT AVAILABLE FOR ELEMENT TYPE R3D4', 
+    'jobName': 'Explicit_1'})
+mdb.jobs['Explicit_1']._Message(WARNING, {'phase': BATCHPRE_PHASE, 
+    'message': 'OUTPUT REQUEST STATUS IS NOT AVAILABLE FOR ELEMENT TYPE R3D4', 
+    'jobName': 'Explicit_1'})
+mdb.jobs['Explicit_1']._Message(WARNING, {'phase': BATCHPRE_PHASE, 
+    'message': 'THE OPTION *BOUNDARY,TYPE=DISPLACEMENT HAS BEEN USED; CHECK STATUS FILE BETWEEN STEPS FOR WARNINGS ON ANY JUMPS PRESCRIBED ACROSS THE STEPS IN DISPLACEMENT VALUES OF TRANSLATIONAL DOF. FOR ROTATIONAL DOF MAKE SURE THAT THERE ARE NO SUCH JUMPS. ALL JUMPS IN DISPLACEMENTS ACROSS STEPS ARE IGNORED', 
+    'jobName': 'Explicit_1'})
+mdb.jobs['Explicit_1']._Message(WARNING, {'phase': BATCHPRE_PHASE, 
+    'message': '121 nodes have dof on which incorrect boundary conditions may have been specified. The nodes have been identified in node set WarnNodeBCIncorrectDof.', 
+    'jobName': 'Explicit_1'})
+mdb.jobs['Explicit_1']._Message(WARNING, {'phase': BATCHPRE_PHASE, 
+    'message': '121 nodes have dof on which incorrect boundary conditions may have been specified. The nodes have been identified in node set WarnNodeBCIncorrectDof.', 
+    'jobName': 'Explicit_1'})
+mdb.jobs['Explicit_1']._Message(COMPLETED, {'phase': BATCHPRE_PHASE, 
+    'message': 'Analysis phase complete', 'jobName': 'Explicit_1'})
+mdb.jobs['Explicit_1']._Message(STARTED, {'phase': PACKAGER_PHASE, 
+    'clientHost': 'kkv-pc-51', 'handle': 15124, 'jobName': 'Explicit_1'})
+mdb.jobs['Explicit_1']._Message(WARNING, {'phase': PACKAGER_PHASE, 
+    'message': 'There are 808 warning messages in the data (.dat) file.  Please check the data file for possible errors in the input file.', 
+    'jobName': 'Explicit_1'})
+mdb.jobs['Explicit_1']._Message(WARNING, {'phase': PACKAGER_PHASE, 
+    'message': 'Each of the nodes in node set WarnNodeBcAtRbSecondaryNode have prescribed boundary conditions and belong to rigid bodies but are not rigid body reference nodes. The boundary conditions at these nodes will not constrain the motion of the rigid bodies. See the status file for further details.', 
+    'jobName': 'Explicit_1'})
+mdb.jobs['Explicit_1']._Message(WARNING, {'phase': PACKAGER_PHASE, 
+    'message': 'Disconnected surfaces in the general contact domains are tied together, but the the surface connectivity is not altered, creating a seam in the contact surface.  Nodes along the tied surface perimeters have been added to node set WarnNodePerimTieSeam.', 
+    'jobName': 'Explicit_1'})
+mdb.jobs['Explicit_1']._Message(COMPLETED, {'phase': PACKAGER_PHASE, 
+    'message': 'Phase complete', 'jobName': 'Explicit_1'})
+mdb.jobs['Explicit_1']._Message(STARTED, {'phase': EXPLICIT_PHASE, 
+    'clientHost': 'kkv-pc-51', 'handle': 17512, 'jobName': 'Explicit_1'})
+mdb.jobs['Explicit_1']._Message(STATUS, {'totalTime': 0.0, 
+    'stableTimeIncrement': 3.10701898342813e-06, 'stepTime': 0.0, 
+    'totalEnergy': 0.0, 'jobName': 'Explicit_1', 'step': 1, 'increment': 0, 
+    'phase': EXPLICIT_PHASE, 'kineticEnergy': 0.0, 'wallTime': 1.0})
+mdb.jobs['Explicit_1']._Message(ODB_FRAME, {'phase': EXPLICIT_PHASE, 'step': 0, 
+    'frame': 0, 'jobName': 'Explicit_1'})
+mdb.jobs['Explicit_1']._Message(STATUS, {'totalTime': 0.0500029549002647, 
+    'stableTimeIncrement': 3.37785763804277e-06, 
+    'stepTime': 0.0500029549002647, 'totalEnergy': 9.7735570747659e-09, 
+    'jobName': 'Explicit_1', 'step': 1, 'increment': 14803, 
+    'phase': EXPLICIT_PHASE, 'kineticEnergy': 4.78897163702641e-05, 
+    'wallTime': 5.0})
+mdb.jobs['Explicit_1']._Message(ODB_FRAME, {'phase': EXPLICIT_PHASE, 'step': 0, 
+    'frame': 1, 'jobName': 'Explicit_1'})
+mdb.jobs['Explicit_1']._Message(STATUS, {'totalTime': 0.100002154707909, 
+    'stableTimeIncrement': 3.37785763804277e-06, 'stepTime': 0.100002154707909, 
+    'totalEnergy': -3.24760947023606e-08, 'jobName': 'Explicit_1', 'step': 1, 
+    'increment': 29613, 'phase': EXPLICIT_PHASE, 
+    'kineticEnergy': 0.000616941077169031, 'wallTime': 9.0})
+mdb.jobs['Explicit_1']._Message(ODB_FRAME, {'phase': EXPLICIT_PHASE, 'step': 0, 
+    'frame': 2, 'jobName': 'Explicit_1'})
+mdb.jobs['Explicit_1']._Message(STATUS, {'totalTime': 0.150002151727676, 
+    'stableTimeIncrement': 3.37784786097473e-06, 'stepTime': 0.150002151727676, 
+    'totalEnergy': -4.32009947815004e-08, 'jobName': 'Explicit_1', 'step': 1, 
+    'increment': 44411, 'phase': EXPLICIT_PHASE, 
+    'kineticEnergy': 0.00248631043359637, 'wallTime': 13.0})
+mdb.jobs['Explicit_1']._Message(ODB_FRAME, {'phase': EXPLICIT_PHASE, 'step': 0, 
+    'frame': 3, 'jobName': 'Explicit_1'})
+mdb.jobs['Explicit_1']._Message(STATUS, {'totalTime': 0.200000673532486, 
+    'stableTimeIncrement': 3.29746308125323e-06, 'stepTime': 0.200000673532486, 
+    'totalEnergy': -1.0134635886061e-07, 'jobName': 'Explicit_1', 'step': 1, 
+    'increment': 59561, 'phase': EXPLICIT_PHASE, 
+    'kineticEnergy': 0.0101764900609851, 'wallTime': 17.0})
+mdb.jobs['Explicit_1']._Message(ODB_FRAME, {'phase': EXPLICIT_PHASE, 'step': 0, 
+    'frame': 4, 'jobName': 'Explicit_1'})
+mdb.jobs['Explicit_1']._Message(STATUS, {'totalTime': 0.250000685453415, 
+    'stableTimeIncrement': 3.29746308125323e-06, 'stepTime': 0.250000685453415, 
+    'totalEnergy': -1.15370767161949e-07, 'jobName': 'Explicit_1', 'step': 1, 
+    'increment': 74744, 'phase': EXPLICIT_PHASE, 
+    'kineticEnergy': 0.0183332432061434, 'wallTime': 21.0})
+mdb.jobs['Explicit_1']._Message(ODB_FRAME, {'phase': EXPLICIT_PHASE, 'step': 0, 
+    'frame': 5, 'jobName': 'Explicit_1'})
+mdb.jobs['Explicit_1']._Message(STATUS, {'totalTime': 0.300001829862595, 
+    'stableTimeIncrement': 3.29713475366589e-06, 'stepTime': 0.300001829862595, 
+    'totalEnergy': -5.2441419029492e-07, 'jobName': 'Explicit_1', 'step': 1, 
+    'increment': 89860, 'phase': EXPLICIT_PHASE, 
+    'kineticEnergy': 0.0296239741146564, 'wallTime': 25.0})
+mdb.jobs['Explicit_1']._Message(ODB_FRAME, {'phase': EXPLICIT_PHASE, 'step': 0, 
+    'frame': 6, 'jobName': 'Explicit_1'})
+mdb.jobs['Explicit_1']._Message(STATUS, {'totalTime': 0.350003123283386, 
+    'stableTimeIncrement': 3.29713475366589e-06, 'stepTime': 0.350003123283386, 
+    'totalEnergy': -8.8752449300955e-07, 'jobName': 'Explicit_1', 'step': 1, 
+    'increment': 104975, 'phase': EXPLICIT_PHASE, 
+    'kineticEnergy': 0.0418920405209064, 'wallTime': 30.0})
+mdb.jobs['Explicit_1']._Message(ODB_FRAME, {'phase': EXPLICIT_PHASE, 'step': 0, 
+    'frame': 7, 'jobName': 'Explicit_1'})
+mdb.jobs['Explicit_1']._Message(STATUS, {'totalTime': 0.400001108646393, 
+    'stableTimeIncrement': 3.29713475366589e-06, 'stepTime': 0.400001108646393, 
+    'totalEnergy': -1.92887773664552e-06, 'jobName': 'Explicit_1', 'step': 1, 
+    'increment': 120089, 'phase': EXPLICIT_PHASE, 
+    'kineticEnergy': 0.0502201989293098, 'wallTime': 34.0})
+mdb.jobs['Explicit_1']._Message(ODB_FRAME, {'phase': EXPLICIT_PHASE, 'step': 0, 
+    'frame': 8, 'jobName': 'Explicit_1'})
+mdb.jobs['Explicit_1']._Message(STATUS, {'totalTime': 0.450002402067184, 
+    'stableTimeIncrement': 3.29713475366589e-06, 'stepTime': 0.450002402067184, 
+    'totalEnergy': 1.04673090390861e-05, 'jobName': 'Explicit_1', 'step': 1, 
+    'increment': 135204, 'phase': EXPLICIT_PHASE, 
+    'kineticEnergy': 0.0674809664487839, 'wallTime': 38.0})
+mdb.jobs['Explicit_1']._Message(ODB_FRAME, {'phase': EXPLICIT_PHASE, 'step': 0, 
+    'frame': 9, 'jobName': 'Explicit_1'})
+mdb.jobs['Explicit_1']._Message(STATUS, {'totalTime': 0.500000357627869, 
+    'stableTimeIncrement': 3.29713475366589e-06, 'stepTime': 0.500000357627869, 
+    'totalEnergy': 2.64950758719351e-05, 'jobName': 'Explicit_1', 'step': 1, 
+    'increment': 150318, 'phase': EXPLICIT_PHASE, 
+    'kineticEnergy': 0.0726972818374634, 'wallTime': 43.0})
+mdb.jobs['Explicit_1']._Message(ODB_FRAME, {'phase': EXPLICIT_PHASE, 'step': 0, 
+    'frame': 10, 'jobName': 'Explicit_1'})
+mdb.jobs['Explicit_1']._Message(STATUS, {'totalTime': 0.550000309944153, 
+    'stableTimeIncrement': 3.25349333252234e-06, 'stepTime': 0.550000309944153, 
+    'totalEnergy': -0.00543883023783565, 'jobName': 'Explicit_1', 'step': 1, 
+    'increment': 165570, 'phase': EXPLICIT_PHASE, 
+    'kineticEnergy': 34.0312805175781, 'wallTime': 47.0})
+mdb.jobs['Explicit_1']._Message(ODB_FRAME, {'phase': EXPLICIT_PHASE, 'step': 0, 
+    'frame': 11, 'jobName': 'Explicit_1'})
+mdb.jobs['Explicit_1']._Message(STATUS, {'totalTime': 0.600000500679016, 
+    'stableTimeIncrement': 2.80780795947067e-06, 'stepTime': 0.600000500679016, 
+    'totalEnergy': 100494.4609375, 'jobName': 'Explicit_1', 'step': 1, 
+    'increment': 181417, 'phase': EXPLICIT_PHASE, 
+    'kineticEnergy': 1584.48217773438, 'wallTime': 53.0})
+mdb.jobs['Explicit_1']._Message(ODB_FRAME, {'phase': EXPLICIT_PHASE, 'step': 0, 
+    'frame': 12, 'jobName': 'Explicit_1'})
+mdb.jobs['Explicit_1']._Message(ERROR, {'phase': EXPLICIT_PHASE, 
+    'message': 'The elements contained in element set ErrElemExcessDistortion-Step1 have distorted excessively.', 
+    'jobName': 'Explicit_1'})
+mdb.jobs['Explicit_1']._Message(WARNING, {'phase': EXPLICIT_PHASE, 
+    'message': 'The ratio of deformation speed to wave speed in the elements in element set WarnElemDeformRateExceedsPt3Wave-Step1 exceeds 0.3. Refer to the status file for further details. This message is printed during the first applicable increment, but will not be printed during subsequent increments for the remainder of the step.', 
+    'jobName': 'Explicit_1'})
+mdb.jobs['Explicit_1']._Message(WARNING, {'phase': EXPLICIT_PHASE, 
+    'message': 'The ratio of deformation speed to wave speed in the elements in element set WarnElemDeformRateExceedsRatio-Step1 exceed the warning ratio.  Refer to the status file for further details. This message is printed during the first applicable increment, but will not be printed during subsequent increments for the remainder of the step.', 
+    'jobName': 'Explicit_1'})
+mdb.jobs['Explicit_1']._Message(ERROR, {'phase': EXPLICIT_PHASE, 
+    'message': 'There is only one excessively distorted element', 
+    'jobName': 'Explicit_1'})
+mdb.jobs['Explicit_1']._Message(ERROR, {'phase': EXPLICIT_PHASE, 
+    'message': 'The ratio of deformation speed to wave speed exceeds 1.0000 in at least one element. This usually indicates an error with the model definition. Additional diagnostic information may be found in the message file.', 
+    'jobName': 'Explicit_1'})
+mdb.jobs['Explicit_1']._Message(STATUS, {'totalTime': 0.646295189857483, 
+    'stableTimeIncrement': 9.9999998245167e-15, 'stepTime': 0.646295189857483, 
+    'totalEnergy': 1682060.25, 'jobName': 'Explicit_1', 'step': 1, 
+    'increment': 206009, 'phase': EXPLICIT_PHASE, 'kineticEnergy': 394855.75, 
+    'wallTime': 66.0})
+mdb.jobs['Explicit_1']._Message(WARNING, {'phase': EXPLICIT_PHASE, 
+    'message': 'All  nodes involved in general contact that have undergone deep penetration of their tracked faces during this step have been listed in node set "InfoNodeDeepPenetAll". Please make sure that these nodes and their contacting faces have sufficient mass to allow the code to calculate realistic contact penalties for enforcing the contact constraint.', 
+    'jobName': 'Explicit_1'})
+mdb.jobs['Explicit_1']._Message(ODB_FRAME, {'phase': EXPLICIT_PHASE, 'step': 0, 
+    'frame': 13, 'jobName': 'Explicit_1'})
+mdb.jobs['Explicit_1']._Message(ABORTED, {'phase': EXPLICIT_PHASE, 
+    'message': 'Analysis failed due to Errors', 'jobName': 'Explicit_1'})
+mdb.jobs['Explicit_1']._Message(ERROR, {
+    'message': 'Abaqus/Explicit Analysis exited with an error - Please see the  status file for possible error messages if the file exists.', 
+    'jobName': 'Explicit_1'})
+mdb.jobs['Explicit_1']._Message(JOB_ABORTED, {
+    'message': 'Abaqus/Explicit Analysis exited with an error - Please see the  status file for possible error messages if the file exists.', 
+    'jobName': 'Explicit_1'})
+mdb.models['Box_Implicit_Explicit'].rootAssembly.Set(
+    edges=mdb.models['Box_Implicit_Explicit'].rootAssembly.instances['Part-2-1'].edges.findAt(
+    ((65.0, 40.625, 0.0), ), ((65.0, 8.125, 0.0), ), ), name='Set-46')
+mdb.models['Box_Implicit_Explicit'].DisplacementBC(amplitude=UNSET, 
+    createStepName='Initial', distributionType=UNIFORM, fieldName='', 
+    localCsys=None, name='BC-5', 
+    region=mdb.models['Box_Implicit_Explicit'].rootAssembly.sets['Set-46'], 
+    u1=SET, u2=UNSET, u3=UNSET, ur1=UNSET, ur2=UNSET, ur3=UNSET)
+mdb.jobs['Explicit_1'].submit(consistencyChecking=OFF)
+mdb.jobs['Explicit_1']._Message(STARTED, {'phase': BATCHPRE_PHASE, 
+    'clientHost': 'kkv-pc-51', 'handle': 0, 'jobName': 'Explicit_1'})
+mdb.jobs['Explicit_1']._Message(WARNING, {'phase': BATCHPRE_PHASE, 
+    'message': 'THE FIRST ORIENTATION SPECIFIED ON THE *CONNECTOR SECTION OPTION WILL BE IGNORED.', 
+    'jobName': 'Explicit_1'})
+mdb.jobs['Explicit_1']._Message(WARNING, {'phase': BATCHPRE_PHASE, 
+    'message': 'OUTPUT REQUEST STATUS IS NOT AVAILABLE FOR ELEMENT TYPE R3D4', 
+    'jobName': 'Explicit_1'})
+mdb.jobs['Explicit_1']._Message(WARNING, {'phase': BATCHPRE_PHASE, 
+    'message': 'OUTPUT REQUEST STATUS IS NOT AVAILABLE FOR ELEMENT TYPE R3D4', 
+    'jobName': 'Explicit_1'})
+mdb.jobs['Explicit_1']._Message(WARNING, {'phase': BATCHPRE_PHASE, 
+    'message': 'OUTPUT REQUEST STATUS IS NOT AVAILABLE FOR ELEMENT TYPE R3D4', 
+    'jobName': 'Explicit_1'})
+mdb.jobs['Explicit_1']._Message(WARNING, {'phase': BATCHPRE_PHASE, 
+    'message': 'OUTPUT REQUEST STATUS IS NOT AVAILABLE FOR ELEMENT TYPE R3D4', 
+    'jobName': 'Explicit_1'})
+mdb.jobs['Explicit_1']._Message(WARNING, {'phase': BATCHPRE_PHASE, 
+    'message': 'THE OPTION *BOUNDARY,TYPE=DISPLACEMENT HAS BEEN USED; CHECK STATUS FILE BETWEEN STEPS FOR WARNINGS ON ANY JUMPS PRESCRIBED ACROSS THE STEPS IN DISPLACEMENT VALUES OF TRANSLATIONAL DOF. FOR ROTATIONAL DOF MAKE SURE THAT THERE ARE NO SUCH JUMPS. ALL JUMPS IN DISPLACEMENTS ACROSS STEPS ARE IGNORED', 
+    'jobName': 'Explicit_1'})
+mdb.jobs['Explicit_1']._Message(WARNING, {'phase': BATCHPRE_PHASE, 
+    'message': '121 nodes have dof on which incorrect boundary conditions may have been specified. The nodes have been identified in node set WarnNodeBCIncorrectDof.', 
+    'jobName': 'Explicit_1'})
+mdb.jobs['Explicit_1']._Message(WARNING, {'phase': BATCHPRE_PHASE, 
+    'message': '121 nodes have dof on which incorrect boundary conditions may have been specified. The nodes have been identified in node set WarnNodeBCIncorrectDof.', 
+    'jobName': 'Explicit_1'})
+mdb.jobs['Explicit_1']._Message(COMPLETED, {'phase': BATCHPRE_PHASE, 
+    'message': 'Analysis phase complete', 'jobName': 'Explicit_1'})
+mdb.jobs['Explicit_1']._Message(STARTED, {'phase': PACKAGER_PHASE, 
+    'clientHost': 'kkv-pc-51', 'handle': 11344, 'jobName': 'Explicit_1'})
+mdb.jobs['Explicit_1']._Message(WARNING, {'phase': PACKAGER_PHASE, 
+    'message': 'There are 808 warning messages in the data (.dat) file.  Please check the data file for possible errors in the input file.', 
+    'jobName': 'Explicit_1'})
+mdb.jobs['Explicit_1']._Message(WARNING, {'phase': PACKAGER_PHASE, 
+    'message': 'Each of the nodes in node set WarnNodeBcAtRbSecondaryNode have prescribed boundary conditions and belong to rigid bodies but are not rigid body reference nodes. The boundary conditions at these nodes will not constrain the motion of the rigid bodies. See the status file for further details.', 
+    'jobName': 'Explicit_1'})
+mdb.jobs['Explicit_1']._Message(WARNING, {'phase': PACKAGER_PHASE, 
+    'message': 'Disconnected surfaces in the general contact domains are tied together, but the the surface connectivity is not altered, creating a seam in the contact surface.  Nodes along the tied surface perimeters have been added to node set WarnNodePerimTieSeam.', 
+    'jobName': 'Explicit_1'})
+mdb.jobs['Explicit_1']._Message(COMPLETED, {'phase': PACKAGER_PHASE, 
+    'message': 'Phase complete', 'jobName': 'Explicit_1'})
+mdb.jobs['Explicit_1']._Message(STARTED, {'phase': EXPLICIT_PHASE, 
+    'clientHost': 'kkv-pc-51', 'handle': 13616, 'jobName': 'Explicit_1'})
+mdb.jobs['Explicit_1']._Message(STATUS, {'totalTime': 0.0, 
+    'stableTimeIncrement': 3.10701898342813e-06, 'stepTime': 0.0, 
+    'totalEnergy': 0.0, 'jobName': 'Explicit_1', 'step': 1, 'increment': 0, 
+    'phase': EXPLICIT_PHASE, 'kineticEnergy': 0.0, 'wallTime': 0.0})
+mdb.jobs['Explicit_1']._Message(ODB_FRAME, {'phase': EXPLICIT_PHASE, 'step': 0, 
+    'frame': 0, 'jobName': 'Explicit_1'})
+mdb.jobs['Explicit_1']._Message(STATUS, {'totalTime': 0.0500029549002647, 
+    'stableTimeIncrement': 3.37788901560998e-06, 
+    'stepTime': 0.0500029549002647, 'totalEnergy': -6.771347926815e-10, 
+    'jobName': 'Explicit_1', 'step': 1, 'increment': 14803, 
+    'phase': EXPLICIT_PHASE, 'kineticEnergy': 0.000139533280162141, 
+    'wallTime': 5.0})
+mdb.jobs['Explicit_1']._Message(ODB_FRAME, {'phase': EXPLICIT_PHASE, 'step': 0, 
+    'frame': 1, 'jobName': 'Explicit_1'})
+mdb.jobs['Explicit_1']._Message(STATUS, {'totalTime': 0.100002154707909, 
+    'stableTimeIncrement': 3.37788901560998e-06, 'stepTime': 0.100002154707909, 
+    'totalEnergy': -3.26596421018621e-08, 'jobName': 'Explicit_1', 'step': 1, 
+    'increment': 29613, 'phase': EXPLICIT_PHASE, 
+    'kineticEnergy': 0.00144333229400218, 'wallTime': 9.0})
+mdb.jobs['Explicit_1']._Message(ODB_FRAME, {'phase': EXPLICIT_PHASE, 'step': 0, 
+    'frame': 2, 'jobName': 'Explicit_1'})
+mdb.jobs['Explicit_1']._Message(STATUS, {'totalTime': 0.150001674890518, 
+    'stableTimeIncrement': 3.25314613291994e-06, 'stepTime': 0.150001674890518, 
+    'totalEnergy': 0.00100942421704531, 'jobName': 'Explicit_1', 'step': 1, 
+    'increment': 44781, 'phase': EXPLICIT_PHASE, 
+    'kineticEnergy': 0.293067932128906, 'wallTime': 13.0})
+mdb.jobs['Explicit_1']._Message(ODB_FRAME, {'phase': EXPLICIT_PHASE, 'step': 0, 
+    'frame': 3, 'jobName': 'Explicit_1'})
+mdb.jobs['Explicit_1']._Message(STATUS, {'totalTime': 0.200003147125244, 
+    'stableTimeIncrement': 3.25317569149774e-06, 'stepTime': 0.200003147125244, 
+    'totalEnergy': 0.00206886907108128, 'jobName': 'Explicit_1', 'step': 1, 
+    'increment': 60147, 'phase': EXPLICIT_PHASE, 
+    'kineticEnergy': 0.0916797816753387, 'wallTime': 17.0})
+mdb.jobs['Explicit_1']._Message(ODB_FRAME, {'phase': EXPLICIT_PHASE, 'step': 0, 
+    'frame': 4, 'jobName': 'Explicit_1'})
+mdb.jobs['Explicit_1']._Message(STATUS, {'totalTime': 0.250000089406967, 
+    'stableTimeIncrement': 3.2531779652345e-06, 'stepTime': 0.250000089406967, 
+    'totalEnergy': 0.00372682372108102, 'jobName': 'Explicit_1', 'step': 1, 
+    'increment': 75538, 'phase': EXPLICIT_PHASE, 
+    'kineticEnergy': 0.0719423592090607, 'wallTime': 22.0})
+mdb.jobs['Explicit_1']._Message(ODB_FRAME, {'phase': EXPLICIT_PHASE, 'step': 0, 
+    'frame': 5, 'jobName': 'Explicit_1'})
+mdb.jobs['Explicit_1']._Message(STATUS, {'totalTime': 0.30000028014183, 
+    'stableTimeIncrement': 3.25317409988202e-06, 'stepTime': 0.30000028014183, 
+    'totalEnergy': 0.00591983832418919, 'jobName': 'Explicit_1', 'step': 1, 
+    'increment': 90930, 'phase': EXPLICIT_PHASE, 
+    'kineticEnergy': 0.0943033844232559, 'wallTime': 27.0})
+mdb.jobs['Explicit_1']._Message(ODB_FRAME, {'phase': EXPLICIT_PHASE, 'step': 0, 
+    'frame': 6, 'jobName': 'Explicit_1'})
+mdb.jobs['Explicit_1']._Message(STATUS, {'totalTime': 0.350000470876694, 
+    'stableTimeIncrement': 3.25317000715586e-06, 'stepTime': 0.350000470876694, 
+    'totalEnergy': 0.00835888460278511, 'jobName': 'Explicit_1', 'step': 1, 
+    'increment': 106322, 'phase': EXPLICIT_PHASE, 
+    'kineticEnergy': 0.0904920175671577, 'wallTime': 31.0})
+mdb.jobs['Explicit_1']._Message(ODB_FRAME, {'phase': EXPLICIT_PHASE, 'step': 0, 
+    'frame': 7, 'jobName': 'Explicit_1'})
+mdb.jobs['Explicit_1']._Message(STATUS, {'totalTime': 0.400000661611557, 
+    'stableTimeIncrement': 3.2531659144297e-06, 'stepTime': 0.400000661611557, 
+    'totalEnergy': 0.0109574496746063, 'jobName': 'Explicit_1', 'step': 1, 
+    'increment': 121714, 'phase': EXPLICIT_PHASE, 
+    'kineticEnergy': 0.0625615790486336, 'wallTime': 36.0})
+mdb.jobs['Explicit_1']._Message(ODB_FRAME, {'phase': EXPLICIT_PHASE, 'step': 0, 
+    'frame': 8, 'jobName': 'Explicit_1'})
+mdb.jobs['Explicit_1']._Message(STATUS, {'totalTime': 0.45000085234642, 
+    'stableTimeIncrement': 3.25318819704989e-06, 'stepTime': 0.45000085234642, 
+    'totalEnergy': 0.0137742580845952, 'jobName': 'Explicit_1', 'step': 1, 
+    'increment': 137106, 'phase': EXPLICIT_PHASE, 
+    'kineticEnergy': 0.096905343234539, 'wallTime': 40.0})
+mdb.jobs['Explicit_1']._Message(ODB_FRAME, {'phase': EXPLICIT_PHASE, 'step': 0, 
+    'frame': 9, 'jobName': 'Explicit_1'})
+mdb.jobs['Explicit_1']._Message(STATUS, {'totalTime': 0.500001072883606, 
+    'stableTimeIncrement': 3.25319138028135e-06, 'stepTime': 0.500001072883606, 
+    'totalEnergy': 0.0134722925722599, 'jobName': 'Explicit_1', 'step': 1, 
+    'increment': 152498, 'phase': EXPLICIT_PHASE, 
+    'kineticEnergy': 0.142078503966331, 'wallTime': 45.0})
+mdb.jobs['Explicit_1']._Message(ODB_FRAME, {'phase': EXPLICIT_PHASE, 'step': 0, 
+    'frame': 10, 'jobName': 'Explicit_1'})
+mdb.jobs['Explicit_1']._Message(STATUS, {'totalTime': 0.55000102519989, 
+    'stableTimeIncrement': 3.25357814290328e-06, 'stepTime': 0.55000102519989, 
+    'totalEnergy': 0.0169860832393169, 'jobName': 'Explicit_1', 'step': 1, 
+    'increment': 167750, 'phase': EXPLICIT_PHASE, 
+    'kineticEnergy': 3.1679630279541, 'wallTime': 50.0})
+mdb.jobs['Explicit_1']._Message(ODB_FRAME, {'phase': EXPLICIT_PHASE, 'step': 0, 
+    'frame': 11, 'jobName': 'Explicit_1'})
+mdb.jobs['Explicit_1']._Message(WARNING, {'phase': EXPLICIT_PHASE, 
+    'message': 'Some nodes involved in general contact have penetrated their tracked faces by more than 50.000 percent of the typical element dimension in the general contact domain, 6.6595. Please check the node set "InfoNodeDeepPenetFirst". Please make sure that these nodes and their contacting faces have sufficient mass to allow the code to calculate realistic contact penalties for enforcing the contact constraint.', 
+    'jobName': 'Explicit_1'})
+mdb.jobs['Explicit_1']._Message(STATUS, {'totalTime': 0.600001752376556, 
+    'stableTimeIncrement': 2.79870937447413e-06, 'stepTime': 0.600001752376556, 
+    'totalEnergy': 99249.703125, 'jobName': 'Explicit_1', 'step': 1, 
+    'increment': 183632, 'phase': EXPLICIT_PHASE, 
+    'kineticEnergy': 1646.38159179688, 'wallTime': 56.0})
+mdb.jobs['Explicit_1']._Message(ODB_FRAME, {'phase': EXPLICIT_PHASE, 'step': 0, 
+    'frame': 12, 'jobName': 'Explicit_1'})
+mdb.jobs['Explicit_1']._Message(WARNING, {'phase': EXPLICIT_PHASE, 
+    'message': 'The ratio of deformation speed to wave speed in the elements in element set WarnElemDeformRateExceedsRatio-Step1 exceed the warning ratio.  Refer to the status file for further details. This message is printed during the first applicable increment, but will not be printed during subsequent increments for the remainder of the step.', 
+    'jobName': 'Explicit_1'})
+mdb.jobs['Explicit_1']._Message(ERROR, {'phase': EXPLICIT_PHASE, 
+    'message': 'The elements contained in element set ErrElemExcessDistortion-Step1 have distorted excessively.', 
+    'jobName': 'Explicit_1'})
+mdb.jobs['Explicit_1']._Message(WARNING, {'phase': EXPLICIT_PHASE, 
+    'message': 'The ratio of deformation speed to wave speed in the elements in element set WarnElemDeformRateExceedsPt3Wave-Step1 exceeds 0.3. Refer to the status file for further details. This message is printed during the first applicable increment, but will not be printed during subsequent increments for the remainder of the step.', 
+    'jobName': 'Explicit_1'})
+mdb.jobs['Explicit_1']._Message(ERROR, {'phase': EXPLICIT_PHASE, 
+    'message': 'There is only one excessively distorted element', 
+    'jobName': 'Explicit_1'})
+mdb.jobs['Explicit_1']._Message(STATUS, {'totalTime': 0.630908846855164, 
+    'stableTimeIncrement': 9.9999998245167e-15, 'stepTime': 0.630908846855164, 
+    'totalEnergy': 1369569.5, 'jobName': 'Explicit_1', 'step': 1, 
+    'increment': 200992, 'phase': EXPLICIT_PHASE, 
+    'kineticEnergy': 261609.21875, 'wallTime': 65.0})
+mdb.jobs['Explicit_1']._Message(WARNING, {'phase': EXPLICIT_PHASE, 
+    'message': 'All  nodes involved in general contact that have undergone deep penetration of their tracked faces during this step have been listed in node set "InfoNodeDeepPenetAll". Please make sure that these nodes and their contacting faces have sufficient mass to allow the code to calculate realistic contact penalties for enforcing the contact constraint.', 
+    'jobName': 'Explicit_1'})
+mdb.jobs['Explicit_1']._Message(ODB_FRAME, {'phase': EXPLICIT_PHASE, 'step': 0, 
+    'frame': 13, 'jobName': 'Explicit_1'})
+mdb.jobs['Explicit_1']._Message(ABORTED, {'phase': EXPLICIT_PHASE, 
+    'message': 'Analysis failed due to Errors', 'jobName': 'Explicit_1'})
+mdb.jobs['Explicit_1']._Message(ERROR, {
+    'message': 'Abaqus/Explicit Analysis exited with an error - Please see the  status file for possible error messages if the file exists.', 
+    'jobName': 'Explicit_1'})
+mdb.jobs['Explicit_1']._Message(JOB_ABORTED, {
+    'message': 'Abaqus/Explicit Analysis exited with an error - Please see the  status file for possible error messages if the file exists.', 
+    'jobName': 'Explicit_1'})
+mdb.models['Box_Implicit_Explicit'].interactionProperties['IntProp-1'].tangentialBehavior.setValues(
+    formulation=FRICTIONLESS)
+mdb.jobs['Explicit_1'].submit(consistencyChecking=OFF)
+mdb.jobs['Explicit_1']._Message(STARTED, {'phase': BATCHPRE_PHASE, 
+    'clientHost': 'kkv-pc-51', 'handle': 0, 'jobName': 'Explicit_1'})
+mdb.jobs['Explicit_1']._Message(WARNING, {'phase': BATCHPRE_PHASE, 
+    'message': 'THE FIRST ORIENTATION SPECIFIED ON THE *CONNECTOR SECTION OPTION WILL BE IGNORED.', 
+    'jobName': 'Explicit_1'})
+mdb.jobs['Explicit_1']._Message(WARNING, {'phase': BATCHPRE_PHASE, 
+    'message': 'OUTPUT REQUEST STATUS IS NOT AVAILABLE FOR ELEMENT TYPE R3D4', 
+    'jobName': 'Explicit_1'})
+mdb.jobs['Explicit_1']._Message(WARNING, {'phase': BATCHPRE_PHASE, 
+    'message': 'OUTPUT REQUEST STATUS IS NOT AVAILABLE FOR ELEMENT TYPE R3D4', 
+    'jobName': 'Explicit_1'})
+mdb.jobs['Explicit_1']._Message(WARNING, {'phase': BATCHPRE_PHASE, 
+    'message': 'OUTPUT REQUEST STATUS IS NOT AVAILABLE FOR ELEMENT TYPE R3D4', 
+    'jobName': 'Explicit_1'})
+mdb.jobs['Explicit_1']._Message(WARNING, {'phase': BATCHPRE_PHASE, 
+    'message': 'OUTPUT REQUEST STATUS IS NOT AVAILABLE FOR ELEMENT TYPE R3D4', 
+    'jobName': 'Explicit_1'})
+mdb.jobs['Explicit_1']._Message(WARNING, {'phase': BATCHPRE_PHASE, 
+    'message': 'THE OPTION *BOUNDARY,TYPE=DISPLACEMENT HAS BEEN USED; CHECK STATUS FILE BETWEEN STEPS FOR WARNINGS ON ANY JUMPS PRESCRIBED ACROSS THE STEPS IN DISPLACEMENT VALUES OF TRANSLATIONAL DOF. FOR ROTATIONAL DOF MAKE SURE THAT THERE ARE NO SUCH JUMPS. ALL JUMPS IN DISPLACEMENTS ACROSS STEPS ARE IGNORED', 
+    'jobName': 'Explicit_1'})
+mdb.jobs['Explicit_1']._Message(WARNING, {'phase': BATCHPRE_PHASE, 
+    'message': '121 nodes have dof on which incorrect boundary conditions may have been specified. The nodes have been identified in node set WarnNodeBCIncorrectDof.', 
+    'jobName': 'Explicit_1'})
+mdb.jobs['Explicit_1']._Message(WARNING, {'phase': BATCHPRE_PHASE, 
+    'message': '121 nodes have dof on which incorrect boundary conditions may have been specified. The nodes have been identified in node set WarnNodeBCIncorrectDof.', 
+    'jobName': 'Explicit_1'})
+mdb.jobs['Explicit_1']._Message(COMPLETED, {'phase': BATCHPRE_PHASE, 
+    'message': 'Analysis phase complete', 'jobName': 'Explicit_1'})
+mdb.jobs['Explicit_1']._Message(STARTED, {'phase': PACKAGER_PHASE, 
+    'clientHost': 'kkv-pc-51', 'handle': 7928, 'jobName': 'Explicit_1'})
+mdb.jobs['Explicit_1']._Message(WARNING, {'phase': PACKAGER_PHASE, 
+    'message': 'There are 808 warning messages in the data (.dat) file.  Please check the data file for possible errors in the input file.', 
+    'jobName': 'Explicit_1'})
+mdb.jobs['Explicit_1']._Message(WARNING, {'phase': PACKAGER_PHASE, 
+    'message': 'Each of the nodes in node set WarnNodeBcAtRbSecondaryNode have prescribed boundary conditions and belong to rigid bodies but are not rigid body reference nodes. The boundary conditions at these nodes will not constrain the motion of the rigid bodies. See the status file for further details.', 
+    'jobName': 'Explicit_1'})
+mdb.jobs['Explicit_1']._Message(WARNING, {'phase': PACKAGER_PHASE, 
+    'message': 'Disconnected surfaces in the general contact domains are tied together, but the the surface connectivity is not altered, creating a seam in the contact surface.  Nodes along the tied surface perimeters have been added to node set WarnNodePerimTieSeam.', 
+    'jobName': 'Explicit_1'})
+mdb.jobs['Explicit_1']._Message(COMPLETED, {'phase': PACKAGER_PHASE, 
+    'message': 'Phase complete', 'jobName': 'Explicit_1'})
+mdb.jobs['Explicit_1']._Message(STARTED, {'phase': EXPLICIT_PHASE, 
+    'clientHost': 'kkv-pc-51', 'handle': 16760, 'jobName': 'Explicit_1'})
+mdb.jobs['Explicit_1']._Message(STATUS, {'totalTime': 0.0, 
+    'stableTimeIncrement': 3.10701898342813e-06, 'stepTime': 0.0, 
+    'totalEnergy': 0.0, 'jobName': 'Explicit_1', 'step': 1, 'increment': 0, 
+    'phase': EXPLICIT_PHASE, 'kineticEnergy': 0.0, 'wallTime': 0.0})
+mdb.jobs['Explicit_1']._Message(ODB_FRAME, {'phase': EXPLICIT_PHASE, 'step': 0, 
+    'frame': 0, 'jobName': 'Explicit_1'})
+mdb.jobs['Explicit_1']._Message(STATUS, {'totalTime': 0.0500029549002647, 
+    'stableTimeIncrement': 3.37788901560998e-06, 
+    'stepTime': 0.0500029549002647, 'totalEnergy': -6.771347926815e-10, 
+    'jobName': 'Explicit_1', 'step': 1, 'increment': 14803, 
+    'phase': EXPLICIT_PHASE, 'kineticEnergy': 0.000139533280162141, 
+    'wallTime': 4.0})
+mdb.jobs['Explicit_1']._Message(ODB_FRAME, {'phase': EXPLICIT_PHASE, 'step': 0, 
+    'frame': 1, 'jobName': 'Explicit_1'})
+mdb.jobs['Explicit_1']._Message(STATUS, {'totalTime': 0.100002154707909, 
+    'stableTimeIncrement': 3.37788901560998e-06, 'stepTime': 0.100002154707909, 
+    'totalEnergy': -3.26596421018621e-08, 'jobName': 'Explicit_1', 'step': 1, 
+    'increment': 29613, 'phase': EXPLICIT_PHASE, 
+    'kineticEnergy': 0.00144333229400218, 'wallTime': 8.0})
+mdb.jobs['Explicit_1']._Message(ODB_FRAME, {'phase': EXPLICIT_PHASE, 'step': 0, 
+    'frame': 2, 'jobName': 'Explicit_1'})
+mdb.jobs['Explicit_1']._Message(STATUS, {'totalTime': 0.150002270936966, 
+    'stableTimeIncrement': 3.25322321259591e-06, 'stepTime': 0.150002270936966, 
+    'totalEnergy': 0.00102413445711136, 'jobName': 'Explicit_1', 'step': 1, 
+    'increment': 44796, 'phase': EXPLICIT_PHASE, 
+    'kineticEnergy': 0.265497863292694, 'wallTime': 12.0})
+mdb.jobs['Explicit_1']._Message(ODB_FRAME, {'phase': EXPLICIT_PHASE, 'step': 0, 
+    'frame': 3, 'jobName': 'Explicit_1'})
+mdb.jobs['Explicit_1']._Message(STATUS, {'totalTime': 0.200001910328865, 
+    'stableTimeIncrement': 3.25319319927075e-06, 'stepTime': 0.200001910328865, 
+    'totalEnergy': 0.00285694375634193, 'jobName': 'Explicit_1', 'step': 1, 
+    'increment': 60183, 'phase': EXPLICIT_PHASE, 
+    'kineticEnergy': 0.187203362584114, 'wallTime': 17.0})
+mdb.jobs['Explicit_1']._Message(ODB_FRAME, {'phase': EXPLICIT_PHASE, 'step': 0, 
+    'frame': 4, 'jobName': 'Explicit_1'})
+mdb.jobs['Explicit_1']._Message(STATUS, {'totalTime': 0.25000211596489, 
+    'stableTimeIncrement': 3.25315568261431e-06, 'stepTime': 0.25000211596489, 
+    'totalEnergy': 0.00508905900642276, 'jobName': 'Explicit_1', 'step': 1, 
+    'increment': 75575, 'phase': EXPLICIT_PHASE, 
+    'kineticEnergy': 0.0907725170254707, 'wallTime': 21.0})
+mdb.jobs['Explicit_1']._Message(ODB_FRAME, {'phase': EXPLICIT_PHASE, 'step': 0, 
+    'frame': 5, 'jobName': 'Explicit_1'})
+mdb.jobs['Explicit_1']._Message(STATUS, {'totalTime': 0.300002306699753, 
+    'stableTimeIncrement': 3.25316841554013e-06, 'stepTime': 0.300002306699753, 
+    'totalEnergy': 0.00780517235398293, 'jobName': 'Explicit_1', 'step': 1, 
+    'increment': 90967, 'phase': EXPLICIT_PHASE, 
+    'kineticEnergy': 0.176287218928337, 'wallTime': 26.0})
+mdb.jobs['Explicit_1']._Message(ODB_FRAME, {'phase': EXPLICIT_PHASE, 'step': 0, 
+    'frame': 6, 'jobName': 'Explicit_1'})
+mdb.jobs['Explicit_1']._Message(STATUS, {'totalTime': 0.350002497434616, 
+    'stableTimeIncrement': 3.25316659655073e-06, 'stepTime': 0.350002497434616, 
+    'totalEnergy': 0.011060337536037, 'jobName': 'Explicit_1', 'step': 1, 
+    'increment': 106359, 'phase': EXPLICIT_PHASE, 
+    'kineticEnergy': 0.0598007515072823, 'wallTime': 30.0})
+mdb.jobs['Explicit_1']._Message(ODB_FRAME, {'phase': EXPLICIT_PHASE, 'step': 0, 
+    'frame': 7, 'jobName': 'Explicit_1'})
+mdb.jobs['Explicit_1']._Message(STATUS, {'totalTime': 0.400002688169479, 
+    'stableTimeIncrement': 3.25316659655073e-06, 'stepTime': 0.400002688169479, 
+    'totalEnergy': 0.0141381891444325, 'jobName': 'Explicit_1', 'step': 1, 
+    'increment': 121751, 'phase': EXPLICIT_PHASE, 
+    'kineticEnergy': 0.108310997486115, 'wallTime': 34.0})
+mdb.jobs['Explicit_1']._Message(ODB_FRAME, {'phase': EXPLICIT_PHASE, 'step': 0, 
+    'frame': 8, 'jobName': 'Explicit_1'})
+mdb.jobs['Explicit_1']._Message(STATUS, {'totalTime': 0.450002878904343, 
+    'stableTimeIncrement': 3.25318819704989e-06, 'stepTime': 0.450002878904343, 
+    'totalEnergy': 0.0177250429987907, 'jobName': 'Explicit_1', 'step': 1, 
+    'increment': 137143, 'phase': EXPLICIT_PHASE, 
+    'kineticEnergy': 0.103876106441021, 'wallTime': 39.0})
+mdb.jobs['Explicit_1']._Message(ODB_FRAME, {'phase': EXPLICIT_PHASE, 'step': 0, 
+    'frame': 9, 'jobName': 'Explicit_1'})
+mdb.jobs['Explicit_1']._Message(STATUS, {'totalTime': 0.500003099441528, 
+    'stableTimeIncrement': 3.25319160765503e-06, 'stepTime': 0.500003099441528, 
+    'totalEnergy': 0.019983334466815, 'jobName': 'Explicit_1', 'step': 1, 
+    'increment': 152535, 'phase': EXPLICIT_PHASE, 
+    'kineticEnergy': 0.121872991323471, 'wallTime': 43.0})
+mdb.jobs['Explicit_1']._Message(ODB_FRAME, {'phase': EXPLICIT_PHASE, 'step': 0, 
+    'frame': 10, 'jobName': 'Explicit_1'})
+mdb.jobs['Explicit_1']._Message(STATUS, {'totalTime': 0.550003051757812, 
+    'stableTimeIncrement': 3.25354972119385e-06, 'stepTime': 0.550003051757812, 
+    'totalEnergy': 0.0231920778751373, 'jobName': 'Explicit_1', 'step': 1, 
+    'increment': 167787, 'phase': EXPLICIT_PHASE, 
+    'kineticEnergy': 3.06606936454773, 'wallTime': 48.0})
+mdb.jobs['Explicit_1']._Message(ODB_FRAME, {'phase': EXPLICIT_PHASE, 'step': 0, 
+    'frame': 11, 'jobName': 'Explicit_1'})
+mdb.jobs['Explicit_1']._Message(WARNING, {'phase': EXPLICIT_PHASE, 
+    'message': 'Some nodes involved in general contact have penetrated their tracked faces by more than 50.000 percent of the typical element dimension in the general contact domain, 6.6621. Please check the node set "InfoNodeDeepPenetFirst". Please make sure that these nodes and their contacting faces have sufficient mass to allow the code to calculate realistic contact penalties for enforcing the contact constraint.', 
+    'jobName': 'Explicit_1'})
+mdb.jobs['Explicit_1']._Message(STATUS, {'totalTime': 0.600002348423004, 
+    'stableTimeIncrement': 2.46149420490838e-06, 'stepTime': 0.600002348423004, 
+    'totalEnergy': 101337.8203125, 'jobName': 'Explicit_1', 'step': 1, 
+    'increment': 183815, 'phase': EXPLICIT_PHASE, 
+    'kineticEnergy': 4736.10302734375, 'wallTime': 54.0})
+mdb.jobs['Explicit_1']._Message(ODB_FRAME, {'phase': EXPLICIT_PHASE, 'step': 0, 
+    'frame': 12, 'jobName': 'Explicit_1'})
+mdb.jobs['Explicit_1']._Message(WARNING, {'phase': EXPLICIT_PHASE, 
+    'message': 'The ratio of deformation speed to wave speed in the elements in element set WarnElemDeformRateExceedsRatio-Step1 exceed the warning ratio.  Refer to the status file for further details. This message is printed during the first applicable increment, but will not be printed during subsequent increments for the remainder of the step.', 
+    'jobName': 'Explicit_1'})
+mdb.jobs['Explicit_1']._Message(ERROR, {'phase': EXPLICIT_PHASE, 
+    'message': 'The elements contained in element set ErrElemExcessDistortion-Step1 have distorted excessively.', 
+    'jobName': 'Explicit_1'})
+mdb.jobs['Explicit_1']._Message(ERROR, {'phase': EXPLICIT_PHASE, 
+    'message': 'There is only one excessively distorted element', 
+    'jobName': 'Explicit_1'})
+mdb.jobs['Explicit_1']._Message(ERROR, {'phase': EXPLICIT_PHASE, 
+    'message': 'The elements contained in element set ErrElemExcessDistortion-Step1 have distorted excessively.', 
+    'jobName': 'Explicit_1'})
+mdb.jobs['Explicit_1']._Message(STATUS, {'totalTime': 0.632513046264648, 
+    'stableTimeIncrement': 9.9999998245167e-15, 'stepTime': 0.632513046264648, 
+    'totalEnergy': 1353375.25, 'jobName': 'Explicit_1', 'step': 1, 
+    'increment': 219309, 'phase': EXPLICIT_PHASE, 
+    'kineticEnergy': 41853.75390625, 'wallTime': 72.0})
+mdb.jobs['Explicit_1']._Message(WARNING, {'phase': EXPLICIT_PHASE, 
+    'message': 'All  nodes involved in general contact that have undergone deep penetration of their tracked faces during this step have been listed in node set "InfoNodeDeepPenetAll". Please make sure that these nodes and their contacting faces have sufficient mass to allow the code to calculate realistic contact penalties for enforcing the contact constraint.', 
+    'jobName': 'Explicit_1'})
+mdb.jobs['Explicit_1']._Message(ODB_FRAME, {'phase': EXPLICIT_PHASE, 'step': 0, 
+    'frame': 13, 'jobName': 'Explicit_1'})
+mdb.jobs['Explicit_1']._Message(ABORTED, {'phase': EXPLICIT_PHASE, 
+    'message': 'Analysis failed due to Errors', 'jobName': 'Explicit_1'})
+mdb.jobs['Explicit_1']._Message(ERROR, {
+    'message': 'Abaqus/Explicit Analysis exited with an error - Please see the  status file for possible error messages if the file exists.', 
+    'jobName': 'Explicit_1'})
+mdb.jobs['Explicit_1']._Message(JOB_ABORTED, {
+    'message': 'Abaqus/Explicit Analysis exited with an error - Please see the  status file for possible error messages if the file exists.', 
+    'jobName': 'Explicit_1'})
+mdb.models['Box_Implicit_Explicit'].boundaryConditions['Disp_loading'].setValues(
+    region=mdb.models['Box_Implicit_Explicit'].rootAssembly.sets['Hinge-4-3'])
+mdb.jobs['Explicit_1'].submit(consistencyChecking=OFF)
+mdb.jobs['Explicit_1']._Message(STARTED, {'phase': BATCHPRE_PHASE, 
+    'clientHost': 'kkv-pc-51', 'handle': 0, 'jobName': 'Explicit_1'})
+mdb.jobs['Explicit_1']._Message(WARNING, {'phase': BATCHPRE_PHASE, 
+    'message': 'THE FIRST ORIENTATION SPECIFIED ON THE *CONNECTOR SECTION OPTION WILL BE IGNORED.', 
+    'jobName': 'Explicit_1'})
+mdb.jobs['Explicit_1']._Message(WARNING, {'phase': BATCHPRE_PHASE, 
+    'message': 'OUTPUT REQUEST STATUS IS NOT AVAILABLE FOR ELEMENT TYPE R3D4', 
+    'jobName': 'Explicit_1'})
+mdb.jobs['Explicit_1']._Message(WARNING, {'phase': BATCHPRE_PHASE, 
+    'message': 'OUTPUT REQUEST STATUS IS NOT AVAILABLE FOR ELEMENT TYPE R3D4', 
+    'jobName': 'Explicit_1'})
+mdb.jobs['Explicit_1']._Message(WARNING, {'phase': BATCHPRE_PHASE, 
+    'message': 'OUTPUT REQUEST STATUS IS NOT AVAILABLE FOR ELEMENT TYPE R3D4', 
+    'jobName': 'Explicit_1'})
+mdb.jobs['Explicit_1']._Message(WARNING, {'phase': BATCHPRE_PHASE, 
+    'message': 'OUTPUT REQUEST STATUS IS NOT AVAILABLE FOR ELEMENT TYPE R3D4', 
+    'jobName': 'Explicit_1'})
+mdb.jobs['Explicit_1']._Message(WARNING, {'phase': BATCHPRE_PHASE, 
+    'message': 'THE OPTION *BOUNDARY,TYPE=DISPLACEMENT HAS BEEN USED; CHECK STATUS FILE BETWEEN STEPS FOR WARNINGS ON ANY JUMPS PRESCRIBED ACROSS THE STEPS IN DISPLACEMENT VALUES OF TRANSLATIONAL DOF. FOR ROTATIONAL DOF MAKE SURE THAT THERE ARE NO SUCH JUMPS. ALL JUMPS IN DISPLACEMENTS ACROSS STEPS ARE IGNORED', 
+    'jobName': 'Explicit_1'})
+mdb.jobs['Explicit_1']._Message(WARNING, {'phase': BATCHPRE_PHASE, 
+    'message': '121 nodes have dof on which incorrect boundary conditions may have been specified. The nodes have been identified in node set WarnNodeBCIncorrectDof.', 
+    'jobName': 'Explicit_1'})
+mdb.jobs['Explicit_1']._Message(WARNING, {'phase': BATCHPRE_PHASE, 
+    'message': '121 nodes have dof on which incorrect boundary conditions may have been specified. The nodes have been identified in node set WarnNodeBCIncorrectDof.', 
+    'jobName': 'Explicit_1'})
+mdb.jobs['Explicit_1']._Message(COMPLETED, {'phase': BATCHPRE_PHASE, 
+    'message': 'Analysis phase complete', 'jobName': 'Explicit_1'})
+mdb.jobs['Explicit_1']._Message(STARTED, {'phase': PACKAGER_PHASE, 
+    'clientHost': 'kkv-pc-51', 'handle': 5224, 'jobName': 'Explicit_1'})
+mdb.jobs['Explicit_1']._Message(WARNING, {'phase': PACKAGER_PHASE, 
+    'message': 'There are 808 warning messages in the data (.dat) file.  Please check the data file for possible errors in the input file.', 
+    'jobName': 'Explicit_1'})
+mdb.jobs['Explicit_1']._Message(WARNING, {'phase': PACKAGER_PHASE, 
+    'message': 'Each of the nodes in node set WarnNodeBcAtRbSecondaryNode have prescribed boundary conditions and belong to rigid bodies but are not rigid body reference nodes. The boundary conditions at these nodes will not constrain the motion of the rigid bodies. See the status file for further details.', 
+    'jobName': 'Explicit_1'})
+mdb.jobs['Explicit_1']._Message(WARNING, {'phase': PACKAGER_PHASE, 
+    'message': 'Disconnected surfaces in the general contact domains are tied together, but the the surface connectivity is not altered, creating a seam in the contact surface.  Nodes along the tied surface perimeters have been added to node set WarnNodePerimTieSeam.', 
+    'jobName': 'Explicit_1'})
+mdb.jobs['Explicit_1']._Message(COMPLETED, {'phase': PACKAGER_PHASE, 
+    'message': 'Phase complete', 'jobName': 'Explicit_1'})
+mdb.jobs['Explicit_1']._Message(STARTED, {'phase': EXPLICIT_PHASE, 
+    'clientHost': 'kkv-pc-51', 'handle': 18392, 'jobName': 'Explicit_1'})
+mdb.jobs['Explicit_1']._Message(STATUS, {'totalTime': 0.0, 
+    'stableTimeIncrement': 3.10701898342813e-06, 'stepTime': 0.0, 
+    'totalEnergy': 0.0, 'jobName': 'Explicit_1', 'step': 1, 'increment': 0, 
+    'phase': EXPLICIT_PHASE, 'kineticEnergy': 0.0, 'wallTime': 1.0})
+mdb.jobs['Explicit_1']._Message(ODB_FRAME, {'phase': EXPLICIT_PHASE, 'step': 0, 
+    'frame': 0, 'jobName': 'Explicit_1'})
+mdb.jobs['Explicit_1']._Message(STATUS, {'totalTime': 0.0500029549002647, 
+    'stableTimeIncrement': 3.37784308612754e-06, 
+    'stepTime': 0.0500029549002647, 'totalEnergy': -3.18429833612299e-08, 
+    'jobName': 'Explicit_1', 'step': 1, 'increment': 14803, 
+    'phase': EXPLICIT_PHASE, 'kineticEnergy': 0.0001177961967187, 
+    'wallTime': 5.0})
+mdb.jobs['Explicit_1']._Message(ODB_FRAME, {'phase': EXPLICIT_PHASE, 'step': 0, 
+    'frame': 1, 'jobName': 'Explicit_1'})
+mdb.jobs['Explicit_1']._Message(STATUS, {'totalTime': 0.100002154707909, 
+    'stableTimeIncrement': 3.37784308612754e-06, 'stepTime': 0.100002154707909, 
+    'totalEnergy': -8.48898551453203e-08, 'jobName': 'Explicit_1', 'step': 1, 
+    'increment': 29613, 'phase': EXPLICIT_PHASE, 
+    'kineticEnergy': 0.00153556722216308, 'wallTime': 9.0})
+mdb.jobs['Explicit_1']._Message(ODB_FRAME, {'phase': EXPLICIT_PHASE, 'step': 0, 
+    'frame': 2, 'jobName': 'Explicit_1'})
+mdb.jobs['Explicit_1']._Message(STATUS, {'totalTime': 0.150002524256706, 
+    'stableTimeIncrement': 3.25317068927689e-06, 'stepTime': 0.150002524256706, 
+    'totalEnergy': -3.31830233335495e-06, 'jobName': 'Explicit_1', 'step': 1, 
+    'increment': 44846, 'phase': EXPLICIT_PHASE, 
+    'kineticEnergy': 0.00349918892607093, 'wallTime': 13.0})
+mdb.jobs['Explicit_1']._Message(ODB_FRAME, {'phase': EXPLICIT_PHASE, 'step': 0, 
+    'frame': 3, 'jobName': 'Explicit_1'})
+mdb.jobs['Explicit_1']._Message(STATUS, {'totalTime': 0.20000271499157, 
+    'stableTimeIncrement': 3.25316045746149e-06, 'stepTime': 0.20000271499157, 
+    'totalEnergy': -2.72021716227755e-05, 'jobName': 'Explicit_1', 'step': 1, 
+    'increment': 60238, 'phase': EXPLICIT_PHASE, 
+    'kineticEnergy': 0.00603225361555815, 'wallTime': 18.0})
+mdb.jobs['Explicit_1']._Message(ODB_FRAME, {'phase': EXPLICIT_PHASE, 'step': 0, 
+    'frame': 4, 'jobName': 'Explicit_1'})
+mdb.jobs['Explicit_1']._Message(STATUS, {'totalTime': 0.250002920627594, 
+    'stableTimeIncrement': 3.25314590554626e-06, 'stepTime': 0.250002920627594, 
+    'totalEnergy': 1.44037767313421e-05, 'jobName': 'Explicit_1', 'step': 1, 
+    'increment': 75630, 'phase': EXPLICIT_PHASE, 
+    'kineticEnergy': 0.0110481306910515, 'wallTime': 22.0})
+mdb.jobs['Explicit_1']._Message(ODB_FRAME, {'phase': EXPLICIT_PHASE, 'step': 0, 
+    'frame': 5, 'jobName': 'Explicit_1'})
+mdb.jobs['Explicit_1']._Message(STATUS, {'totalTime': 0.300003111362457, 
+    'stableTimeIncrement': 3.25313317262044e-06, 'stepTime': 0.300003111362457, 
+    'totalEnergy': 2.03237723326311e-05, 'jobName': 'Explicit_1', 'step': 1, 
+    'increment': 91022, 'phase': EXPLICIT_PHASE, 
+    'kineticEnergy': 0.0163026638329029, 'wallTime': 27.0})
+mdb.jobs['Explicit_1']._Message(ODB_FRAME, {'phase': EXPLICIT_PHASE, 'step': 0, 
+    'frame': 6, 'jobName': 'Explicit_1'})
+mdb.jobs['Explicit_1']._Message(STATUS, {'totalTime': 0.35000005364418, 
+    'stableTimeIncrement': 3.25314135807275e-06, 'stepTime': 0.35000005364418, 
+    'totalEnergy': 0.000829806202091277, 'jobName': 'Explicit_1', 'step': 1, 
+    'increment': 106413, 'phase': EXPLICIT_PHASE, 
+    'kineticEnergy': 0.0628949999809265, 'wallTime': 32.0})
+mdb.jobs['Explicit_1']._Message(ODB_FRAME, {'phase': EXPLICIT_PHASE, 'step': 0, 
+    'frame': 7, 'jobName': 'Explicit_1'})
+mdb.jobs['Explicit_1']._Message(STATUS, {'totalTime': 0.400000244379044, 
+    'stableTimeIncrement': 3.25314772453567e-06, 'stepTime': 0.400000244379044, 
+    'totalEnergy': 0.0035034001339227, 'jobName': 'Explicit_1', 'step': 1, 
+    'increment': 121805, 'phase': EXPLICIT_PHASE, 
+    'kineticEnergy': 0.0677575170993805, 'wallTime': 37.0})
+mdb.jobs['Explicit_1']._Message(ODB_FRAME, {'phase': EXPLICIT_PHASE, 'step': 0, 
+    'frame': 8, 'jobName': 'Explicit_1'})
+mdb.jobs['Explicit_1']._Message(STATUS, {'totalTime': 0.450000435113907, 
+    'stableTimeIncrement': 3.25315886584576e-06, 'stepTime': 0.450000435113907, 
+    'totalEnergy': 0.00665723998099566, 'jobName': 'Explicit_1', 'step': 1, 
+    'increment': 137197, 'phase': EXPLICIT_PHASE, 
+    'kineticEnergy': 0.101420506834984, 'wallTime': 41.0})
+mdb.jobs['Explicit_1']._Message(ODB_FRAME, {'phase': EXPLICIT_PHASE, 'step': 0, 
+    'frame': 9, 'jobName': 'Explicit_1'})
+mdb.jobs['Explicit_1']._Message(STATUS, {'totalTime': 0.500000655651093, 
+    'stableTimeIncrement': 3.25215364682663e-06, 'stepTime': 0.500000655651093, 
+    'totalEnergy': 0.00960218347609043, 'jobName': 'Explicit_1', 'step': 1, 
+    'increment': 152589, 'phase': EXPLICIT_PHASE, 
+    'kineticEnergy': 0.228278741240501, 'wallTime': 46.0})
+mdb.jobs['Explicit_1']._Message(ODB_FRAME, {'phase': EXPLICIT_PHASE, 'step': 0, 
+    'frame': 10, 'jobName': 'Explicit_1'})
+mdb.jobs['Explicit_1']._Message(STATUS, {'totalTime': 0.550002157688141, 
+    'stableTimeIncrement': 3.21797347169195e-06, 'stepTime': 0.550002157688141, 
+    'totalEnergy': 0.011724166572094, 'jobName': 'Explicit_1', 'step': 1, 
+    'increment': 167887, 'phase': EXPLICIT_PHASE, 
+    'kineticEnergy': 0.232076555490494, 'wallTime': 51.0})
+mdb.jobs['Explicit_1']._Message(ODB_FRAME, {'phase': EXPLICIT_PHASE, 'step': 0, 
+    'frame': 11, 'jobName': 'Explicit_1'})
+mdb.jobs['Explicit_1']._Message(STATUS, {'totalTime': 0.60000067949295, 
+    'stableTimeIncrement': 3.20820072374772e-06, 'stepTime': 0.60000067949295, 
+    'totalEnergy': 0.0129078216850758, 'jobName': 'Explicit_1', 'step': 1, 
+    'increment': 183421, 'phase': EXPLICIT_PHASE, 
+    'kineticEnergy': 0.197708323597908, 'wallTime': 57.0})
+mdb.jobs['Explicit_1']._Message(ODB_FRAME, {'phase': EXPLICIT_PHASE, 'step': 0, 
+    'frame': 12, 'jobName': 'Explicit_1'})
+mdb.jobs['Explicit_1']._Message(STATUS, {'totalTime': 0.650002419948578, 
+    'stableTimeIncrement': 3.20804406328534e-06, 'stepTime': 0.650002419948578, 
+    'totalEnergy': 0.0169499032199383, 'jobName': 'Explicit_1', 'step': 1, 
+    'increment': 198956, 'phase': EXPLICIT_PHASE, 
+    'kineticEnergy': 0.724895179271698, 'wallTime': 62.0})
+mdb.jobs['Explicit_1']._Message(ODB_FRAME, {'phase': EXPLICIT_PHASE, 'step': 0, 
+    'frame': 13, 'jobName': 'Explicit_1'})
+mdb.jobs['Explicit_1']._Message(STATUS, {'totalTime': 0.700001120567322, 
+    'stableTimeIncrement': 3.12988390760438e-06, 'stepTime': 0.700001120567322, 
+    'totalEnergy': -0.00764346122741699, 'jobName': 'Explicit_1', 'step': 1, 
+    'increment': 214748, 'phase': EXPLICIT_PHASE, 
+    'kineticEnergy': 2.93485307693481, 'wallTime': 69.0})
+mdb.jobs['Explicit_1']._Message(ODB_FRAME, {'phase': EXPLICIT_PHASE, 'step': 0, 
+    'frame': 14, 'jobName': 'Explicit_1'})
+del mdb.models['Box_Implicit_Explicit'].boundaryConditions['BC-5']
+mdb.jobs['Explicit_1']._Message(STATUS, {'totalTime': 0.750002503395081, 
+    'stableTimeIncrement': 3.12988390760438e-06, 'stepTime': 0.750002503395081, 
+    'totalEnergy': 0.0339388586580753, 'jobName': 'Explicit_1', 'step': 1, 
+    'increment': 230576, 'phase': EXPLICIT_PHASE, 
+    'kineticEnergy': 0.495578736066818, 'wallTime': 75.0})
+mdb.jobs['Explicit_1']._Message(ODB_FRAME, {'phase': EXPLICIT_PHASE, 'step': 0, 
+    'frame': 15, 'jobName': 'Explicit_1'})
+mdb.jobs['Explicit_1']._Message(ERROR, {'phase': EXPLICIT_PHASE, 
+    'message': 'Process terminated by external request (SIGTERM or SIGINT received).', 
+    'jobName': 'Explicit_1'})
+mdb.jobs['Explicit_1']._Message(INTERRUPTED, {'phase': EXPLICIT_PHASE, 
+    'message': 'Analysis terminated by external signal', 
+    'jobName': 'Explicit_1'})
+mdb.jobs['Explicit_1']._Message(ERROR, {
+    'message': 'Abaqus/Explicit Analysis exited with an error - Please see the  status file for possible error messages if the file exists.', 
+    'jobName': 'Explicit_1'})
+mdb.jobs['Explicit_1']._Message(JOB_ABORTED, {
+    'message': 'Abaqus/Explicit Analysis exited with an error - Please see the  status file for possible error messages if the file exists.', 
+    'jobName': 'Explicit_1'})
+mdb.jobs['Explicit_1'].submit(consistencyChecking=OFF)
+mdb.jobs['Explicit_1']._Message(STARTED, {'phase': BATCHPRE_PHASE, 
+    'clientHost': 'kkv-pc-51', 'handle': 0, 'jobName': 'Explicit_1'})
+mdb.jobs['Explicit_1']._Message(WARNING, {'phase': BATCHPRE_PHASE, 
+    'message': 'THE FIRST ORIENTATION SPECIFIED ON THE *CONNECTOR SECTION OPTION WILL BE IGNORED.', 
+    'jobName': 'Explicit_1'})
+mdb.jobs['Explicit_1']._Message(WARNING, {'phase': BATCHPRE_PHASE, 
+    'message': 'OUTPUT REQUEST STATUS IS NOT AVAILABLE FOR ELEMENT TYPE R3D4', 
+    'jobName': 'Explicit_1'})
+mdb.jobs['Explicit_1']._Message(WARNING, {'phase': BATCHPRE_PHASE, 
+    'message': 'OUTPUT REQUEST STATUS IS NOT AVAILABLE FOR ELEMENT TYPE R3D4', 
+    'jobName': 'Explicit_1'})
+mdb.jobs['Explicit_1']._Message(WARNING, {'phase': BATCHPRE_PHASE, 
+    'message': 'OUTPUT REQUEST STATUS IS NOT AVAILABLE FOR ELEMENT TYPE R3D4', 
+    'jobName': 'Explicit_1'})
+mdb.jobs['Explicit_1']._Message(WARNING, {'phase': BATCHPRE_PHASE, 
+    'message': 'OUTPUT REQUEST STATUS IS NOT AVAILABLE FOR ELEMENT TYPE R3D4', 
+    'jobName': 'Explicit_1'})
+mdb.jobs['Explicit_1']._Message(WARNING, {'phase': BATCHPRE_PHASE, 
+    'message': 'THE OPTION *BOUNDARY,TYPE=DISPLACEMENT HAS BEEN USED; CHECK STATUS FILE BETWEEN STEPS FOR WARNINGS ON ANY JUMPS PRESCRIBED ACROSS THE STEPS IN DISPLACEMENT VALUES OF TRANSLATIONAL DOF. FOR ROTATIONAL DOF MAKE SURE THAT THERE ARE NO SUCH JUMPS. ALL JUMPS IN DISPLACEMENTS ACROSS STEPS ARE IGNORED', 
+    'jobName': 'Explicit_1'})
+mdb.jobs['Explicit_1']._Message(WARNING, {'phase': BATCHPRE_PHASE, 
+    'message': '121 nodes have dof on which incorrect boundary conditions may have been specified. The nodes have been identified in node set WarnNodeBCIncorrectDof.', 
+    'jobName': 'Explicit_1'})
+mdb.jobs['Explicit_1']._Message(WARNING, {'phase': BATCHPRE_PHASE, 
+    'message': '121 nodes have dof on which incorrect boundary conditions may have been specified. The nodes have been identified in node set WarnNodeBCIncorrectDof.', 
+    'jobName': 'Explicit_1'})
+mdb.jobs['Explicit_1']._Message(COMPLETED, {'phase': BATCHPRE_PHASE, 
+    'message': 'Analysis phase complete', 'jobName': 'Explicit_1'})
+mdb.jobs['Explicit_1']._Message(STARTED, {'phase': PACKAGER_PHASE, 
+    'clientHost': 'kkv-pc-51', 'handle': 11492, 'jobName': 'Explicit_1'})
+mdb.jobs['Explicit_1']._Message(WARNING, {'phase': PACKAGER_PHASE, 
+    'message': 'There are 808 warning messages in the data (.dat) file.  Please check the data file for possible errors in the input file.', 
+    'jobName': 'Explicit_1'})
+mdb.jobs['Explicit_1']._Message(WARNING, {'phase': PACKAGER_PHASE, 
+    'message': 'Each of the nodes in node set WarnNodeBcAtRbSecondaryNode have prescribed boundary conditions and belong to rigid bodies but are not rigid body reference nodes. The boundary conditions at these nodes will not constrain the motion of the rigid bodies. See the status file for further details.', 
+    'jobName': 'Explicit_1'})
+mdb.jobs['Explicit_1']._Message(WARNING, {'phase': PACKAGER_PHASE, 
+    'message': 'Disconnected surfaces in the general contact domains are tied together, but the the surface connectivity is not altered, creating a seam in the contact surface.  Nodes along the tied surface perimeters have been added to node set WarnNodePerimTieSeam.', 
+    'jobName': 'Explicit_1'})
+mdb.jobs['Explicit_1']._Message(COMPLETED, {'phase': PACKAGER_PHASE, 
+    'message': 'Phase complete', 'jobName': 'Explicit_1'})
+mdb.jobs['Explicit_1']._Message(STARTED, {'phase': EXPLICIT_PHASE, 
+    'clientHost': 'kkv-pc-51', 'handle': 9456, 'jobName': 'Explicit_1'})
+mdb.jobs['Explicit_1']._Message(STATUS, {'totalTime': 0.0, 
+    'stableTimeIncrement': 3.10701898342813e-06, 'stepTime': 0.0, 
+    'totalEnergy': 0.0, 'jobName': 'Explicit_1', 'step': 1, 'increment': 0, 
+    'phase': EXPLICIT_PHASE, 'kineticEnergy': 0.0, 'wallTime': 1.0})
+mdb.jobs['Explicit_1']._Message(ODB_FRAME, {'phase': EXPLICIT_PHASE, 'step': 0, 
+    'frame': 0, 'jobName': 'Explicit_1'})
+mdb.jobs['Explicit_1']._Message(STATUS, {'totalTime': 0.0500029549002647, 
+    'stableTimeIncrement': 3.37782694259658e-06, 
+    'stepTime': 0.0500029549002647, 'totalEnergy': -5.51339374155191e-09, 
+    'jobName': 'Explicit_1', 'step': 1, 'increment': 14803, 
+    'phase': EXPLICIT_PHASE, 'kineticEnergy': 0.000117797244456597, 
+    'wallTime': 5.0})
+mdb.jobs['Explicit_1']._Message(ODB_FRAME, {'phase': EXPLICIT_PHASE, 'step': 0, 
+    'frame': 1, 'jobName': 'Explicit_1'})
+mdb.jobs['Explicit_1']._Message(STATUS, {'totalTime': 0.100002154707909, 
+    'stableTimeIncrement': 3.37782694259658e-06, 'stepTime': 0.100002154707909, 
+    'totalEnergy': -3.50062663301287e-08, 'jobName': 'Explicit_1', 'step': 1, 
+    'increment': 29613, 'phase': EXPLICIT_PHASE, 
+    'kineticEnergy': 0.00153555371798575, 'wallTime': 9.0})
+mdb.jobs['Explicit_1']._Message(ODB_FRAME, {'phase': EXPLICIT_PHASE, 'step': 0, 
+    'frame': 2, 'jobName': 'Explicit_1'})
+mdb.jobs['Explicit_1']._Message(STATUS, {'totalTime': 0.150000900030136, 
+    'stableTimeIncrement': 3.25317068927689e-06, 'stepTime': 0.150000900030136, 
+    'totalEnergy': 9.60641045821831e-07, 'jobName': 'Explicit_1', 'step': 1, 
+    'increment': 44844, 'phase': EXPLICIT_PHASE, 
+    'kineticEnergy': 0.00351867685094476, 'wallTime': 13.0})
+mdb.jobs['Explicit_1']._Message(ODB_FRAME, {'phase': EXPLICIT_PHASE, 'step': 0, 
+    'frame': 3, 'jobName': 'Explicit_1'})
+mdb.models['Box_Implicit_Explicit'].fieldOutputRequests['F-Output-1'].setValues(
+    variables=('S', 'SVAVG', 'PE', 'PEVAVG', 'PEEQ', 'PEEQVAVG', 'LE', 'U', 
+    'V', 'A'))
+mdb.jobs['Explicit_1']._Message(STATUS, {'totalTime': 0.200001090764999, 
+    'stableTimeIncrement': 3.25315977534046e-06, 'stepTime': 0.200001090764999, 
+    'totalEnergy': 1.18983734864742e-05, 'jobName': 'Explicit_1', 'step': 1, 
+    'increment': 60236, 'phase': EXPLICIT_PHASE, 
+    'kineticEnergy': 0.00605901330709457, 'wallTime': 18.0})
+mdb.jobs['Explicit_1']._Message(ODB_FRAME, {'phase': EXPLICIT_PHASE, 'step': 0, 
+    'frame': 4, 'jobName': 'Explicit_1'})
+mdb.jobs['Explicit_1']._Message(STATUS, {'totalTime': 0.250001281499863, 
+    'stableTimeIncrement': 3.2531270335312e-06, 'stepTime': 0.250001281499863, 
+    'totalEnergy': 0.000137356779305264, 'jobName': 'Explicit_1', 'step': 1, 
+    'increment': 75628, 'phase': EXPLICIT_PHASE, 
+    'kineticEnergy': 0.564940333366394, 'wallTime': 23.0})
+mdb.jobs['Explicit_1']._Message(ODB_FRAME, {'phase': EXPLICIT_PHASE, 'step': 0, 
+    'frame': 5, 'jobName': 'Explicit_1'})
+mdb.jobs['Explicit_1']._Message(STATUS, {'totalTime': 0.300002366304398, 
+    'stableTimeIncrement': 3.28197620547144e-06, 'stepTime': 0.300002366304398, 
+    'totalEnergy': -0.000158950686454773, 'jobName': 'Explicit_1', 'step': 1, 
+    'increment': 90935, 'phase': EXPLICIT_PHASE, 
+    'kineticEnergy': 25.8092880249023, 'wallTime': 27.0})
+mdb.jobs['Explicit_1']._Message(ODB_FRAME, {'phase': EXPLICIT_PHASE, 'step': 0, 
+    'frame': 6, 'jobName': 'Explicit_1'})
+mdb.jobs['Explicit_1']._Message(STATUS, {'totalTime': 0.350002318620682, 
+    'stableTimeIncrement': 3.28197620547144e-06, 'stepTime': 0.350002318620682, 
+    'totalEnergy': -0.000220052897930145, 'jobName': 'Explicit_1', 'step': 1, 
+    'increment': 106187, 'phase': EXPLICIT_PHASE, 
+    'kineticEnergy': 30.2721328735352, 'wallTime': 32.0})
+mdb.jobs['Explicit_1']._Message(ODB_FRAME, {'phase': EXPLICIT_PHASE, 'step': 0, 
+    'frame': 7, 'jobName': 'Explicit_1'})
+mdb.jobs['Explicit_1']._Message(STATUS, {'totalTime': 0.400000900030136, 
+    'stableTimeIncrement': 3.28197620547144e-06, 'stepTime': 0.400000900030136, 
+    'totalEnergy': 0.00516796112060547, 'jobName': 'Explicit_1', 'step': 1, 
+    'increment': 121442, 'phase': EXPLICIT_PHASE, 
+    'kineticEnergy': 9.45602035522461, 'wallTime': 36.0})
+mdb.jobs['Explicit_1']._Message(ODB_FRAME, {'phase': EXPLICIT_PHASE, 'step': 0, 
+    'frame': 8, 'jobName': 'Explicit_1'})
+mdb.jobs['Explicit_1']._Message(STATUS, {'totalTime': 0.450001388788223, 
+    'stableTimeIncrement': 3.28197620547144e-06, 'stepTime': 0.450001388788223, 
+    'totalEnergy': 0.0674428343772888, 'jobName': 'Explicit_1', 'step': 1, 
+    'increment': 136700, 'phase': EXPLICIT_PHASE, 
+    'kineticEnergy': 16.4489002227783, 'wallTime': 40.0})
+mdb.jobs['Explicit_1']._Message(ODB_FRAME, {'phase': EXPLICIT_PHASE, 'step': 0, 
+    'frame': 9, 'jobName': 'Explicit_1'})
+mdb.jobs['Explicit_1']._Message(STATUS, {'totalTime': 0.50000137090683, 
+    'stableTimeIncrement': 3.28197620547144e-06, 'stepTime': 0.50000137090683, 
+    'totalEnergy': 0.205186247825623, 'jobName': 'Explicit_1', 'step': 1, 
+    'increment': 151952, 'phase': EXPLICIT_PHASE, 
+    'kineticEnergy': 15.9178333282471, 'wallTime': 45.0})
+mdb.jobs['Explicit_1']._Message(ODB_FRAME, {'phase': EXPLICIT_PHASE, 'step': 0, 
+    'frame': 10, 'jobName': 'Explicit_1'})
+mdb.jobs['Explicit_1']._Message(STATUS, {'totalTime': 0.550001323223114, 
+    'stableTimeIncrement': 3.28197620547144e-06, 'stepTime': 0.550001323223114, 
+    'totalEnergy': 0.309983849525452, 'jobName': 'Explicit_1', 'step': 1, 
+    'increment': 167204, 'phase': EXPLICIT_PHASE, 
+    'kineticEnergy': 12.8750171661377, 'wallTime': 49.0})
+mdb.jobs['Explicit_1']._Message(ODB_FRAME, {'phase': EXPLICIT_PHASE, 'step': 0, 
+    'frame': 11, 'jobName': 'Explicit_1'})
+mdb.jobs['Explicit_1']._Message(STATUS, {'totalTime': 0.600001275539398, 
+    'stableTimeIncrement': 3.28197620547144e-06, 'stepTime': 0.600001275539398, 
+    'totalEnergy': 0.479405492544174, 'jobName': 'Explicit_1', 'step': 1, 
+    'increment': 182456, 'phase': EXPLICIT_PHASE, 
+    'kineticEnergy': 11.7105178833008, 'wallTime': 54.0})
+mdb.jobs['Explicit_1']._Message(ODB_FRAME, {'phase': EXPLICIT_PHASE, 'step': 0, 
+    'frame': 12, 'jobName': 'Explicit_1'})
+mdb.jobs['Explicit_1']._Message(STATUS, {'totalTime': 0.650001227855682, 
+    'stableTimeIncrement': 3.28197620547144e-06, 'stepTime': 0.650001227855682, 
+    'totalEnergy': 0.782126665115356, 'jobName': 'Explicit_1', 'step': 1, 
+    'increment': 197708, 'phase': EXPLICIT_PHASE, 
+    'kineticEnergy': 8.65966987609863, 'wallTime': 58.0})
+mdb.jobs['Explicit_1']._Message(ODB_FRAME, {'phase': EXPLICIT_PHASE, 'step': 0, 
+    'frame': 13, 'jobName': 'Explicit_1'})
+mdb.jobs['Explicit_1']._Message(STATUS, {'totalTime': 0.700001180171967, 
+    'stableTimeIncrement': 3.28197620547144e-06, 'stepTime': 0.700001180171967, 
+    'totalEnergy': 1.02269625663757, 'jobName': 'Explicit_1', 'step': 1, 
+    'increment': 212960, 'phase': EXPLICIT_PHASE, 
+    'kineticEnergy': 8.36237716674805, 'wallTime': 63.0})
+mdb.jobs['Explicit_1']._Message(ODB_FRAME, {'phase': EXPLICIT_PHASE, 'step': 0, 
+    'frame': 14, 'jobName': 'Explicit_1'})
+mdb.jobs['Explicit_1']._Message(STATUS, {'totalTime': 0.750001132488251, 
+    'stableTimeIncrement': 3.28197620547144e-06, 'stepTime': 0.750001132488251, 
+    'totalEnergy': 1.19535791873932, 'jobName': 'Explicit_1', 'step': 1, 
+    'increment': 228212, 'phase': EXPLICIT_PHASE, 
+    'kineticEnergy': 7.370436668396, 'wallTime': 67.0})
+mdb.jobs['Explicit_1']._Message(ODB_FRAME, {'phase': EXPLICIT_PHASE, 'step': 0, 
+    'frame': 15, 'jobName': 'Explicit_1'})
+mdb.jobs['Explicit_1']._Message(STATUS, {'totalTime': 0.800001084804535, 
+    'stableTimeIncrement': 3.28197620547144e-06, 'stepTime': 0.800001084804535, 
+    'totalEnergy': 1.38854932785034, 'jobName': 'Explicit_1', 'step': 1, 
+    'increment': 243464, 'phase': EXPLICIT_PHASE, 
+    'kineticEnergy': 6.05597305297852, 'wallTime': 72.0})
+mdb.jobs['Explicit_1']._Message(ODB_FRAME, {'phase': EXPLICIT_PHASE, 'step': 0, 
+    'frame': 16, 'jobName': 'Explicit_1'})
+mdb.jobs['Explicit_1']._Message(STATUS, {'totalTime': 0.850001037120819, 
+    'stableTimeIncrement': 3.28197620547144e-06, 'stepTime': 0.850001037120819, 
+    'totalEnergy': 1.53626012802124, 'jobName': 'Explicit_1', 'step': 1, 
+    'increment': 258716, 'phase': EXPLICIT_PHASE, 
+    'kineticEnergy': 5.00597953796387, 'wallTime': 76.0})
+mdb.jobs['Explicit_1']._Message(ODB_FRAME, {'phase': EXPLICIT_PHASE, 'step': 0, 
+    'frame': 17, 'jobName': 'Explicit_1'})
+mdb.jobs['Explicit_1']._Message(STATUS, {'totalTime': 0.900000989437103, 
+    'stableTimeIncrement': 3.28197620547144e-06, 'stepTime': 0.900000989437103, 
+    'totalEnergy': 1.63716018199921, 'jobName': 'Explicit_1', 'step': 1, 
+    'increment': 273968, 'phase': EXPLICIT_PHASE, 
+    'kineticEnergy': 5.19160032272339, 'wallTime': 80.0})
+mdb.jobs['Explicit_1']._Message(ODB_FRAME, {'phase': EXPLICIT_PHASE, 'step': 0, 
+    'frame': 18, 'jobName': 'Explicit_1'})
+mdb.jobs['Explicit_1']._Message(STATUS, {'totalTime': 0.950000941753387, 
+    'stableTimeIncrement': 3.28197620547144e-06, 'stepTime': 0.950000941753387, 
+    'totalEnergy': 1.80171012878418, 'jobName': 'Explicit_1', 'step': 1, 
+    'increment': 289220, 'phase': EXPLICIT_PHASE, 
+    'kineticEnergy': 3.44601893424988, 'wallTime': 85.0})
+mdb.jobs['Explicit_1']._Message(ODB_FRAME, {'phase': EXPLICIT_PHASE, 'step': 0, 
+    'frame': 19, 'jobName': 'Explicit_1'})
+mdb.models['Box_Implicit_Explicit'].boundaryConditions['Disp_loading'].deactivate(
+    'Release')
+mdb.jobs['Explicit_1']._Message(STATUS, {'totalTime': 1.0, 
+    'stableTimeIncrement': 3.28197620547144e-06, 'stepTime': 1.0, 
+    'totalEnergy': 2.0330023765564, 'jobName': 'Explicit_1', 'step': 1, 
+    'increment': 304472, 'phase': EXPLICIT_PHASE, 
+    'kineticEnergy': 3.14991688728333, 'wallTime': 89.0})
+mdb.jobs['Explicit_1']._Message(ODB_FRAME, {'phase': EXPLICIT_PHASE, 'step': 0, 
+    'frame': 20, 'jobName': 'Explicit_1'})
+mdb.jobs['Explicit_1']._Message(STATUS, {'totalTime': 1.0, 
+    'stableTimeIncrement': 3.10625500787864e-06, 'stepTime': 0.0, 
+    'totalEnergy': 2.03300261497498, 'jobName': 'Explicit_1', 'step': 2, 
+    'increment': 0, 'phase': EXPLICIT_PHASE, 'kineticEnergy': 3.14991688728333, 
+    'wallTime': 89.0})
+mdb.jobs['Explicit_1']._Message(ODB_FRAME, {'phase': EXPLICIT_PHASE, 'step': 1, 
+    'frame': 0, 'jobName': 'Explicit_1'})
+mdb.jobs['Explicit_1']._Message(WARNING, {'phase': EXPLICIT_PHASE, 
+    'message': 'The option *BOUNDARY,TYPE=DISPLACEMENT has been used with a jump in displacements at the nodes in node set WarnNodeDispBCJump-Step2 at the beginning of the next step; all jumps in displacement across steps are ignored. See the status file for further details.', 
+    'jobName': 'Explicit_1'})
+mdb.jobs['Explicit_1']._Message(STATUS, {'totalTime': 1.05000078678131, 
+    'stableTimeIncrement': 3.28197620547144e-06, 
+    'stepTime': 0.0500007979571819, 'totalEnergy': 2.19137954711914, 
+    'jobName': 'Explicit_1', 'step': 2, 'increment': 15235, 
+    'phase': EXPLICIT_PHASE, 'kineticEnergy': 2.47797894477844, 
+    'wallTime': 94.0})
+mdb.jobs['Explicit_1']._Message(ODB_FRAME, {'phase': EXPLICIT_PHASE, 'step': 1, 
+    'frame': 1, 'jobName': 'Explicit_1'})
+mdb.jobs['Explicit_1']._Message(STATUS, {'totalTime': 1.1000018119812, 
+    'stableTimeIncrement': 3.28197620547144e-06, 'stepTime': 0.100001826882362, 
+    'totalEnergy': 2.28232622146606, 'jobName': 'Explicit_1', 'step': 2, 
+    'increment': 30483, 'phase': EXPLICIT_PHASE, 
+    'kineticEnergy': 1.69274961948395, 'wallTime': 98.0})
+mdb.jobs['Explicit_1']._Message(ODB_FRAME, {'phase': EXPLICIT_PHASE, 'step': 1, 
+    'frame': 2, 'jobName': 'Explicit_1'})
+mdb.jobs['Explicit_1']._Message(STATUS, {'totalTime': 1.15000176429749, 
+    'stableTimeIncrement': 3.28197620547144e-06, 'stepTime': 0.150001779198647, 
+    'totalEnergy': 2.35303521156311, 'jobName': 'Explicit_1', 'step': 2, 
+    'increment': 45735, 'phase': EXPLICIT_PHASE, 
+    'kineticEnergy': 0.762352406978607, 'wallTime': 102.0})
+mdb.jobs['Explicit_1']._Message(ODB_FRAME, {'phase': EXPLICIT_PHASE, 'step': 1, 
+    'frame': 3, 'jobName': 'Explicit_1'})
+mdb.jobs['Explicit_1']._Message(STATUS, {'totalTime': 1.20000171661377, 
+    'stableTimeIncrement': 3.28197620547144e-06, 'stepTime': 0.200001731514931, 
+    'totalEnergy': 2.40834784507751, 'jobName': 'Explicit_1', 'step': 2, 
+    'increment': 60987, 'phase': EXPLICIT_PHASE, 
+    'kineticEnergy': 1.29124128818512, 'wallTime': 107.0})
+mdb.jobs['Explicit_1']._Message(ODB_FRAME, {'phase': EXPLICIT_PHASE, 'step': 1, 
+    'frame': 4, 'jobName': 'Explicit_1'})
+mdb.jobs['Explicit_1']._Message(ERROR, {'phase': EXPLICIT_PHASE, 
+    'message': 'Process terminated by external request (SIGTERM or SIGINT received).', 
+    'jobName': 'Explicit_1'})
+mdb.jobs['Explicit_1']._Message(INTERRUPTED, {'phase': EXPLICIT_PHASE, 
+    'message': 'Analysis terminated by external signal', 
+    'jobName': 'Explicit_1'})
+mdb.jobs['Explicit_1']._Message(ERROR, {
+    'message': 'Abaqus/Explicit Analysis exited with an error - Please see the  status file for possible error messages if the file exists.', 
+    'jobName': 'Explicit_1'})
+mdb.jobs['Explicit_1']._Message(JOB_ABORTED, {
+    'message': 'Abaqus/Explicit Analysis exited with an error - Please see the  status file for possible error messages if the file exists.', 
+    'jobName': 'Explicit_1'})
+#--- End of Recover file ------
+mdb.save()
+#: The model database has been saved to "C:\Users\p2321038\Documents\GitHub\ABAQUS_Python_Course_2023\Project - Origami\Model_3\Box.cae".
+p = mdb.models['Box_Implicit_Explicit'].parts['Part-1']
+session.viewports['Viewport: 1'].setValues(displayedObject=p)
+a = mdb.models['Box_Implicit_Explicit'].rootAssembly
+session.viewports['Viewport: 1'].setValues(displayedObject=a)
+session.viewports['Viewport: 1'].assemblyDisplay.setValues(
+    optimizationTasks=OFF, geometricRestrictions=OFF, stopConditions=OFF)
+session.viewports['Viewport: 1'].view.setValues(nearPlane=445.167, 
+    farPlane=793.262, width=375.433, height=212.331, cameraPosition=(-186.094, 
+    422.852, -364.463), cameraUpVector=(-0.453261, 0.0960898, 0.886183), 
+    cameraTarget=(70.5433, 28.5325, 43.8863))
+session.viewports['Viewport: 1'].view.setValues(nearPlane=446.976, 
+    farPlane=791.453, width=376.959, height=213.194, cameraPosition=(-186.094, 
+    422.852, -364.463), cameraUpVector=(0.106365, 0.457069, 0.883049), 
+    cameraTarget=(70.5433, 28.5325, 43.8863))
+session.viewports['Viewport: 1'].view.setValues(nearPlane=431.823, 
+    farPlane=800.855, width=364.18, height=205.967, cameraPosition=(-316.848, 
+    498.959, -83.0236), cameraUpVector=(0.156271, -0.049889, 0.986453), 
+    cameraTarget=(71.3377, 28.0701, 42.1764))
+session.viewports['Viewport: 1'].view.setValues(nearPlane=430.701, 
+    farPlane=797.56, width=363.235, height=205.432, cameraPosition=(-280.095, 
+    505.805, 230.041), cameraUpVector=(0.489382, -0.387707, 0.781145), 
+    cameraTarget=(70.9419, 27.9964, 38.805))
+session.viewports['Viewport: 1'].view.setValues(nearPlane=430.883, 
+    farPlane=797.377, width=363.389, height=205.519, cameraPosition=(-280.095, 
+    505.805, 230.041), cameraUpVector=(0.31464, -0.521009, 0.793443), 
+    cameraTarget=(70.9419, 27.9964, 38.805))
+session.viewports['Viewport: 1'].assemblyDisplay.setValues(loads=ON, bcs=ON, 
+    predefinedFields=ON, connectors=ON)
+session.viewports['Viewport: 1'].assemblyDisplay.setValues(step='Loading')
+session.viewports['Viewport: 1'].assemblyDisplay.setValues(step='Initial')
+session.viewports['Viewport: 1'].assemblyDisplay.setValues(loads=OFF, bcs=OFF, 
+    predefinedFields=OFF, interactions=ON, constraints=ON, 
+    engineeringFeatures=ON)
+session.viewports['Viewport: 1'].assemblyDisplay.setValues(interactions=OFF, 
+    constraints=OFF, connectors=OFF, engineeringFeatures=OFF)
+mdb.jobs['Explicit_1'].submit(consistencyChecking=OFF)
+#: The job input file "Explicit_1.inp" has been submitted for analysis.
+#: Job Explicit_1: Analysis Input File Processor completed successfully.
+#: Job Explicit_1: Abaqus/Explicit Packager completed successfully.
+o3 = session.openOdb(
+    name='C:/Users/p2321038/Documents/GitHub/ABAQUS_Python_Course_2023/Project - Origami/Model_3/Explicit_1.odb')
+#: Model: C:/Users/p2321038/Documents/GitHub/ABAQUS_Python_Course_2023/Project - Origami/Model_3/Explicit_1.odb
+#: Number of Assemblies:         1
+#: Number of Assembly instances: 0
+#: Number of Part instances:     5
+#: Number of Meshes:             6
+#: Number of Element Sets:       16
+#: Number of Node Sets:          22
+#: Number of Steps:              2
+session.viewports['Viewport: 1'].setValues(displayedObject=o3)
+session.viewports['Viewport: 1'].makeCurrent()
+session.viewports['Viewport: 1'].odbDisplay.display.setValues(plotState=(
+    CONTOURS_ON_DEF, ))
+session.viewports['Viewport: 1'].view.setValues(nearPlane=467.343, 
+    farPlane=773.486, width=394.136, height=222.908, cameraPosition=(-10.4642, 
+    463.509, -396.722), cameraUpVector=(-0.891957, -0.331616, 0.307318), 
+    cameraTarget=(69.5981, 28.694, 42.1698))
+session.viewports['Viewport: 1'].view.setValues(nearPlane=443.018, 
+    farPlane=790.75, width=373.621, height=211.306, cameraPosition=(-195.688, 
+    590.887, 14.7021), cameraUpVector=(-0.254607, -0.450212, 0.855853), 
+    cameraTarget=(70.363, 28.168, 40.4709))
+session.viewports['Viewport: 1'].view.setValues(nearPlane=444.904, 
+    farPlane=788.864, width=375.211, height=212.205, cameraPosition=(-195.688, 
+    590.887, 14.7021), cameraUpVector=(0.115557, -0.270627, 0.955724), 
+    cameraTarget=(70.363, 28.168, 40.4709))
+session.viewports['Viewport: 1'].view.setValues(nearPlane=440.925, 
+    farPlane=791.608, width=371.855, height=210.308, cameraPosition=(-181.602, 
+    585.863, 156.186), cameraUpVector=(0.178298, -0.473066, 0.862797), 
+    cameraTarget=(70.2239, 28.2176, 39.0735))
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=5 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=5 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=5 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=5 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=5 )
+session.viewports['Viewport: 1'].view.setValues(nearPlane=462.201, 
+    farPlane=772.703, width=389.799, height=220.456, cameraPosition=(-15.2655, 
+    635.297, 148.318), cameraUpVector=(0.0923061, -0.485264, 0.869481), 
+    cameraTarget=(68.5065, 27.7072, 39.1547))
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=5 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=6 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=6 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=5 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=4 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=3 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=4 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=5 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=6 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=6 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=5 )
+p = mdb.models['Box_Implicit_Explicit'].parts['Part-1']
+session.viewports['Viewport: 1'].setValues(displayedObject=p)
+a = mdb.models['Box_Implicit_Explicit'].rootAssembly
+session.viewports['Viewport: 1'].setValues(displayedObject=a)
+session.viewports['Viewport: 1'].assemblyDisplay.setValues(loads=ON, bcs=ON, 
+    predefinedFields=ON, connectors=ON)
+session.viewports['Viewport: 1'].assemblyDisplay.setValues(step='Loading')
+mdb.models['Box_Implicit_Explicit'].Gravity(name='Load-1', 
+    createStepName='Loading', comp3=-9.81, distributionType=UNIFORM, field='')
+mdb.models['Box_Implicit_Explicit'].boundaryConditions['Disp_loading'].setValues(
+    u1=UNSET)
+o3 = session.openOdb(
+    name='C:/Users/p2321038/Documents/GitHub/ABAQUS_Python_Course_2023/Project - Origami/Model_3/Explicit_1.odb')
+session.viewports['Viewport: 1'].setValues(displayedObject=o3)
+session.viewports['Viewport: 1'].makeCurrent()
+a = mdb.models['Box_Implicit_Explicit'].rootAssembly
+session.viewports['Viewport: 1'].setValues(displayedObject=a)
+session.viewports['Viewport: 1'].setValues(
+    displayedObject=session.odbs['C:/Users/p2321038/Documents/GitHub/ABAQUS_Python_Course_2023/Project - Origami/Model_3/Explicit_1.odb'])
+session.viewports['Viewport: 1'].assemblyDisplay.setValues(loads=OFF, bcs=OFF, 
+    predefinedFields=OFF, connectors=OFF)
+session.viewports[session.currentViewportName].odbDisplay.setFrame(
+    step='Release', frame=2)
+p = mdb.models['Box_Implicit_Explicit'].parts['Part-1']
+session.viewports['Viewport: 1'].setValues(displayedObject=p)
+a = mdb.models['Box_Implicit_Explicit'].rootAssembly
+session.viewports['Viewport: 1'].setValues(displayedObject=a)
+a = mdb.models['Box_Implicit_Explicit'].rootAssembly
+session.viewports['Viewport: 1'].setValues(displayedObject=a)
+mdb.jobs['Explicit_1'].kill()
+#: Error in job Explicit_1: Process terminated by external request (SIGTERM or SIGINT received).
+#: Job Explicit_1: Abaqus/Explicit was terminated prior to analysis completion.
+#: ERROR in job messaging system: Error in connection to analysis
+#: Error in job Explicit_1: Abaqus/Explicit Analysis exited with an error - Please see the  status file for possible error messages if the file exists.
+mdb.Job(name='Explicit_2', objectToCopy=mdb.jobs['Explicit_1'])
+session.viewports['Viewport: 1'].assemblyDisplay.setValues(loads=ON, bcs=ON, 
+    predefinedFields=ON, connectors=ON)
+mdb.models['Box_Implicit_Explicit'].EquallySpacedAmplitude(name='Amp-2', 
+    timeSpan=STEP, smooth=SOLVER_DEFAULT, fixedInterval=100.0, begin=0.0, 
+    data=(0.0, 1.0))
+mdb.models['Box_Implicit_Explicit'].boundaryConditions['Disp_loading'].setValues(
+    amplitude='Amp-2')
+session.viewports['Viewport: 1'].assemblyDisplay.setValues(loads=OFF, bcs=OFF, 
+    predefinedFields=OFF, connectors=OFF)
+mdb.jobs['Explicit_2'].submit(consistencyChecking=OFF)
+#: The job input file "Explicit_2.inp" has been submitted for analysis.
+#: Job Explicit_2: Analysis Input File Processor completed successfully.
+#: Job Explicit_2: Abaqus/Explicit Packager completed successfully.
+session.viewports['Viewport: 1'].setValues(
+    displayedObject=session.odbs['C:/Users/p2321038/Documents/GitHub/ABAQUS_Python_Course_2023/Project - Origami/Model_3/Explicit_1.odb'])
+o3 = session.openOdb(
+    name='C:/Users/p2321038/Documents/GitHub/ABAQUS_Python_Course_2023/Project - Origami/Model_3/Explicit_2.odb')
+#: Model: C:/Users/p2321038/Documents/GitHub/ABAQUS_Python_Course_2023/Project - Origami/Model_3/Explicit_2.odb
+#: Number of Assemblies:         1
+#: Number of Assembly instances: 0
+#: Number of Part instances:     5
+#: Number of Meshes:             6
+#: Number of Element Sets:       17
+#: Number of Node Sets:          22
+#: Number of Steps:              2
+session.viewports['Viewport: 1'].setValues(displayedObject=o3)
+session.viewports['Viewport: 1'].makeCurrent()
+session.viewports['Viewport: 1'].odbDisplay.display.setValues(plotState=(
+    CONTOURS_ON_DEF, ))
+session.viewports['Viewport: 1'].view.setValues(nearPlane=441.498, 
+    farPlane=805.685, width=372.339, height=210.581, cameraPosition=(477.905, 
+    499.121, 71.2743), cameraUpVector=(-0.829582, 0.247574, 0.500501), 
+    cameraTarget=(70.5615, 28.5749, 43.7591))
+session.viewports['Viewport: 1'].view.setValues(nearPlane=443.623, 
+    farPlane=803.559, width=374.131, height=211.595, cameraPosition=(477.905, 
+    499.121, 71.2743), cameraUpVector=(-0.564581, -0.000830099, 0.825377), 
+    cameraTarget=(70.5615, 28.5749, 43.7591))
+session.viewports['Viewport: 1'].view.setValues(nearPlane=451.857, 
+    farPlane=789.725, width=381.076, height=215.522, cameraPosition=(257.279, 
+    612.459, 155.039), cameraUpVector=(-0.392589, -0.388771, 0.833505), 
+    cameraTarget=(70.344, 28.6866, 43.8417))
+session.viewports['Viewport: 1'].view.setValues(nearPlane=434.011, 
+    farPlane=795.946, width=366.026, height=207.01, cameraPosition=(-410.076, 
+    421.047, 84.2888), cameraUpVector=(0.546085, 0.0571303, 0.83578), 
+    cameraTarget=(72.6933, 29.3604, 44.0908))
+session.viewports['Viewport: 1'].view.setValues(width=345.2, height=195.232, 
+    viewOffsetX=-1.92875, viewOffsetY=-0.0231624)
+session.viewports['Viewport: 1'].view.setValues(nearPlane=437.341, 
+    farPlane=792.618, width=346.705, height=196.083, cameraPosition=(-410.298, 
+    420.929, 82.778), cameraUpVector=(0.219087, -0.353466, 0.90943), 
+    cameraTarget=(72.4716, 29.2422, 42.58), viewOffsetX=-1.93716, 
+    viewOffsetY=-0.0232634)
+session.viewports['Viewport: 1'].view.setValues(nearPlane=443.862, 
+    farPlane=789.042, width=351.875, height=199.007, cameraPosition=(-152.435, 
+    547.597, 304.701), cameraUpVector=(0.25663, -0.653935, 0.711695), 
+    cameraTarget=(68.3163, 28.6336, 40.0372), viewOffsetX=-1.96605, 
+    viewOffsetY=-0.0236103)
+session.viewports['Viewport: 1'].view.setValues(width=373.905, height=211.467, 
+    viewOffsetX=-5.70285, viewOffsetY=1.72947)
+session.viewports[session.currentViewportName].odbDisplay.setFrame(
+    step='Release', frame=4)
+p = mdb.models['Box_Implicit_Explicit'].parts['Part-1']
+session.viewports['Viewport: 1'].setValues(displayedObject=p)
+a = mdb.models['Box_Implicit_Explicit'].rootAssembly
+session.viewports['Viewport: 1'].setValues(displayedObject=a)
+a = mdb.models['Box_Implicit_Explicit'].rootAssembly
+session.viewports['Viewport: 1'].setValues(displayedObject=a)
+mdb.jobs['Explicit_2'].kill()
+#: Error in job Explicit_2: Process terminated by external request (SIGTERM or SIGINT received).
+#: Job Explicit_2: Abaqus/Explicit was terminated prior to analysis completion.
+#: ERROR in job messaging system: Error in connection to analysis
+session.viewports['Viewport: 1'].assemblyDisplay.setValues(loads=ON, bcs=ON, 
+    predefinedFields=ON, connectors=ON)
+#: Error in job Explicit_2: Abaqus/Explicit Analysis exited with an error - Please see the  status file for possible error messages if the file exists.
+mdb.models['Box_Implicit_Explicit'].amplitudes['Amp-2'].setValues(
+    timeSpan=STEP, smooth=SOLVER_DEFAULT, fixedInterval=100.0, begin=0.0, 
+    data=(0.0, 1.0))
+del mdb.models['Box_Implicit_Explicit'].amplitudes['Amp-2']
+mdb.models['Box_Implicit_Explicit'].EquallySpacedAmplitude(name='Amp-2', 
+    timeSpan=STEP, smooth=SOLVER_DEFAULT, fixedInterval=1.0, begin=0.0, data=(
+    0.0, 1.0))
+session.viewports['Viewport: 1'].assemblyDisplay.setValues(loads=OFF, bcs=OFF, 
+    predefinedFields=OFF, connectors=OFF)
+mdb.jobs['Explicit_2'].submit(consistencyChecking=OFF)
+#: The job input file "Explicit_2.inp" has been submitted for analysis.
+#: Job Explicit_2: Analysis Input File Processor completed successfully.
+#: Job Explicit_2: Abaqus/Explicit Packager completed successfully.
+o3 = session.openOdb(
+    name='C:/Users/p2321038/Documents/GitHub/ABAQUS_Python_Course_2023/Project - Origami/Model_3/Explicit_2.odb')
+#: Model: C:/Users/p2321038/Documents/GitHub/ABAQUS_Python_Course_2023/Project - Origami/Model_3/Explicit_2.odb
+#: Number of Assemblies:         1
+#: Number of Assembly instances: 0
+#: Number of Part instances:     5
+#: Number of Meshes:             6
+#: Number of Element Sets:       17
+#: Number of Node Sets:          22
+#: Number of Steps:              2
+session.viewports['Viewport: 1'].setValues(displayedObject=o3)
+session.viewports['Viewport: 1'].makeCurrent()
+session.viewports['Viewport: 1'].odbDisplay.display.setValues(plotState=(
+    CONTOURS_ON_DEF, ))
+session.viewports['Viewport: 1'].view.setValues(nearPlane=447.272, 
+    farPlane=799.2, width=377.209, height=213.335, cameraPosition=(-20.3391, 
+    427.403, -397.255), cameraUpVector=(-0.687, 0.132899, 0.714402), 
+    cameraTarget=(84.4655, 27.3213, 68.6315))
+session.viewports['Viewport: 1'].view.setValues(nearPlane=422.345, 
+    farPlane=795.808, width=356.187, height=201.446, cameraPosition=(-272.452, 
+    529.692, -23.1408), cameraUpVector=(-0.236732, -0.421335, 0.875463), 
+    cameraTarget=(84.3606, 27.3639, 68.7871))
+session.viewports['Viewport: 1'].view.setValues(nearPlane=424.15, 
+    farPlane=794.003, width=357.709, height=202.307, cameraUpVector=(0.0563785, 
+    -0.19412, 0.979356), cameraTarget=(84.3606, 27.3639, 68.7871))
+session.viewports['Viewport: 1'].view.setValues(nearPlane=415.946, 
+    farPlane=793.639, width=350.791, height=198.394, cameraPosition=(-281.569, 
+    514.414, 194.827), cameraUpVector=(0.121944, -0.556213, 0.822044), 
+    cameraTarget=(84.5687, 27.7126, 63.8129))
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=3 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=2 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=1 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=2 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=3 )
+session.viewports['Viewport: 1'].view.setValues(nearPlane=456.084, 
+    farPlane=770.892, width=384.641, height=217.539, cameraPosition=(-9.80239, 
+    633.582, 163.029), cameraUpVector=(0.0614656, -0.474148, 0.878297), 
+    cameraTarget=(77.6356, 24.6724, 64.6241))
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=2 )
+p = mdb.models['Box_Implicit_Explicit'].parts['Part-1']
+session.viewports['Viewport: 1'].setValues(displayedObject=p)
+a = mdb.models['Box_Implicit_Explicit'].rootAssembly
+session.viewports['Viewport: 1'].setValues(displayedObject=a)
+mdb.Job(name='Explicit_2_NoSpring', objectToCopy=mdb.jobs['Explicit_2'])
+session.viewports['Viewport: 1'].partDisplay.setValues(sectionAssignments=ON, 
+    engineeringFeatures=ON)
+session.viewports['Viewport: 1'].partDisplay.geometryOptions.setValues(
+    referenceRepresentation=OFF)
+p = mdb.models['Box_Implicit_Explicit'].parts['Part-1']
+session.viewports['Viewport: 1'].setValues(displayedObject=p)
+session.viewports['Viewport: 1'].partDisplay.setValues(sectionAssignments=OFF, 
+    engineeringFeatures=OFF)
+session.viewports['Viewport: 1'].partDisplay.geometryOptions.setValues(
+    referenceRepresentation=ON)
+a = mdb.models['Box_Implicit_Explicit'].rootAssembly
+session.viewports['Viewport: 1'].setValues(displayedObject=a)
+mdb.models['Box_Implicit_Explicit'].rootAssembly.sectionAssignments[0].suppress(
+    )
+session.viewports['Viewport: 1'].assemblyDisplay.setValues(interactions=ON, 
+    constraints=ON, connectors=ON, engineeringFeatures=ON)
+session.viewports['Viewport: 1'].assemblyDisplay.setValues(interactions=OFF, 
+    constraints=OFF, connectors=OFF, engineeringFeatures=OFF)
+mdb.jobs['Explicit_2_NoSpring'].submit(consistencyChecking=OFF)
+#: The job input file "Explicit_2_NoSpring.inp" has been submitted for analysis.
+mdb.save()
+#: The model database has been saved to "C:\Users\p2321038\Documents\GitHub\ABAQUS_Python_Course_2023\Project - Origami\Model_3\Box.cae".
+#: Job Explicit_2_NoSpring: Analysis Input File Processor completed successfully.
+#: Job Explicit_2_NoSpring: Abaqus/Explicit Packager completed successfully.
+session.viewports['Viewport: 1'].setValues(
+    displayedObject=session.odbs['C:/Users/p2321038/Documents/GitHub/ABAQUS_Python_Course_2023/Project - Origami/Model_3/Explicit_2.odb'])
+o3 = session.openOdb(
+    name='C:/Users/p2321038/Documents/GitHub/ABAQUS_Python_Course_2023/Project - Origami/Model_3/Explicit_2_NoSpring.odb')
+#: Model: C:/Users/p2321038/Documents/GitHub/ABAQUS_Python_Course_2023/Project - Origami/Model_3/Explicit_2_NoSpring.odb
+#: Number of Assemblies:         1
+#: Number of Assembly instances: 0
+#: Number of Part instances:     5
+#: Number of Meshes:             5
+#: Number of Element Sets:       16
+#: Number of Node Sets:          22
+#: Number of Steps:              2
+session.viewports['Viewport: 1'].setValues(displayedObject=o3)
+session.viewports['Viewport: 1'].makeCurrent()
+session.viewports['Viewport: 1'].odbDisplay.display.setValues(plotState=(
+    CONTOURS_ON_DEF, ))
+session.viewports['Viewport: 1'].view.setValues(nearPlane=445.375, 
+    farPlane=800.284, width=375.608, height=212.43, cameraPosition=(401.209, 
+    417.737, -318.225), cameraUpVector=(-0.656399, 0.523114, 0.543592), 
+    cameraTarget=(70.3299, 28.7497, 38.5769))
+session.viewports['Viewport: 1'].view.setValues(nearPlane=447.873, 
+    farPlane=797.786, width=377.715, height=213.622, cameraPosition=(401.209, 
+    417.737, -318.225), cameraUpVector=(-0.0512529, 0.36311, 0.930336), 
+    cameraTarget=(70.3299, 28.7497, 38.5769))
+session.viewports['Viewport: 1'].view.setValues(nearPlane=452.56, 
+    farPlane=789.576, width=381.669, height=215.858, cameraPosition=(275.985, 
+    612.299, -33.8393), cameraUpVector=(-0.21426, -0.160896, 0.963434), 
+    cameraTarget=(70.3595, 28.7037, 38.5097))
+session.viewports['Viewport: 1'].view.setValues(nearPlane=472.649, 
+    farPlane=764.542, width=398.612, height=225.44, cameraPosition=(21.0107, 
+    649.488, 46.6946), cameraUpVector=(0.336031, -0.319351, 0.886058), 
+    cameraTarget=(71.143, 28.5894, 38.2622))
+session.viewports['Viewport: 1'].view.setValues(nearPlane=438.096, 
+    farPlane=794.687, width=369.471, height=208.959, cameraPosition=(-246.224, 
+    448.734, 368.913), cameraUpVector=(0.601572, -0.51965, 0.606692), 
+    cameraTarget=(73.0356, 30.0112, 35.9802))
+session.viewports['Viewport: 1'].view.setValues(nearPlane=440.607, 
+    farPlane=792.176, width=371.589, height=210.157, cameraPosition=(-246.224, 
+    448.734, 368.913), cameraUpVector=(0.473019, -0.627237, 0.618729), 
+    cameraTarget=(73.0356, 30.0112, 35.9802))
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=5 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=5 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=5 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=5 )
+a = mdb.models['Box_Implicit_Explicit'].rootAssembly
+session.viewports['Viewport: 1'].setValues(displayedObject=a)
+o3 = session.openOdb(
+    name='C:/Users/p2321038/Documents/GitHub/ABAQUS_Python_Course_2023/Project - Origami/Model_3/Explicit_2.odb')
+session.viewports['Viewport: 1'].setValues(displayedObject=o3)
+session.viewports['Viewport: 1'].makeCurrent()
+a = mdb.models['Box_Implicit_Explicit'].rootAssembly
+session.viewports['Viewport: 1'].setValues(displayedObject=a)
+session.viewports['Viewport: 1'].setValues(
+    displayedObject=session.odbs['C:/Users/p2321038/Documents/GitHub/ABAQUS_Python_Course_2023/Project - Origami/Model_3/Explicit_2.odb'])
+session.viewports['Viewport: 1'].odbDisplay.display.setValues(plotState=(
+    CONTOURS_ON_DEF, ))
+a = mdb.models['Box_Implicit_Explicit'].rootAssembly
+session.viewports['Viewport: 1'].setValues(displayedObject=a)
+a = mdb.models['Box_Implicit_Explicit'].rootAssembly
+session.viewports['Viewport: 1'].setValues(displayedObject=a)
+mdb.jobs['Explicit_2'].kill()
+#: Error in job Explicit_2: Process terminated by external request (SIGTERM or SIGINT received).
+#: Job Explicit_2: Abaqus/Explicit was terminated prior to analysis completion.
+#: ERROR in job messaging system: Error in connection to analysis
+#: Error in job Explicit_2: Abaqus/Explicit Analysis exited with an error - Please see the  status file for possible error messages if the file exists.
+session.viewports['Viewport: 1'].setValues(
+    displayedObject=session.odbs['C:/Users/p2321038/Documents/GitHub/ABAQUS_Python_Course_2023/Project - Origami/Model_3/Explicit_2.odb'])
+odb = session.odbs['C:/Users/p2321038/Documents/GitHub/ABAQUS_Python_Course_2023/Project - Origami/Model_3/Explicit_2.odb']
+session.viewports['Viewport: 1'].setValues(displayedObject=odb)
+p = mdb.models['Box_Implicit_Explicit'].parts['Part-1']
+session.viewports['Viewport: 1'].setValues(displayedObject=p)
+a = mdb.models['Box_Implicit_Explicit'].rootAssembly
+session.viewports['Viewport: 1'].setValues(displayedObject=a)
+session.viewports['Viewport: 1'].assemblyDisplay.setValues(
+    adaptiveMeshConstraints=ON)
+session.viewports['Viewport: 1'].assemblyDisplay.setValues(
+    adaptiveMeshConstraints=OFF)
+session.viewports['Viewport: 1'].view.setValues(nearPlane=451.036, 
+    farPlane=777.224, width=150.363, height=85.0399, viewOffsetX=-7.15495, 
+    viewOffsetY=-4.58744)
+session.viewports['Viewport: 1'].view.setValues(nearPlane=480.767, 
+    farPlane=759.638, width=160.275, height=90.6454, cameraPosition=(-59.1709, 
+    631.221, 149.301), cameraUpVector=(0.122508, -0.47721, 0.870209), 
+    cameraTarget=(65.6728, 30.5736, 40.9692), viewOffsetX=-7.62659, 
+    viewOffsetY=-4.88983)
+session.viewports['Viewport: 1'].view.setValues(nearPlane=458.805, 
+    farPlane=775.486, width=152.953, height=86.5047, cameraPosition=(-247.505, 
+    557.197, 134.443), cameraUpVector=(0.236009, -0.408011, 0.881945), 
+    cameraTarget=(67.7631, 28.1132, 40.7628), viewOffsetX=-7.27819, 
+    viewOffsetY=-4.66645)
+session.viewports['Viewport: 1'].view.setValues(nearPlane=455.349, 
+    farPlane=778.943, width=206.841, height=116.981, viewOffsetX=-17.2831, 
+    viewOffsetY=-3.30054)
+session.viewports['Viewport: 1'].view.setValues(nearPlane=485.798, 
+    farPlane=776.137, width=220.672, height=124.804, cameraPosition=(171.184, 
+    633.813, 204.654), cameraUpVector=(-0.0373743, -0.570432, 0.820494), 
+    cameraTarget=(60.6493, 42.7503, 41.7831), viewOffsetX=-18.4388, 
+    viewOffsetY=-3.52125)
+session.viewports['Viewport: 1'].view.setValues(nearPlane=464.571, 
+    farPlane=783.137, width=211.03, height=119.351, cameraPosition=(-223.337, 
+    582.671, -14.6055), cameraUpVector=(-0.0565268, -0.323054, 0.944691), 
+    cameraTarget=(57.3594, 28.5141, 32.5021), viewOffsetX=-17.6331, 
+    viewOffsetY=-3.36739)
+session.viewports['Viewport: 1'].view.setValues(nearPlane=449.619, 
+    farPlane=781.249, width=204.239, height=115.51, cameraPosition=(-255.721, 
+    479.447, 321.665), cameraUpVector=(0.300612, -0.674882, 0.673919), 
+    cameraTarget=(59.2697, 25.1878, 34.3859), viewOffsetX=-17.0656, 
+    viewOffsetY=-3.25902)
+session.viewports['Viewport: 1'].view.setValues(nearPlane=445.92, 
+    farPlane=783.101, width=202.559, height=114.56, cameraPosition=(-325.751, 
+    451, 268.91), cameraUpVector=(0.335805, -0.584912, 0.738318), 
+    cameraTarget=(62.015, 23.233, 34.917), viewOffsetX=-16.9252, 
+    viewOffsetY=-3.23221)
+o3 = session.openOdb(
+    name='C:/Users/p2321038/Documents/GitHub/ABAQUS_Python_Course_2023/Project - Origami/Model_3/Explicit_2_NoSpring.odb')
+session.viewports['Viewport: 1'].setValues(displayedObject=o3)
+session.viewports['Viewport: 1'].makeCurrent()
+a = mdb.models['Box_Implicit_Explicit'].rootAssembly
+session.viewports['Viewport: 1'].setValues(displayedObject=a)
+session.viewports['Viewport: 1'].setValues(
+    displayedObject=session.odbs['C:/Users/p2321038/Documents/GitHub/ABAQUS_Python_Course_2023/Project - Origami/Model_3/Explicit_2_NoSpring.odb'])
+session.viewports['Viewport: 1'].odbDisplay.display.setValues(plotState=(
+    CONTOURS_ON_DEF, ))
+session.viewports[session.currentViewportName].odbDisplay.setFrame(
+    step='Loading', frame=3)
+session.viewports[session.currentViewportName].odbDisplay.setFrame(
+    step='Loading', frame=18)
+session.viewports['Viewport: 1'].view.setValues(nearPlane=474.547, 
+    farPlane=788.149, width=312.466, height=176.719, viewOffsetX=-3.63478, 
+    viewOffsetY=-8.62987)
+session.viewports['Viewport: 1'].view.setValues(nearPlane=484.089, 
+    farPlane=776.173, width=318.749, height=180.272, cameraPosition=(-26.7665, 
+    651.724, 85.816), cameraUpVector=(0.0470234, -0.408483, 0.911554), 
+    cameraTarget=(71.3378, 38.7184, 33.8649), viewOffsetX=-3.70787, 
+    viewOffsetY=-8.80341)
+session.viewports['Viewport: 1'].view.setValues(nearPlane=481.708, 
+    farPlane=775.928, width=317.181, height=179.386, cameraPosition=(-35.1877, 
+    653.527, 26.7815), cameraUpVector=(-0.00868675, -0.330235, 0.943859), 
+    cameraTarget=(70.5449, 39.6201, 32.9734), viewOffsetX=-3.68963, 
+    viewOffsetY=-8.76011)
+session.viewports[session.currentViewportName].odbDisplay.setFrame(
+    step='Loading', frame=19)
+session.viewports['Viewport: 1'].odbDisplay.basicOptions.setValues(
+    renderShellThickness=ON)
+session.viewports[session.currentViewportName].odbDisplay.setFrame(
+    step='Release', frame=7)
+session.viewports[session.currentViewportName].odbDisplay.setFrame(
+    step='Release', frame=10)
+session.viewports['Viewport: 1'].animationController.setValues(
+    animationType=TIME_HISTORY)
+session.viewports['Viewport: 1'].animationController.play(duration=UNLIMITED)
+session.viewports['Viewport: 1'].view.setValues(nearPlane=446.396, 
+    farPlane=783.319, width=293.93, height=166.236, cameraPosition=(-141.047, 
+    529.483, 343.294), cameraUpVector=(0.251291, -0.714692, 0.652739), 
+    cameraTarget=(72.1961, 32.0794, 34.722), viewOffsetX=-3.41916, 
+    viewOffsetY=-8.11794)
+session.viewports['Viewport: 1'].view.setValues(nearPlane=453.332, 
+    farPlane=776.383, width=233.052, height=131.805, viewOffsetX=-4.76808, 
+    viewOffsetY=-13.0583)
+session.viewports['Viewport: 1'].view.setValues(nearPlane=476.145, 
+    farPlane=778.45, width=244.779, height=138.438, cameraPosition=(-118.772, 
+    631.519, 76.5662), cameraUpVector=(0.121818, -0.367061, 0.922186), 
+    cameraTarget=(69.5298, 38.7521, 40.9331), viewOffsetX=-5.00802, 
+    viewOffsetY=-13.7154)
+session.viewports['Viewport: 1'].animationController.setValues(
+    animationType=NONE)
+session.viewports['Viewport: 1'].animationController.setValues(
+    animationType=TIME_HISTORY)
+session.viewports['Viewport: 1'].animationController.play(duration=UNLIMITED)
+session.viewports['Viewport: 1'].animationController.setValues(
+    animationType=NONE)
+session.viewports[session.currentViewportName].odbDisplay.setFrame(
+    step='Loading', frame=1)
+p = mdb.models['Box_Implicit_Explicit'].parts['Part-1']
+session.viewports['Viewport: 1'].setValues(displayedObject=p)
+#: Job Explicit_2_NoSpring: Abaqus/Explicit completed successfully.
+a = mdb.models['Box_Implicit_Explicit'].rootAssembly
+session.viewports['Viewport: 1'].setValues(displayedObject=a)
+session.viewports['Viewport: 1'].assemblyDisplay.setValues(loads=ON, bcs=ON, 
+    predefinedFields=ON, connectors=ON)
+#: Job Explicit_2_NoSpring completed successfully. 
+session.viewports['Viewport: 1'].view.setValues(nearPlane=429.711, 
+    farPlane=799.31, width=390.288, height=220.732, viewOffsetX=37.3811, 
+    viewOffsetY=3.78984)
+session.viewports['Viewport: 1'].view.setValues(nearPlane=427.747, 
+    farPlane=801.274, width=388.504, height=219.723, cameraPosition=(-327.143, 
+    452.543, 263.783), cameraUpVector=(0.409842, -0.522803, 0.747467), 
+    cameraTarget=(60.6229, 24.7756, 29.79), viewOffsetX=37.2102, 
+    viewOffsetY=3.77251)
+session.viewports['Viewport: 1'].view.setValues(nearPlane=419.516, 
+    farPlane=783.623, width=381.028, height=215.495, cameraPosition=(-219.499, 
+    530.365, 227.862), cameraUpVector=(0.297774, -0.542133, 0.785762), 
+    cameraTarget=(66.1211, 14.1546, 27.7427), viewOffsetX=36.4942, 
+    viewOffsetY=3.69992)
+mdb.models['Box_Implicit_Explicit'].loads['Load-1'].setValues(comp3=-9810.0, 
+    distributionType=UNIFORM, field='')
+o3 = session.openOdb(
+    name='C:/Users/p2321038/Documents/GitHub/ABAQUS_Python_Course_2023/Project - Origami/Model_3/Explicit_2_NoSpring.odb')
+session.viewports['Viewport: 1'].setValues(displayedObject=o3)
+session.viewports['Viewport: 1'].makeCurrent()
+a = mdb.models['Box_Implicit_Explicit'].rootAssembly
+session.viewports['Viewport: 1'].setValues(displayedObject=a)
+session.viewports['Viewport: 1'].setValues(
+    displayedObject=session.odbs['C:/Users/p2321038/Documents/GitHub/ABAQUS_Python_Course_2023/Project - Origami/Model_3/Explicit_2_NoSpring.odb'])
+session.viewports['Viewport: 1'].assemblyDisplay.setValues(loads=OFF, bcs=OFF, 
+    predefinedFields=OFF, connectors=OFF)
+session.viewports['Viewport: 1'].animationController.setValues(
+    animationType=TIME_HISTORY)
+session.viewports['Viewport: 1'].animationController.play(duration=UNLIMITED)
+session.viewports['Viewport: 1'].animationController.setValues(
+    animationType=NONE)
+a = mdb.models['Box_Implicit_Explicit'].rootAssembly
+session.viewports['Viewport: 1'].setValues(displayedObject=a)
+a = mdb.models['Box_Implicit_Explicit'].rootAssembly
+session.viewports['Viewport: 1'].setValues(displayedObject=a)
+mdb.jobs['Explicit_2_NoSpring'].submit(consistencyChecking=OFF)
+#: The job input file "Explicit_2_NoSpring.inp" has been submitted for analysis.
+#: Job Explicit_2_NoSpring: Analysis Input File Processor completed successfully.
+#: Job Explicit_2_NoSpring: Abaqus/Explicit Packager completed successfully.
+o3 = session.openOdb(
+    name='C:/Users/p2321038/Documents/GitHub/ABAQUS_Python_Course_2023/Project - Origami/Model_3/Explicit_2_NoSpring.odb')
+#: Model: C:/Users/p2321038/Documents/GitHub/ABAQUS_Python_Course_2023/Project - Origami/Model_3/Explicit_2_NoSpring.odb
+#: Number of Assemblies:         1
+#: Number of Assembly instances: 0
+#: Number of Part instances:     5
+#: Number of Meshes:             5
+#: Number of Element Sets:       16
+#: Number of Node Sets:          22
+#: Number of Steps:              2
+session.viewports['Viewport: 1'].setValues(displayedObject=o3)
+session.viewports['Viewport: 1'].makeCurrent()
+session.viewports['Viewport: 1'].odbDisplay.display.setValues(plotState=(
+    CONTOURS_ON_DEF, ))
+session.viewports['Viewport: 1'].view.setValues(nearPlane=474.309, 
+    farPlane=775.991, width=400.012, height=226.232, cameraPosition=(-1.21716, 
+    607.017, 259.482), cameraUpVector=(-0.00413083, -0.654342, 0.756187), 
+    cameraTarget=(73.7988, 30.5043, 35.6393))
+session.viewports['Viewport: 1'].view.setValues(nearPlane=476.053, 
+    farPlane=762.742, width=401.483, height=227.064, cameraPosition=(61.8928, 
+    649.031, -39.9564), cameraUpVector=(0.0448753, -0.217375, 0.975056), 
+    cameraTarget=(74.0182, 30.6504, 34.5983))
+session.viewports['Viewport: 1'].view.setValues(nearPlane=458.175, 
+    farPlane=784.304, width=386.406, height=218.537, cameraPosition=(-74.03, 
+    624.523, 149.401), cameraUpVector=(0.0688574, -0.500904, 0.862759), 
+    cameraTarget=(74.8035, 30.792, 33.5042))
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=11 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=10 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=9 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=8 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=7 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=6 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=5 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=4 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=3 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=2 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=1 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=0 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=0 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=0 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=0 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=1 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=2 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=3 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=4 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=5 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=6 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=7 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=8 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=9 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=10 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=11 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=12 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=13 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=14 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=14 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=14 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=14 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=14 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=14 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=14 )
+session.viewports['Viewport: 1'].animationController.setValues(
+    animationType=TIME_HISTORY)
+session.viewports['Viewport: 1'].animationController.play(duration=UNLIMITED)
+session.viewports['Viewport: 1'].animationController.setValues(
+    animationType=NONE)
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=17 )
+session.viewports['Viewport: 1'].view.setValues(nearPlane=467.643, 
+    farPlane=790.334, width=394.391, height=223.053, cameraPosition=(-288.624, 
+    386.654, 393.244), cameraUpVector=(0.696532, -0.442856, 0.564554), 
+    cameraTarget=(74.7634, 30.7476, 33.5497))
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=17 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=18 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=18 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=18 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=18 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=18 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=18 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=18 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=18 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=18 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=18 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=18 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=18 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=18 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=18 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=18 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=19 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=19 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=19 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=19 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=19 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=18 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=19 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=19 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=19 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=19 )
+session.viewports[session.currentViewportName].odbDisplay.setFrame(
+    step='Release', frame=4)
+session.viewports['Viewport: 1'].view.setValues(nearPlane=477.701, 
+    farPlane=768.051, width=402.874, height=227.85, cameraPosition=(45.7372, 
+    654.436, -40.1469), cameraUpVector=(0.0685422, -0.229234, 0.970955), 
+    cameraTarget=(81.2112, 35.9115, 25.1922))
+session.viewports['Viewport: 1'].view.setValues(nearPlane=485.939, 
+    farPlane=771.478, width=409.821, height=231.78, cameraPosition=(100.591, 
+    656.841, 71.7535), cameraUpVector=(0.274776, -0.408314, 0.870504), 
+    cameraTarget=(81.2023, 35.9111, 25.1741))
+session.viewports['Viewport: 1'].view.setValues(nearPlane=454.071, 
+    farPlane=790.487, width=382.946, height=216.58, cameraPosition=(-130.057, 
+    621.692, 53.9704), cameraUpVector=(0.155118, -0.344694, 0.92581), 
+    cameraTarget=(79.0997, 35.5907, 25.012))
+session.viewports['Viewport: 1'].view.setValues(nearPlane=454.016, 
+    farPlane=792.346, width=382.9, height=216.554, cameraPosition=(-170.941, 
+    600.743, 103.608), cameraUpVector=(0.245976, -0.382551, 0.89059), 
+    cameraTarget=(79.1455, 35.6142, 24.9564))
+session.viewports['Viewport: 1'].view.setValues(nearPlane=473.36, 
+    farPlane=773.002, width=178.595, height=101.006, viewOffsetX=4.35586, 
+    viewOffsetY=-8.62405)
+session.viewports[session.currentViewportName].odbDisplay.setFrame(
+    step='Release', frame=1)
+session.viewports['Viewport: 1'].odbDisplay.basicOptions.setValues(
+    renderShellThickness=OFF)
+session.viewports[session.currentViewportName].odbDisplay.setFrame(
+    step='Release', frame=8)
+session.viewports['Viewport: 1'].view.setValues(nearPlane=479.342, 
+    farPlane=770.755, width=180.852, height=102.283, cameraPosition=(-170.826, 
+    577.842, 197.14), cameraUpVector=(0.216772, -0.539145, 0.813838), 
+    cameraTarget=(78.8186, 33.5727, 25.2427), viewOffsetX=4.41091, 
+    viewOffsetY=-8.73304)
+session.viewports['Viewport: 1'].view.setValues(nearPlane=469.073, 
+    farPlane=777.269, width=176.977, height=100.092, cameraPosition=(-286.52, 
+    515.692, 180.117), cameraUpVector=(0.48095, -0.330561, 0.812045), 
+    cameraTarget=(79.9353, 36.7483, 23.836), viewOffsetX=4.31641, 
+    viewOffsetY=-8.54595)
+session.viewports[session.currentViewportName].odbDisplay.setFrame(
+    step='Release', frame=13)
+odb = session.odbs['C:/Users/p2321038/Documents/GitHub/ABAQUS_Python_Course_2023/Project - Origami/Model_3/Explicit_2_NoSpring.odb']
+xy1 = xyPlot.XYDataFromHistory(odb=odb, 
+    outputVariableName='Artificial strain energy: ALLAE for Whole Model', 
+    steps=('Loading', 'Release', ), suppressQuery=True, 
+    __linkedVpName__='Viewport: 1')
+c1 = session.Curve(xyData=xy1)
+xyp = session.XYPlot('XYPlot-1')
+chartName = xyp.charts.keys()[0]
+chart = xyp.charts[chartName]
+chart.setValues(curvesToPlot=(c1, ), )
+session.charts[chartName].autoColor(lines=True, symbols=True)
+session.viewports['Viewport: 1'].setValues(displayedObject=xyp)
+odb = session.odbs['C:/Users/p2321038/Documents/GitHub/ABAQUS_Python_Course_2023/Project - Origami/Model_3/Explicit_2_NoSpring.odb']
+session.viewports['Viewport: 1'].setValues(displayedObject=odb)
+session.viewports['Viewport: 1'].odbDisplay.display.setValues(plotState=(
+    CONTOURS_ON_DEF, ))
+session.viewports[session.currentViewportName].odbDisplay.setFrame(
+    step='Release', frame=18)
+p = mdb.models['Box_Implicit_Explicit'].parts['Part-1']
+session.viewports['Viewport: 1'].setValues(displayedObject=p)
+#: Job Explicit_2_NoSpring: Abaqus/Explicit completed successfully.
+a = mdb.models['Box_Implicit_Explicit'].rootAssembly
+session.viewports['Viewport: 1'].setValues(displayedObject=a)
+#: Job Explicit_2_NoSpring completed successfully. 
+session.viewports['Viewport: 1'].assemblyDisplay.setValues(loads=ON, bcs=ON, 
+    predefinedFields=ON, connectors=ON)
+mdb.models['Box_Implicit_Explicit'].rootAssembly.sectionAssignments[0].resume()
+session.viewports['Viewport: 1'].assemblyDisplay.setValues(loads=OFF, bcs=OFF, 
+    predefinedFields=OFF, interactions=ON, constraints=ON, 
+    engineeringFeatures=ON)
+session.viewports['Viewport: 1'].assemblyDisplay.setValues(interactions=OFF, 
+    constraints=OFF, connectors=OFF, engineeringFeatures=OFF)
+mdb.jobs['Explicit_2'].submit(consistencyChecking=OFF)
+#: The job input file "Explicit_2.inp" has been submitted for analysis.
+#: Job Explicit_2: Analysis Input File Processor completed successfully.
+session.viewports['Viewport: 1'].setValues(
+    displayedObject=session.odbs['C:/Users/p2321038/Documents/GitHub/ABAQUS_Python_Course_2023/Project - Origami/Model_3/Explicit_2_NoSpring.odb'])
+o3 = session.openOdb(
+    name='C:/Users/p2321038/Documents/GitHub/ABAQUS_Python_Course_2023/Project - Origami/Model_3/Explicit_2.odb')
+#* OdbError: The .lck file for the output database 
+#* C:/Users/p2321038/Documents/GitHub/ABAQUS_Python_Course_2023/Project - 
+#* Origami/Model_3/Explicit_2.odb indicates that the Analysis Input File 
+#* Processor is currently modifying the database.  The database cannot be 
+#* opened at this time.
+#: Job Explicit_2: Abaqus/Explicit Packager completed successfully.
+session.viewports['Viewport: 1'].partDisplay.setValues(sectionAssignments=ON, 
+    engineeringFeatures=ON)
+session.viewports['Viewport: 1'].partDisplay.geometryOptions.setValues(
+    referenceRepresentation=OFF)
+p = mdb.models['Box_Implicit_Explicit'].parts['Part-1']
+session.viewports['Viewport: 1'].setValues(displayedObject=p)
+session.viewports['Viewport: 1'].partDisplay.setValues(sectionAssignments=OFF, 
+    engineeringFeatures=OFF)
+session.viewports['Viewport: 1'].partDisplay.geometryOptions.setValues(
+    referenceRepresentation=ON)
+a = mdb.models['Box_Implicit_Explicit'].rootAssembly
+session.viewports['Viewport: 1'].setValues(displayedObject=a)
+a = mdb.models['Box_Implicit_Explicit'].rootAssembly
+session.viewports['Viewport: 1'].setValues(displayedObject=a)
+session.viewports['Viewport: 1'].setValues(
+    displayedObject=session.odbs['C:/Users/p2321038/Documents/GitHub/ABAQUS_Python_Course_2023/Project - Origami/Model_3/Explicit_2_NoSpring.odb'])
+o3 = session.openOdb(
+    name='C:/Users/p2321038/Documents/GitHub/ABAQUS_Python_Course_2023/Project - Origami/Model_3/Explicit_2.odb')
+#: Model: C:/Users/p2321038/Documents/GitHub/ABAQUS_Python_Course_2023/Project - Origami/Model_3/Explicit_2.odb
+#: Number of Assemblies:         1
+#: Number of Assembly instances: 0
+#: Number of Part instances:     5
+#: Number of Meshes:             6
+#: Number of Element Sets:       17
+#: Number of Node Sets:          22
+#: Number of Steps:              2
+session.viewports['Viewport: 1'].setValues(displayedObject=o3)
+session.viewports['Viewport: 1'].makeCurrent()
+session.viewports['Viewport: 1'].odbDisplay.display.setValues(plotState=(
+    CONTOURS_ON_DEF, ))
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=0 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=1 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=2 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=3 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=2 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=1 )
+session.viewports['Viewport: 1'].view.setValues(nearPlane=479.123, 
+    farPlane=754.667, width=180.768, height=102.235, viewOffsetX=1.95975, 
+    viewOffsetY=-34.2148)
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=2 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=1 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=2 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=1 )
+p = mdb.models['Box_Implicit_Explicit'].parts['Part-1']
+session.viewports['Viewport: 1'].setValues(displayedObject=p)
+a = mdb.models['Box_Implicit_Explicit'].rootAssembly
+session.viewports['Viewport: 1'].setValues(displayedObject=a)
+session.viewports['Viewport: 1'].assemblyDisplay.setValues(interactions=ON, 
+    constraints=ON, connectors=ON, engineeringFeatures=ON)
+o3 = session.openOdb(
+    name='C:/Users/p2321038/Documents/GitHub/ABAQUS_Python_Course_2023/Project - Origami/Model_3/Explicit_2_NoSpring.odb')
+session.viewports['Viewport: 1'].setValues(displayedObject=o3)
+session.viewports['Viewport: 1'].makeCurrent()
+a = mdb.models['Box_Implicit_Explicit'].rootAssembly
+session.viewports['Viewport: 1'].setValues(displayedObject=a)
+session.viewports['Viewport: 1'].setValues(
+    displayedObject=session.odbs['C:/Users/p2321038/Documents/GitHub/ABAQUS_Python_Course_2023/Project - Origami/Model_3/Explicit_2_NoSpring.odb'])
+session.viewports['Viewport: 1'].assemblyDisplay.setValues(interactions=OFF, 
+    constraints=OFF, connectors=OFF, engineeringFeatures=OFF)
+session.viewports['Viewport: 1'].animationController.setValues(
+    animationType=TIME_HISTORY)
+session.viewports['Viewport: 1'].animationController.play(duration=UNLIMITED)
+session.viewports['Viewport: 1'].animationController.setValues(
+    animationType=NONE)
+session.viewports['Viewport: 1'].view.setValues(nearPlane=464.545, 
+    farPlane=776.545, width=175.269, height=99.1258, cameraPosition=(-265.354, 
+    557.184, 38.6455), cameraUpVector=(0.131062, -0.335673, 0.932816), 
+    cameraTarget=(76.3684, 36.4518, 25.8634), viewOffsetX=4.27474, 
+    viewOffsetY=-8.46346)
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=1, frame=18 )
+session.viewports['Viewport: 1'].view.setValues(nearPlane=473.132, 
+    farPlane=774.678, width=178.509, height=100.958, cameraPosition=(-269.687, 
+    512.26, 220.274), cameraUpVector=(0.0973468, -0.663421, 0.741887), 
+    cameraTarget=(75.9115, 31.9823, 25.3525), viewOffsetX=4.35376, 
+    viewOffsetY=-8.61991)
+p = mdb.models['Box_Implicit_Explicit'].parts['Part-1']
+session.viewports['Viewport: 1'].setValues(displayedObject=p)
+a = mdb.models['Box_Implicit_Explicit'].rootAssembly
+session.viewports['Viewport: 1'].setValues(displayedObject=a)
+o3 = session.openOdb(
+    name='C:/Users/p2321038/Documents/GitHub/ABAQUS_Python_Course_2023/Project - Origami/Model_3/Explicit_2.odb')
+session.viewports['Viewport: 1'].setValues(displayedObject=o3)
+session.viewports['Viewport: 1'].makeCurrent()
+a = mdb.models['Box_Implicit_Explicit'].rootAssembly
+session.viewports['Viewport: 1'].setValues(displayedObject=a)
+session.viewports['Viewport: 1'].setValues(
+    displayedObject=session.odbs['C:/Users/p2321038/Documents/GitHub/ABAQUS_Python_Course_2023/Project - Origami/Model_3/Explicit_2.odb'])
+session.viewports['Viewport: 1'].animationController.setValues(
+    animationType=TIME_HISTORY)
+session.viewports['Viewport: 1'].animationController.play(duration=UNLIMITED)
+session.viewports['Viewport: 1'].animationController.setValues(
+    animationType=NONE)
+session.viewports['Viewport: 1'].view.setValues(nearPlane=1144.87, 
+    farPlane=1828.14, width=415.794, height=235.158, viewOffsetX=83.4189, 
+    viewOffsetY=1.69247)
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=0 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=1 )
+session.viewports['Viewport: 1'].view.setValues(nearPlane=1155.91, 
+    farPlane=1430.62, width=176.538, height=99.843, viewOffsetX=157.433, 
+    viewOffsetY=6.1597)
+session.viewports['Viewport: 1'].view.setValues(nearPlane=1129.44, 
+    farPlane=1438.31, width=172.495, height=97.5566, cameraPosition=(-253.569, 
+    1286.73, 189.523), cameraUpVector=(0.132554, -0.455733, 0.880191), 
+    cameraTarget=(276.428, 80.9529, -10.1066), viewOffsetX=153.828, 
+    viewOffsetY=6.01864)
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=2 )
+session.viewports['Viewport: 1'].view.setValues(nearPlane=1130.44, 
+    farPlane=1437.91, width=172.647, height=97.6427, cameraPosition=(-253.955, 
+    1287.72, 182.504), cameraUpVector=(0.167628, -0.440602, 0.881913), 
+    cameraTarget=(276.042, 81.9452, -17.1252), viewOffsetX=153.964, 
+    viewOffsetY=6.02394)
+session.viewports['Viewport: 1'].view.setValues(nearPlane=1134.14, 
+    farPlane=1434.19, width=127.121, height=71.8951, viewOffsetX=161.247, 
+    viewOffsetY=6.57665)
+session.viewports['Viewport: 1'].view.setValues(nearPlane=1162.24, 
+    farPlane=1421.65, width=130.271, height=73.6764, cameraPosition=(110.334, 
+    1334.79, 180.38), cameraUpVector=(0.106711, -0.468849, 0.876809), 
+    cameraTarget=(276.03, 29.9942, -31.0444), viewOffsetX=165.242, 
+    viewOffsetY=6.73959)
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=1 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=2 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=0 )
+session.viewports['Viewport: 1'].view.setValues(nearPlane=1171.14, 
+    farPlane=1426.09, width=131.269, height=74.2406, cameraPosition=(74.0336, 
+    1348.26, 19.8055), cameraUpVector=(-0.0513003, -0.356168, 0.933013), 
+    cameraTarget=(277.136, 31.7665, 4.35074), viewOffsetX=166.507, 
+    viewOffsetY=6.7912)
+session.viewports['Viewport: 1'].view.setValues(nearPlane=1149.1, 
+    farPlane=1448.13, width=374.826, height=211.988, viewOffsetX=125.482, 
+    viewOffsetY=-21.7358)
+session.viewports['Viewport: 1'].view.setValues(nearPlane=1147.01, 
+    farPlane=1450.22, width=374.143, height=211.601, cameraPosition=(76.7739, 
+    1348.82, 8.52758), cameraUpVector=(0.0237455, -0.344654, 0.938429), 
+    cameraTarget=(279.876, 32.3217, -6.92719), viewOffsetX=125.254, 
+    viewOffsetY=-21.6962)
+session.viewports['Viewport: 1'].view.setValues(nearPlane=1141.2, 
+    farPlane=1444.82, width=372.247, height=210.529, cameraPosition=(142.923, 
+    1339.44, 136.868), cameraUpVector=(0.123146, -0.435708, 0.891624), 
+    cameraTarget=(281.581, 24.6538, -26.7452), viewOffsetX=124.619, 
+    viewOffsetY=-21.5862)
+#: Job Explicit_2: Abaqus/Explicit completed successfully.
+#: Job Explicit_2 completed successfully. 
+session.viewports['Viewport: 1'].view.setValues(nearPlane=1150.99, 
+    farPlane=1435.03, width=259.005, height=146.483, viewOffsetX=148.518, 
+    viewOffsetY=-14.9577)
+p = mdb.models['Box_Implicit_Explicit'].parts['Part-1']
+session.viewports['Viewport: 1'].setValues(displayedObject=p)
+a = mdb.models['Box_Implicit_Explicit'].rootAssembly
+session.viewports['Viewport: 1'].setValues(displayedObject=a)
+session.viewports['Viewport: 1'].view.setValues(nearPlane=430.786, 
+    farPlane=732.25, width=391.264, height=221.284, cameraPosition=(-16.2068, 
+    607.977, 18.9513), cameraUpVector=(0.133998, -0.302554, 0.943666), 
+    cameraTarget=(65.2449, -9.56314, 29.448), viewOffsetX=37.4746, 
+    viewOffsetY=3.79932)
+session.viewports['Viewport: 1'].view.setValues(nearPlane=429.925, 
+    farPlane=733.112, width=390.482, height=220.842, cameraPosition=(-15.224, 
+    608.27, 28.5833), cameraUpVector=(-0.0440696, -0.326029, 0.944332), 
+    cameraTarget=(66.2278, -9.26978, 39.08), viewOffsetX=37.3997, 
+    viewOffsetY=3.79173)
+session.viewports['Viewport: 1'].view.setValues(nearPlane=418.975, 
+    farPlane=755.613, width=380.536, height=215.217, cameraPosition=(-90.0162, 
+    586.976, 161.569), cameraUpVector=(-0.00858743, -0.539137, 0.842174), 
+    cameraTarget=(70.1966, -1.21013, 33.2361), viewOffsetX=36.4471, 
+    viewOffsetY=3.69515)
+session.viewports['Viewport: 1'].view.setValues(nearPlane=416.266, 
+    farPlane=771.27, width=378.076, height=213.826, cameraPosition=(-166.121, 
+    517.347, 298.97), cameraUpVector=(0.250746, -0.676993, 0.691959), 
+    cameraTarget=(71.0637, 13.3355, 20.0129), viewOffsetX=36.2115, 
+    viewOffsetY=3.67126)
+session.viewports['Viewport: 1'].view.setValues(nearPlane=418.798, 
+    farPlane=768.74, width=336.1, height=190.086, viewOffsetX=30.0697, 
+    viewOffsetY=6.63278)
+session.viewports['Viewport: 1'].view.setValues(nearPlane=420.552, 
+    farPlane=774.528, width=337.508, height=190.882, cameraPosition=(-213.818, 
+    531.426, 220.744), cameraUpVector=(0.310495, -0.535816, 0.785172), 
+    cameraTarget=(71.1729, 15.0551, 20.1393), viewOffsetX=30.1956, 
+    viewOffsetY=6.66055)
+session.viewports['Viewport: 1'].view.setValues(nearPlane=425.974, 
+    farPlane=769.106, width=266.906, height=150.952, viewOffsetX=20.9271, 
+    viewOffsetY=9.34903)
+session.viewports['Viewport: 1'].assemblyDisplay.setValues(interactions=ON, 
+    constraints=ON, connectors=ON, engineeringFeatures=ON)
+mdb.models['Box_Implicit_Explicit'].interactionProperties['IntProp-1'].tangentialBehavior.setValues(
+    formulation=ROUGH)
+o3 = session.openOdb(
+    name='C:/Users/p2321038/Documents/GitHub/ABAQUS_Python_Course_2023/Project - Origami/Model_3/Explicit_2_NoSpring.odb')
+session.viewports['Viewport: 1'].setValues(displayedObject=o3)
+session.viewports['Viewport: 1'].makeCurrent()
+a = mdb.models['Box_Implicit_Explicit'].rootAssembly
+session.viewports['Viewport: 1'].setValues(displayedObject=a)
+session.viewports['Viewport: 1'].setValues(
+    displayedObject=session.odbs['C:/Users/p2321038/Documents/GitHub/ABAQUS_Python_Course_2023/Project - Origami/Model_3/Explicit_2_NoSpring.odb'])
+session.viewports['Viewport: 1'].assemblyDisplay.setValues(interactions=OFF, 
+    constraints=OFF, connectors=OFF, engineeringFeatures=OFF)
+session.viewports['Viewport: 1'].animationController.setValues(
+    animationType=TIME_HISTORY)
+session.viewports['Viewport: 1'].animationController.play(duration=UNLIMITED)
+a = mdb.models['Box_Implicit_Explicit'].rootAssembly
+session.viewports['Viewport: 1'].setValues(displayedObject=a)
+o3 = session.openOdb(
+    name='C:/Users/p2321038/Documents/GitHub/ABAQUS_Python_Course_2023/Project - Origami/Model_3/Explicit_2.odb')
+session.viewports['Viewport: 1'].setValues(displayedObject=o3)
+session.viewports['Viewport: 1'].makeCurrent()
+a = mdb.models['Box_Implicit_Explicit'].rootAssembly
+session.viewports['Viewport: 1'].setValues(displayedObject=a)
+session.viewports['Viewport: 1'].setValues(
+    displayedObject=session.odbs['C:/Users/p2321038/Documents/GitHub/ABAQUS_Python_Course_2023/Project - Origami/Model_3/Explicit_2.odb'])
+session.viewports['Viewport: 1'].animationController.setValues(
+    animationType=NONE)
+session.viewports['Viewport: 1'].view.setValues(nearPlane=1124.79, 
+    farPlane=1461.22, width=573.081, height=324.113, viewOffsetX=187.039, 
+    viewOffsetY=-16.7476)
+session.viewports['Viewport: 1'].animationController.setValues(
+    animationType=TIME_HISTORY)
+session.viewports['Viewport: 1'].animationController.play(duration=UNLIMITED)
+session.viewports['Viewport: 1'].view.setValues(nearPlane=7444, 
+    farPlane=11115.4, width=14683.6, height=8304.52, viewOffsetX=2118.94, 
+    viewOffsetY=36.7893)
+session.viewports['Viewport: 1'].animationController.setValues(
+    animationType=NONE)
+p = mdb.models['Box_Implicit_Explicit'].parts['Part-1']
+session.viewports['Viewport: 1'].setValues(displayedObject=p)
+a = mdb.models['Box_Implicit_Explicit'].rootAssembly
+session.viewports['Viewport: 1'].setValues(displayedObject=a)
+a = mdb.models['Box_Implicit_Explicit'].rootAssembly
+session.viewports['Viewport: 1'].setValues(displayedObject=a)
+
+---------- RUNTIME EXCEPTION HAS OCCURRED ----------
+*** ERROR: ABAQUS/ABQcaeK rank 0 encountered a SEGMENTATION FAULT
+
+---------- RUNTIME EXCEPTION HAS OCCURRED ----------
+*** ERROR: ABAQUS/ABQcaeK rank 0 received the ABORT signal

@@ -1,0 +1,23 @@
+Analysis initiated from SIMULIA established products
+Abaqus JOB Explicit_2
+Abaqus 2022
+Abaqus License Manager checked out the following licenses:
+Abaqus/Explicit checked out 8 tokens from Flexnet server licsrv.unileoben.ac.at.
+<305 out of 425 licenses remain available>.
+Begin Analysis Input File Processor
+20.12.2023 17:09:12
+Run pre.exe
+20.12.2023 17:09:14
+End Analysis Input File Processor
+Begin Abaqus/Explicit Packager
+20.12.2023 17:09:14
+Run package.exe
+20.12.2023 17:09:15
+End Abaqus/Explicit Packager
+Begin Abaqus/Explicit Analysis
+20.12.2023 17:09:15
+Run explicit.exe
+20.12.2023 17:12:13
+End Abaqus/Explicit Analysis
+Abaqus JOB Explicit_2 COMPLETED
+Socket error: [Errno 10061] No connection could be made because the target machine actively refused it

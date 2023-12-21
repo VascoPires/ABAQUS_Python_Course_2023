@@ -1,0 +1,72 @@
+<Description>
+   ABAQUS/ABQcaeK rank 0 encountered a SEGMENTATION FAULT
+
+</Description>
+
+<Context>
+   CAE
+</Context>
+
+<Callstack>
+  1)  KERNELBASE.dll              RaiseException                          
+  2)  VCRUNTIME140_1.dll          _NLG_Return2                            
+  3)  ntdll.dll                   RtlCaptureContext2                      
+  4)  ABQSMAInbVwrIPC.dll         ipc_Actor::Receive                      
+  5)  ABQSMAInbVwrIPC.dll         ipc_Monitor::onSocketRead               
+  6)  ABQSMAInbVwrIPC.dll         ipc_Monitor::handle                     
+  7)  ABQSMAFoxFoxAPI.dll         FXApp::getNextEvent                     
+  8)  ABQSMAFoxFoxAPI.dll         FXApp::run                              
+  9)  ABQSMAInkVwrKer.dll         ker_KernelActor::Main                   
+ 10)  ABQSMAInkVwrKer.dll         ker_main                                
+</Callstack>
+
+<Memory>
+   <Current>             311 MB </Current>
+   <Resident>            357 MB </Resident>
+   <Physical>          16155 MB </Physical>
+   <Limit>                 0 MB </Limit>
+   <Accessible>        16155 MB </Accessible>
+   <Allocator>            DL    </Allocator>
+</Memory>
+
+<Directories>
+  <current> C:\Users\p2321038\Documents\GitHub\ABAQUS_Python_Course_2023\Project - Origami\Model_3 </current> <free>     85 GB </free>   <used>    149 GB </used> 
+     <temp> C:\Users\p2321038\AppData\Local\Temp </temp>    <free>     85 GB </free>
+</Directories>
+
+<Installation>
+     <Version> 2022 2022 </Version>
+       <Build> 2021_09_15-19.57.30 176069 </Build>
+</Installation>
+
+<Description>
+   ABAQUS/ABQcaeK rank 0 received the ABORT signal
+
+</Description>
+
+<Context>
+   CAE
+</Context>
+
+<Callstack>
+</Callstack>
+
+<Memory>
+   <Current>             307 MB </Current>
+   <Resident>            354 MB </Resident>
+   <Physical>          16155 MB </Physical>
+   <Limit>                 0 MB </Limit>
+   <Accessible>        16155 MB </Accessible>
+   <Allocator>            DL    </Allocator>
+</Memory>
+
+<Directories>
+  <current> C:\Users\p2321038\Documents\GitHub\ABAQUS_Python_Course_2023\Project - Origami\Model_3 </current> <free>     85 GB </free>   <used>    149 GB </used> 
+     <temp> C:\Users\p2321038\AppData\Local\Temp </temp>    <free>     85 GB </free>
+</Directories>
+
+<Installation>
+     <Version> 2022 6.22-1 </Version>
+       <Build> 2021_09_15-19.57.30 176069 </Build>
+</Installation>
+

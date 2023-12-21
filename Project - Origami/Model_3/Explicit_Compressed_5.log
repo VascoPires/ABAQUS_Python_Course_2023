@@ -1,0 +1,38 @@
+Analysis initiated from SIMULIA established products
+Abaqus JOB Explicit_Compressed_5
+Abaqus 2022
+Abaqus License Manager checked out the following licenses:
+Abaqus/Explicit checked out 6 tokens from Flexnet server licsrv.unileoben.ac.at.
+<318 out of 425 licenses remain available>.
+Begin Analysis Input File Processor
+21.12.2023 15:52:56
+Run pre.exe
+21.12.2023 15:52:58
+End Analysis Input File Processor
+Begin Abaqus/Explicit Packager
+21.12.2023 15:52:58
+Run package.exe
+21.12.2023 15:53:01
+End Abaqus/Explicit Packager
+Begin Abaqus/Explicit Analysis
+21.12.2023 15:53:01
+Run explicit.exe
+
+job aborted:
+[ranks] message
+
+[0] application aborted
+aborting MPI_COMM_WORLD (comm=0x44000000), error 1, comm rank 0
+
+[1] terminated
+
+---- error analysis -----
+
+[0] on KKV-PC-51
+C:\Users\p2321038\AppData\Local\Temp\p2321038_Explicit_Compressed_5_13280\Explicit_Compressed_5_explicit.exe_nl3jnd.bat aborted the job. abort code 1
+
+---- error analysis -----
+21.12.2023 15:54:12
+Abaqus Error: Abaqus/Explicit Analysis exited with an error - Please see the 
+status file for possible error messages if the file exists.
+Abaqus/Analysis exited with errors

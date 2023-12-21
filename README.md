@@ -16,6 +16,11 @@ First, it is important that the "building blocks" of the device work. So the fir
 <strong> Figure 1 </strong>: First steps defined in class.
 </p>
 
+In fact, some very important details are required to build the model sucefully. In particular, two model features are required to allow rotation:
+ 
+1. Tie constraint between the edges of the part instances on the hinge line
+2. Hinge connector
+
 
 ### Material properties
 

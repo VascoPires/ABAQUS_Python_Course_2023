@@ -1,0 +1,23 @@
+Analysis initiated from SIMULIA established products
+Abaqus JOB Box_Try_5
+Abaqus 2022
+Abaqus License Manager checked out the following licenses:
+Abaqus/Explicit checked out 6 tokens from Flexnet server licsrv.unileoben.ac.at.
+<278 out of 425 licenses remain available>.
+Begin Analysis Input File Processor
+19.12.2023 14:52:14
+Run pre.exe
+19.12.2023 14:52:15
+End Analysis Input File Processor
+Begin Abaqus/Explicit Packager
+19.12.2023 14:52:15
+Run package.exe
+19.12.2023 14:52:16
+End Abaqus/Explicit Packager
+Begin Abaqus/Explicit Analysis
+19.12.2023 14:52:16
+Run explicit.exe
+19.12.2023 14:52:21
+Abaqus Error: Abaqus/Explicit Analysis exited with an error - Please see the 
+status file for possible error messages if the file exists.
+Abaqus/Analysis exited with errors
