@@ -39,7 +39,7 @@ The results are presented in the following figure.
 <strong> Figure 3 </strong>: Force-displacement curves of the rubber band.  Note that the first point corresponds to the static position of the system, where the weight of the probe and resistance force are the same.
 </p>
 
-Even tough the test setup is not the most elaborate, it is possible to obtain a good estimate of the real stiffness of the rubber band. The stiffness of each specimen was obtained using linear regressions, obtaining the following results.
+Even tough the test setup is not the most elaborate, it is possible to obtain a good estimate of the real stiffness of the rubber band. The stiffness of each specimen was obtained using linear regressions. Each stiffness is divided by 2, since the measured stiffness is corresponds to two cross-sections as seen in Figure 2. The following results were obtained:
 
 
 <p align="left">
