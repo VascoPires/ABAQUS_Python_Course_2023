@@ -1,0 +1,845 @@
+Abaqus/Explicit 2022                             DATE 11-Jan-2024  TIME 13:20:23
+-------------------------------------------------------------------------------
+ PREPROCESSOR WARNING MESSAGES
+-------------------------------------------------------------------------------
+
+
+***WARNING: There are 405 warning messages in the data (.dat) file.  Please
+            check the data file for possible errors in the input file.
+
+
+
+***WARNING: In step 1, portions of main surfaces in the general contact domain
+            have been tied together.  Joining disconnected surfaces with *TIE
+            does not alter the surface connectivity and results in a seam in
+            the contact surface.  The nodes along the tied surface perimeters
+            have been added to the node set named  "WarnNodePerimTieSeam".
+
+-------------------------------------------------------------------------------
+           DOMAIN DECOMPOSITION INFORMATION
+-------------------------------------------------------------------------------
+
+
+     DOMAIN 1 HAS 112 ELEMENTS AND 160 NODES with WEIGHT 25.184
+
+     DOMAIN 2 HAS 110 ELEMENTS AND 154 NODES with WEIGHT 24.919
+
+     DOMAIN 3 HAS 109 ELEMENTS AND 168 NODES with WEIGHT 24.843
+
+     DOMAIN 4 HAS 170 ELEMENTS AND 222 NODES with WEIGHT 25.053
+
+
+-------------------------------------------------------------------------------
+ MODEL INFORMATION (IN GLOBAL X-Y COORDINATES)
+-------------------------------------------------------------------------------
+
+   Total mass in model = 2.02800E-06
+   Center of mass of model = ( 4.650000E+02, 4.325000E+02, 1.028713E+01)
+
+    Moments of Inertia :
+                 About Center of Mass              About Origin
+      I(XX)          8.273413E-04                  3.803921E-01
+      I(YY)          2.882870E-03                  4.416019E-01
+      I(ZZ)          3.524621E-03                  8.213792E-01
+      I(XY)         -4.692424E-10                 -4.078562E-01
+      I(YZ)          3.877304E-10                 -9.022948E-03
+      I(ZX)         -1.945084E-10                 -9.700973E-03
+
+-------------------------------------------------------------------------------
+ STABLE TIME INCREMENT INFORMATION
+-------------------------------------------------------------------------------
+
+
+  The stable time increment estimate for each element is based on
+  linearization about the initial state.
+
+
+   Initial time increment = 1.41815E-06
+
+   Statistics for all elements:
+      Mean = 1.41816E-06
+      Standard deviation = 0.0000
+
+   Most critical elements:
+    Element number   Rank    Time increment   Increment ratio
+    (Instance name)
+   ----------------------------------------------------------
+           3          1       1.418154E-06      1.000000E+00
+    PART-1-3
+           4          2       1.418154E-06      1.000000E+00
+    PART-1-3
+          13          3       1.418154E-06      9.999999E-01
+    PART-1-1
+          14          4       1.418154E-06      9.999999E-01
+    PART-1-1
+          54          5       1.418154E-06      9.999999E-01
+    PART-1-3
+          55          6       1.418154E-06      9.999999E-01
+    PART-1-3
+          53          7       1.418154E-06      9.999999E-01
+    PART-1-3
+           1          8       1.418154E-06      9.999999E-01
+    PART-1-3
+          52          9       1.418154E-06      9.999999E-01
+    PART-1-3
+           2         10       1.418154E-06      9.999999E-01
+    PART-1-3
+
+
+  Instance name for the most critical element will be printed if the critical
+  element changes or at the beginning of a new page.
+
+
+
+***WARNING: Boundary conditions have been prescribed at nodes belonging to
+            rigid bodies but are not rigid body reference nodes. Boundary
+            conditions on rigid body nodes other than the rigid body reference
+            node do not constrain the motion of the rigid body. A node set
+            named "WarnNodeBcAtRbSecondaryNode" containing the problematic
+            secondary nodes is created to help the user locate the error and
+            modify the input definition.
+
+
+***WARNING: Boundary conditions have been prescribed at nodes belonging to
+            rigid bodies but are not rigid body reference nodes. Boundary
+            conditions on rigid body nodes other than the rigid body reference
+            node do not constrain the motion of the rigid body. A node set
+            named "WarnNodeBcAtRbSecondaryNode" containing the problematic
+            secondary nodes is created to help the user locate the error and
+            modify the input definition.
+
+
+***WARNING: Boundary conditions have been prescribed at nodes belonging to
+            rigid bodies but are not rigid body reference nodes. Boundary
+            conditions on rigid body nodes other than the rigid body reference
+            node do not constrain the motion of the rigid body. A node set
+            named "WarnNodeBcAtRbSecondaryNode" containing the problematic
+            secondary nodes is created to help the user locate the error and
+            modify the input definition.
+
+-------------------------------------------------------------------------------
+
+  INFORMATION REGARDING INITIAL CONTACT OVERCLOSURES FOR NEWLY DEFINED GENERAL
+  CONTACT INTERACTIONS IN STEP 1
+
+-------------------------------------------------------------------------------
+
+***WARNING: 3 secondary nodes are pinched between tied surfaces. This is most
+            likely a modeling error and should be corrected before continuing
+            the analysis. To help identify the pinched nodes the nset
+            WarnNodePinchedTiedSurf has been created. Check the message file
+            for more detailed information.
+
+
+  Abaqus/Explicit will attempt to resolve 30 initial node-face overclosure(s).
+
+
+  Maximum initial overclosure for node-face contact is 0.30000 at node 61 of
+  instance PART-3-1 and face SNEG of element 50 of instance PART-1-1.
+
+
+  No initial edge-edge overclosures found.
+
+
+  No nodal position adjustments have been made.
+
+
+  30 node-face overclosure(s) left unresolved and will be stored as offsets.
+  To help identify the nodes involved in the overclosures a node set
+  InfoNodeUnresolvInitOver has been created. Check the message file for more
+  detailed information.
+
+
+  Maximum unresolved overclosure is 0.30000 at node 61 of instance PART-3-1
+  and face SNEG of element 50 of instance PART-1-1.
+
+
+  No edge-edge overclosures left unresolved.
+
+
+***WARNING: 30 secondary nodes have been found to be coincident with the
+            reference plane of double-sided elements after the completion of
+            the initial overclosure procedure (30 were detected in the
+            original model). It may be neccessary to manually adjust the
+            configuration of these nodes (e.g. via the *CONTACT CLEARANCE
+            ASSIGNMENT option). These secondary nodes have been added to the
+            node set WarnNodeCoincidRefPlane. Check the message file for more
+            detailed information.
+
+
+  More detailed information on initial overclosures can be found in the
+  message (.msg) file.
+
+
+***NOTE: You can view the deformed configuration due to the resolution of
+         initial overclosures.  In increment 0, draw the deformed shape or
+         draw a symbol plot of vector displacements.
+
+------------------------------------------------------------------------------
+
+Abaqus/Explicit 2022                             DATE 11-Jan-2024  TIME 13:20:30
+
+The single precision Abaqus/Explicit executable will be used in this analysis.
+
+The model has been decomposed into 4 domains.
+Domain level parallelization will be used with 4 processors.
+
+-------------------------------------------------------------------------------
+ SOLUTION PROGRESS
+-------------------------------------------------------------------------------
+
+ STEP 1  ORIGIN 0.0000
+
+  Total memory used for step 1 is approximately 13.8 megabytes.
+  Global time estimation algorithm will be used.
+  Scaling factor:  1.0000
+              STEP     TOTAL      WALL      STABLE    CRITICAL    KINETIC      TOTAL
+INCREMENT     TIME      TIME      TIME   INCREMENT     ELEMENT     ENERGY     ENERGY
+        0  0.000E+00 0.000E+00  00:00:00 1.352E-06           4  0.000E+00  0.000E+00
+INSTANCE WITH CRITICAL ELEMENT: PART-1-1
+Output Field Frame Number   0, of  200, at step time 0.000E+00
+
+***WARNING: THE ANALYSIS MAY NEED A LARGE NUMBER OF INCREMENTS (MORE THAN
+            300000), AND IT MAY BE AFFECTED BY ROUND-OFF ERRORS. RUNNING THE
+            DOUBLE PRECISION EXECUTABLE IS RECOMMENDED.
+
+     8348  1.250E-02 1.250E-02  00:00:03 1.498E-06          96  2.334E-01  3.181E-09
+INSTANCE WITH CRITICAL ELEMENT: PART-1-1
+Output Field Frame Number   1, of  200, at step time 1.250E-02
+    16695  2.500E-02 2.500E-02  00:00:06 1.498E-06          96  1.383E+00  2.710E-05
+INSTANCE WITH CRITICAL ELEMENT: PART-1-1
+Output Field Frame Number   2, of  200, at step time 2.500E-02
+    25042  3.750E-02 3.750E-02  00:00:09 1.498E-06          75  4.288E+00  3.366E-04
+INSTANCE WITH CRITICAL ELEMENT: PART-1-3
+Output Field Frame Number   3, of  200, at step time 3.750E-02
+    33388  5.000E-02 5.000E-02  00:00:12 1.498E-06          51  2.401E+00  5.228E-04
+INSTANCE WITH CRITICAL ELEMENT: PART-1-3
+Output Field Frame Number   4, of  200, at step time 5.000E-02
+    41735  6.250E-02 6.250E-02  00:00:15 1.498E-06          51  4.025E+00  9.624E-04
+INSTANCE WITH CRITICAL ELEMENT: PART-1-3
+Output Field Frame Number   5, of  200, at step time 6.250E-02
+    50082  7.500E-02 7.500E-02  00:00:18 1.498E-06          75  1.654E+00  1.044E-03
+INSTANCE WITH CRITICAL ELEMENT: PART-1-3
+Output Field Frame Number   6, of  200, at step time 7.500E-02
+    58429  8.750E-02 8.750E-02  00:00:21 1.498E-06          51  3.582E+00  1.323E-03
+INSTANCE WITH CRITICAL ELEMENT: PART-1-3
+Output Field Frame Number   7, of  200, at step time 8.750E-02
+    66776  1.000E-01 1.000E-01  00:00:24 1.498E-06          51  2.197E+00  2.917E-03
+INSTANCE WITH CRITICAL ELEMENT: PART-1-3
+Output Field Frame Number   8, of  200, at step time 1.000E-01
+    75123  1.125E-01 1.125E-01  00:00:27 1.498E-06          75  1.453E+00  3.397E-03
+INSTANCE WITH CRITICAL ELEMENT: PART-1-3
+Output Field Frame Number   9, of  200, at step time 1.125E-01
+    83470  1.250E-01 1.250E-01  00:00:30 1.498E-06          75  1.694E+00  3.251E-03
+INSTANCE WITH CRITICAL ELEMENT: PART-1-3
+Output Field Frame Number  10, of  200, at step time 1.250E-01
+    91775  1.375E-01 1.375E-01  00:00:33 1.498E-06          51  9.261E-01  3.822E-03
+INSTANCE WITH CRITICAL ELEMENT: PART-1-3
+Output Field Frame Number  11, of  200, at step time 1.375E-01
+   100081  1.500E-01 1.500E-01  00:00:36 1.498E-06          83  2.582E+00  5.236E-03
+INSTANCE WITH CRITICAL ELEMENT: PART-1-3
+Output Field Frame Number  12, of  200, at step time 1.500E-01
+   108386  1.625E-01 1.625E-01  00:00:39 1.498E-06          75  1.614E-01  5.451E-03
+INSTANCE WITH CRITICAL ELEMENT: PART-1-3
+Output Field Frame Number  13, of  200, at step time 1.625E-01
+   116692  1.750E-01 1.750E-01  00:00:43 1.498E-06          42  2.384E+00  5.642E-03
+INSTANCE WITH CRITICAL ELEMENT: PART-1-3
+Output Field Frame Number  14, of  200, at step time 1.750E-01
+   124997  1.875E-01 1.875E-01  00:00:46 1.498E-06           9  5.276E-01  7.125E-03
+INSTANCE WITH CRITICAL ELEMENT: PART-1-3
+Output Field Frame Number  15, of  200, at step time 1.875E-01
+   133303  2.000E-01 2.000E-01  00:00:48 1.498E-06          83  1.108E+00  7.709E-03
+INSTANCE WITH CRITICAL ELEMENT: PART-1-3
+Output Field Frame Number  16, of  200, at step time 2.000E-01
+   141609  2.125E-01 2.125E-01  00:00:51 1.498E-06          75  6.441E-01  7.553E-03
+INSTANCE WITH CRITICAL ELEMENT: PART-1-3
+Output Field Frame Number  17, of  200, at step time 2.125E-01
+   149914  2.250E-01 2.250E-01  00:00:54 1.498E-06          93  1.273E+00  8.004E-03
+INSTANCE WITH CRITICAL ELEMENT: PART-1-3
+Output Field Frame Number  18, of  200, at step time 2.250E-01
+   158220  2.375E-01 2.375E-01  00:00:57 1.498E-06          83  2.376E+00  9.640E-03
+INSTANCE WITH CRITICAL ELEMENT: PART-1-3
+Output Field Frame Number  19, of  200, at step time 2.375E-01
+   166525  2.500E-01 2.500E-01  00:01:00 1.498E-06          83  2.897E-01  9.951E-03
+INSTANCE WITH CRITICAL ELEMENT: PART-1-3
+Output Field Frame Number  20, of  200, at step time 2.500E-01
+   174914  2.625E-01 2.625E-01  00:01:03 1.498E-06          83  2.397E+00  1.003E-02
+INSTANCE WITH CRITICAL ELEMENT: PART-1-3
+Output Field Frame Number  21, of  200, at step time 2.625E-01
+   183302  2.750E-01 2.750E-01  00:01:06 1.498E-06          42  5.854E-01  1.121E-02
+INSTANCE WITH CRITICAL ELEMENT: PART-1-3
+Output Field Frame Number  22, of  200, at step time 2.750E-01
+   191691  2.875E-01 2.875E-01  00:01:09 1.498E-06          83  2.214E+00  1.201E-02
+INSTANCE WITH CRITICAL ELEMENT: PART-1-3
+Output Field Frame Number  23, of  200, at step time 2.875E-01
+   200080  3.000E-01 3.000E-01  00:01:12 1.498E-06          21  1.270E+00  1.191E-02
+INSTANCE WITH CRITICAL ELEMENT: PART-1-3
+Output Field Frame Number  24, of  200, at step time 3.000E-01
+   208468  3.125E-01 3.125E-01  00:01:15 1.498E-06          83  2.875E+00  1.232E-02
+INSTANCE WITH CRITICAL ELEMENT: PART-1-3
+Output Field Frame Number  25, of  200, at step time 3.125E-01
+   216857  3.250E-01 3.250E-01  00:01:18 1.498E-06          83  3.500E+00  1.407E-02
+INSTANCE WITH CRITICAL ELEMENT: PART-1-3
+Output Field Frame Number  26, of  200, at step time 3.250E-01
+   225245  3.375E-01 3.375E-01  00:01:21 1.498E-06          83  1.949E+00  1.441E-02
+INSTANCE WITH CRITICAL ELEMENT: PART-1-3
+Output Field Frame Number  27, of  200, at step time 3.375E-01
+   233634  3.500E-01 3.500E-01  00:01:24 1.498E-06          83  3.930E+00  1.441E-02
+INSTANCE WITH CRITICAL ELEMENT: PART-1-3
+Output Field Frame Number  28, of  200, at step time 3.500E-01
+   242024  3.625E-01 3.625E-01  00:01:27 1.498E-06          83  3.577E+00  1.476E-02
+INSTANCE WITH CRITICAL ELEMENT: PART-1-3
+Output Field Frame Number  29, of  200, at step time 3.625E-01
+   250413  3.750E-01 3.750E-01  00:01:30 1.498E-06          55  1.461E+00  1.477E-02
+INSTANCE WITH CRITICAL ELEMENT: PART-1-3
+Output Field Frame Number  30, of  200, at step time 3.750E-01
+   258802  3.875E-01 3.875E-01  00:01:33 1.498E-06          27  2.341E+00  1.488E-02
+INSTANCE WITH CRITICAL ELEMENT: PART-1-1
+Output Field Frame Number  31, of  200, at step time 3.875E-01
+   267190  4.000E-01 4.000E-01  00:01:36 1.498E-06          60  1.191E+00  1.495E-02
+INSTANCE WITH CRITICAL ELEMENT: PART-2-1
+Output Field Frame Number  32, of  200, at step time 4.000E-01
+   275579  4.125E-01 4.125E-01  00:01:38 1.498E-06          55  1.409E+00  1.506E-02
+INSTANCE WITH CRITICAL ELEMENT: PART-1-3
+Output Field Frame Number  33, of  200, at step time 4.125E-01
+   283968  4.250E-01 4.250E-01  00:01:41 1.498E-06          60  1.509E+00  1.529E-02
+INSTANCE WITH CRITICAL ELEMENT: PART-2-1
+Output Field Frame Number  34, of  200, at step time 4.250E-01
+   292365  4.375E-01 4.375E-01  00:01:44 1.498E-06          78  2.276E+00  1.532E-02
+INSTANCE WITH CRITICAL ELEMENT: PART-1-1
+Output Field Frame Number  35, of  200, at step time 4.375E-01
+
+***WARNING: THE ANALYSIS REACHED A LARGE NUMBER OF INCREMENTS (300000), AND IT
+            MAY BE AFFECTED BY ROUND-OFF ERRORS. RUNNING THE DOUBLE PRECISION
+            EXECUTABLE IS RECOMMENDED.
+
+   300754  4.500E-01 4.500E-01  00:01:47 1.498E-06          76  1.597E+00  1.568E-02
+INSTANCE WITH CRITICAL ELEMENT: PART-2-1
+Output Field Frame Number  36, of  200, at step time 4.500E-01
+   309142  4.625E-01 4.625E-01  00:01:50 1.494E-06          77  2.376E+00  1.595E-02
+INSTANCE WITH CRITICAL ELEMENT: PART-2-1
+Output Field Frame Number  37, of  200, at step time 4.625E-01
+   317863  4.750E-01 4.750E-01  00:01:53 1.418E-06          34  1.841E+00  1.621E-02
+INSTANCE WITH CRITICAL ELEMENT: PART-1-1
+Output Field Frame Number  38, of  200, at step time 4.750E-01
+   326601  4.875E-01 4.875E-01  00:01:56 1.418E-06          77  1.731E+00  1.654E-02
+INSTANCE WITH CRITICAL ELEMENT: PART-1-1
+Output Field Frame Number  39, of  200, at step time 4.875E-01
+
+ STEP 1  ORIGIN 0.0000
+
+              STEP     TOTAL      WALL      STABLE    CRITICAL    KINETIC      TOTAL
+INCREMENT     TIME      TIME      TIME   INCREMENT     ELEMENT     ENERGY     ENERGY
+   335339  5.000E-01 5.000E-01  00:01:59 1.418E-06          95  1.990E+00  1.676E-02
+INSTANCE WITH CRITICAL ELEMENT: PART-1-3
+Output Field Frame Number  40, of  200, at step time 5.000E-01
+   344078  5.125E-01 5.125E-01  00:02:02 1.418E-06          20  1.082E+00  1.699E-02
+INSTANCE WITH CRITICAL ELEMENT: PART-1-3
+Output Field Frame Number  41, of  200, at step time 5.125E-01
+   352816  5.250E-01 5.250E-01  00:02:05 1.418E-06          29  1.529E+00  1.726E-02
+INSTANCE WITH CRITICAL ELEMENT: PART-1-2
+Output Field Frame Number  42, of  200, at step time 5.250E-01
+   361554  5.375E-01 5.375E-01  00:02:07 1.418E-06          54  1.205E+00  1.755E-02
+INSTANCE WITH CRITICAL ELEMENT: PART-1-1
+Output Field Frame Number  43, of  200, at step time 5.375E-01
+   370292  5.500E-01 5.500E-01  00:02:10 1.418E-06          96  1.663E+00  1.780E-02
+INSTANCE WITH CRITICAL ELEMENT: PART-1-2
+Output Field Frame Number  44, of  200, at step time 5.500E-01
+   379030  5.625E-01 5.625E-01  00:02:13 1.418E-06          99  1.797E+00  1.807E-02
+INSTANCE WITH CRITICAL ELEMENT: PART-1-2
+Output Field Frame Number  45, of  200, at step time 5.625E-01
+   387768  5.750E-01 5.750E-01  00:02:16 1.418E-06          99  5.310E-01  1.855E-02
+INSTANCE WITH CRITICAL ELEMENT: PART-1-2
+Output Field Frame Number  46, of  200, at step time 5.750E-01
+   396506  5.875E-01 5.875E-01  00:02:19 1.418E-06          95  1.768E+00  1.888E-02
+INSTANCE WITH CRITICAL ELEMENT: PART-1-3
+Output Field Frame Number  47, of  200, at step time 5.875E-01
+   405245  6.000E-01 6.000E-01  00:02:22 1.418E-06          20  2.140E+00  1.937E-02
+INSTANCE WITH CRITICAL ELEMENT: PART-1-3
+Output Field Frame Number  48, of  200, at step time 6.000E-01
+   413983  6.125E-01 6.125E-01  00:02:25 1.418E-06          96  1.212E+00  1.971E-02
+INSTANCE WITH CRITICAL ELEMENT: PART-2-1
+Output Field Frame Number  49, of  200, at step time 6.125E-01
+   422721  6.250E-01 6.250E-01  00:02:28 1.418E-06         100  1.977E+00  2.002E-02
+INSTANCE WITH CRITICAL ELEMENT: PART-1-3
+Output Field Frame Number  50, of  200, at step time 6.250E-01
+   431465  6.375E-01 6.375E-01  00:02:31 1.418E-06          20  2.121E+00  2.054E-02
+INSTANCE WITH CRITICAL ELEMENT: PART-1-3
+Output Field Frame Number  51, of  200, at step time 6.375E-01
+   440204  6.500E-01 6.500E-01  00:02:34 1.418E-06          26  1.403E+00  2.161E-02
+INSTANCE WITH CRITICAL ELEMENT: PART-1-1
+Output Field Frame Number  52, of  200, at step time 6.500E-01
+   448942  6.625E-01 6.625E-01  00:02:39 1.418E-06          26  2.036E+00  2.270E-02
+INSTANCE WITH CRITICAL ELEMENT: PART-1-3
+Output Field Frame Number  53, of  200, at step time 6.625E-01
+   457680  6.750E-01 6.750E-01  00:02:43 1.418E-06          26  2.092E+00  2.392E-02
+INSTANCE WITH CRITICAL ELEMENT: PART-1-3
+Output Field Frame Number  54, of  200, at step time 6.750E-01
+   466424  6.875E-01 6.875E-01  00:02:49 1.418E-06          80  1.744E+00  2.528E-02
+INSTANCE WITH CRITICAL ELEMENT: PART-1-3
+Output Field Frame Number  55, of  200, at step time 6.875E-01
+   475162  7.000E-01 7.000E-01  00:02:54 1.418E-06          41  1.178E+00  2.668E-02
+INSTANCE WITH CRITICAL ELEMENT: PART-1-1
+Output Field Frame Number  56, of  200, at step time 7.000E-01
+   483900  7.125E-01 7.125E-01  00:02:58 1.418E-06          66  1.735E+00  2.773E-02
+INSTANCE WITH CRITICAL ELEMENT: PART-1-1
+Output Field Frame Number  57, of  200, at step time 7.125E-01
+   492638  7.250E-01 7.250E-01  00:03:03 1.418E-06          31  1.388E+00  2.852E-02
+INSTANCE WITH CRITICAL ELEMENT: PART-1-1
+Output Field Frame Number  58, of  200, at step time 7.250E-01
+   501377  7.375E-01 7.375E-01  00:03:07 1.418E-06          80  1.234E+00  2.951E-02
+INSTANCE WITH CRITICAL ELEMENT: PART-1-1
+Output Field Frame Number  59, of  200, at step time 7.375E-01
+   510115  7.500E-01 7.500E-01  00:03:10 1.418E-06          80  1.693E+00  3.037E-02
+INSTANCE WITH CRITICAL ELEMENT: PART-1-1
+Output Field Frame Number  60, of  200, at step time 7.500E-01
+   518853  7.625E-01 7.625E-01  00:03:15 1.418E-06          80  1.217E+00  3.126E-02
+INSTANCE WITH CRITICAL ELEMENT: PART-1-1
+Output Field Frame Number  61, of  200, at step time 7.625E-01
+   527597  7.750E-01 7.750E-01  00:03:18 1.418E-06          80  1.247E+00  3.234E-02
+INSTANCE WITH CRITICAL ELEMENT: PART-1-1
+Output Field Frame Number  62, of  200, at step time 7.750E-01
+   536340  7.875E-01 7.875E-01  00:03:22 1.418E-06          80  1.343E+00  3.318E-02
+INSTANCE WITH CRITICAL ELEMENT: PART-1-1
+Output Field Frame Number  63, of  200, at step time 7.875E-01
+   545078  8.000E-01 8.000E-01  00:03:25 1.418E-06          51  8.121E-01  3.386E-02
+INSTANCE WITH CRITICAL ELEMENT: PART-1-1
+Output Field Frame Number  64, of  200, at step time 8.000E-01
+   553822  8.125E-01 8.125E-01  00:03:28 1.418E-06          80  1.354E+00  3.466E-02
+INSTANCE WITH CRITICAL ELEMENT: PART-1-1
+Output Field Frame Number  65, of  200, at step time 8.125E-01
+   562566  8.250E-01 8.250E-01  00:03:31 1.418E-06          80  1.169E+00  3.535E-02
+INSTANCE WITH CRITICAL ELEMENT: PART-1-1
+Output Field Frame Number  66, of  200, at step time 8.250E-01
+   571304  8.375E-01 8.375E-01  00:03:34 1.418E-06          80  1.095E+00  3.587E-02
+INSTANCE WITH CRITICAL ELEMENT: PART-1-1
+Output Field Frame Number  67, of  200, at step time 8.375E-01
+   580042  8.500E-01 8.500E-01  00:03:37 1.418E-06          46  8.856E-01  3.646E-02
+INSTANCE WITH CRITICAL ELEMENT: PART-1-3
+Output Field Frame Number  68, of  200, at step time 8.500E-01
+   588781  8.625E-01 8.625E-01  00:03:40 1.418E-06          46  9.649E-01  3.695E-02
+INSTANCE WITH CRITICAL ELEMENT: PART-1-3
+Output Field Frame Number  69, of  200, at step time 8.625E-01
+   597519  8.750E-01 8.750E-01  00:03:43 1.418E-06          46  7.224E-01  3.729E-02
+INSTANCE WITH CRITICAL ELEMENT: PART-1-3
+Output Field Frame Number  70, of  200, at step time 8.750E-01
+   606257  8.875E-01 8.875E-01  00:03:46 1.418E-06          46  6.390E-01  3.765E-02
+INSTANCE WITH CRITICAL ELEMENT: PART-1-3
+Output Field Frame Number  71, of  200, at step time 8.875E-01
+   614995  9.000E-01 9.000E-01  00:03:49 1.418E-06          46  8.570E-01  3.785E-02
+INSTANCE WITH CRITICAL ELEMENT: PART-1-3
+Output Field Frame Number  72, of  200, at step time 9.000E-01
+   623733  9.125E-01 9.125E-01  00:03:52 1.418E-06          80  6.970E-01  3.804E-02
+INSTANCE WITH CRITICAL ELEMENT: PART-1-3
+Output Field Frame Number  73, of  200, at step time 9.125E-01
+   632471  9.250E-01 9.250E-01  00:03:55 1.418E-06          80  6.534E-01  3.824E-02
+INSTANCE WITH CRITICAL ELEMENT: PART-1-3
+Output Field Frame Number  74, of  200, at step time 9.250E-01
+   641209  9.375E-01 9.375E-01  00:03:58 1.418E-06          80  7.803E-01  3.835E-02
+INSTANCE WITH CRITICAL ELEMENT: PART-1-3
+Output Field Frame Number  75, of  200, at step time 9.375E-01
+   649947  9.500E-01 9.500E-01  00:04:01 1.418E-06          80  8.953E-01  3.843E-02
+INSTANCE WITH CRITICAL ELEMENT: PART-1-3
+Output Field Frame Number  76, of  200, at step time 9.500E-01
+   658686  9.625E-01 9.625E-01  00:04:04 1.418E-06           5  9.512E-01  3.840E-02
+INSTANCE WITH CRITICAL ELEMENT: PART-1-3
+Output Field Frame Number  77, of  200, at step time 9.625E-01
+   667445  9.750E-01 9.750E-01  00:04:07 1.418E-06          80  6.687E-01  3.840E-02
+INSTANCE WITH CRITICAL ELEMENT: PART-1-3
+Output Field Frame Number  78, of  200, at step time 9.750E-01
+   676184  9.875E-01 9.875E-01  00:04:10 1.418E-06          80  6.494E-01  3.833E-02
+INSTANCE WITH CRITICAL ELEMENT: PART-1-3
+Output Field Frame Number  79, of  200, at step time 9.875E-01
+
+ STEP 1  ORIGIN 0.0000
+
+              STEP     TOTAL      WALL      STABLE    CRITICAL    KINETIC      TOTAL
+INCREMENT     TIME      TIME      TIME   INCREMENT     ELEMENT     ENERGY     ENERGY
+   684922  1.000E+00 1.000E+00  00:04:13 1.418E-06          80  6.166E-01  3.842E-02
+INSTANCE WITH CRITICAL ELEMENT: PART-1-3
+Output Field Frame Number  80, of  200, at step time 1.000E+00
+   693660  1.013E+00 1.013E+00  00:04:16 1.418E-06           5  2.390E-01  3.847E-02
+INSTANCE WITH CRITICAL ELEMENT: PART-1-3
+Output Field Frame Number  81, of  200, at step time 1.013E+00
+   702398  1.025E+00 1.025E+00  00:04:19 1.418E-06          80  3.874E-01  3.866E-02
+INSTANCE WITH CRITICAL ELEMENT: PART-1-3
+Output Field Frame Number  82, of  200, at step time 1.025E+00
+   711136  1.038E+00 1.038E+00  00:04:22 1.418E-06          80  7.173E-01  3.878E-02
+INSTANCE WITH CRITICAL ELEMENT: PART-1-3
+Output Field Frame Number  83, of  200, at step time 1.038E+00
+   719890  1.050E+00 1.050E+00  00:04:25 1.418E-06          80  7.491E-01  3.889E-02
+INSTANCE WITH CRITICAL ELEMENT: PART-1-3
+Output Field Frame Number  84, of  200, at step time 1.050E+00
+   728628  1.063E+00 1.063E+00  00:04:27 1.418E-06          80  6.527E-01  3.907E-02
+INSTANCE WITH CRITICAL ELEMENT: PART-1-3
+Output Field Frame Number  85, of  200, at step time 1.063E+00
+   737366  1.075E+00 1.075E+00  00:04:30 1.418E-06          80  6.709E-01  3.926E-02
+INSTANCE WITH CRITICAL ELEMENT: PART-1-3
+Output Field Frame Number  86, of  200, at step time 1.075E+00
+   746104  1.088E+00 1.088E+00  00:04:33 1.418E-06          80  8.510E-01  3.945E-02
+INSTANCE WITH CRITICAL ELEMENT: PART-1-3
+Output Field Frame Number  87, of  200, at step time 1.088E+00
+   754857  1.100E+00 1.100E+00  00:04:36 1.418E-06          66  8.022E-01  3.926E-02
+INSTANCE WITH CRITICAL ELEMENT: PART-1-3
+Output Field Frame Number  88, of  200, at step time 1.100E+00
+   763610  1.113E+00 1.113E+00  00:04:39 1.418E-06          71  4.243E-01  3.907E-02
+INSTANCE WITH CRITICAL ELEMENT: PART-1-3
+Output Field Frame Number  89, of  200, at step time 1.113E+00
+   772348  1.125E+00 1.125E+00  00:04:41 1.418E-06          46  5.450E-01  3.888E-02
+INSTANCE WITH CRITICAL ELEMENT: PART-1-3
+Output Field Frame Number  90, of  200, at step time 1.125E+00
+   781086  1.138E+00 1.138E+00  00:04:44 1.418E-06          46  5.341E-01  3.870E-02
+INSTANCE WITH CRITICAL ELEMENT: PART-1-3
+Output Field Frame Number  91, of  200, at step time 1.138E+00
+   789840  1.150E+00 1.150E+00  00:04:47 1.418E-06          20  4.523E-01  3.853E-02
+INSTANCE WITH CRITICAL ELEMENT: PART-1-1
+Output Field Frame Number  92, of  200, at step time 1.150E+00
+   798578  1.163E+00 1.163E+00  00:04:50 1.418E-06          20  3.282E-01  3.830E-02
+INSTANCE WITH CRITICAL ELEMENT: PART-1-1
+Output Field Frame Number  93, of  200, at step time 1.163E+00
+   807330  1.175E+00 1.175E+00  00:04:53 1.352E-06          20  4.280E-01  3.815E-02
+INSTANCE WITH CRITICAL ELEMENT: PART-1-1
+Output Field Frame Number  94, of  200, at step time 1.175E+00
+   816071  1.188E+00 1.188E+00  00:04:55 1.418E-06          80  4.664E-01  3.785E-02
+INSTANCE WITH CRITICAL ELEMENT: PART-1-1
+Output Field Frame Number  95, of  200, at step time 1.188E+00
+   824809  1.200E+00 1.200E+00  00:04:58 1.418E-06          80  3.950E-01  3.765E-02
+INSTANCE WITH CRITICAL ELEMENT: PART-1-1
+Output Field Frame Number  96, of  200, at step time 1.200E+00
+   833575  1.213E+00 1.213E+00  00:05:01 1.418E-06          31  3.428E-01  3.742E-02
+INSTANCE WITH CRITICAL ELEMENT: PART-1-1
+Output Field Frame Number  97, of  200, at step time 1.213E+00
+   842332  1.225E+00 1.225E+00  00:05:04 1.418E-06          31  3.797E-01  3.721E-02
+INSTANCE WITH CRITICAL ELEMENT: PART-1-1
+Output Field Frame Number  98, of  200, at step time 1.225E+00
+   851070  1.237E+00 1.237E+00  00:05:07 1.418E-06          31  2.474E-01  3.668E-02
+INSTANCE WITH CRITICAL ELEMENT: PART-1-1
+Output Field Frame Number  99, of  200, at step time 1.237E+00
+   859824  1.250E+00 1.250E+00  00:05:09 1.418E-06          31  1.998E-01  3.621E-02
+INSTANCE WITH CRITICAL ELEMENT: PART-1-1
+Output Field Frame Number 100, of  200, at step time 1.250E+00
+   868573  1.263E+00 1.263E+00  00:05:12 1.418E-06          31  2.328E-01  3.576E-02
+INSTANCE WITH CRITICAL ELEMENT: PART-1-1
+Output Field Frame Number 101, of  200, at step time 1.263E+00
+   877311  1.275E+00 1.275E+00  00:05:15 1.418E-06          31  2.354E-01  3.532E-02
+INSTANCE WITH CRITICAL ELEMENT: PART-1-1
+Output Field Frame Number 102, of  200, at step time 1.275E+00
+   886062  1.288E+00 1.288E+00  00:05:18 1.418E-06          31  1.007E-01  3.490E-02
+INSTANCE WITH CRITICAL ELEMENT: PART-1-1
+Output Field Frame Number 103, of  200, at step time 1.288E+00
+   894815  1.300E+00 1.300E+00  00:05:21 1.418E-06          31  2.094E-01  3.447E-02
+INSTANCE WITH CRITICAL ELEMENT: PART-1-1
+Output Field Frame Number 104, of  200, at step time 1.300E+00
+   903553  1.313E+00 1.313E+00  00:05:24 1.418E-06          31  2.899E-01  3.419E-02
+INSTANCE WITH CRITICAL ELEMENT: PART-1-1
+Output Field Frame Number 105, of  200, at step time 1.313E+00
+   912317  1.325E+00 1.325E+00  00:05:27 1.418E-06          31  1.851E-01  3.379E-02
+INSTANCE WITH CRITICAL ELEMENT: PART-1-1
+Output Field Frame Number 106, of  200, at step time 1.325E+00
+   921055  1.338E+00 1.338E+00  00:05:30 1.418E-06          31  2.001E-01  3.323E-02
+INSTANCE WITH CRITICAL ELEMENT: PART-1-1
+Output Field Frame Number 107, of  200, at step time 1.338E+00
+   929793  1.350E+00 1.350E+00  00:05:33 1.418E-06          31  3.001E-01  3.286E-02
+INSTANCE WITH CRITICAL ELEMENT: PART-1-1
+Output Field Frame Number 108, of  200, at step time 1.350E+00
+   938545  1.363E+00 1.363E+00  00:05:36 1.418E-06          66  2.315E-01  3.234E-02
+INSTANCE WITH CRITICAL ELEMENT: PART-1-1
+Output Field Frame Number 109, of  200, at step time 1.363E+00
+   947298  1.375E+00 1.375E+00  00:05:39 1.418E-06          31  2.387E-01  3.164E-02
+INSTANCE WITH CRITICAL ELEMENT: PART-1-1
+Output Field Frame Number 110, of  200, at step time 1.375E+00
+   956052  1.388E+00 1.388E+00  00:05:42 1.418E-06          66  2.879E-01  3.090E-02
+INSTANCE WITH CRITICAL ELEMENT: PART-1-1
+Output Field Frame Number 111, of  200, at step time 1.388E+00
+   964790  1.400E+00 1.400E+00  00:05:45 1.418E-06          66  2.237E-01  3.040E-02
+INSTANCE WITH CRITICAL ELEMENT: PART-1-1
+Output Field Frame Number 112, of  200, at step time 1.400E+00
+   973545  1.413E+00 1.413E+00  00:05:48 1.418E-06          46  3.048E-01  2.985E-02
+INSTANCE WITH CRITICAL ELEMENT: PART-1-3
+Output Field Frame Number 113, of  200, at step time 1.413E+00
+   982283  1.425E+00 1.425E+00  00:05:50 1.418E-06          46  3.890E-01  2.931E-02
+INSTANCE WITH CRITICAL ELEMENT: PART-1-3
+Output Field Frame Number 114, of  200, at step time 1.425E+00
+   991021  1.438E+00 1.438E+00  00:05:53 1.418E-06          46  3.728E-01  2.878E-02
+INSTANCE WITH CRITICAL ELEMENT: PART-1-3
+Output Field Frame Number 115, of  200, at step time 1.438E+00
+   999760  1.450E+00 1.450E+00  00:05:56 1.418E-06          46  3.567E-01  2.825E-02
+INSTANCE WITH CRITICAL ELEMENT: PART-1-3
+Output Field Frame Number 116, of  200, at step time 1.450E+00
+  1008527  1.463E+00 1.463E+00  00:05:59 1.418E-06          66  2.894E-01  2.767E-02
+INSTANCE WITH CRITICAL ELEMENT: PART-1-3
+Output Field Frame Number 117, of  200, at step time 1.463E+00
+  1017265  1.475E+00 1.475E+00  00:06:02 1.418E-06          66  2.964E-01  2.697E-02
+INSTANCE WITH CRITICAL ELEMENT: PART-1-3
+Output Field Frame Number 118, of  200, at step time 1.475E+00
+  1026012  1.488E+00 1.488E+00  00:06:04 1.418E-06          46  2.352E-01  2.634E-02
+INSTANCE WITH CRITICAL ELEMENT: PART-1-3
+Output Field Frame Number 119, of  200, at step time 1.488E+00
+
+ STEP 1  ORIGIN 0.0000
+
+              STEP     TOTAL      WALL      STABLE    CRITICAL    KINETIC      TOTAL
+INCREMENT     TIME      TIME      TIME   INCREMENT     ELEMENT     ENERGY     ENERGY
+  1034756  1.500E+00 1.500E+00  00:06:07 1.418E-06          46  1.567E-01  2.559E-02
+INSTANCE WITH CRITICAL ELEMENT: PART-1-3
+Output Field Frame Number 120, of  200, at step time 1.500E+00
+  1043510  1.513E+00 1.513E+00  00:06:10 1.418E-06          66  2.209E-01  2.494E-02
+INSTANCE WITH CRITICAL ELEMENT: PART-1-3
+Output Field Frame Number 121, of  200, at step time 1.513E+00
+  1052260  1.525E+00 1.525E+00  00:06:13 1.418E-06          66  2.405E-01  2.439E-02
+INSTANCE WITH CRITICAL ELEMENT: PART-1-3
+Output Field Frame Number 122, of  200, at step time 1.525E+00
+  1060999  1.538E+00 1.538E+00  00:06:15 1.418E-06          66  6.436E-02  2.366E-02
+INSTANCE WITH CRITICAL ELEMENT: PART-1-3
+Output Field Frame Number 123, of  200, at step time 1.538E+00
+  1069752  1.550E+00 1.550E+00  00:06:18 1.418E-06          66  1.658E-01  2.310E-02
+INSTANCE WITH CRITICAL ELEMENT: PART-1-3
+Output Field Frame Number 124, of  200, at step time 1.550E+00
+  1078520  1.563E+00 1.563E+00  00:06:21 1.418E-06          66  2.475E-01  2.244E-02
+INSTANCE WITH CRITICAL ELEMENT: PART-1-3
+Output Field Frame Number 125, of  200, at step time 1.563E+00
+  1087277  1.575E+00 1.575E+00  00:06:24 1.418E-06          46  1.428E-01  2.162E-02
+INSTANCE WITH CRITICAL ELEMENT: PART-1-3
+Output Field Frame Number 126, of  200, at step time 1.575E+00
+  1096041  1.588E+00 1.588E+00  00:06:26 1.418E-06          46  1.020E-01  2.083E-02
+INSTANCE WITH CRITICAL ELEMENT: PART-1-3
+Output Field Frame Number 127, of  200, at step time 1.588E+00
+  1104794  1.600E+00 1.600E+00  00:06:29 1.418E-06          66  2.184E-01  1.997E-02
+INSTANCE WITH CRITICAL ELEMENT: PART-1-3
+Output Field Frame Number 128, of  200, at step time 1.600E+00
+  1113556  1.613E+00 1.613E+00  00:06:32 1.418E-06          66  2.011E-01  1.926E-02
+INSTANCE WITH CRITICAL ELEMENT: PART-1-3
+Output Field Frame Number 129, of  200, at step time 1.613E+00
+  1122339  1.625E+00 1.625E+00  00:06:35 1.418E-06          46  1.212E-01  1.830E-02
+INSTANCE WITH CRITICAL ELEMENT: PART-1-3
+Output Field Frame Number 130, of  200, at step time 1.625E+00
+  1131091  1.638E+00 1.638E+00  00:06:38 1.418E-06          46  1.389E-01  1.748E-02
+INSTANCE WITH CRITICAL ELEMENT: PART-1-3
+Output Field Frame Number 131, of  200, at step time 1.638E+00
+  1139855  1.650E+00 1.650E+00  00:06:41 1.418E-06          46  1.644E-01  1.669E-02
+INSTANCE WITH CRITICAL ELEMENT: PART-1-3
+Output Field Frame Number 132, of  200, at step time 1.650E+00
+  1148621  1.663E+00 1.663E+00  00:06:44 1.418E-06          46  1.687E-01  1.581E-02
+INSTANCE WITH CRITICAL ELEMENT: PART-1-3
+Output Field Frame Number 133, of  200, at step time 1.663E+00
+  1157390  1.675E+00 1.675E+00  00:06:47 1.418E-06          46  6.210E-02  1.517E-02
+INSTANCE WITH CRITICAL ELEMENT: PART-1-3
+Output Field Frame Number 134, of  200, at step time 1.675E+00
+  1166128  1.688E+00 1.688E+00  00:06:50 1.418E-06          46  1.493E-01  1.449E-02
+INSTANCE WITH CRITICAL ELEMENT: PART-1-3
+Output Field Frame Number 135, of  200, at step time 1.688E+00
+  1174878  1.700E+00 1.700E+00  00:06:52 1.418E-06          46  1.528E-01  1.359E-02
+INSTANCE WITH CRITICAL ELEMENT: PART-1-3
+Output Field Frame Number 136, of  200, at step time 1.700E+00
+  1183629  1.713E+00 1.713E+00  00:06:55 1.418E-06          46  1.276E-01  1.247E-02
+INSTANCE WITH CRITICAL ELEMENT: PART-1-3
+Output Field Frame Number 137, of  200, at step time 1.713E+00
+  1192391  1.725E+00 1.725E+00  00:06:58 1.418E-06          46  4.611E-02  1.147E-02
+INSTANCE WITH CRITICAL ELEMENT: PART-1-3
+Output Field Frame Number 138, of  200, at step time 1.725E+00
+  1201157  1.738E+00 1.738E+00  00:07:01 1.418E-06          46  1.433E-01  1.059E-02
+INSTANCE WITH CRITICAL ELEMENT: PART-1-3
+Output Field Frame Number 139, of  200, at step time 1.738E+00
+  1209910  1.750E+00 1.750E+00  00:07:04 1.418E-06          46  1.214E-01  9.777E-03
+INSTANCE WITH CRITICAL ELEMENT: PART-1-3
+Output Field Frame Number 140, of  200, at step time 1.750E+00
+  1218695  1.763E+00 1.763E+00  00:07:06 1.418E-06          46  5.330E-02  8.962E-03
+INSTANCE WITH CRITICAL ELEMENT: PART-1-3
+Output Field Frame Number 141, of  200, at step time 1.763E+00
+  1227455  1.775E+00 1.775E+00  00:07:09 1.418E-06          46  8.022E-02  8.106E-03
+INSTANCE WITH CRITICAL ELEMENT: PART-1-3
+Output Field Frame Number 142, of  200, at step time 1.775E+00
+  1236218  1.788E+00 1.788E+00  00:07:12 1.418E-06          46  1.252E-01  7.237E-03
+INSTANCE WITH CRITICAL ELEMENT: PART-1-3
+Output Field Frame Number 143, of  200, at step time 1.788E+00
+  1245005  1.800E+00 1.800E+00  00:07:15 1.418E-06          46  1.359E-01  6.147E-03
+INSTANCE WITH CRITICAL ELEMENT: PART-1-3
+Output Field Frame Number 144, of  200, at step time 1.800E+00
+  1253794  1.813E+00 1.813E+00  00:07:18 1.418E-06          46  3.133E-02  5.264E-03
+INSTANCE WITH CRITICAL ELEMENT: PART-1-3
+Output Field Frame Number 145, of  200, at step time 1.813E+00
+  1262609  1.825E+00 1.825E+00  00:07:21 1.352E-06          66  9.077E-02  4.219E-03
+INSTANCE WITH CRITICAL ELEMENT: PART-1-1
+Output Field Frame Number 146, of  200, at step time 1.825E+00
+  1271387  1.838E+00 1.838E+00  00:07:23 1.418E-06          66  1.008E-01  3.236E-03
+INSTANCE WITH CRITICAL ELEMENT: PART-1-1
+Output Field Frame Number 147, of  200, at step time 1.838E+00
+  1280184  1.850E+00 1.850E+00  00:07:26 1.418E-06          66  9.446E-02  2.224E-03
+INSTANCE WITH CRITICAL ELEMENT: PART-1-1
+Output Field Frame Number 148, of  200, at step time 1.850E+00
+  1288964  1.863E+00 1.863E+00  00:07:29 1.418E-06          46  2.545E-02  1.207E-03
+INSTANCE WITH CRITICAL ELEMENT: PART-1-3
+Output Field Frame Number 149, of  200, at step time 1.863E+00
+  1297769  1.875E+00 1.875E+00  00:07:32 1.418E-06          66  6.598E-02  4.601E-04
+INSTANCE WITH CRITICAL ELEMENT: PART-1-1
+Output Field Frame Number 150, of  200, at step time 1.875E+00
+  1306589  1.888E+00 1.888E+00  00:07:35 1.418E-06          66  9.376E-02 -5.385E-04
+INSTANCE WITH CRITICAL ELEMENT: PART-1-1
+Output Field Frame Number 151, of  200, at step time 1.888E+00
+  1315382  1.900E+00 1.900E+00  00:07:38 1.418E-06          46  7.303E-02 -1.348E-03
+INSTANCE WITH CRITICAL ELEMENT: PART-1-3
+Output Field Frame Number 152, of  200, at step time 1.900E+00
+  1324205  1.913E+00 1.913E+00  00:07:41 1.418E-06          66  3.307E-02 -2.645E-03
+INSTANCE WITH CRITICAL ELEMENT: PART-1-1
+Output Field Frame Number 153, of  200, at step time 1.913E+00
+  1333059  1.925E+00 1.925E+00  00:07:44 1.418E-06          46  4.380E-02 -3.730E-03
+INSTANCE WITH CRITICAL ELEMENT: PART-1-3
+Output Field Frame Number 154, of  200, at step time 1.925E+00
+  1341851  1.938E+00 1.938E+00  00:07:46 1.418E-06          46  5.126E-02 -4.463E-03
+INSTANCE WITH CRITICAL ELEMENT: PART-1-3
+Output Field Frame Number 155, of  200, at step time 1.938E+00
+  1350625  1.950E+00 1.950E+00  00:07:49 1.418E-06          66  5.696E-02 -5.171E-03
+INSTANCE WITH CRITICAL ELEMENT: PART-1-1
+Output Field Frame Number 156, of  200, at step time 1.950E+00
+  1359447  1.963E+00 1.963E+00  00:07:52 1.418E-06          66  1.510E-02 -6.154E-03
+INSTANCE WITH CRITICAL ELEMENT: PART-1-1
+Output Field Frame Number 157, of  200, at step time 1.963E+00
+  1368258  1.975E+00 1.975E+00  00:07:55 1.418E-06          66  5.055E-02 -6.412E-03
+INSTANCE WITH CRITICAL ELEMENT: PART-1-1
+Output Field Frame Number 158, of  200, at step time 1.975E+00
+  1377097  1.988E+00 1.988E+00  00:07:58 1.418E-06          66  3.020E-02 -6.659E-03
+INSTANCE WITH CRITICAL ELEMENT: PART-1-1
+Output Field Frame Number 159, of  200, at step time 1.988E+00
+
+ STEP 1  ORIGIN 0.0000
+
+              STEP     TOTAL      WALL      STABLE    CRITICAL    KINETIC      TOTAL
+INCREMENT     TIME      TIME      TIME   INCREMENT     ELEMENT     ENERGY     ENERGY
+  1385935  2.000E+00 2.000E+00  00:08:01 1.418E-06          46  6.304E-02 -7.400E-03
+INSTANCE WITH CRITICAL ELEMENT: PART-1-3
+Output Field Frame Number 160, of  200, at step time 2.000E+00
+  1394673  2.013E+00 2.013E+00  00:08:04 1.418E-06          66  1.360E-02 -8.233E-03
+INSTANCE WITH CRITICAL ELEMENT: PART-1-1
+Output Field Frame Number 161, of  200, at step time 2.013E+00
+  1403411  2.025E+00 2.025E+00  00:08:06 1.418E-06          66  4.292E-02 -8.891E-03
+INSTANCE WITH CRITICAL ELEMENT: PART-1-1
+Output Field Frame Number 162, of  200, at step time 2.025E+00
+  1412149  2.038E+00 2.038E+00  00:08:09 1.418E-06          66  1.971E-02 -9.538E-03
+INSTANCE WITH CRITICAL ELEMENT: PART-1-1
+Output Field Frame Number 163, of  200, at step time 2.038E+00
+  1420887  2.050E+00 2.050E+00  00:08:12 1.418E-06          66  3.135E-02 -1.027E-02
+INSTANCE WITH CRITICAL ELEMENT: PART-1-1
+Output Field Frame Number 164, of  200, at step time 2.050E+00
+  1429625  2.063E+00 2.063E+00  00:08:15 1.418E-06          66  2.661E-02 -1.075E-02
+INSTANCE WITH CRITICAL ELEMENT: PART-1-1
+Output Field Frame Number 165, of  200, at step time 2.063E+00
+  1438363  2.075E+00 2.075E+00  00:08:18 1.418E-06          66  1.134E-02 -1.139E-02
+INSTANCE WITH CRITICAL ELEMENT: PART-1-1
+Output Field Frame Number 166, of  200, at step time 2.075E+00
+  1447102  2.088E+00 2.088E+00  00:08:21 1.418E-06          66  3.837E-02 -1.168E-02
+INSTANCE WITH CRITICAL ELEMENT: PART-1-1
+Output Field Frame Number 167, of  200, at step time 2.088E+00
+  1455840  2.100E+00 2.100E+00  00:08:24 1.418E-06          66  1.868E-02 -1.221E-02
+INSTANCE WITH CRITICAL ELEMENT: PART-1-1
+Output Field Frame Number 168, of  200, at step time 2.100E+00
+  1464578  2.113E+00 2.113E+00  00:08:27 1.418E-06          66  1.115E-02 -1.242E-02
+INSTANCE WITH CRITICAL ELEMENT: PART-1-1
+Output Field Frame Number 169, of  200, at step time 2.113E+00
+  1473316  2.125E+00 2.125E+00  00:08:30 1.418E-06          66  3.655E-02 -1.279E-02
+INSTANCE WITH CRITICAL ELEMENT: PART-1-1
+Output Field Frame Number 170, of  200, at step time 2.125E+00
+  1482054  2.138E+00 2.138E+00  00:08:33 1.418E-06          66  4.064E-03 -1.315E-02
+INSTANCE WITH CRITICAL ELEMENT: PART-1-1
+Output Field Frame Number 171, of  200, at step time 2.138E+00
+  1490792  2.150E+00 2.150E+00  00:08:36 1.418E-06          66  2.572E-02 -1.354E-02
+INSTANCE WITH CRITICAL ELEMENT: PART-1-1
+Output Field Frame Number 172, of  200, at step time 2.150E+00
+  1499530  2.163E+00 2.163E+00  00:08:39 1.418E-06          66  2.231E-02 -1.374E-02
+INSTANCE WITH CRITICAL ELEMENT: PART-1-1
+Output Field Frame Number 173, of  200, at step time 2.163E+00
+  1508268  2.175E+00 2.175E+00  00:08:41 1.418E-06          66  9.185E-03 -1.398E-02
+INSTANCE WITH CRITICAL ELEMENT: PART-1-1
+Output Field Frame Number 174, of  200, at step time 2.175E+00
+  1517007  2.188E+00 2.188E+00  00:08:44 1.418E-06          66  3.585E-02 -1.419E-02
+INSTANCE WITH CRITICAL ELEMENT: PART-1-1
+Output Field Frame Number 175, of  200, at step time 2.188E+00
+  1525745  2.200E+00 2.200E+00  00:08:47 1.418E-06          66  7.842E-03 -1.438E-02
+INSTANCE WITH CRITICAL ELEMENT: PART-1-1
+Output Field Frame Number 176, of  200, at step time 2.200E+00
+  1534483  2.213E+00 2.213E+00  00:08:50 1.418E-06          66  1.761E-02 -1.455E-02
+INSTANCE WITH CRITICAL ELEMENT: PART-1-1
+Output Field Frame Number 177, of  200, at step time 2.213E+00
+  1543221  2.225E+00 2.225E+00  00:08:53 1.418E-06          66  3.183E-02 -1.472E-02
+INSTANCE WITH CRITICAL ELEMENT: PART-1-1
+Output Field Frame Number 178, of  200, at step time 2.225E+00
+  1551959  2.238E+00 2.238E+00  00:08:56 1.352E-06          66  3.848E-03 -1.494E-02
+INSTANCE WITH CRITICAL ELEMENT: PART-1-1
+Output Field Frame Number 179, of  200, at step time 2.238E+00
+  1560697  2.250E+00 2.250E+00  00:08:59 1.418E-06          66  2.537E-02 -1.514E-02
+INSTANCE WITH CRITICAL ELEMENT: PART-1-1
+Output Field Frame Number 180, of  200, at step time 2.250E+00
+  1569435  2.263E+00 2.263E+00  00:09:02 1.418E-06          66  2.636E-02 -1.530E-02
+INSTANCE WITH CRITICAL ELEMENT: PART-1-1
+Output Field Frame Number 181, of  200, at step time 2.263E+00
+  1578174  2.275E+00 2.275E+00  00:09:05 1.352E-06          66  2.144E-03 -1.546E-02
+INSTANCE WITH CRITICAL ELEMENT: PART-1-1
+Output Field Frame Number 182, of  200, at step time 2.275E+00
+  1586912  2.288E+00 2.288E+00  00:09:08 1.418E-06          66  3.019E-02 -1.562E-02
+INSTANCE WITH CRITICAL ELEMENT: PART-1-1
+Output Field Frame Number 183, of  200, at step time 2.288E+00
+  1595650  2.300E+00 2.300E+00  00:09:10 1.352E-06          66  1.708E-02 -1.575E-02
+INSTANCE WITH CRITICAL ELEMENT: PART-1-1
+Output Field Frame Number 184, of  200, at step time 2.300E+00
+  1604388  2.313E+00 2.313E+00  00:09:13 1.352E-06          66  8.286E-03 -1.591E-02
+INSTANCE WITH CRITICAL ELEMENT: PART-1-1
+Output Field Frame Number 185, of  200, at step time 2.313E+00
+  1613126  2.325E+00 2.325E+00  00:09:16 1.418E-06          66  3.307E-02 -1.608E-02
+INSTANCE WITH CRITICAL ELEMENT: PART-1-1
+Output Field Frame Number 186, of  200, at step time 2.325E+00
+  1621864  2.338E+00 2.338E+00  00:09:19 1.352E-06          66  1.004E-02 -1.620E-02
+INSTANCE WITH CRITICAL ELEMENT: PART-1-1
+Output Field Frame Number 187, of  200, at step time 2.338E+00
+  1630602  2.350E+00 2.350E+00  00:09:22 1.418E-06          66  1.192E-02 -1.633E-02
+INSTANCE WITH CRITICAL ELEMENT: PART-1-1
+Output Field Frame Number 188, of  200, at step time 2.350E+00
+  1639340  2.362E+00 2.362E+00  00:09:25 1.418E-06          66  2.854E-02 -1.650E-02
+INSTANCE WITH CRITICAL ELEMENT: PART-1-1
+Output Field Frame Number 189, of  200, at step time 2.362E+00
+  1648079  2.375E+00 2.375E+00  00:09:27 1.418E-06          66  3.559E-03 -1.666E-02
+INSTANCE WITH CRITICAL ELEMENT: PART-1-1
+Output Field Frame Number 190, of  200, at step time 2.375E+00
+  1656817  2.388E+00 2.388E+00  00:09:30 1.352E-06          66  1.536E-02 -1.679E-02
+INSTANCE WITH CRITICAL ELEMENT: PART-1-1
+Output Field Frame Number 191, of  200, at step time 2.388E+00
+  1665555  2.400E+00 2.400E+00  00:09:33 1.418E-06          66  3.015E-02 -1.689E-02
+INSTANCE WITH CRITICAL ELEMENT: PART-1-1
+Output Field Frame Number 192, of  200, at step time 2.400E+00
+  1674293  2.413E+00 2.413E+00  00:09:36 1.352E-06          66  8.123E-03 -1.699E-02
+INSTANCE WITH CRITICAL ELEMENT: PART-1-1
+Output Field Frame Number 193, of  200, at step time 2.413E+00
+  1683031  2.425E+00 2.425E+00  00:09:39 1.418E-06          66  9.166E-03 -1.710E-02
+INSTANCE WITH CRITICAL ELEMENT: PART-1-1
+Output Field Frame Number 194, of  200, at step time 2.425E+00
+  1691769  2.438E+00 2.438E+00  00:09:42 1.418E-06          66  3.127E-02 -1.721E-02
+INSTANCE WITH CRITICAL ELEMENT: PART-1-1
+Output Field Frame Number 195, of  200, at step time 2.438E+00
+  1700507  2.450E+00 2.450E+00  00:09:45 1.352E-06          66  5.966E-03 -1.732E-02
+INSTANCE WITH CRITICAL ELEMENT: PART-1-1
+Output Field Frame Number 196, of  200, at step time 2.450E+00
+  1709246  2.463E+00 2.463E+00  00:09:48 1.418E-06          66  1.655E-02 -1.744E-02
+INSTANCE WITH CRITICAL ELEMENT: PART-1-1
+Output Field Frame Number 197, of  200, at step time 2.463E+00
+  1717984  2.475E+00 2.475E+00  00:09:51 1.418E-06          66  2.956E-02 -1.754E-02
+INSTANCE WITH CRITICAL ELEMENT: PART-1-1
+Output Field Frame Number 198, of  200, at step time 2.475E+00
+  1726722  2.488E+00 2.488E+00  00:09:53 1.352E-06          66  7.252E-03 -1.765E-02
+INSTANCE WITH CRITICAL ELEMENT: PART-1-1
+Output Field Frame Number 199, of  200, at step time 2.488E+00
+
+ STEP 1  ORIGIN 0.0000
+
+              STEP     TOTAL      WALL      STABLE    CRITICAL    KINETIC      TOTAL
+INCREMENT     TIME      TIME      TIME   INCREMENT     ELEMENT     ENERGY     ENERGY
+  1735461  2.500E+00 2.500E+00  00:09:56 1.352E-06          66  1.341E-02 -1.776E-02
+INSTANCE WITH CRITICAL ELEMENT: PART-1-1
+Restart Number  1 at 2.5000
+Output Field Frame Number 200, of  200, at step time 2.500E+00
+  EXPLICIT EXECUTABLE TIME SUMMARY
+       USER TIME (SEC)      =   482.50
+       SYSTEM TIME (SEC)    =   31.400
+       WALLCLOCK TIME (SEC) =          596
+              INIT (SEC) =          0
+              MAIN (SEC) =        596
+
+  THE ANALYSIS HAS COMPLETED SUCCESSFULLY
+

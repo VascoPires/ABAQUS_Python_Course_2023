@@ -1,0 +1,250 @@
+Abaqus/Explicit 2022                             DATE 11-Jan-2024  TIME 14:34:57
+-------------------------------------------------------------------------------
+ PREPROCESSOR WARNING MESSAGES
+-------------------------------------------------------------------------------
+
+
+***WARNING: There are 406 warning messages in the data (.dat) file.  Please
+            check the data file for possible errors in the input file.
+
+
+
+***WARNING: In step 1, portions of main surfaces in the general contact domain
+            have been tied together.  Joining disconnected surfaces with *TIE
+            does not alter the surface connectivity and results in a seam in
+            the contact surface.  The nodes along the tied surface perimeters
+            have been added to the node set named  "WarnNodePerimTieSeam".
+
+-------------------------------------------------------------------------------
+           DOMAIN DECOMPOSITION INFORMATION
+-------------------------------------------------------------------------------
+
+
+     DOMAIN 1 HAS 80 ELEMENTS AND 121 NODES with WEIGHT 12.494
+
+     DOMAIN 2 HAS 57 ELEMENTS AND 94 NODES with WEIGHT 12.459
+
+     DOMAIN 3 HAS 80 ELEMENTS AND 129 NODES with WEIGHT 12.416
+
+     DOMAIN 4 HAS 57 ELEMENTS AND 94 NODES with WEIGHT 12.635
+
+     DOMAIN 5 HAS 66 ELEMENTS AND 108 NODES with WEIGHT 12.499
+
+     DOMAIN 6 HAS 61 ELEMENTS AND 111 NODES with WEIGHT 12.521
+
+     DOMAIN 7 HAS 101 ELEMENTS AND 142 NODES with WEIGHT 12.589
+
+     DOMAIN 8 HAS 103 ELEMENTS AND 146 NODES with WEIGHT 12.387
+
+
+-------------------------------------------------------------------------------
+ MODEL INFORMATION (IN GLOBAL X-Y COORDINATES)
+-------------------------------------------------------------------------------
+
+   Total mass in model = 2.28162E-06
+   Center of mass of model = ( 4.614781E+02, 4.349262E+02, 1.028759E+01)
+
+    Moments of Inertia :
+                 About Center of Mass              About Origin
+      I(XX)          9.560693E-04                  4.327908E-01
+      I(YY)          3.160301E-03                  4.893004E-01
+      I(ZZ)          3.919073E-03                  9.214109E-01
+      I(XY)          1.564101E-04                 -4.577853E-01
+      I(YZ)         -5.355740E-09                 -1.020876E-02
+      I(ZX)          4.890369E-08                 -1.083194E-02
+
+-------------------------------------------------------------------------------
+ STABLE TIME INCREMENT INFORMATION
+-------------------------------------------------------------------------------
+
+
+  The stable time increment estimate for each element is based on
+  linearization about the initial state.
+
+
+   Initial time increment = 3.93962E-07
+
+   Statistics for all elements:
+      Mean = 1.28805E-06
+      Standard deviation = 2.66222E-07
+
+   Most critical elements:
+    Element number   Rank    Time increment   Increment ratio
+    (Instance name)
+   ----------------------------------------------------------
+          38          1       3.939617E-07      1.000000E+00
+    TRIANGLE-2
+          38          2       3.939667E-07      9.999874E-01
+    TRIANGLE-1
+           7          3       4.543860E-07      8.670200E-01
+    TRIANGLE-1
+           7          4       4.543860E-07      8.670200E-01
+    TRIANGLE-2
+          51          5       4.553344E-07      8.652140E-01
+    TRIANGLE-1
+          51          6       4.553345E-07      8.652139E-01
+    TRIANGLE-2
+          52          7       5.514061E-07      7.144675E-01
+    TRIANGLE-1
+          52          8       5.514062E-07      7.144674E-01
+    TRIANGLE-2
+           1          9       5.579016E-07      7.061491E-01
+    TRIANGLE-2
+           1         10       5.579017E-07      7.061490E-01
+    TRIANGLE-1
+
+
+  Instance name for the most critical element will be printed if the critical
+  element changes or at the beginning of a new page.
+
+
+
+***WARNING: Boundary conditions have been prescribed at nodes belonging to
+            rigid bodies but are not rigid body reference nodes. Boundary
+            conditions on rigid body nodes other than the rigid body reference
+            node do not constrain the motion of the rigid body. A node set
+            named "WarnNodeBcAtRbSecondaryNode" containing the problematic
+            secondary nodes is created to help the user locate the error and
+            modify the input definition.
+
+
+***WARNING: Boundary conditions have been prescribed at nodes belonging to
+            rigid bodies but are not rigid body reference nodes. Boundary
+            conditions on rigid body nodes other than the rigid body reference
+            node do not constrain the motion of the rigid body. A node set
+            named "WarnNodeBcAtRbSecondaryNode" containing the problematic
+            secondary nodes is created to help the user locate the error and
+            modify the input definition.
+
+
+***WARNING: Boundary conditions have been prescribed at nodes belonging to
+            rigid bodies but are not rigid body reference nodes. Boundary
+            conditions on rigid body nodes other than the rigid body reference
+            node do not constrain the motion of the rigid body. A node set
+            named "WarnNodeBcAtRbSecondaryNode" containing the problematic
+            secondary nodes is created to help the user locate the error and
+            modify the input definition.
+
+
+***WARNING: Boundary conditions have been prescribed at nodes belonging to
+            rigid bodies but are not rigid body reference nodes. Boundary
+            conditions on rigid body nodes other than the rigid body reference
+            node do not constrain the motion of the rigid body. A node set
+            named "WarnNodeBcAtRbSecondaryNode" containing the problematic
+            secondary nodes is created to help the user locate the error and
+            modify the input definition.
+
+-------------------------------------------------------------------------------
+
+  INFORMATION REGARDING INITIAL CONTACT OVERCLOSURES FOR NEWLY DEFINED GENERAL
+  CONTACT INTERACTIONS IN STEP 1
+
+-------------------------------------------------------------------------------
+
+***WARNING: 6 secondary nodes are pinched between tied surfaces. This is most
+            likely a modeling error and should be corrected before continuing
+            the analysis. To help identify the pinched nodes the nset
+            WarnNodePinchedTiedSurf has been created. Check the message file
+            for more detailed information.
+
+
+  Abaqus/Explicit will attempt to resolve 73 initial node-face overclosure(s).
+
+
+  Maximum initial overclosure for node-face contact is 0.54791 at node 35 of
+  instance TRIANGLE-2 and face SNEG of element 41 of instance PART-1-2.
+
+
+  Abaqus/Explicit will attempt to resolve 28 initial edge-edge overclosure(s).
+
+
+  Maximum initial overclosure for edge-edge contact is 0.54771 between the
+  edge defined by nodes 34 and 35 of instance PART-1-2 and the edge defined by
+  nodes 35 and 36 of instance TRIANGLE-2
+
+
+  Maximum initial contact adjustment is: 0.61489 at node 8 of instance
+  TRIANGLE-1.
+
+
+  38 node-face overclosure(s) left unresolved and will be stored as offsets.
+  To help identify the nodes involved in the overclosures a node set
+  InfoNodeUnresolvInitOver has been created. Check the message file for more
+  detailed information.
+
+
+  Maximum unresolved overclosure is 0.46755 at node 2 of instance TRIANGLE-2
+  and face SNEG of element 25 of instance PART-1-2.
+
+
+  3 edge-edge overclosure(s) left unresolved and will be stored as offsets. To
+  help identify the nodes involved in the overclosures a node set
+  InfoNodeUnresolvInitOver has been created. Check the message file for more
+  detailed information.
+
+
+  Maximum unresolved overclosure is 0.46759 between the edge defined by nodes
+  17 and 3 of instance PART-1-2 and the edge defined by nodes 2 and 13 of
+  instance TRIANGLE-2
+
+
+***WARNING: 36 secondary nodes have been found to be coincident with the
+            reference plane of double-sided elements after the completion of
+            the initial overclosure procedure (64 were detected in the
+            original model). It may be neccessary to manually adjust the
+            configuration of these nodes (e.g. via the *CONTACT CLEARANCE
+            ASSIGNMENT option). These secondary nodes have been added to the
+            node set WarnNodeCoincidRefPlane. Check the message file for more
+            detailed information.
+
+
+  More detailed information on initial overclosures can be found in the
+  message (.msg) file.
+
+
+***NOTE: You can view the deformed configuration due to the resolution of
+         initial overclosures.  In increment 0, draw the deformed shape or
+         draw a symbol plot of vector displacements.
+
+------------------------------------------------------------------------------
+
+Abaqus/Explicit 2022                             DATE 11-Jan-2024  TIME 14:35:04
+
+The single precision Abaqus/Explicit executable will be used in this analysis.
+
+The model has been decomposed into 8 domains.
+Domain level parallelization will be used with 8 processors.
+
+-------------------------------------------------------------------------------
+ SOLUTION PROGRESS
+-------------------------------------------------------------------------------
+
+ STEP 1  ORIGIN 0.0000
+
+  Total memory used for step 1 is approximately 24.8 megabytes.
+  Global time estimation algorithm will be used.
+  Scaling factor:  1.0000
+              STEP     TOTAL      WALL      STABLE    CRITICAL    KINETIC      TOTAL
+INCREMENT     TIME      TIME      TIME   INCREMENT     ELEMENT     ENERGY     ENERGY
+        0  0.000E+00 0.000E+00  00:00:00 3.940E-07          38  0.000E+00  0.000E+00
+INSTANCE WITH CRITICAL ELEMENT: TRIANGLE-2
+Output Field Frame Number   0, of   50, at step time 0.000E+00
+
+***WARNING: THE ANALYSIS NEEDS AN EXTREMELY LARGE NUMBER OF INCREMENTS (MORE
+            THAN 2,000,000). CHECK THE PROPERTIES OF THE MOST CRITICAL
+            ELEMENTS AND THE DATA FILE FOR WARNING MESSAGES.
+
+
+***WARNING: THE ANALYSIS MAY NEED A LARGE NUMBER OF INCREMENTS (MORE THAN
+            300000), AND IT MAY BE AFFECTED BY ROUND-OFF ERRORS. RUNNING THE
+            DOUBLE PRECISION EXECUTABLE IS RECOMMENDED.
+
+    91380  5.000E-02 5.000E-02  00:00:37 5.328E-07          38  4.780E+00  4.026E-04
+INSTANCE WITH CRITICAL ELEMENT: TRIANGLE-2
+Output Field Frame Number   1, of   50, at step time 5.000E-02
+   187181  1.000E-01 1.000E-01  00:01:15 5.049E-07          38  3.483E+00 -5.158E-04
+INSTANCE WITH CRITICAL ELEMENT: TRIANGLE-1
+Output Field Frame Number   2, of   50, at step time 1.000E-01
+
+***ERROR: Process terminated by external request (SIGTERM or SIGINT received).
+

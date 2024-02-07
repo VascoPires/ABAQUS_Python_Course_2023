@@ -1,0 +1,22 @@
+Analysis initiated from SIMULIA established products
+Abaqus JOB Z_Explicit_Correct_Stiff_Paper_WORKING_Video
+Abaqus 2022
+Abaqus License Manager checked out the following licenses:
+Abaqus/Explicit checked out 8 tokens from Flexnet server HP-Omen_Vasco.
+<9991 out of 9999 licenses remain available>.
+Begin Analysis Input File Processor
+11/01/2024 13:20:12
+Run pre.exe
+11/01/2024 13:20:18
+End Analysis Input File Processor
+Begin Abaqus/Explicit Packager
+11/01/2024 13:20:18
+Run package.exe
+11/01/2024 13:20:24
+End Abaqus/Explicit Packager
+Begin Abaqus/Explicit Analysis
+11/01/2024 13:20:24
+Run explicit.exe
+11/01/2024 13:30:27
+End Abaqus/Explicit Analysis
+Abaqus JOB Z_Explicit_Correct_Stiff_Paper_WORKING_Video COMPLETED

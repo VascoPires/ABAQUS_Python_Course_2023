@@ -1,0 +1,2934 @@
+from part import *
+from material import *
+from section import *
+from assembly import *
+from step import *
+from interaction import *
+from load import *
+from mesh import *
+from optimization import *
+from job import *
+from sketch import *
+from visualization import *
+from connectorBehavior import *
+mdb.jobs['Z_Explicit_Correct_Stiff_Paper_WORKING_Video'].submit(
+    consistencyChecking=OFF)
+mdb.jobs['Z_Explicit_Correct_Stiff_Paper_WORKING_Video']._Message(STARTED, {
+    'phase': BATCHPRE_PHASE, 'clientHost': 'HP-Omen_Vasco', 'handle': 0, 
+    'jobName': 'Z_Explicit_Correct_Stiff_Paper_WORKING_Video'})
+mdb.jobs['Z_Explicit_Correct_Stiff_Paper_WORKING_Video']._Message(WARNING, {
+    'phase': BATCHPRE_PHASE, 
+    'message': 'THE FIRST ORIENTATION SPECIFIED ON THE *CONNECTOR SECTION OPTION WILL BE IGNORED.', 
+    'jobName': 'Z_Explicit_Correct_Stiff_Paper_WORKING_Video'})
+mdb.jobs['Z_Explicit_Correct_Stiff_Paper_WORKING_Video']._Message(WARNING, {
+    'phase': BATCHPRE_PHASE, 
+    'message': 'RIGID ELEMENTS WILL NOT BE CONSIDERED IN THE APPLICATION OF  GRAV LOADS.', 
+    'jobName': 'Z_Explicit_Correct_Stiff_Paper_WORKING_Video'})
+mdb.jobs['Z_Explicit_Correct_Stiff_Paper_WORKING_Video']._Message(WARNING, {
+    'phase': BATCHPRE_PHASE, 
+    'message': 'OUTPUT REQUEST STATUS IS NOT AVAILABLE FOR ELEMENT TYPE R3D4', 
+    'jobName': 'Z_Explicit_Correct_Stiff_Paper_WORKING_Video'})
+mdb.jobs['Z_Explicit_Correct_Stiff_Paper_WORKING_Video']._Message(WARNING, {
+    'phase': BATCHPRE_PHASE, 
+    'message': 'OUTPUT REQUEST STATUS IS NOT AVAILABLE FOR ELEMENT TYPE R3D4', 
+    'jobName': 'Z_Explicit_Correct_Stiff_Paper_WORKING_Video'})
+mdb.jobs['Z_Explicit_Correct_Stiff_Paper_WORKING_Video']._Message(WARNING, {
+    'phase': BATCHPRE_PHASE, 
+    'message': '121 nodes have dof on which incorrect boundary conditions may have been specified. The nodes have been identified in node set WarnNodeBCIncorrectDof.', 
+    'jobName': 'Z_Explicit_Correct_Stiff_Paper_WORKING_Video'})
+mdb.jobs['Z_Explicit_Correct_Stiff_Paper_WORKING_Video']._Message(COMPLETED, {
+    'phase': BATCHPRE_PHASE, 'message': 'Analysis phase complete', 
+    'jobName': 'Z_Explicit_Correct_Stiff_Paper_WORKING_Video'})
+mdb.jobs['Z_Explicit_Correct_Stiff_Paper_WORKING_Video']._Message(STARTED, {
+    'phase': PACKAGER_PHASE, 'clientHost': 'HP-Omen_Vasco', 'handle': 8572, 
+    'jobName': 'Z_Explicit_Correct_Stiff_Paper_WORKING_Video'})
+mdb.jobs['Z_Explicit_Correct_Stiff_Paper_WORKING_Video']._Message(WARNING, {
+    'phase': PACKAGER_PHASE, 
+    'message': 'There are 405 warning messages in the data (.dat) file.  Please check the data file for possible errors in the input file.', 
+    'jobName': 'Z_Explicit_Correct_Stiff_Paper_WORKING_Video'})
+mdb.jobs['Z_Explicit_Correct_Stiff_Paper_WORKING_Video']._Message(WARNING, {
+    'phase': PACKAGER_PHASE, 
+    'message': 'Each of the nodes in node set WarnNodeBcAtRbSecondaryNode have prescribed boundary conditions and belong to rigid bodies but are not rigid body reference nodes. The boundary conditions at these nodes will not constrain the motion of the rigid bodies. See the status file for further details.', 
+    'jobName': 'Z_Explicit_Correct_Stiff_Paper_WORKING_Video'})
+mdb.jobs['Z_Explicit_Correct_Stiff_Paper_WORKING_Video']._Message(WARNING, {
+    'phase': PACKAGER_PHASE, 
+    'message': 'Disconnected surfaces in the general contact domains are tied together, but the the surface connectivity is not altered, creating a seam in the contact surface.  Nodes along the tied surface perimeters have been added to node set WarnNodePerimTieSeam.', 
+    'jobName': 'Z_Explicit_Correct_Stiff_Paper_WORKING_Video'})
+mdb.jobs['Z_Explicit_Correct_Stiff_Paper_WORKING_Video']._Message(COMPLETED, {
+    'phase': PACKAGER_PHASE, 'message': 'Phase complete', 
+    'jobName': 'Z_Explicit_Correct_Stiff_Paper_WORKING_Video'})
+mdb.jobs['Z_Explicit_Correct_Stiff_Paper_WORKING_Video']._Message(STARTED, {
+    'phase': EXPLICIT_PHASE, 'clientHost': 'HP-Omen_Vasco', 'handle': 18920, 
+    'jobName': 'Z_Explicit_Correct_Stiff_Paper_WORKING_Video'})
+mdb.jobs['Z_Explicit_Correct_Stiff_Paper_WORKING_Video']._Message(STATUS, {
+    'totalTime': 0.0, 'stableTimeIncrement': 1.35215680074907e-06, 
+    'stepTime': 0.0, 'totalEnergy': 0.0, 
+    'jobName': 'Z_Explicit_Correct_Stiff_Paper_WORKING_Video', 'step': 1, 
+    'increment': 0, 'phase': EXPLICIT_PHASE, 'kineticEnergy': 0.0, 
+    'wallTime': 0.0})
+mdb.jobs['Z_Explicit_Correct_Stiff_Paper_WORKING_Video']._Message(ODB_FRAME, {
+    'phase': EXPLICIT_PHASE, 'step': 0, 'frame': 0, 
+    'jobName': 'Z_Explicit_Correct_Stiff_Paper_WORKING_Video'})
+mdb.jobs['Z_Explicit_Correct_Stiff_Paper_WORKING_Video']._Message(WARNING, {
+    'phase': EXPLICIT_PHASE, 
+    'message': 'The nodes in node set WarnNodeCoincidRefPlane-Step1 arenearly coincident with the reference plane of a double-sided element. Refer to the status and message file for further details.', 
+    'jobName': 'Z_Explicit_Correct_Stiff_Paper_WORKING_Video'})
+mdb.jobs['Z_Explicit_Correct_Stiff_Paper_WORKING_Video']._Message(WARNING, {
+    'phase': EXPLICIT_PHASE, 
+    'message': 'The nodes in node set WarnNodePinchedTiedSurf-Step1 arepinched between tied surfaces. Refer to the status and message file for further details.', 
+    'jobName': 'Z_Explicit_Correct_Stiff_Paper_WORKING_Video'})
+mdb.jobs['Z_Explicit_Correct_Stiff_Paper_WORKING_Video']._Message(STATUS, {
+    'totalTime': 0.0125010730698705, 
+    'stableTimeIncrement': 1.49766651702521e-06, 
+    'stepTime': 0.0125010730698705, 'totalEnergy': 3.18118509312626e-09, 
+    'jobName': 'Z_Explicit_Correct_Stiff_Paper_WORKING_Video', 'step': 1, 
+    'increment': 8348, 'phase': EXPLICIT_PHASE, 
+    'kineticEnergy': 0.233411639928818, 'wallTime': 3.0})
+mdb.jobs['Z_Explicit_Correct_Stiff_Paper_WORKING_Video']._Message(ODB_FRAME, {
+    'phase': EXPLICIT_PHASE, 'step': 0, 'frame': 1, 
+    'jobName': 'Z_Explicit_Correct_Stiff_Paper_WORKING_Video'})
+mdb.jobs['Z_Explicit_Correct_Stiff_Paper_WORKING_Video']._Message(STATUS, {
+    'totalTime': 0.0250012632459402, 
+    'stableTimeIncrement': 1.49766651702521e-06, 
+    'stepTime': 0.0250012632459402, 'totalEnergy': 2.71002299996326e-05, 
+    'jobName': 'Z_Explicit_Correct_Stiff_Paper_WORKING_Video', 'step': 1, 
+    'increment': 16695, 'phase': EXPLICIT_PHASE, 
+    'kineticEnergy': 1.3833464384079, 'wallTime': 6.0})
+mdb.jobs['Z_Explicit_Correct_Stiff_Paper_WORKING_Video']._Message(ODB_FRAME, {
+    'phase': EXPLICIT_PHASE, 'step': 0, 'frame': 2, 
+    'jobName': 'Z_Explicit_Correct_Stiff_Paper_WORKING_Video'})
+mdb.jobs['Z_Explicit_Correct_Stiff_Paper_WORKING_Video']._Message(STATUS, {
+    'totalTime': 0.0375014543533325, 
+    'stableTimeIncrement': 1.49766651702521e-06, 
+    'stepTime': 0.0375014543533325, 'totalEnergy': 0.000336591328959912, 
+    'jobName': 'Z_Explicit_Correct_Stiff_Paper_WORKING_Video', 'step': 1, 
+    'increment': 25042, 'phase': EXPLICIT_PHASE, 
+    'kineticEnergy': 4.2880973815918, 'wallTime': 9.0})
+mdb.jobs['Z_Explicit_Correct_Stiff_Paper_WORKING_Video']._Message(ODB_FRAME, {
+    'phase': EXPLICIT_PHASE, 'step': 0, 'frame': 3, 
+    'jobName': 'Z_Explicit_Correct_Stiff_Paper_WORKING_Video'})
+mdb.Model(name='Box_Explicit_Compressed-20_Correct_Stiff_3D', objectToCopy=
+    mdb.models['Box_Explicit_Compressed-20_Correct_Stiff'])
+mdb.jobs['Z_Explicit_Correct_Stiff_Paper_WORKING_Video']._Message(STATUS, {
+    'totalTime': 0.0500001460313797, 
+    'stableTimeIncrement': 1.49766526646999e-06, 
+    'stepTime': 0.0500001460313797, 'totalEnergy': 0.000522759510204196, 
+    'jobName': 'Z_Explicit_Correct_Stiff_Paper_WORKING_Video', 'step': 1, 
+    'increment': 33388, 'phase': EXPLICIT_PHASE, 
+    'kineticEnergy': 2.40070557594299, 'wallTime': 12.0})
+mdb.jobs['Z_Explicit_Correct_Stiff_Paper_WORKING_Video']._Message(ODB_FRAME, {
+    'phase': EXPLICIT_PHASE, 'step': 0, 'frame': 4, 
+    'jobName': 'Z_Explicit_Correct_Stiff_Paper_WORKING_Video'})
+mdb.jobs['Z_Explicit_Correct_Stiff_Paper_WORKING_Video']._Message(STATUS, {
+    'totalTime': 0.0625003352761269, 
+    'stableTimeIncrement': 1.49766594859102e-06, 
+    'stepTime': 0.0625003352761269, 'totalEnergy': 0.000962411693762988, 
+    'jobName': 'Z_Explicit_Correct_Stiff_Paper_WORKING_Video', 'step': 1, 
+    'increment': 41735, 'phase': EXPLICIT_PHASE, 
+    'kineticEnergy': 4.02469158172607, 'wallTime': 15.0})
+mdb.jobs['Z_Explicit_Correct_Stiff_Paper_WORKING_Video']._Message(ODB_FRAME, {
+    'phase': EXPLICIT_PHASE, 'step': 0, 'frame': 5, 
+    'jobName': 'Z_Explicit_Correct_Stiff_Paper_WORKING_Video'})
+mdb.jobs['Z_Explicit_Correct_Stiff_Paper_WORKING_Video']._Message(STATUS, {
+    'totalTime': 0.075000524520874, 
+    'stableTimeIncrement': 1.49766390222794e-06, 'stepTime': 0.075000524520874, 
+    'totalEnergy': 0.00104443030431867, 
+    'jobName': 'Z_Explicit_Correct_Stiff_Paper_WORKING_Video', 'step': 1, 
+    'increment': 50082, 'phase': EXPLICIT_PHASE, 
+    'kineticEnergy': 1.65436995029449, 'wallTime': 18.0})
+mdb.jobs['Z_Explicit_Correct_Stiff_Paper_WORKING_Video']._Message(ODB_FRAME, {
+    'phase': EXPLICIT_PHASE, 'step': 0, 'frame': 6, 
+    'jobName': 'Z_Explicit_Correct_Stiff_Paper_WORKING_Video'})
+mdb.jobs['Z_Explicit_Correct_Stiff_Paper_WORKING_Video']._Message(STATUS, {
+    'totalTime': 0.0875007137656212, 
+    'stableTimeIncrement': 1.49766538015683e-06, 
+    'stepTime': 0.0875007137656212, 'totalEnergy': 0.0013229661853984, 
+    'jobName': 'Z_Explicit_Correct_Stiff_Paper_WORKING_Video', 'step': 1, 
+    'increment': 58429, 'phase': EXPLICIT_PHASE, 
+    'kineticEnergy': 3.58196926116943, 'wallTime': 21.0})
+mdb.jobs['Z_Explicit_Correct_Stiff_Paper_WORKING_Video']._Message(ODB_FRAME, {
+    'phase': EXPLICIT_PHASE, 'step': 0, 'frame': 7, 
+    'jobName': 'Z_Explicit_Correct_Stiff_Paper_WORKING_Video'})
+mdb.jobs['Z_Explicit_Correct_Stiff_Paper_WORKING_Video']._Message(STATUS, {
+    'totalTime': 0.100000903010368, 
+    'stableTimeIncrement': 1.49766458434897e-06, 'stepTime': 0.100000903010368, 
+    'totalEnergy': 0.00291724991984665, 
+    'jobName': 'Z_Explicit_Correct_Stiff_Paper_WORKING_Video', 'step': 1, 
+    'increment': 66776, 'phase': EXPLICIT_PHASE, 
+    'kineticEnergy': 2.19691061973572, 'wallTime': 24.0})
+mdb.jobs['Z_Explicit_Correct_Stiff_Paper_WORKING_Video']._Message(ODB_FRAME, {
+    'phase': EXPLICIT_PHASE, 'step': 0, 'frame': 8, 
+    'jobName': 'Z_Explicit_Correct_Stiff_Paper_WORKING_Video'})
+mdb.jobs['Z_Explicit_Correct_Stiff_Paper_WORKING_Video']._Message(STATUS, {
+    'totalTime': 0.112501092255116, 
+    'stableTimeIncrement': 1.49766469803581e-06, 'stepTime': 0.112501092255116, 
+    'totalEnergy': 0.00339683191850781, 
+    'jobName': 'Z_Explicit_Correct_Stiff_Paper_WORKING_Video', 'step': 1, 
+    'increment': 75123, 'phase': EXPLICIT_PHASE, 
+    'kineticEnergy': 1.45336592197418, 'wallTime': 27.0})
+mdb.jobs['Z_Explicit_Correct_Stiff_Paper_WORKING_Video']._Message(ODB_FRAME, {
+    'phase': EXPLICIT_PHASE, 'step': 0, 'frame': 9, 
+    'jobName': 'Z_Explicit_Correct_Stiff_Paper_WORKING_Video'})
+mdb.jobs['Z_Explicit_Correct_Stiff_Paper_WORKING_Video']._Message(STATUS, {
+    'totalTime': 0.125001281499863, 
+    'stableTimeIncrement': 1.49766503909632e-06, 'stepTime': 0.125001281499863, 
+    'totalEnergy': 0.00325128994882107, 
+    'jobName': 'Z_Explicit_Correct_Stiff_Paper_WORKING_Video', 'step': 1, 
+    'increment': 83470, 'phase': EXPLICIT_PHASE, 
+    'kineticEnergy': 1.69404864311218, 'wallTime': 30.0})
+mdb.jobs['Z_Explicit_Correct_Stiff_Paper_WORKING_Video']._Message(ODB_FRAME, {
+    'phase': EXPLICIT_PHASE, 'step': 0, 'frame': 10, 
+    'jobName': 'Z_Explicit_Correct_Stiff_Paper_WORKING_Video'})
+mdb.jobs['Z_Explicit_Correct_Stiff_Paper_WORKING_Video']._Message(STATUS, {
+    'totalTime': 0.137500450015068, 
+    'stableTimeIncrement': 1.49766390222794e-06, 'stepTime': 0.137500450015068, 
+    'totalEnergy': 0.00382184260524809, 
+    'jobName': 'Z_Explicit_Correct_Stiff_Paper_WORKING_Video', 'step': 1, 
+    'increment': 91775, 'phase': EXPLICIT_PHASE, 
+    'kineticEnergy': 0.926126837730408, 'wallTime': 33.0})
+mdb.jobs['Z_Explicit_Correct_Stiff_Paper_WORKING_Video']._Message(ODB_FRAME, {
+    'phase': EXPLICIT_PHASE, 'step': 0, 'frame': 11, 
+    'jobName': 'Z_Explicit_Correct_Stiff_Paper_WORKING_Video'})
+mdb.jobs['Z_Explicit_Correct_Stiff_Paper_WORKING_Video']._Message(STATUS, {
+    'totalTime': 0.150001123547554, 
+    'stableTimeIncrement': 1.49766538015683e-06, 'stepTime': 0.150001123547554, 
+    'totalEnergy': 0.00523630622774363, 
+    'jobName': 'Z_Explicit_Correct_Stiff_Paper_WORKING_Video', 'step': 1, 
+    'increment': 100081, 'phase': EXPLICIT_PHASE, 
+    'kineticEnergy': 2.58185863494873, 'wallTime': 36.0})
+mdb.jobs['Z_Explicit_Correct_Stiff_Paper_WORKING_Video']._Message(ODB_FRAME, {
+    'phase': EXPLICIT_PHASE, 'step': 0, 'frame': 12, 
+    'jobName': 'Z_Explicit_Correct_Stiff_Paper_WORKING_Video'})
+mdb.jobs['Z_Explicit_Correct_Stiff_Paper_WORKING_Video']._Message(STATUS, {
+    'totalTime': 0.162500292062759, 
+    'stableTimeIncrement': 1.49766390222794e-06, 'stepTime': 0.162500292062759, 
+    'totalEnergy': 0.00545107806101441, 
+    'jobName': 'Z_Explicit_Correct_Stiff_Paper_WORKING_Video', 'step': 1, 
+    'increment': 108386, 'phase': EXPLICIT_PHASE, 
+    'kineticEnergy': 0.161364868283272, 'wallTime': 39.0})
+mdb.jobs['Z_Explicit_Correct_Stiff_Paper_WORKING_Video']._Message(ODB_FRAME, {
+    'phase': EXPLICIT_PHASE, 'step': 0, 'frame': 13, 
+    'jobName': 'Z_Explicit_Correct_Stiff_Paper_WORKING_Video'})
+mdb.jobs['Z_Explicit_Correct_Stiff_Paper_WORKING_Video']._Message(STATUS, {
+    'totalTime': 0.175000965595245, 
+    'stableTimeIncrement': 1.49766503909632e-06, 'stepTime': 0.175000965595245, 
+    'totalEnergy': 0.00564201595261693, 
+    'jobName': 'Z_Explicit_Correct_Stiff_Paper_WORKING_Video', 'step': 1, 
+    'increment': 116692, 'phase': EXPLICIT_PHASE, 
+    'kineticEnergy': 2.38383483886719, 'wallTime': 43.0})
+mdb.jobs['Z_Explicit_Correct_Stiff_Paper_WORKING_Video']._Message(ODB_FRAME, {
+    'phase': EXPLICIT_PHASE, 'step': 0, 'frame': 14, 
+    'jobName': 'Z_Explicit_Correct_Stiff_Paper_WORKING_Video'})
+mdb.jobs['Z_Explicit_Correct_Stiff_Paper_WORKING_Video']._Message(STATUS, {
+    'totalTime': 0.187500134110451, 
+    'stableTimeIncrement': 1.49766299273324e-06, 'stepTime': 0.187500134110451, 
+    'totalEnergy': 0.00712530082091689, 
+    'jobName': 'Z_Explicit_Correct_Stiff_Paper_WORKING_Video', 'step': 1, 
+    'increment': 124997, 'phase': EXPLICIT_PHASE, 
+    'kineticEnergy': 0.527570724487305, 'wallTime': 46.0})
+mdb.jobs['Z_Explicit_Correct_Stiff_Paper_WORKING_Video']._Message(ODB_FRAME, {
+    'phase': EXPLICIT_PHASE, 'step': 0, 'frame': 15, 
+    'jobName': 'Z_Explicit_Correct_Stiff_Paper_WORKING_Video'})
+mdb.jobs['Z_Explicit_Correct_Stiff_Paper_WORKING_Video']._Message(STATUS, {
+    'totalTime': 0.200000807642937, 
+    'stableTimeIncrement': 1.49766481172264e-06, 'stepTime': 0.200000807642937, 
+    'totalEnergy': 0.00770873390138149, 
+    'jobName': 'Z_Explicit_Correct_Stiff_Paper_WORKING_Video', 'step': 1, 
+    'increment': 133303, 'phase': EXPLICIT_PHASE, 
+    'kineticEnergy': 1.10751175880432, 'wallTime': 48.0})
+mdb.jobs['Z_Explicit_Correct_Stiff_Paper_WORKING_Video']._Message(ODB_FRAME, {
+    'phase': EXPLICIT_PHASE, 'step': 0, 'frame': 16, 
+    'jobName': 'Z_Explicit_Correct_Stiff_Paper_WORKING_Video'})
+mdb.jobs['Z_Explicit_Correct_Stiff_Paper_WORKING_Video']._Message(STATUS, {
+    'totalTime': 0.212501481175423, 
+    'stableTimeIncrement': 1.49766401591478e-06, 'stepTime': 0.212501481175423, 
+    'totalEnergy': 0.00755277602002025, 
+    'jobName': 'Z_Explicit_Correct_Stiff_Paper_WORKING_Video', 'step': 1, 
+    'increment': 141609, 'phase': EXPLICIT_PHASE, 
+    'kineticEnergy': 0.644052565097809, 'wallTime': 51.0})
+mdb.jobs['Z_Explicit_Correct_Stiff_Paper_WORKING_Video']._Message(ODB_FRAME, {
+    'phase': EXPLICIT_PHASE, 'step': 0, 'frame': 17, 
+    'jobName': 'Z_Explicit_Correct_Stiff_Paper_WORKING_Video'})
+mdb.jobs['Z_Explicit_Correct_Stiff_Paper_WORKING_Video']._Message(STATUS, {
+    'totalTime': 0.225000649690628, 
+    'stableTimeIncrement': 1.49766356116743e-06, 'stepTime': 0.225000649690628, 
+    'totalEnergy': 0.00800397712737322, 
+    'jobName': 'Z_Explicit_Correct_Stiff_Paper_WORKING_Video', 'step': 1, 
+    'increment': 149914, 'phase': EXPLICIT_PHASE, 
+    'kineticEnergy': 1.27269291877747, 'wallTime': 54.0})
+mdb.jobs['Z_Explicit_Correct_Stiff_Paper_WORKING_Video']._Message(ODB_FRAME, {
+    'phase': EXPLICIT_PHASE, 'step': 0, 'frame': 18, 
+    'jobName': 'Z_Explicit_Correct_Stiff_Paper_WORKING_Video'})
+mdb.jobs['Z_Explicit_Correct_Stiff_Paper_WORKING_Video']._Message(STATUS, {
+    'totalTime': 0.237501323223114, 
+    'stableTimeIncrement': 1.49766401591478e-06, 'stepTime': 0.237501323223114, 
+    'totalEnergy': 0.00963999517261982, 
+    'jobName': 'Z_Explicit_Correct_Stiff_Paper_WORKING_Video', 'step': 1, 
+    'increment': 158220, 'phase': EXPLICIT_PHASE, 
+    'kineticEnergy': 2.37620329856873, 'wallTime': 57.0})
+mdb.jobs['Z_Explicit_Correct_Stiff_Paper_WORKING_Video']._Message(ODB_FRAME, {
+    'phase': EXPLICIT_PHASE, 'step': 0, 'frame': 19, 
+    'jobName': 'Z_Explicit_Correct_Stiff_Paper_WORKING_Video'})
+mdb.jobs['Z_Explicit_Correct_Stiff_Paper_WORKING_Video']._Message(STATUS, {
+    'totalTime': 0.250000476837158, 
+    'stableTimeIncrement': 1.49766310642008e-06, 'stepTime': 0.250000476837158, 
+    'totalEnergy': 0.00995143316686153, 
+    'jobName': 'Z_Explicit_Correct_Stiff_Paper_WORKING_Video', 'step': 1, 
+    'increment': 166525, 'phase': EXPLICIT_PHASE, 
+    'kineticEnergy': 0.289658695459366, 'wallTime': 60.0})
+mdb.jobs['Z_Explicit_Correct_Stiff_Paper_WORKING_Video']._Message(ODB_FRAME, {
+    'phase': EXPLICIT_PHASE, 'step': 0, 'frame': 20, 
+    'jobName': 'Z_Explicit_Correct_Stiff_Paper_WORKING_Video'})
+mdb.jobs['Z_Explicit_Correct_Stiff_Paper_WORKING_Video']._Message(STATUS, {
+    'totalTime': 0.262501060962677, 
+    'stableTimeIncrement': 1.49766322010692e-06, 'stepTime': 0.262501060962677, 
+    'totalEnergy': 0.0100284134969115, 
+    'jobName': 'Z_Explicit_Correct_Stiff_Paper_WORKING_Video', 'step': 1, 
+    'increment': 174914, 'phase': EXPLICIT_PHASE, 
+    'kineticEnergy': 2.39685988426208, 'wallTime': 63.0})
+mdb.jobs['Z_Explicit_Correct_Stiff_Paper_WORKING_Video']._Message(ODB_FRAME, {
+    'phase': EXPLICIT_PHASE, 'step': 0, 'frame': 21, 
+    'jobName': 'Z_Explicit_Correct_Stiff_Paper_WORKING_Video'})
+mdb.jobs['Z_Explicit_Correct_Stiff_Paper_WORKING_Video']._Message(STATUS, {
+    'totalTime': 0.275000154972076, 
+    'stableTimeIncrement': 1.49766253798589e-06, 'stepTime': 0.275000154972076, 
+    'totalEnergy': 0.0112090781331062, 
+    'jobName': 'Z_Explicit_Correct_Stiff_Paper_WORKING_Video', 'step': 1, 
+    'increment': 183302, 'phase': EXPLICIT_PHASE, 
+    'kineticEnergy': 0.585361778736115, 'wallTime': 66.0})
+mdb.jobs['Z_Explicit_Correct_Stiff_Paper_WORKING_Video']._Message(ODB_FRAME, {
+    'phase': EXPLICIT_PHASE, 'step': 0, 'frame': 22, 
+    'jobName': 'Z_Explicit_Correct_Stiff_Paper_WORKING_Video'})
+mdb.jobs['Z_Explicit_Correct_Stiff_Paper_WORKING_Video']._Message(STATUS, {
+    'totalTime': 0.287500739097595, 
+    'stableTimeIncrement': 1.49766356116743e-06, 'stepTime': 0.287500739097595, 
+    'totalEnergy': 0.0120061133056879, 
+    'jobName': 'Z_Explicit_Correct_Stiff_Paper_WORKING_Video', 'step': 1, 
+    'increment': 191691, 'phase': EXPLICIT_PHASE, 
+    'kineticEnergy': 2.21448087692261, 'wallTime': 69.0})
+mdb.jobs['Z_Explicit_Correct_Stiff_Paper_WORKING_Video']._Message(ODB_FRAME, {
+    'phase': EXPLICIT_PHASE, 'step': 0, 'frame': 23, 
+    'jobName': 'Z_Explicit_Correct_Stiff_Paper_WORKING_Video'})
+mdb.jobs['Z_Explicit_Correct_Stiff_Paper_WORKING_Video']._Message(STATUS, {
+    'totalTime': 0.300001323223114, 'stableTimeIncrement': 1.4976628790464e-06, 
+    'stepTime': 0.300001323223114, 'totalEnergy': 0.0119103780016303, 
+    'jobName': 'Z_Explicit_Correct_Stiff_Paper_WORKING_Video', 'step': 1, 
+    'increment': 200080, 'phase': EXPLICIT_PHASE, 
+    'kineticEnergy': 1.27043724060059, 'wallTime': 72.0})
+mdb.jobs['Z_Explicit_Correct_Stiff_Paper_WORKING_Video']._Message(ODB_FRAME, {
+    'phase': EXPLICIT_PHASE, 'step': 0, 'frame': 24, 
+    'jobName': 'Z_Explicit_Correct_Stiff_Paper_WORKING_Video'})
+mdb.jobs['Z_Explicit_Correct_Stiff_Paper_WORKING_Video']._Message(STATUS, {
+    'totalTime': 0.312500417232513, 
+    'stableTimeIncrement': 1.49766299273324e-06, 'stepTime': 0.312500417232513, 
+    'totalEnergy': 0.0123232416808605, 
+    'jobName': 'Z_Explicit_Correct_Stiff_Paper_WORKING_Video', 'step': 1, 
+    'increment': 208468, 'phase': EXPLICIT_PHASE, 
+    'kineticEnergy': 2.87523007392883, 'wallTime': 75.0})
+mdb.jobs['Z_Explicit_Correct_Stiff_Paper_WORKING_Video']._Message(ODB_FRAME, {
+    'phase': EXPLICIT_PHASE, 'step': 0, 'frame': 25, 
+    'jobName': 'Z_Explicit_Correct_Stiff_Paper_WORKING_Video'})
+mdb.jobs['Z_Explicit_Correct_Stiff_Paper_WORKING_Video']._Message(STATUS, {
+    'totalTime': 0.325001001358032, 
+    'stableTimeIncrement': 1.49766299273324e-06, 'stepTime': 0.325001001358032, 
+    'totalEnergy': 0.0140657471492887, 
+    'jobName': 'Z_Explicit_Correct_Stiff_Paper_WORKING_Video', 'step': 1, 
+    'increment': 216857, 'phase': EXPLICIT_PHASE, 
+    'kineticEnergy': 3.49978804588318, 'wallTime': 78.0})
+mdb.jobs['Z_Explicit_Correct_Stiff_Paper_WORKING_Video']._Message(ODB_FRAME, {
+    'phase': EXPLICIT_PHASE, 'step': 0, 'frame': 26, 
+    'jobName': 'Z_Explicit_Correct_Stiff_Paper_WORKING_Video'})
+mdb.jobs['Z_Explicit_Correct_Stiff_Paper_WORKING_Video']._Message(STATUS, {
+    'totalTime': 0.337500095367432, 
+    'stableTimeIncrement': 1.49766322010692e-06, 'stepTime': 0.337500095367432, 
+    'totalEnergy': 0.0144091760739684, 
+    'jobName': 'Z_Explicit_Correct_Stiff_Paper_WORKING_Video', 'step': 1, 
+    'increment': 225245, 'phase': EXPLICIT_PHASE, 
+    'kineticEnergy': 1.94947648048401, 'wallTime': 81.0})
+mdb.jobs['Z_Explicit_Correct_Stiff_Paper_WORKING_Video']._Message(ODB_FRAME, {
+    'phase': EXPLICIT_PHASE, 'step': 0, 'frame': 27, 
+    'jobName': 'Z_Explicit_Correct_Stiff_Paper_WORKING_Video'})
+mdb.jobs['Z_Explicit_Correct_Stiff_Paper_WORKING_Video']._Message(STATUS, {
+    'totalTime': 0.35000067949295, 'stableTimeIncrement': 1.49766367485427e-06, 
+    'stepTime': 0.35000067949295, 'totalEnergy': 0.0144111718982458, 
+    'jobName': 'Z_Explicit_Correct_Stiff_Paper_WORKING_Video', 'step': 1, 
+    'increment': 233634, 'phase': EXPLICIT_PHASE, 
+    'kineticEnergy': 3.93041133880615, 'wallTime': 84.0})
+mdb.jobs['Z_Explicit_Correct_Stiff_Paper_WORKING_Video']._Message(ODB_FRAME, {
+    'phase': EXPLICIT_PHASE, 'step': 0, 'frame': 28, 
+    'jobName': 'Z_Explicit_Correct_Stiff_Paper_WORKING_Video'})
+mdb.jobs['Z_Explicit_Correct_Stiff_Paper_WORKING_Video']._Message(STATUS, {
+    'totalTime': 0.362500011920929, 'stableTimeIncrement': 1.4976532156652e-06, 
+    'stepTime': 0.362500011920929, 'totalEnergy': 0.0147571135312319, 
+    'jobName': 'Z_Explicit_Correct_Stiff_Paper_WORKING_Video', 'step': 1, 
+    'increment': 242024, 'phase': EXPLICIT_PHASE, 
+    'kineticEnergy': 3.5769305229187, 'wallTime': 87.0})
+mdb.jobs['Z_Explicit_Correct_Stiff_Paper_WORKING_Video']._Message(ODB_FRAME, {
+    'phase': EXPLICIT_PHASE, 'step': 0, 'frame': 29, 
+    'jobName': 'Z_Explicit_Correct_Stiff_Paper_WORKING_Video'})
+mdb.jobs['Z_Explicit_Correct_Stiff_Paper_WORKING_Video']._Message(STATUS, {
+    'totalTime': 0.375000596046448, 
+    'stableTimeIncrement': 1.49765389778622e-06, 'stepTime': 0.375000596046448, 
+    'totalEnergy': 0.014774838462472, 
+    'jobName': 'Z_Explicit_Correct_Stiff_Paper_WORKING_Video', 'step': 1, 
+    'increment': 250413, 'phase': EXPLICIT_PHASE, 
+    'kineticEnergy': 1.46097314357758, 'wallTime': 90.0})
+mdb.jobs['Z_Explicit_Correct_Stiff_Paper_WORKING_Video']._Message(ODB_FRAME, {
+    'phase': EXPLICIT_PHASE, 'step': 0, 'frame': 30, 
+    'jobName': 'Z_Explicit_Correct_Stiff_Paper_WORKING_Video'})
+mdb.jobs['Z_Explicit_Correct_Stiff_Paper_WORKING_Video']._Message(STATUS, {
+    'totalTime': 0.387501180171967, 
+    'stableTimeIncrement': 1.49765276091784e-06, 'stepTime': 0.387501180171967, 
+    'totalEnergy': 0.014884265139699, 
+    'jobName': 'Z_Explicit_Correct_Stiff_Paper_WORKING_Video', 'step': 1, 
+    'increment': 258802, 'phase': EXPLICIT_PHASE, 
+    'kineticEnergy': 2.34124112129211, 'wallTime': 93.0})
+mdb.jobs['Z_Explicit_Correct_Stiff_Paper_WORKING_Video']._Message(ODB_FRAME, {
+    'phase': EXPLICIT_PHASE, 'step': 0, 'frame': 31, 
+    'jobName': 'Z_Explicit_Correct_Stiff_Paper_WORKING_Video'})
+mdb.jobs['Z_Explicit_Correct_Stiff_Paper_WORKING_Video']._Message(STATUS, {
+    'totalTime': 0.400000274181366, 
+    'stableTimeIncrement': 1.49764593970758e-06, 'stepTime': 0.400000274181366, 
+    'totalEnergy': 0.0149528253823519, 
+    'jobName': 'Z_Explicit_Correct_Stiff_Paper_WORKING_Video', 'step': 1, 
+    'increment': 267190, 'phase': EXPLICIT_PHASE, 
+    'kineticEnergy': 1.19101822376251, 'wallTime': 96.0})
+mdb.jobs['Z_Explicit_Correct_Stiff_Paper_WORKING_Video']._Message(ODB_FRAME, {
+    'phase': EXPLICIT_PHASE, 'step': 0, 'frame': 32, 
+    'jobName': 'Z_Explicit_Correct_Stiff_Paper_WORKING_Video'})
+mdb.jobs['Z_Explicit_Correct_Stiff_Paper_WORKING_Video']._Message(STATUS, {
+    'totalTime': 0.412500858306885, 
+    'stableTimeIncrement': 1.49763934587099e-06, 'stepTime': 0.412500858306885, 
+    'totalEnergy': 0.0150604266673326, 
+    'jobName': 'Z_Explicit_Correct_Stiff_Paper_WORKING_Video', 'step': 1, 
+    'increment': 275579, 'phase': EXPLICIT_PHASE, 
+    'kineticEnergy': 1.40913915634155, 'wallTime': 98.0})
+mdb.jobs['Z_Explicit_Correct_Stiff_Paper_WORKING_Video']._Message(ODB_FRAME, {
+    'phase': EXPLICIT_PHASE, 'step': 0, 'frame': 33, 
+    'jobName': 'Z_Explicit_Correct_Stiff_Paper_WORKING_Video'})
+mdb.jobs['Z_Explicit_Correct_Stiff_Paper_WORKING_Video']._Message(STATUS, {
+    'totalTime': 0.425001442432404, 
+    'stableTimeIncrement': 1.49762547607679e-06, 'stepTime': 0.425001442432404, 
+    'totalEnergy': 0.0152899120002985, 
+    'jobName': 'Z_Explicit_Correct_Stiff_Paper_WORKING_Video', 'step': 1, 
+    'increment': 283968, 'phase': EXPLICIT_PHASE, 
+    'kineticEnergy': 1.50936436653137, 'wallTime': 101.0})
+mdb.jobs['Z_Explicit_Correct_Stiff_Paper_WORKING_Video']._Message(ODB_FRAME, {
+    'phase': EXPLICIT_PHASE, 'step': 0, 'frame': 34, 
+    'jobName': 'Z_Explicit_Correct_Stiff_Paper_WORKING_Video'})
+mdb.jobs['Z_Explicit_Correct_Stiff_Paper_WORKING_Video']._Message(STATUS, {
+    'totalTime': 0.437500536441803, 
+    'stableTimeIncrement': 1.49764241541561e-06, 'stepTime': 0.437500536441803, 
+    'totalEnergy': 0.0153169482946396, 
+    'jobName': 'Z_Explicit_Correct_Stiff_Paper_WORKING_Video', 'step': 1, 
+    'increment': 292365, 'phase': EXPLICIT_PHASE, 
+    'kineticEnergy': 2.27570724487305, 'wallTime': 104.0})
+mdb.jobs['Z_Explicit_Correct_Stiff_Paper_WORKING_Video']._Message(ODB_FRAME, {
+    'phase': EXPLICIT_PHASE, 'step': 0, 'frame': 35, 
+    'jobName': 'Z_Explicit_Correct_Stiff_Paper_WORKING_Video'})
+mdb.jobs['Z_Explicit_Correct_Stiff_Paper_WORKING_Video']._Message(STATUS, {
+    'totalTime': 0.450001120567322, 
+    'stableTimeIncrement': 1.49762229284534e-06, 'stepTime': 0.450001120567322, 
+    'totalEnergy': 0.0156754404306412, 
+    'jobName': 'Z_Explicit_Correct_Stiff_Paper_WORKING_Video', 'step': 1, 
+    'increment': 300754, 'phase': EXPLICIT_PHASE, 
+    'kineticEnergy': 1.59673750400543, 'wallTime': 107.0})
+mdb.jobs['Z_Explicit_Correct_Stiff_Paper_WORKING_Video']._Message(ODB_FRAME, {
+    'phase': EXPLICIT_PHASE, 'step': 0, 'frame': 36, 
+    'jobName': 'Z_Explicit_Correct_Stiff_Paper_WORKING_Video'})
+mdb.jobs['Z_Explicit_Correct_Stiff_Paper_WORKING_Video']._Message(STATUS, {
+    'totalTime': 0.462500214576721, 
+    'stableTimeIncrement': 1.49424238315987e-06, 'stepTime': 0.462500214576721, 
+    'totalEnergy': 0.015954278409481, 
+    'jobName': 'Z_Explicit_Correct_Stiff_Paper_WORKING_Video', 'step': 1, 
+    'increment': 309142, 'phase': EXPLICIT_PHASE, 
+    'kineticEnergy': 2.37615537643433, 'wallTime': 110.0})
+mdb.jobs['Z_Explicit_Correct_Stiff_Paper_WORKING_Video']._Message(ODB_FRAME, {
+    'phase': EXPLICIT_PHASE, 'step': 0, 'frame': 37, 
+    'jobName': 'Z_Explicit_Correct_Stiff_Paper_WORKING_Video'})
+mdb.jobs['Z_Explicit_Correct_Stiff_Paper_WORKING_Video']._Message(STATUS, {
+    'totalTime': 0.475000381469727, 
+    'stableTimeIncrement': 1.41814075504954e-06, 'stepTime': 0.475000381469727, 
+    'totalEnergy': 0.016209289431572, 
+    'jobName': 'Z_Explicit_Correct_Stiff_Paper_WORKING_Video', 'step': 1, 
+    'increment': 317863, 'phase': EXPLICIT_PHASE, 
+    'kineticEnergy': 1.84094870090485, 'wallTime': 113.0})
+mdb.jobs['Z_Explicit_Correct_Stiff_Paper_WORKING_Video']._Message(ODB_FRAME, {
+    'phase': EXPLICIT_PHASE, 'step': 0, 'frame': 38, 
+    'jobName': 'Z_Explicit_Correct_Stiff_Paper_WORKING_Video'})
+mdb.jobs['Z_Explicit_Correct_Stiff_Paper_WORKING_Video']._Message(STATUS, {
+    'totalTime': 0.487500190734863, 
+    'stableTimeIncrement': 1.41812961373944e-06, 'stepTime': 0.487500190734863, 
+    'totalEnergy': 0.0165397971868515, 
+    'jobName': 'Z_Explicit_Correct_Stiff_Paper_WORKING_Video', 'step': 1, 
+    'increment': 326601, 'phase': EXPLICIT_PHASE, 
+    'kineticEnergy': 1.73076891899109, 'wallTime': 116.0})
+mdb.jobs['Z_Explicit_Correct_Stiff_Paper_WORKING_Video']._Message(ODB_FRAME, {
+    'phase': EXPLICIT_PHASE, 'step': 0, 'frame': 39, 
+    'jobName': 'Z_Explicit_Correct_Stiff_Paper_WORKING_Video'})
+mdb.jobs['Z_Explicit_Correct_Stiff_Paper_WORKING_Video']._Message(STATUS, {
+    'totalTime': 0.5, 'stableTimeIncrement': 1.41813688969705e-06, 
+    'stepTime': 0.5, 'totalEnergy': 0.0167613625526428, 
+    'jobName': 'Z_Explicit_Correct_Stiff_Paper_WORKING_Video', 'step': 1, 
+    'increment': 335339, 'phase': EXPLICIT_PHASE, 
+    'kineticEnergy': 1.9898556470871, 'wallTime': 119.0})
+mdb.jobs['Z_Explicit_Correct_Stiff_Paper_WORKING_Video']._Message(ODB_FRAME, {
+    'phase': EXPLICIT_PHASE, 'step': 0, 'frame': 40, 
+    'jobName': 'Z_Explicit_Correct_Stiff_Paper_WORKING_Video'})
+mdb.jobs['Z_Explicit_Correct_Stiff_Paper_WORKING_Video']._Message(STATUS, {
+    'totalTime': 0.512501239776611, 
+    'stableTimeIncrement': 1.41813188747619e-06, 'stepTime': 0.512501239776611, 
+    'totalEnergy': 0.0169911682605743, 
+    'jobName': 'Z_Explicit_Correct_Stiff_Paper_WORKING_Video', 'step': 1, 
+    'increment': 344078, 'phase': EXPLICIT_PHASE, 
+    'kineticEnergy': 1.08182048797607, 'wallTime': 122.0})
+mdb.jobs['Z_Explicit_Correct_Stiff_Paper_WORKING_Video']._Message(ODB_FRAME, {
+    'phase': EXPLICIT_PHASE, 'step': 0, 'frame': 41, 
+    'jobName': 'Z_Explicit_Correct_Stiff_Paper_WORKING_Video'})
+mdb.jobs['Z_Explicit_Correct_Stiff_Paper_WORKING_Video']._Message(STATUS, {
+    'totalTime': 0.525001049041748, 
+    'stableTimeIncrement': 1.41812722631585e-06, 'stepTime': 0.525001049041748, 
+    'totalEnergy': 0.0172575265169144, 
+    'jobName': 'Z_Explicit_Correct_Stiff_Paper_WORKING_Video', 'step': 1, 
+    'increment': 352816, 'phase': EXPLICIT_PHASE, 
+    'kineticEnergy': 1.52946329116821, 'wallTime': 125.0})
+mdb.jobs['Z_Explicit_Correct_Stiff_Paper_WORKING_Video']._Message(ODB_FRAME, {
+    'phase': EXPLICIT_PHASE, 'step': 0, 'frame': 42, 
+    'jobName': 'Z_Explicit_Correct_Stiff_Paper_WORKING_Video'})
+mdb.jobs['Z_Explicit_Correct_Stiff_Paper_WORKING_Video']._Message(STATUS, {
+    'totalTime': 0.537500858306885, 'stableTimeIncrement': 1.4181207461661e-06, 
+    'stepTime': 0.537500858306885, 'totalEnergy': 0.0175493210554123, 
+    'jobName': 'Z_Explicit_Correct_Stiff_Paper_WORKING_Video', 'step': 1, 
+    'increment': 361554, 'phase': EXPLICIT_PHASE, 
+    'kineticEnergy': 1.205406665802, 'wallTime': 127.0})
+mdb.jobs['Z_Explicit_Correct_Stiff_Paper_WORKING_Video']._Message(ODB_FRAME, {
+    'phase': EXPLICIT_PHASE, 'step': 0, 'frame': 43, 
+    'jobName': 'Z_Explicit_Correct_Stiff_Paper_WORKING_Video'})
+mdb.jobs['Z_Explicit_Correct_Stiff_Paper_WORKING_Video']._Message(STATUS, {
+    'totalTime': 0.550000667572021, 
+    'stableTimeIncrement': 1.41811847242934e-06, 'stepTime': 0.550000667572021, 
+    'totalEnergy': 0.0178026482462883, 
+    'jobName': 'Z_Explicit_Correct_Stiff_Paper_WORKING_Video', 'step': 1, 
+    'increment': 370292, 'phase': EXPLICIT_PHASE, 
+    'kineticEnergy': 1.66316759586334, 'wallTime': 130.0})
+mdb.jobs['Z_Explicit_Correct_Stiff_Paper_WORKING_Video']._Message(ODB_FRAME, {
+    'phase': EXPLICIT_PHASE, 'step': 0, 'frame': 44, 
+    'jobName': 'Z_Explicit_Correct_Stiff_Paper_WORKING_Video'})
+mdb.jobs['Z_Explicit_Correct_Stiff_Paper_WORKING_Video']._Message(STATUS, {
+    'totalTime': 0.562500476837158, 
+    'stableTimeIncrement': 1.41812051879242e-06, 'stepTime': 0.562500476837158, 
+    'totalEnergy': 0.0180676802992821, 
+    'jobName': 'Z_Explicit_Correct_Stiff_Paper_WORKING_Video', 'step': 1, 
+    'increment': 379030, 'phase': EXPLICIT_PHASE, 
+    'kineticEnergy': 1.79688048362732, 'wallTime': 133.0})
+mdb.jobs['Z_Explicit_Correct_Stiff_Paper_WORKING_Video']._Message(ODB_FRAME, {
+    'phase': EXPLICIT_PHASE, 'step': 0, 'frame': 45, 
+    'jobName': 'Z_Explicit_Correct_Stiff_Paper_WORKING_Video'})
+mdb.jobs['Z_Explicit_Correct_Stiff_Paper_WORKING_Video']._Message(STATUS, {
+    'totalTime': 0.575000286102295, 
+    'stableTimeIncrement': 1.41812051879242e-06, 'stepTime': 0.575000286102295, 
+    'totalEnergy': 0.0185450166463852, 
+    'jobName': 'Z_Explicit_Correct_Stiff_Paper_WORKING_Video', 'step': 1, 
+    'increment': 387768, 'phase': EXPLICIT_PHASE, 
+    'kineticEnergy': 0.530996382236481, 'wallTime': 136.0})
+mdb.jobs['Z_Explicit_Correct_Stiff_Paper_WORKING_Video']._Message(ODB_FRAME, {
+    'phase': EXPLICIT_PHASE, 'step': 0, 'frame': 46, 
+    'jobName': 'Z_Explicit_Correct_Stiff_Paper_WORKING_Video'})
+mdb.jobs['Z_Explicit_Correct_Stiff_Paper_WORKING_Video']._Message(STATUS, {
+    'totalTime': 0.587500095367432, 
+    'stableTimeIncrement': 1.41811722187413e-06, 'stepTime': 0.587500095367432, 
+    'totalEnergy': 0.0188814699649811, 
+    'jobName': 'Z_Explicit_Correct_Stiff_Paper_WORKING_Video', 'step': 1, 
+    'increment': 396506, 'phase': EXPLICIT_PHASE, 
+    'kineticEnergy': 1.76787948608398, 'wallTime': 139.0})
+mdb.jobs['Z_Explicit_Correct_Stiff_Paper_WORKING_Video']._Message(ODB_FRAME, {
+    'phase': EXPLICIT_PHASE, 'step': 0, 'frame': 47, 
+    'jobName': 'Z_Explicit_Correct_Stiff_Paper_WORKING_Video'})
+mdb.jobs['Z_Explicit_Correct_Stiff_Paper_WORKING_Video']._Message(STATUS, {
+    'totalTime': 0.600001335144043, 
+    'stableTimeIncrement': 1.41811358389532e-06, 'stepTime': 0.600001335144043, 
+    'totalEnergy': 0.0193729028105736, 
+    'jobName': 'Z_Explicit_Correct_Stiff_Paper_WORKING_Video', 'step': 1, 
+    'increment': 405245, 'phase': EXPLICIT_PHASE, 
+    'kineticEnergy': 2.1400203704834, 'wallTime': 142.0})
+mdb.jobs['Z_Explicit_Correct_Stiff_Paper_WORKING_Video']._Message(ODB_FRAME, {
+    'phase': EXPLICIT_PHASE, 'step': 0, 'frame': 48, 
+    'jobName': 'Z_Explicit_Correct_Stiff_Paper_WORKING_Video'})
+mdb.jobs['Z_Explicit_Correct_Stiff_Paper_WORKING_Video']._Message(STATUS, {
+    'totalTime': 0.61250114440918, 'stableTimeIncrement': 1.41812233778182e-06, 
+    'stepTime': 0.61250114440918, 'totalEnergy': 0.0197073966264725, 
+    'jobName': 'Z_Explicit_Correct_Stiff_Paper_WORKING_Video', 'step': 1, 
+    'increment': 413983, 'phase': EXPLICIT_PHASE, 
+    'kineticEnergy': 1.21204888820648, 'wallTime': 145.0})
+mdb.jobs['Z_Explicit_Correct_Stiff_Paper_WORKING_Video']._Message(ODB_FRAME, {
+    'phase': EXPLICIT_PHASE, 'step': 0, 'frame': 49, 
+    'jobName': 'Z_Explicit_Correct_Stiff_Paper_WORKING_Video'})
+mdb.jobs['Z_Explicit_Correct_Stiff_Paper_WORKING_Video']._Message(STATUS, {
+    'totalTime': 0.625000953674316, 
+    'stableTimeIncrement': 1.41812483889225e-06, 'stepTime': 0.625000953674316, 
+    'totalEnergy': 0.0200249254703522, 
+    'jobName': 'Z_Explicit_Correct_Stiff_Paper_WORKING_Video', 'step': 1, 
+    'increment': 422721, 'phase': EXPLICIT_PHASE, 
+    'kineticEnergy': 1.97745907306671, 'wallTime': 148.0})
+mdb.jobs['Z_Explicit_Correct_Stiff_Paper_WORKING_Video']._Message(ODB_FRAME, {
+    'phase': EXPLICIT_PHASE, 'step': 0, 'frame': 50, 
+    'jobName': 'Z_Explicit_Correct_Stiff_Paper_WORKING_Video'})
+mdb.jobs['Z_Explicit_Correct_Stiff_Paper_WORKING_Video']._Message(STATUS, {
+    'totalTime': 0.637499988079071, 'stableTimeIncrement': 1.4181225651555e-06, 
+    'stepTime': 0.637499988079071, 'totalEnergy': 0.0205360502004623, 
+    'jobName': 'Z_Explicit_Correct_Stiff_Paper_WORKING_Video', 'step': 1, 
+    'increment': 431465, 'phase': EXPLICIT_PHASE, 
+    'kineticEnergy': 2.12125468254089, 'wallTime': 151.0})
+mdb.jobs['Z_Explicit_Correct_Stiff_Paper_WORKING_Video']._Message(ODB_FRAME, {
+    'phase': EXPLICIT_PHASE, 'step': 0, 'frame': 51, 
+    'jobName': 'Z_Explicit_Correct_Stiff_Paper_WORKING_Video'})
+mdb.jobs['Z_Explicit_Correct_Stiff_Paper_WORKING_Video']._Message(STATUS, {
+    'totalTime': 0.650001227855682, 
+    'stableTimeIncrement': 1.41811847242934e-06, 'stepTime': 0.650001227855682, 
+    'totalEnergy': 0.0216140449047089, 
+    'jobName': 'Z_Explicit_Correct_Stiff_Paper_WORKING_Video', 'step': 1, 
+    'increment': 440204, 'phase': EXPLICIT_PHASE, 
+    'kineticEnergy': 1.40270686149597, 'wallTime': 154.0})
+mdb.jobs['Z_Explicit_Correct_Stiff_Paper_WORKING_Video']._Message(ODB_FRAME, {
+    'phase': EXPLICIT_PHASE, 'step': 0, 'frame': 52, 
+    'jobName': 'Z_Explicit_Correct_Stiff_Paper_WORKING_Video'})
+mdb.jobs['Z_Explicit_Correct_Stiff_Paper_WORKING_Video']._Message(STATUS, {
+    'totalTime': 0.662501037120819, 
+    'stableTimeIncrement': 1.41811437970318e-06, 'stepTime': 0.662501037120819, 
+    'totalEnergy': 0.0227012559771538, 
+    'jobName': 'Z_Explicit_Correct_Stiff_Paper_WORKING_Video', 'step': 1, 
+    'increment': 448942, 'phase': EXPLICIT_PHASE, 
+    'kineticEnergy': 2.03631520271301, 'wallTime': 159.0})
+mdb.jobs['Z_Explicit_Correct_Stiff_Paper_WORKING_Video']._Message(ODB_FRAME, {
+    'phase': EXPLICIT_PHASE, 'step': 0, 'frame': 53, 
+    'jobName': 'Z_Explicit_Correct_Stiff_Paper_WORKING_Video'})
+mdb.jobs['Z_Explicit_Correct_Stiff_Paper_WORKING_Video']._Message(STATUS, {
+    'totalTime': 0.675000846385956, 'stableTimeIncrement': 1.418109604856e-06, 
+    'stepTime': 0.675000846385956, 'totalEnergy': 0.0239206552505493, 
+    'jobName': 'Z_Explicit_Correct_Stiff_Paper_WORKING_Video', 'step': 1, 
+    'increment': 457680, 'phase': EXPLICIT_PHASE, 
+    'kineticEnergy': 2.09235954284668, 'wallTime': 163.0})
+mdb.jobs['Z_Explicit_Correct_Stiff_Paper_WORKING_Video']._Message(ODB_FRAME, {
+    'phase': EXPLICIT_PHASE, 'step': 0, 'frame': 54, 
+    'jobName': 'Z_Explicit_Correct_Stiff_Paper_WORKING_Video'})
+mdb.jobs['Z_Explicit_Correct_Stiff_Paper_WORKING_Video']._Message(STATUS, {
+    'totalTime': 0.687500715255737, 
+    'stableTimeIncrement': 1.41812131460028e-06, 'stepTime': 0.687500715255737, 
+    'totalEnergy': 0.0252757407724857, 
+    'jobName': 'Z_Explicit_Correct_Stiff_Paper_WORKING_Video', 'step': 1, 
+    'increment': 466424, 'phase': EXPLICIT_PHASE, 
+    'kineticEnergy': 1.74397313594818, 'wallTime': 169.0})
+mdb.jobs['Z_Explicit_Correct_Stiff_Paper_WORKING_Video']._Message(ODB_FRAME, {
+    'phase': EXPLICIT_PHASE, 'step': 0, 'frame': 55, 
+    'jobName': 'Z_Explicit_Correct_Stiff_Paper_WORKING_Video'})
+mdb.jobs['Z_Explicit_Correct_Stiff_Paper_WORKING_Video']._Message(STATUS, {
+    'totalTime': 0.700000524520874, 
+    'stableTimeIncrement': 1.41812199672131e-06, 'stepTime': 0.700000524520874, 
+    'totalEnergy': 0.0266811214387417, 
+    'jobName': 'Z_Explicit_Correct_Stiff_Paper_WORKING_Video', 'step': 1, 
+    'increment': 475162, 'phase': EXPLICIT_PHASE, 
+    'kineticEnergy': 1.17788565158844, 'wallTime': 174.0})
+mdb.jobs['Z_Explicit_Correct_Stiff_Paper_WORKING_Video']._Message(ODB_FRAME, {
+    'phase': EXPLICIT_PHASE, 'step': 0, 'frame': 56, 
+    'jobName': 'Z_Explicit_Correct_Stiff_Paper_WORKING_Video'})
+mdb.jobs['Z_Explicit_Correct_Stiff_Paper_WORKING_Video']._Message(STATUS, {
+    'totalTime': 0.712500333786011, 
+    'stableTimeIncrement': 1.41811460707686e-06, 'stepTime': 0.712500333786011, 
+    'totalEnergy': 0.0277329124510288, 
+    'jobName': 'Z_Explicit_Correct_Stiff_Paper_WORKING_Video', 'step': 1, 
+    'increment': 483900, 'phase': EXPLICIT_PHASE, 
+    'kineticEnergy': 1.73455262184143, 'wallTime': 178.0})
+mdb.jobs['Z_Explicit_Correct_Stiff_Paper_WORKING_Video']._Message(ODB_FRAME, {
+    'phase': EXPLICIT_PHASE, 'step': 0, 'frame': 57, 
+    'jobName': 'Z_Explicit_Correct_Stiff_Paper_WORKING_Video'})
+mdb.jobs['Z_Explicit_Correct_Stiff_Paper_WORKING_Video']._Message(STATUS, {
+    'totalTime': 0.725000143051147, 
+    'stableTimeIncrement': 1.41810369314044e-06, 'stepTime': 0.725000143051147, 
+    'totalEnergy': 0.0285237468779087, 
+    'jobName': 'Z_Explicit_Correct_Stiff_Paper_WORKING_Video', 'step': 1, 
+    'increment': 492638, 'phase': EXPLICIT_PHASE, 
+    'kineticEnergy': 1.38846111297607, 'wallTime': 183.0})
+mdb.jobs['Z_Explicit_Correct_Stiff_Paper_WORKING_Video']._Message(ODB_FRAME, {
+    'phase': EXPLICIT_PHASE, 'step': 0, 'frame': 58, 
+    'jobName': 'Z_Explicit_Correct_Stiff_Paper_WORKING_Video'})
+mdb.jobs['Z_Explicit_Correct_Stiff_Paper_WORKING_Video']._Message(STATUS, {
+    'totalTime': 0.737501382827759, 
+    'stableTimeIncrement': 1.41809016440675e-06, 'stepTime': 0.737501382827759, 
+    'totalEnergy': 0.0295097418129444, 
+    'jobName': 'Z_Explicit_Correct_Stiff_Paper_WORKING_Video', 'step': 1, 
+    'increment': 501377, 'phase': EXPLICIT_PHASE, 
+    'kineticEnergy': 1.23385787010193, 'wallTime': 187.0})
+mdb.jobs['Z_Explicit_Correct_Stiff_Paper_WORKING_Video']._Message(ODB_FRAME, {
+    'phase': EXPLICIT_PHASE, 'step': 0, 'frame': 59, 
+    'jobName': 'Z_Explicit_Correct_Stiff_Paper_WORKING_Video'})
+mdb.jobs['Z_Explicit_Correct_Stiff_Paper_WORKING_Video']._Message(STATUS, {
+    'totalTime': 0.750001192092896, 
+    'stableTimeIncrement': 1.41806799547339e-06, 'stepTime': 0.750001192092896, 
+    'totalEnergy': 0.0303717963397503, 
+    'jobName': 'Z_Explicit_Correct_Stiff_Paper_WORKING_Video', 'step': 1, 
+    'increment': 510115, 'phase': EXPLICIT_PHASE, 
+    'kineticEnergy': 1.69259214401245, 'wallTime': 190.0})
+mdb.jobs['Z_Explicit_Correct_Stiff_Paper_WORKING_Video']._Message(ODB_FRAME, {
+    'phase': EXPLICIT_PHASE, 'step': 0, 'frame': 60, 
+    'jobName': 'Z_Explicit_Correct_Stiff_Paper_WORKING_Video'})
+mdb.jobs['Z_Explicit_Correct_Stiff_Paper_WORKING_Video']._Message(STATUS, {
+    'totalTime': 0.762501001358032, 
+    'stableTimeIncrement': 1.41809903198009e-06, 'stepTime': 0.762501001358032, 
+    'totalEnergy': 0.0312562026083469, 
+    'jobName': 'Z_Explicit_Correct_Stiff_Paper_WORKING_Video', 'step': 1, 
+    'increment': 518853, 'phase': EXPLICIT_PHASE, 
+    'kineticEnergy': 1.21719121932983, 'wallTime': 195.0})
+mdb.jobs['Z_Explicit_Correct_Stiff_Paper_WORKING_Video']._Message(ODB_FRAME, {
+    'phase': EXPLICIT_PHASE, 'step': 0, 'frame': 61, 
+    'jobName': 'Z_Explicit_Correct_Stiff_Paper_WORKING_Video'})
+mdb.jobs['Z_Explicit_Correct_Stiff_Paper_WORKING_Video']._Message(STATUS, {
+    'totalTime': 0.775000870227814, 
+    'stableTimeIncrement': 1.41804866871098e-06, 'stepTime': 0.775000870227814, 
+    'totalEnergy': 0.0323417596518993, 
+    'jobName': 'Z_Explicit_Correct_Stiff_Paper_WORKING_Video', 'step': 1, 
+    'increment': 527597, 'phase': EXPLICIT_PHASE, 
+    'kineticEnergy': 1.24660396575928, 'wallTime': 198.0})
+mdb.jobs['Z_Explicit_Correct_Stiff_Paper_WORKING_Video']._Message(ODB_FRAME, {
+    'phase': EXPLICIT_PHASE, 'step': 0, 'frame': 62, 
+    'jobName': 'Z_Explicit_Correct_Stiff_Paper_WORKING_Video'})
+mdb.jobs['Z_Explicit_Correct_Stiff_Paper_WORKING_Video']._Message(STATUS, {
+    'totalTime': 0.787501037120819, 
+    'stableTimeIncrement': 1.41804582654004e-06, 'stepTime': 0.787501037120819, 
+    'totalEnergy': 0.0331798791885376, 
+    'jobName': 'Z_Explicit_Correct_Stiff_Paper_WORKING_Video', 'step': 1, 
+    'increment': 536340, 'phase': EXPLICIT_PHASE, 
+    'kineticEnergy': 1.34297704696655, 'wallTime': 202.0})
+mdb.jobs['Z_Explicit_Correct_Stiff_Paper_WORKING_Video']._Message(ODB_FRAME, {
+    'phase': EXPLICIT_PHASE, 'step': 0, 'frame': 63, 
+    'jobName': 'Z_Explicit_Correct_Stiff_Paper_WORKING_Video'})
+mdb.jobs['Z_Explicit_Correct_Stiff_Paper_WORKING_Video']._Message(STATUS, {
+    'totalTime': 0.800000846385956, 'stableTimeIncrement': 1.4180354810378e-06, 
+    'stepTime': 0.800000846385956, 'totalEnergy': 0.033860269933939, 
+    'jobName': 'Z_Explicit_Correct_Stiff_Paper_WORKING_Video', 'step': 1, 
+    'increment': 545078, 'phase': EXPLICIT_PHASE, 
+    'kineticEnergy': 0.812127590179443, 'wallTime': 205.0})
+mdb.jobs['Z_Explicit_Correct_Stiff_Paper_WORKING_Video']._Message(ODB_FRAME, {
+    'phase': EXPLICIT_PHASE, 'step': 0, 'frame': 64, 
+    'jobName': 'Z_Explicit_Correct_Stiff_Paper_WORKING_Video'})
+mdb.jobs['Z_Explicit_Correct_Stiff_Paper_WORKING_Video']._Message(STATUS, {
+    'totalTime': 0.812500894069672, 
+    'stableTimeIncrement': 1.41804537179269e-06, 'stepTime': 0.812500894069672, 
+    'totalEnergy': 0.0346568152308464, 
+    'jobName': 'Z_Explicit_Correct_Stiff_Paper_WORKING_Video', 'step': 1, 
+    'increment': 553822, 'phase': EXPLICIT_PHASE, 
+    'kineticEnergy': 1.35425901412964, 'wallTime': 208.0})
+mdb.jobs['Z_Explicit_Correct_Stiff_Paper_WORKING_Video']._Message(ODB_FRAME, {
+    'phase': EXPLICIT_PHASE, 'step': 0, 'frame': 65, 
+    'jobName': 'Z_Explicit_Correct_Stiff_Paper_WORKING_Video'})
+mdb.jobs['Z_Explicit_Correct_Stiff_Paper_WORKING_Video']._Message(STATUS, {
+    'totalTime': 0.825000464916229, 
+    'stableTimeIncrement': 1.41807743148092e-06, 'stepTime': 0.825000464916229, 
+    'totalEnergy': 0.0353534296154976, 
+    'jobName': 'Z_Explicit_Correct_Stiff_Paper_WORKING_Video', 'step': 1, 
+    'increment': 562566, 'phase': EXPLICIT_PHASE, 
+    'kineticEnergy': 1.16875731945038, 'wallTime': 211.0})
+mdb.jobs['Z_Explicit_Correct_Stiff_Paper_WORKING_Video']._Message(ODB_FRAME, {
+    'phase': EXPLICIT_PHASE, 'step': 0, 'frame': 66, 
+    'jobName': 'Z_Explicit_Correct_Stiff_Paper_WORKING_Video'})
+mdb.jobs['Z_Explicit_Correct_Stiff_Paper_WORKING_Video']._Message(STATUS, {
+    'totalTime': 0.837500274181366, 
+    'stableTimeIncrement': 1.41808675380162e-06, 'stepTime': 0.837500274181366, 
+    'totalEnergy': 0.0358729399740696, 
+    'jobName': 'Z_Explicit_Correct_Stiff_Paper_WORKING_Video', 'step': 1, 
+    'increment': 571304, 'phase': EXPLICIT_PHASE, 
+    'kineticEnergy': 1.09545421600342, 'wallTime': 214.0})
+mdb.jobs['Z_Explicit_Correct_Stiff_Paper_WORKING_Video']._Message(ODB_FRAME, {
+    'phase': EXPLICIT_PHASE, 'step': 0, 'frame': 67, 
+    'jobName': 'Z_Explicit_Correct_Stiff_Paper_WORKING_Video'})
+mdb.jobs['Z_Explicit_Correct_Stiff_Paper_WORKING_Video']._Message(STATUS, {
+    'totalTime': 0.850000083446503, 
+    'stableTimeIncrement': 1.41810528475617e-06, 'stepTime': 0.850000083446503, 
+    'totalEnergy': 0.0364556983113289, 
+    'jobName': 'Z_Explicit_Correct_Stiff_Paper_WORKING_Video', 'step': 1, 
+    'increment': 580042, 'phase': EXPLICIT_PHASE, 
+    'kineticEnergy': 0.885572135448456, 'wallTime': 217.0})
+mdb.jobs['Z_Explicit_Correct_Stiff_Paper_WORKING_Video']._Message(ODB_FRAME, {
+    'phase': EXPLICIT_PHASE, 'step': 0, 'frame': 68, 
+    'jobName': 'Z_Explicit_Correct_Stiff_Paper_WORKING_Video'})
+mdb.jobs['Z_Explicit_Correct_Stiff_Paper_WORKING_Video']._Message(STATUS, {
+    'totalTime': 0.862501323223114, 
+    'stableTimeIncrement': 1.41810301101941e-06, 'stepTime': 0.862501323223114, 
+    'totalEnergy': 0.0369470492005348, 
+    'jobName': 'Z_Explicit_Correct_Stiff_Paper_WORKING_Video', 'step': 1, 
+    'increment': 588781, 'phase': EXPLICIT_PHASE, 
+    'kineticEnergy': 0.9648677110672, 'wallTime': 220.0})
+mdb.jobs['Z_Explicit_Correct_Stiff_Paper_WORKING_Video']._Message(ODB_FRAME, {
+    'phase': EXPLICIT_PHASE, 'step': 0, 'frame': 69, 
+    'jobName': 'Z_Explicit_Correct_Stiff_Paper_WORKING_Video'})
+mdb.jobs['Z_Explicit_Correct_Stiff_Paper_WORKING_Video']._Message(STATUS, {
+    'totalTime': 0.875001132488251, 
+    'stableTimeIncrement': 1.41810301101941e-06, 'stepTime': 0.875001132488251, 
+    'totalEnergy': 0.0372913479804993, 
+    'jobName': 'Z_Explicit_Correct_Stiff_Paper_WORKING_Video', 'step': 1, 
+    'increment': 597519, 'phase': EXPLICIT_PHASE, 
+    'kineticEnergy': 0.722417533397675, 'wallTime': 223.0})
+mdb.jobs['Z_Explicit_Correct_Stiff_Paper_WORKING_Video']._Message(ODB_FRAME, {
+    'phase': EXPLICIT_PHASE, 'step': 0, 'frame': 70, 
+    'jobName': 'Z_Explicit_Correct_Stiff_Paper_WORKING_Video'})
+mdb.jobs['Z_Explicit_Correct_Stiff_Paper_WORKING_Video']._Message(STATUS, {
+    'totalTime': 0.887500941753387, 
+    'stableTimeIncrement': 1.41810050990898e-06, 'stepTime': 0.887500941753387, 
+    'totalEnergy': 0.0376468226313591, 
+    'jobName': 'Z_Explicit_Correct_Stiff_Paper_WORKING_Video', 'step': 1, 
+    'increment': 606257, 'phase': EXPLICIT_PHASE, 
+    'kineticEnergy': 0.63902884721756, 'wallTime': 226.0})
+mdb.jobs['Z_Explicit_Correct_Stiff_Paper_WORKING_Video']._Message(ODB_FRAME, {
+    'phase': EXPLICIT_PHASE, 'step': 0, 'frame': 71, 
+    'jobName': 'Z_Explicit_Correct_Stiff_Paper_WORKING_Video'})
+mdb.jobs['Z_Explicit_Correct_Stiff_Paper_WORKING_Video']._Message(STATUS, {
+    'totalTime': 0.900000751018524, 
+    'stableTimeIncrement': 1.41809960041428e-06, 'stepTime': 0.900000751018524, 
+    'totalEnergy': 0.0378508865833282, 
+    'jobName': 'Z_Explicit_Correct_Stiff_Paper_WORKING_Video', 'step': 1, 
+    'increment': 614995, 'phase': EXPLICIT_PHASE, 
+    'kineticEnergy': 0.857005953788757, 'wallTime': 229.0})
+mdb.jobs['Z_Explicit_Correct_Stiff_Paper_WORKING_Video']._Message(ODB_FRAME, {
+    'phase': EXPLICIT_PHASE, 'step': 0, 'frame': 72, 
+    'jobName': 'Z_Explicit_Correct_Stiff_Paper_WORKING_Video'})
+mdb.jobs['Z_Explicit_Correct_Stiff_Paper_WORKING_Video']._Message(STATUS, {
+    'totalTime': 0.912500560283661, 
+    'stableTimeIncrement': 1.41808743592264e-06, 'stepTime': 0.912500560283661, 
+    'totalEnergy': 0.0380393117666245, 
+    'jobName': 'Z_Explicit_Correct_Stiff_Paper_WORKING_Video', 'step': 1, 
+    'increment': 623733, 'phase': EXPLICIT_PHASE, 
+    'kineticEnergy': 0.696969628334045, 'wallTime': 232.0})
+mdb.jobs['Z_Explicit_Correct_Stiff_Paper_WORKING_Video']._Message(ODB_FRAME, {
+    'phase': EXPLICIT_PHASE, 'step': 0, 'frame': 73, 
+    'jobName': 'Z_Explicit_Correct_Stiff_Paper_WORKING_Video'})
+mdb.jobs['Z_Explicit_Correct_Stiff_Paper_WORKING_Video']._Message(STATUS, {
+    'totalTime': 0.925000369548798, 
+    'stableTimeIncrement': 1.41806390274724e-06, 'stepTime': 0.925000369548798, 
+    'totalEnergy': 0.038237951695919, 
+    'jobName': 'Z_Explicit_Correct_Stiff_Paper_WORKING_Video', 'step': 1, 
+    'increment': 632471, 'phase': EXPLICIT_PHASE, 
+    'kineticEnergy': 0.653396427631378, 'wallTime': 235.0})
+mdb.jobs['Z_Explicit_Correct_Stiff_Paper_WORKING_Video']._Message(ODB_FRAME, {
+    'phase': EXPLICIT_PHASE, 'step': 0, 'frame': 74, 
+    'jobName': 'Z_Explicit_Correct_Stiff_Paper_WORKING_Video'})
+mdb.jobs['Z_Explicit_Correct_Stiff_Paper_WORKING_Video']._Message(STATUS, {
+    'totalTime': 0.937500178813934, 
+    'stableTimeIncrement': 1.41805548992124e-06, 'stepTime': 0.937500178813934, 
+    'totalEnergy': 0.0383459329605103, 
+    'jobName': 'Z_Explicit_Correct_Stiff_Paper_WORKING_Video', 'step': 1, 
+    'increment': 641209, 'phase': EXPLICIT_PHASE, 
+    'kineticEnergy': 0.780277848243713, 'wallTime': 238.0})
+mdb.jobs['Z_Explicit_Correct_Stiff_Paper_WORKING_Video']._Message(ODB_FRAME, {
+    'phase': EXPLICIT_PHASE, 'step': 0, 'frame': 75, 
+    'jobName': 'Z_Explicit_Correct_Stiff_Paper_WORKING_Video'})
+mdb.jobs['Z_Explicit_Correct_Stiff_Paper_WORKING_Video']._Message(STATUS, {
+    'totalTime': 0.949999988079071, 
+    'stableTimeIncrement': 1.41804707709525e-06, 'stepTime': 0.949999988079071, 
+    'totalEnergy': 0.0384313464164734, 
+    'jobName': 'Z_Explicit_Correct_Stiff_Paper_WORKING_Video', 'step': 1, 
+    'increment': 649947, 'phase': EXPLICIT_PHASE, 
+    'kineticEnergy': 0.895302534103394, 'wallTime': 241.0})
+mdb.jobs['Z_Explicit_Correct_Stiff_Paper_WORKING_Video']._Message(ODB_FRAME, {
+    'phase': EXPLICIT_PHASE, 'step': 0, 'frame': 76, 
+    'jobName': 'Z_Explicit_Correct_Stiff_Paper_WORKING_Video'})
+mdb.jobs['Z_Explicit_Correct_Stiff_Paper_WORKING_Video']._Message(STATUS, {
+    'totalTime': 0.962501227855682, 'stableTimeIncrement': 1.4180378684614e-06, 
+    'stepTime': 0.962501227855682, 'totalEnergy': 0.0384004414081573, 
+    'jobName': 'Z_Explicit_Correct_Stiff_Paper_WORKING_Video', 'step': 1, 
+    'increment': 658686, 'phase': EXPLICIT_PHASE, 
+    'kineticEnergy': 0.951245725154877, 'wallTime': 244.0})
+mdb.jobs['Z_Explicit_Correct_Stiff_Paper_WORKING_Video']._Message(ODB_FRAME, {
+    'phase': EXPLICIT_PHASE, 'step': 0, 'frame': 77, 
+    'jobName': 'Z_Explicit_Correct_Stiff_Paper_WORKING_Video'})
+mdb.jobs['Z_Explicit_Correct_Stiff_Paper_WORKING_Video']._Message(STATUS, {
+    'totalTime': 0.975000083446503, 
+    'stableTimeIncrement': 1.41799102948426e-06, 'stepTime': 0.975000083446503, 
+    'totalEnergy': 0.038402546197176, 
+    'jobName': 'Z_Explicit_Correct_Stiff_Paper_WORKING_Video', 'step': 1, 
+    'increment': 667445, 'phase': EXPLICIT_PHASE, 
+    'kineticEnergy': 0.668747842311859, 'wallTime': 247.0})
+mdb.jobs['Z_Explicit_Correct_Stiff_Paper_WORKING_Video']._Message(ODB_FRAME, {
+    'phase': EXPLICIT_PHASE, 'step': 0, 'frame': 78, 
+    'jobName': 'Z_Explicit_Correct_Stiff_Paper_WORKING_Video'})
+mdb.jobs['Z_Explicit_Correct_Stiff_Paper_WORKING_Video']._Message(STATUS, {
+    'totalTime': 0.987501323223114, 
+    'stableTimeIncrement': 1.41798716413177e-06, 'stepTime': 0.987501323223114, 
+    'totalEnergy': 0.0383305810391903, 
+    'jobName': 'Z_Explicit_Correct_Stiff_Paper_WORKING_Video', 'step': 1, 
+    'increment': 676184, 'phase': EXPLICIT_PHASE, 
+    'kineticEnergy': 0.649415910243988, 'wallTime': 250.0})
+mdb.jobs['Z_Explicit_Correct_Stiff_Paper_WORKING_Video']._Message(ODB_FRAME, {
+    'phase': EXPLICIT_PHASE, 'step': 0, 'frame': 79, 
+    'jobName': 'Z_Explicit_Correct_Stiff_Paper_WORKING_Video'})
+mdb.jobs['Z_Explicit_Correct_Stiff_Paper_WORKING_Video']._Message(STATUS, {
+    'totalTime': 1.00000107288361, 'stableTimeIncrement': 1.4179730669639e-06, 
+    'stepTime': 1.00000107288361, 'totalEnergy': 0.0384197272360325, 
+    'jobName': 'Z_Explicit_Correct_Stiff_Paper_WORKING_Video', 'step': 1, 
+    'increment': 684922, 'phase': EXPLICIT_PHASE, 
+    'kineticEnergy': 0.616553068161011, 'wallTime': 253.0})
+mdb.jobs['Z_Explicit_Correct_Stiff_Paper_WORKING_Video']._Message(ODB_FRAME, {
+    'phase': EXPLICIT_PHASE, 'step': 0, 'frame': 80, 
+    'jobName': 'Z_Explicit_Correct_Stiff_Paper_WORKING_Video'})
+mdb.jobs['Z_Explicit_Correct_Stiff_Paper_WORKING_Video']._Message(STATUS, {
+    'totalTime': 1.01250088214874, 'stableTimeIncrement': 1.41799318953417e-06, 
+    'stepTime': 1.01250088214874, 'totalEnergy': 0.0384747385978699, 
+    'jobName': 'Z_Explicit_Correct_Stiff_Paper_WORKING_Video', 'step': 1, 
+    'increment': 693660, 'phase': EXPLICIT_PHASE, 
+    'kineticEnergy': 0.238999858498573, 'wallTime': 256.0})
+mdb.jobs['Z_Explicit_Correct_Stiff_Paper_WORKING_Video']._Message(ODB_FRAME, {
+    'phase': EXPLICIT_PHASE, 'step': 0, 'frame': 81, 
+    'jobName': 'Z_Explicit_Correct_Stiff_Paper_WORKING_Video'})
+mdb.jobs['Z_Explicit_Correct_Stiff_Paper_WORKING_Video']._Message(STATUS, {
+    'totalTime': 1.02500069141388, 'stableTimeIncrement': 1.41801058362034e-06, 
+    'stepTime': 1.02500069141388, 'totalEnergy': 0.0386608280241489, 
+    'jobName': 'Z_Explicit_Correct_Stiff_Paper_WORKING_Video', 'step': 1, 
+    'increment': 702398, 'phase': EXPLICIT_PHASE, 
+    'kineticEnergy': 0.387390345335007, 'wallTime': 259.0})
+mdb.jobs['Z_Explicit_Correct_Stiff_Paper_WORKING_Video']._Message(ODB_FRAME, {
+    'phase': EXPLICIT_PHASE, 'step': 0, 'frame': 82, 
+    'jobName': 'Z_Explicit_Correct_Stiff_Paper_WORKING_Video'})
+mdb.jobs['Z_Explicit_Correct_Stiff_Paper_WORKING_Video']._Message(STATUS, {
+    'totalTime': 1.03750050067902, 'stableTimeIncrement': 1.41798818731331e-06, 
+    'stepTime': 1.03750050067902, 'totalEnergy': 0.0387829877436161, 
+    'jobName': 'Z_Explicit_Correct_Stiff_Paper_WORKING_Video', 'step': 1, 
+    'increment': 711136, 'phase': EXPLICIT_PHASE, 
+    'kineticEnergy': 0.717337131500244, 'wallTime': 262.0})
+mdb.jobs['Z_Explicit_Correct_Stiff_Paper_WORKING_Video']._Message(ODB_FRAME, {
+    'phase': EXPLICIT_PHASE, 'step': 0, 'frame': 83, 
+    'jobName': 'Z_Explicit_Correct_Stiff_Paper_WORKING_Video'})
+mdb.jobs['Z_Explicit_Correct_Stiff_Paper_WORKING_Video']._Message(STATUS, {
+    'totalTime': 1.05000126361847, 'stableTimeIncrement': 1.41798886943434e-06, 
+    'stepTime': 1.05000126361847, 'totalEnergy': 0.0388948358595371, 
+    'jobName': 'Z_Explicit_Correct_Stiff_Paper_WORKING_Video', 'step': 1, 
+    'increment': 719890, 'phase': EXPLICIT_PHASE, 
+    'kineticEnergy': 0.74908310174942, 'wallTime': 265.0})
+mdb.jobs['Z_Explicit_Correct_Stiff_Paper_WORKING_Video']._Message(ODB_FRAME, {
+    'phase': EXPLICIT_PHASE, 'step': 0, 'frame': 84, 
+    'jobName': 'Z_Explicit_Correct_Stiff_Paper_WORKING_Video'})
+mdb.jobs['Z_Explicit_Correct_Stiff_Paper_WORKING_Video']._Message(STATUS, {
+    'totalTime': 1.06250107288361, 'stableTimeIncrement': 1.41800467190478e-06, 
+    'stepTime': 1.06250107288361, 'totalEnergy': 0.0390725247561932, 
+    'jobName': 'Z_Explicit_Correct_Stiff_Paper_WORKING_Video', 'step': 1, 
+    'increment': 728628, 'phase': EXPLICIT_PHASE, 
+    'kineticEnergy': 0.652701020240784, 'wallTime': 267.0})
+mdb.jobs['Z_Explicit_Correct_Stiff_Paper_WORKING_Video']._Message(ODB_FRAME, {
+    'phase': EXPLICIT_PHASE, 'step': 0, 'frame': 85, 
+    'jobName': 'Z_Explicit_Correct_Stiff_Paper_WORKING_Video'})
+mdb.jobs['Z_Explicit_Correct_Stiff_Paper_WORKING_Video']._Message(STATUS, {
+    'totalTime': 1.07500088214874, 'stableTimeIncrement': 1.41800137498649e-06, 
+    'stepTime': 1.07500088214874, 'totalEnergy': 0.0392614342272282, 
+    'jobName': 'Z_Explicit_Correct_Stiff_Paper_WORKING_Video', 'step': 1, 
+    'increment': 737366, 'phase': EXPLICIT_PHASE, 
+    'kineticEnergy': 0.670888185501099, 'wallTime': 270.0})
+mdb.jobs['Z_Explicit_Correct_Stiff_Paper_WORKING_Video']._Message(ODB_FRAME, {
+    'phase': EXPLICIT_PHASE, 'step': 0, 'frame': 86, 
+    'jobName': 'Z_Explicit_Correct_Stiff_Paper_WORKING_Video'})
+mdb.jobs['Z_Explicit_Correct_Stiff_Paper_WORKING_Video']._Message(STATUS, {
+    'totalTime': 1.08750069141388, 'stableTimeIncrement': 1.41804878239782e-06, 
+    'stepTime': 1.08750069141388, 'totalEnergy': 0.0394523963332176, 
+    'jobName': 'Z_Explicit_Correct_Stiff_Paper_WORKING_Video', 'step': 1, 
+    'increment': 746104, 'phase': EXPLICIT_PHASE, 
+    'kineticEnergy': 0.851023435592651, 'wallTime': 273.0})
+mdb.jobs['Z_Explicit_Correct_Stiff_Paper_WORKING_Video']._Message(ODB_FRAME, {
+    'phase': EXPLICIT_PHASE, 'step': 0, 'frame': 87, 
+    'jobName': 'Z_Explicit_Correct_Stiff_Paper_WORKING_Video'})
+mdb.jobs['Z_Explicit_Correct_Stiff_Paper_WORKING_Video']._Message(STATUS, {
+    'totalTime': 1.10000097751617, 'stableTimeIncrement': 1.41808106945973e-06, 
+    'stepTime': 1.10000097751617, 'totalEnergy': 0.0392575971782207, 
+    'jobName': 'Z_Explicit_Correct_Stiff_Paper_WORKING_Video', 'step': 1, 
+    'increment': 754857, 'phase': EXPLICIT_PHASE, 
+    'kineticEnergy': 0.802152335643768, 'wallTime': 276.0})
+mdb.jobs['Z_Explicit_Correct_Stiff_Paper_WORKING_Video']._Message(ODB_FRAME, {
+    'phase': EXPLICIT_PHASE, 'step': 0, 'frame': 88, 
+    'jobName': 'Z_Explicit_Correct_Stiff_Paper_WORKING_Video'})
+mdb.jobs['Z_Explicit_Correct_Stiff_Paper_WORKING_Video']._Message(STATUS, {
+    'totalTime': 1.11250078678131, 'stableTimeIncrement': 1.41809368869872e-06, 
+    'stepTime': 1.11250078678131, 'totalEnergy': 0.0390673838555813, 
+    'jobName': 'Z_Explicit_Correct_Stiff_Paper_WORKING_Video', 'step': 1, 
+    'increment': 763610, 'phase': EXPLICIT_PHASE, 
+    'kineticEnergy': 0.424271821975708, 'wallTime': 279.0})
+mdb.jobs['Z_Explicit_Correct_Stiff_Paper_WORKING_Video']._Message(ODB_FRAME, {
+    'phase': EXPLICIT_PHASE, 'step': 0, 'frame': 89, 
+    'jobName': 'Z_Explicit_Correct_Stiff_Paper_WORKING_Video'})
+mdb.jobs['Z_Explicit_Correct_Stiff_Paper_WORKING_Video']._Message(STATUS, {
+    'totalTime': 1.12500059604645, 'stableTimeIncrement': 1.41809687193017e-06, 
+    'stepTime': 1.12500059604645, 'totalEnergy': 0.0388836748898029, 
+    'jobName': 'Z_Explicit_Correct_Stiff_Paper_WORKING_Video', 'step': 1, 
+    'increment': 772348, 'phase': EXPLICIT_PHASE, 
+    'kineticEnergy': 0.544952273368835, 'wallTime': 281.0})
+mdb.jobs['Z_Explicit_Correct_Stiff_Paper_WORKING_Video']._Message(ODB_FRAME, {
+    'phase': EXPLICIT_PHASE, 'step': 0, 'frame': 90, 
+    'jobName': 'Z_Explicit_Correct_Stiff_Paper_WORKING_Video'})
+mdb.jobs['Z_Explicit_Correct_Stiff_Paper_WORKING_Video']._Message(STATUS, {
+    'totalTime': 1.13750040531158, 'stableTimeIncrement': 1.41809698561701e-06, 
+    'stepTime': 1.13750040531158, 'totalEnergy': 0.0387033261358738, 
+    'jobName': 'Z_Explicit_Correct_Stiff_Paper_WORKING_Video', 'step': 1, 
+    'increment': 781086, 'phase': EXPLICIT_PHASE, 
+    'kineticEnergy': 0.534140944480896, 'wallTime': 284.0})
+mdb.jobs['Z_Explicit_Correct_Stiff_Paper_WORKING_Video']._Message(ODB_FRAME, {
+    'phase': EXPLICIT_PHASE, 'step': 0, 'frame': 91, 
+    'jobName': 'Z_Explicit_Correct_Stiff_Paper_WORKING_Video'})
+mdb.jobs['Z_Explicit_Correct_Stiff_Paper_WORKING_Video']._Message(STATUS, {
+    'totalTime': 1.15000021457672, 'stableTimeIncrement': 1.41808834541735e-06, 
+    'stepTime': 1.15000021457672, 'totalEnergy': 0.0385335274040699, 
+    'jobName': 'Z_Explicit_Correct_Stiff_Paper_WORKING_Video', 'step': 1, 
+    'increment': 789840, 'phase': EXPLICIT_PHASE, 
+    'kineticEnergy': 0.452324479818344, 'wallTime': 287.0})
+mdb.jobs['Z_Explicit_Correct_Stiff_Paper_WORKING_Video']._Message(ODB_FRAME, {
+    'phase': EXPLICIT_PHASE, 'step': 0, 'frame': 92, 
+    'jobName': 'Z_Explicit_Correct_Stiff_Paper_WORKING_Video'})
+mdb.jobs['Z_Explicit_Correct_Stiff_Paper_WORKING_Video']._Message(STATUS, {
+    'totalTime': 1.16250002384186, 'stableTimeIncrement': 1.41808868647786e-06, 
+    'stepTime': 1.16250002384186, 'totalEnergy': 0.0382988154888153, 
+    'jobName': 'Z_Explicit_Correct_Stiff_Paper_WORKING_Video', 'step': 1, 
+    'increment': 798578, 'phase': EXPLICIT_PHASE, 
+    'kineticEnergy': 0.328211575746536, 'wallTime': 290.0})
+mdb.jobs['Z_Explicit_Correct_Stiff_Paper_WORKING_Video']._Message(ODB_FRAME, {
+    'phase': EXPLICIT_PHASE, 'step': 0, 'frame': 93, 
+    'jobName': 'Z_Explicit_Correct_Stiff_Paper_WORKING_Video'})
+mdb.jobs['Z_Explicit_Correct_Stiff_Paper_WORKING_Video']._Message(STATUS, {
+    'totalTime': 1.17499995231628, 'stableTimeIncrement': 1.35216134822258e-06, 
+    'stepTime': 1.17499995231628, 'totalEnergy': 0.0381459109485149, 
+    'jobName': 'Z_Explicit_Correct_Stiff_Paper_WORKING_Video', 'step': 1, 
+    'increment': 807330, 'phase': EXPLICIT_PHASE, 
+    'kineticEnergy': 0.427966445684433, 'wallTime': 293.0})
+mdb.jobs['Z_Explicit_Correct_Stiff_Paper_WORKING_Video']._Message(ODB_FRAME, {
+    'phase': EXPLICIT_PHASE, 'step': 0, 'frame': 94, 
+    'jobName': 'Z_Explicit_Correct_Stiff_Paper_WORKING_Video'})
+mdb.jobs['Z_Explicit_Correct_Stiff_Paper_WORKING_Video']._Message(STATUS, {
+    'totalTime': 1.18750083446503, 'stableTimeIncrement': 1.41807447562314e-06, 
+    'stepTime': 1.18750083446503, 'totalEnergy': 0.0378456898033619, 
+    'jobName': 'Z_Explicit_Correct_Stiff_Paper_WORKING_Video', 'step': 1, 
+    'increment': 816071, 'phase': EXPLICIT_PHASE, 
+    'kineticEnergy': 0.466407060623169, 'wallTime': 295.0})
+mdb.jobs['Z_Explicit_Correct_Stiff_Paper_WORKING_Video']._Message(ODB_FRAME, {
+    'phase': EXPLICIT_PHASE, 'step': 0, 'frame': 95, 
+    'jobName': 'Z_Explicit_Correct_Stiff_Paper_WORKING_Video'})
+mdb.jobs['Z_Explicit_Correct_Stiff_Paper_WORKING_Video']._Message(STATUS, {
+    'totalTime': 1.20000064373016, 'stableTimeIncrement': 1.41807458930998e-06, 
+    'stepTime': 1.20000064373016, 'totalEnergy': 0.037652425467968, 
+    'jobName': 'Z_Explicit_Correct_Stiff_Paper_WORKING_Video', 'step': 1, 
+    'increment': 824809, 'phase': EXPLICIT_PHASE, 
+    'kineticEnergy': 0.394974619150162, 'wallTime': 298.0})
+mdb.jobs['Z_Explicit_Correct_Stiff_Paper_WORKING_Video']._Message(ODB_FRAME, {
+    'phase': EXPLICIT_PHASE, 'step': 0, 'frame': 96, 
+    'jobName': 'Z_Explicit_Correct_Stiff_Paper_WORKING_Video'})
+mdb.jobs['Z_Explicit_Correct_Stiff_Paper_WORKING_Video']._Message(STATUS, {
+    'totalTime': 1.21250104904175, 'stableTimeIncrement': 1.41806970077596e-06, 
+    'stepTime': 1.21250104904175, 'totalEnergy': 0.0374154821038246, 
+    'jobName': 'Z_Explicit_Correct_Stiff_Paper_WORKING_Video', 'step': 1, 
+    'increment': 833575, 'phase': EXPLICIT_PHASE, 
+    'kineticEnergy': 0.34282249212265, 'wallTime': 301.0})
+mdb.jobs['Z_Explicit_Correct_Stiff_Paper_WORKING_Video']._Message(ODB_FRAME, {
+    'phase': EXPLICIT_PHASE, 'step': 0, 'frame': 97, 
+    'jobName': 'Z_Explicit_Correct_Stiff_Paper_WORKING_Video'})
+mdb.jobs['Z_Explicit_Correct_Stiff_Paper_WORKING_Video']._Message(STATUS, {
+    'totalTime': 1.22500014305115, 'stableTimeIncrement': 1.41805946896056e-06, 
+    'stepTime': 1.22500014305115, 'totalEnergy': 0.0372076369822025, 
+    'jobName': 'Z_Explicit_Correct_Stiff_Paper_WORKING_Video', 'step': 1, 
+    'increment': 842332, 'phase': EXPLICIT_PHASE, 
+    'kineticEnergy': 0.379720091819763, 'wallTime': 304.0})
+mdb.jobs['Z_Explicit_Correct_Stiff_Paper_WORKING_Video']._Message(ODB_FRAME, {
+    'phase': EXPLICIT_PHASE, 'step': 0, 'frame': 98, 
+    'jobName': 'Z_Explicit_Correct_Stiff_Paper_WORKING_Video'})
+mdb.jobs['Z_Explicit_Correct_Stiff_Paper_WORKING_Video']._Message(STATUS, {
+    'totalTime': 1.23749995231628, 'stableTimeIncrement': 1.41805799103167e-06, 
+    'stepTime': 1.23749995231628, 'totalEnergy': 0.0366763658821583, 
+    'jobName': 'Z_Explicit_Correct_Stiff_Paper_WORKING_Video', 'step': 1, 
+    'increment': 851070, 'phase': EXPLICIT_PHASE, 
+    'kineticEnergy': 0.247369080781937, 'wallTime': 307.0})
+mdb.jobs['Z_Explicit_Correct_Stiff_Paper_WORKING_Video']._Message(ODB_FRAME, {
+    'phase': EXPLICIT_PHASE, 'step': 0, 'frame': 99, 
+    'jobName': 'Z_Explicit_Correct_Stiff_Paper_WORKING_Video'})
+mdb.jobs['Z_Explicit_Correct_Stiff_Paper_WORKING_Video']._Message(STATUS, {
+    'totalTime': 1.2500011920929, 'stableTimeIncrement': 1.41804071063234e-06, 
+    'stepTime': 1.2500011920929, 'totalEnergy': 0.0362126715481281, 
+    'jobName': 'Z_Explicit_Correct_Stiff_Paper_WORKING_Video', 'step': 1, 
+    'increment': 859824, 'phase': EXPLICIT_PHASE, 
+    'kineticEnergy': 0.199787348508835, 'wallTime': 309.0})
+mdb.jobs['Z_Explicit_Correct_Stiff_Paper_WORKING_Video']._Message(ODB_FRAME, {
+    'phase': EXPLICIT_PHASE, 'step': 0, 'frame': 100, 
+    'jobName': 'Z_Explicit_Correct_Stiff_Paper_WORKING_Video'})
+mdb.jobs['Z_Explicit_Correct_Stiff_Paper_WORKING_Video']._Message(STATUS, {
+    'totalTime': 1.26250052452087, 'stableTimeIncrement': 1.41802979669592e-06, 
+    'stepTime': 1.26250052452087, 'totalEnergy': 0.0357595048844814, 
+    'jobName': 'Z_Explicit_Correct_Stiff_Paper_WORKING_Video', 'step': 1, 
+    'increment': 868573, 'phase': EXPLICIT_PHASE, 
+    'kineticEnergy': 0.232760012149811, 'wallTime': 312.0})
+mdb.jobs['Z_Explicit_Correct_Stiff_Paper_WORKING_Video']._Message(ODB_FRAME, {
+    'phase': EXPLICIT_PHASE, 'step': 0, 'frame': 101, 
+    'jobName': 'Z_Explicit_Correct_Stiff_Paper_WORKING_Video'})
+mdb.jobs['Z_Explicit_Correct_Stiff_Paper_WORKING_Video']._Message(STATUS, {
+    'totalTime': 1.27500033378601, 'stableTimeIncrement': 1.41802968300908e-06, 
+    'stepTime': 1.27500033378601, 'totalEnergy': 0.0353222042322159, 
+    'jobName': 'Z_Explicit_Correct_Stiff_Paper_WORKING_Video', 'step': 1, 
+    'increment': 877311, 'phase': EXPLICIT_PHASE, 
+    'kineticEnergy': 0.235360965132713, 'wallTime': 315.0})
+mdb.jobs['Z_Explicit_Correct_Stiff_Paper_WORKING_Video']._Message(ODB_FRAME, {
+    'phase': EXPLICIT_PHASE, 'step': 0, 'frame': 102, 
+    'jobName': 'Z_Explicit_Correct_Stiff_Paper_WORKING_Video'})
+mdb.jobs['Z_Explicit_Correct_Stiff_Paper_WORKING_Video']._Message(STATUS, {
+    'totalTime': 1.28750061988831, 'stableTimeIncrement': 1.41803377573524e-06, 
+    'stepTime': 1.28750061988831, 'totalEnergy': 0.0349008180201054, 
+    'jobName': 'Z_Explicit_Correct_Stiff_Paper_WORKING_Video', 'step': 1, 
+    'increment': 886062, 'phase': EXPLICIT_PHASE, 
+    'kineticEnergy': 0.100748673081398, 'wallTime': 318.0})
+mdb.jobs['Z_Explicit_Correct_Stiff_Paper_WORKING_Video']._Message(ODB_FRAME, {
+    'phase': EXPLICIT_PHASE, 'step': 0, 'frame': 103, 
+    'jobName': 'Z_Explicit_Correct_Stiff_Paper_WORKING_Video'})
+mdb.jobs['Z_Explicit_Correct_Stiff_Paper_WORKING_Video']._Message(STATUS, {
+    'totalTime': 1.30000078678131, 'stableTimeIncrement': 1.41803741371405e-06, 
+    'stepTime': 1.30000078678131, 'totalEnergy': 0.0344700552523136, 
+    'jobName': 'Z_Explicit_Correct_Stiff_Paper_WORKING_Video', 'step': 1, 
+    'increment': 894815, 'phase': EXPLICIT_PHASE, 
+    'kineticEnergy': 0.20939613878727, 'wallTime': 321.0})
+mdb.jobs['Z_Explicit_Correct_Stiff_Paper_WORKING_Video']._Message(ODB_FRAME, {
+    'phase': EXPLICIT_PHASE, 'step': 0, 'frame': 104, 
+    'jobName': 'Z_Explicit_Correct_Stiff_Paper_WORKING_Video'})
+mdb.jobs['Z_Explicit_Correct_Stiff_Paper_WORKING_Video']._Message(STATUS, {
+    'totalTime': 1.31250059604645, 'stableTimeIncrement': 1.41804423492431e-06, 
+    'stepTime': 1.31250059604645, 'totalEnergy': 0.0341914147138596, 
+    'jobName': 'Z_Explicit_Correct_Stiff_Paper_WORKING_Video', 'step': 1, 
+    'increment': 903553, 'phase': EXPLICIT_PHASE, 
+    'kineticEnergy': 0.289912968873978, 'wallTime': 324.0})
+mdb.jobs['Z_Explicit_Correct_Stiff_Paper_WORKING_Video']._Message(ODB_FRAME, {
+    'phase': EXPLICIT_PHASE, 'step': 0, 'frame': 105, 
+    'jobName': 'Z_Explicit_Correct_Stiff_Paper_WORKING_Video'})
+mdb.jobs['Z_Explicit_Correct_Stiff_Paper_WORKING_Video']._Message(STATUS, {
+    'totalTime': 1.3250013589859, 'stableTimeIncrement': 1.41805367093184e-06, 
+    'stepTime': 1.3250013589859, 'totalEnergy': 0.0337892174720764, 
+    'jobName': 'Z_Explicit_Correct_Stiff_Paper_WORKING_Video', 'step': 1, 
+    'increment': 912317, 'phase': EXPLICIT_PHASE, 
+    'kineticEnergy': 0.185111686587334, 'wallTime': 327.0})
+mdb.jobs['Z_Explicit_Correct_Stiff_Paper_WORKING_Video']._Message(ODB_FRAME, {
+    'phase': EXPLICIT_PHASE, 'step': 0, 'frame': 106, 
+    'jobName': 'Z_Explicit_Correct_Stiff_Paper_WORKING_Video'})
+mdb.jobs['Z_Explicit_Correct_Stiff_Paper_WORKING_Video']._Message(STATUS, {
+    'totalTime': 1.33750116825104, 'stableTimeIncrement': 1.41805753628432e-06, 
+    'stepTime': 1.33750116825104, 'totalEnergy': 0.0332334935665131, 
+    'jobName': 'Z_Explicit_Correct_Stiff_Paper_WORKING_Video', 'step': 1, 
+    'increment': 921055, 'phase': EXPLICIT_PHASE, 
+    'kineticEnergy': 0.200121968984604, 'wallTime': 330.0})
+mdb.jobs['Z_Explicit_Correct_Stiff_Paper_WORKING_Video']._Message(ODB_FRAME, {
+    'phase': EXPLICIT_PHASE, 'step': 0, 'frame': 107, 
+    'jobName': 'Z_Explicit_Correct_Stiff_Paper_WORKING_Video'})
+mdb.jobs['Z_Explicit_Correct_Stiff_Paper_WORKING_Video']._Message(STATUS, {
+    'totalTime': 1.35000097751617, 'stableTimeIncrement': 1.41806549436296e-06, 
+    'stepTime': 1.35000097751617, 'totalEnergy': 0.0328571647405624, 
+    'jobName': 'Z_Explicit_Correct_Stiff_Paper_WORKING_Video', 'step': 1, 
+    'increment': 929793, 'phase': EXPLICIT_PHASE, 
+    'kineticEnergy': 0.300080567598343, 'wallTime': 333.0})
+mdb.jobs['Z_Explicit_Correct_Stiff_Paper_WORKING_Video']._Message(ODB_FRAME, {
+    'phase': EXPLICIT_PHASE, 'step': 0, 'frame': 108, 
+    'jobName': 'Z_Explicit_Correct_Stiff_Paper_WORKING_Video'})
+mdb.jobs['Z_Explicit_Correct_Stiff_Paper_WORKING_Video']._Message(STATUS, {
+    'totalTime': 1.36250007152557, 'stableTimeIncrement': 1.41808106945973e-06, 
+    'stepTime': 1.36250007152557, 'totalEnergy': 0.0323419235646725, 
+    'jobName': 'Z_Explicit_Correct_Stiff_Paper_WORKING_Video', 'step': 1, 
+    'increment': 938545, 'phase': EXPLICIT_PHASE, 
+    'kineticEnergy': 0.231534257531166, 'wallTime': 336.0})
+mdb.jobs['Z_Explicit_Correct_Stiff_Paper_WORKING_Video']._Message(ODB_FRAME, {
+    'phase': EXPLICIT_PHASE, 'step': 0, 'frame': 109, 
+    'jobName': 'Z_Explicit_Correct_Stiff_Paper_WORKING_Video'})
+mdb.jobs['Z_Explicit_Correct_Stiff_Paper_WORKING_Video']._Message(STATUS, {
+    'totalTime': 1.37500131130219, 'stableTimeIncrement': 1.41808311582281e-06, 
+    'stepTime': 1.37500131130219, 'totalEnergy': 0.0316421687602997, 
+    'jobName': 'Z_Explicit_Correct_Stiff_Paper_WORKING_Video', 'step': 1, 
+    'increment': 947298, 'phase': EXPLICIT_PHASE, 
+    'kineticEnergy': 0.238717436790466, 'wallTime': 339.0})
+mdb.jobs['Z_Explicit_Correct_Stiff_Paper_WORKING_Video']._Message(ODB_FRAME, {
+    'phase': EXPLICIT_PHASE, 'step': 0, 'frame': 110, 
+    'jobName': 'Z_Explicit_Correct_Stiff_Paper_WORKING_Video'})
+mdb.jobs['Z_Explicit_Correct_Stiff_Paper_WORKING_Video']._Message(STATUS, {
+    'totalTime': 1.38750016689301, 'stableTimeIncrement': 1.41809005071991e-06, 
+    'stepTime': 1.38750016689301, 'totalEnergy': 0.0309012867510319, 
+    'jobName': 'Z_Explicit_Correct_Stiff_Paper_WORKING_Video', 'step': 1, 
+    'increment': 956052, 'phase': EXPLICIT_PHASE, 
+    'kineticEnergy': 0.287929177284241, 'wallTime': 342.0})
+mdb.jobs['Z_Explicit_Correct_Stiff_Paper_WORKING_Video']._Message(ODB_FRAME, {
+    'phase': EXPLICIT_PHASE, 'step': 0, 'frame': 111, 
+    'jobName': 'Z_Explicit_Correct_Stiff_Paper_WORKING_Video'})
+mdb.jobs['Z_Explicit_Correct_Stiff_Paper_WORKING_Video']._Message(STATUS, {
+    'totalTime': 1.39999997615814, 'stableTimeIncrement': 1.41809312026453e-06, 
+    'stepTime': 1.39999997615814, 'totalEnergy': 0.0304003208875656, 
+    'jobName': 'Z_Explicit_Correct_Stiff_Paper_WORKING_Video', 'step': 1, 
+    'increment': 964790, 'phase': EXPLICIT_PHASE, 
+    'kineticEnergy': 0.223694398999214, 'wallTime': 345.0})
+mdb.jobs['Z_Explicit_Correct_Stiff_Paper_WORKING_Video']._Message(ODB_FRAME, {
+    'phase': EXPLICIT_PHASE, 'step': 0, 'frame': 112, 
+    'jobName': 'Z_Explicit_Correct_Stiff_Paper_WORKING_Video'})
+mdb.jobs['Z_Explicit_Correct_Stiff_Paper_WORKING_Video']._Message(STATUS, {
+    'totalTime': 1.41250050067902, 'stableTimeIncrement': 1.41808834541735e-06, 
+    'stepTime': 1.41250050067902, 'totalEnergy': 0.0298537742346525, 
+    'jobName': 'Z_Explicit_Correct_Stiff_Paper_WORKING_Video', 'step': 1, 
+    'increment': 973545, 'phase': EXPLICIT_PHASE, 
+    'kineticEnergy': 0.304818898439407, 'wallTime': 348.0})
+mdb.jobs['Z_Explicit_Correct_Stiff_Paper_WORKING_Video']._Message(ODB_FRAME, {
+    'phase': EXPLICIT_PHASE, 'step': 0, 'frame': 113, 
+    'jobName': 'Z_Explicit_Correct_Stiff_Paper_WORKING_Video'})
+mdb.jobs['Z_Explicit_Correct_Stiff_Paper_WORKING_Video']._Message(STATUS, {
+    'totalTime': 1.42500030994415, 'stableTimeIncrement': 1.41808413900435e-06, 
+    'stepTime': 1.42500030994415, 'totalEnergy': 0.0293117072433233, 
+    'jobName': 'Z_Explicit_Correct_Stiff_Paper_WORKING_Video', 'step': 1, 
+    'increment': 982283, 'phase': EXPLICIT_PHASE, 
+    'kineticEnergy': 0.389037728309631, 'wallTime': 350.0})
+mdb.jobs['Z_Explicit_Correct_Stiff_Paper_WORKING_Video']._Message(ODB_FRAME, {
+    'phase': EXPLICIT_PHASE, 'step': 0, 'frame': 114, 
+    'jobName': 'Z_Explicit_Correct_Stiff_Paper_WORKING_Video'})
+mdb.jobs['Z_Explicit_Correct_Stiff_Paper_WORKING_Video']._Message(STATUS, {
+    'totalTime': 1.43750011920929, 'stableTimeIncrement': 1.41807424824947e-06, 
+    'stepTime': 1.43750011920929, 'totalEnergy': 0.028777277097106, 
+    'jobName': 'Z_Explicit_Correct_Stiff_Paper_WORKING_Video', 'step': 1, 
+    'increment': 991021, 'phase': EXPLICIT_PHASE, 
+    'kineticEnergy': 0.372759163379669, 'wallTime': 353.0})
+mdb.jobs['Z_Explicit_Correct_Stiff_Paper_WORKING_Video']._Message(ODB_FRAME, {
+    'phase': EXPLICIT_PHASE, 'step': 0, 'frame': 115, 
+    'jobName': 'Z_Explicit_Correct_Stiff_Paper_WORKING_Video'})
+mdb.jobs['Z_Explicit_Correct_Stiff_Paper_WORKING_Video']._Message(STATUS, {
+    'totalTime': 1.4500013589859, 'stableTimeIncrement': 1.41806970077596e-06, 
+    'stepTime': 1.4500013589859, 'totalEnergy': 0.0282484237104654, 
+    'jobName': 'Z_Explicit_Correct_Stiff_Paper_WORKING_Video', 'step': 1, 
+    'increment': 999760, 'phase': EXPLICIT_PHASE, 
+    'kineticEnergy': 0.35669219493866, 'wallTime': 356.0})
+mdb.jobs['Z_Explicit_Correct_Stiff_Paper_WORKING_Video']._Message(ODB_FRAME, {
+    'phase': EXPLICIT_PHASE, 'step': 0, 'frame': 116, 
+    'jobName': 'Z_Explicit_Correct_Stiff_Paper_WORKING_Video'})
+mdb.jobs['Z_Explicit_Correct_Stiff_Paper_WORKING_Video']._Message(STATUS, {
+    'totalTime': 1.4625004529953, 'stableTimeIncrement': 1.41806071951578e-06, 
+    'stepTime': 1.4625004529953, 'totalEnergy': 0.0276681799441576, 
+    'jobName': 'Z_Explicit_Correct_Stiff_Paper_WORKING_Video', 'step': 1, 
+    'increment': 1008527, 'phase': EXPLICIT_PHASE, 
+    'kineticEnergy': 0.289435267448425, 'wallTime': 359.0})
+mdb.jobs['Z_Explicit_Correct_Stiff_Paper_WORKING_Video']._Message(ODB_FRAME, {
+    'phase': EXPLICIT_PHASE, 'step': 0, 'frame': 117, 
+    'jobName': 'Z_Explicit_Correct_Stiff_Paper_WORKING_Video'})
+mdb.jobs['Z_Explicit_Correct_Stiff_Paper_WORKING_Video']._Message(STATUS, {
+    'totalTime': 1.47500026226044, 'stableTimeIncrement': 1.41806276587886e-06, 
+    'stepTime': 1.47500026226044, 'totalEnergy': 0.0269652847200632, 
+    'jobName': 'Z_Explicit_Correct_Stiff_Paper_WORKING_Video', 'step': 1, 
+    'increment': 1017265, 'phase': EXPLICIT_PHASE, 
+    'kineticEnergy': 0.296428680419922, 'wallTime': 362.0})
+mdb.jobs['Z_Explicit_Correct_Stiff_Paper_WORKING_Video']._Message(ODB_FRAME, {
+    'phase': EXPLICIT_PHASE, 'step': 0, 'frame': 118, 
+    'jobName': 'Z_Explicit_Correct_Stiff_Paper_WORKING_Video'})
+mdb.jobs['Z_Explicit_Correct_Stiff_Paper_WORKING_Video']._Message(STATUS, {
+    'totalTime': 1.48750019073486, 'stableTimeIncrement': 1.4180665175445e-06, 
+    'stepTime': 1.48750019073486, 'totalEnergy': 0.0263375788927078, 
+    'jobName': 'Z_Explicit_Correct_Stiff_Paper_WORKING_Video', 'step': 1, 
+    'increment': 1026012, 'phase': EXPLICIT_PHASE, 
+    'kineticEnergy': 0.235225111246109, 'wallTime': 364.0})
+mdb.jobs['Z_Explicit_Correct_Stiff_Paper_WORKING_Video']._Message(ODB_FRAME, {
+    'phase': EXPLICIT_PHASE, 'step': 0, 'frame': 119, 
+    'jobName': 'Z_Explicit_Correct_Stiff_Paper_WORKING_Video'})
+mdb.jobs['Z_Explicit_Correct_Stiff_Paper_WORKING_Video']._Message(STATUS, {
+    'totalTime': 1.50000011920929, 'stableTimeIncrement': 1.4180656080498e-06, 
+    'stepTime': 1.50000011920929, 'totalEnergy': 0.0255928300321102, 
+    'jobName': 'Z_Explicit_Correct_Stiff_Paper_WORKING_Video', 'step': 1, 
+    'increment': 1034756, 'phase': EXPLICIT_PHASE, 
+    'kineticEnergy': 0.156719744205475, 'wallTime': 367.0})
+mdb.jobs['Z_Explicit_Correct_Stiff_Paper_WORKING_Video']._Message(ODB_FRAME, {
+    'phase': EXPLICIT_PHASE, 'step': 0, 'frame': 120, 
+    'jobName': 'Z_Explicit_Correct_Stiff_Paper_WORKING_Video'})
+mdb.jobs['Z_Explicit_Correct_Stiff_Paper_WORKING_Video']._Message(STATUS, {
+    'totalTime': 1.51250052452087, 'stableTimeIncrement': 1.4180595826474e-06, 
+    'stepTime': 1.51250052452087, 'totalEnergy': 0.0249386988580227, 
+    'jobName': 'Z_Explicit_Correct_Stiff_Paper_WORKING_Video', 'step': 1, 
+    'increment': 1043510, 'phase': EXPLICIT_PHASE, 
+    'kineticEnergy': 0.220910742878914, 'wallTime': 370.0})
+mdb.jobs['Z_Explicit_Correct_Stiff_Paper_WORKING_Video']._Message(ODB_FRAME, {
+    'phase': EXPLICIT_PHASE, 'step': 0, 'frame': 121, 
+    'jobName': 'Z_Explicit_Correct_Stiff_Paper_WORKING_Video'})
+mdb.jobs['Z_Explicit_Correct_Stiff_Paper_WORKING_Video']._Message(STATUS, {
+    'totalTime': 1.52500009536743, 'stableTimeIncrement': 1.4180568541633e-06, 
+    'stepTime': 1.52500009536743, 'totalEnergy': 0.0243877097964287, 
+    'jobName': 'Z_Explicit_Correct_Stiff_Paper_WORKING_Video', 'step': 1, 
+    'increment': 1052260, 'phase': EXPLICIT_PHASE, 
+    'kineticEnergy': 0.240502938628197, 'wallTime': 373.0})
+mdb.jobs['Z_Explicit_Correct_Stiff_Paper_WORKING_Video']._Message(ODB_FRAME, {
+    'phase': EXPLICIT_PHASE, 'step': 0, 'frame': 122, 
+    'jobName': 'Z_Explicit_Correct_Stiff_Paper_WORKING_Video'})
+mdb.jobs['Z_Explicit_Correct_Stiff_Paper_WORKING_Video']._Message(STATUS, {
+    'totalTime': 1.53750133514404, 'stableTimeIncrement': 1.41806208375783e-06, 
+    'stepTime': 1.53750133514404, 'totalEnergy': 0.0236608982086182, 
+    'jobName': 'Z_Explicit_Correct_Stiff_Paper_WORKING_Video', 'step': 1, 
+    'increment': 1060999, 'phase': EXPLICIT_PHASE, 
+    'kineticEnergy': 0.0643631145358086, 'wallTime': 375.0})
+mdb.jobs['Z_Explicit_Correct_Stiff_Paper_WORKING_Video']._Message(ODB_FRAME, {
+    'phase': EXPLICIT_PHASE, 'step': 0, 'frame': 123, 
+    'jobName': 'Z_Explicit_Correct_Stiff_Paper_WORKING_Video'})
+mdb.jobs['Z_Explicit_Correct_Stiff_Paper_WORKING_Video']._Message(STATUS, {
+    'totalTime': 1.55000007152557, 'stableTimeIncrement': 1.41804980557936e-06, 
+    'stepTime': 1.55000007152557, 'totalEnergy': 0.0230997297912836, 
+    'jobName': 'Z_Explicit_Correct_Stiff_Paper_WORKING_Video', 'step': 1, 
+    'increment': 1069752, 'phase': EXPLICIT_PHASE, 
+    'kineticEnergy': 0.165800929069519, 'wallTime': 378.0})
+mdb.jobs['Z_Explicit_Correct_Stiff_Paper_WORKING_Video']._Message(ODB_FRAME, {
+    'phase': EXPLICIT_PHASE, 'step': 0, 'frame': 124, 
+    'jobName': 'Z_Explicit_Correct_Stiff_Paper_WORKING_Video'})
+mdb.jobs['Z_Explicit_Correct_Stiff_Paper_WORKING_Video']._Message(STATUS, {
+    'totalTime': 1.56250083446503, 'stableTimeIncrement': 1.4180628795657e-06, 
+    'stepTime': 1.56250083446503, 'totalEnergy': 0.0224438160657883, 
+    'jobName': 'Z_Explicit_Correct_Stiff_Paper_WORKING_Video', 'step': 1, 
+    'increment': 1078520, 'phase': EXPLICIT_PHASE, 
+    'kineticEnergy': 0.247494697570801, 'wallTime': 381.0})
+mdb.jobs['Z_Explicit_Correct_Stiff_Paper_WORKING_Video']._Message(ODB_FRAME, {
+    'phase': EXPLICIT_PHASE, 'step': 0, 'frame': 125, 
+    'jobName': 'Z_Explicit_Correct_Stiff_Paper_WORKING_Video'})
+mdb.jobs['Z_Explicit_Correct_Stiff_Paper_WORKING_Video']._Message(STATUS, {
+    'totalTime': 1.57500100135803, 'stableTimeIncrement': 1.41806776809972e-06, 
+    'stepTime': 1.57500100135803, 'totalEnergy': 0.0216171983629465, 
+    'jobName': 'Z_Explicit_Correct_Stiff_Paper_WORKING_Video', 'step': 1, 
+    'increment': 1087277, 'phase': EXPLICIT_PHASE, 
+    'kineticEnergy': 0.142828226089478, 'wallTime': 384.0})
+mdb.jobs['Z_Explicit_Correct_Stiff_Paper_WORKING_Video']._Message(ODB_FRAME, {
+    'phase': EXPLICIT_PHASE, 'step': 0, 'frame': 126, 
+    'jobName': 'Z_Explicit_Correct_Stiff_Paper_WORKING_Video'})
+mdb.jobs['Z_Explicit_Correct_Stiff_Paper_WORKING_Video']._Message(STATUS, {
+    'totalTime': 1.5875004529953, 'stableTimeIncrement': 1.41806776809972e-06, 
+    'stepTime': 1.5875004529953, 'totalEnergy': 0.0208312962204218, 
+    'jobName': 'Z_Explicit_Correct_Stiff_Paper_WORKING_Video', 'step': 1, 
+    'increment': 1096041, 'phase': EXPLICIT_PHASE, 
+    'kineticEnergy': 0.101989559829235, 'wallTime': 386.0})
+mdb.jobs['Z_Explicit_Correct_Stiff_Paper_WORKING_Video']._Message(ODB_FRAME, {
+    'phase': EXPLICIT_PHASE, 'step': 0, 'frame': 127, 
+    'jobName': 'Z_Explicit_Correct_Stiff_Paper_WORKING_Video'})
+mdb.jobs['Z_Explicit_Correct_Stiff_Paper_WORKING_Video']._Message(STATUS, {
+    'totalTime': 1.60000085830688, 'stableTimeIncrement': 1.41806572173664e-06, 
+    'stepTime': 1.60000085830688, 'totalEnergy': 0.0199739411473274, 
+    'jobName': 'Z_Explicit_Correct_Stiff_Paper_WORKING_Video', 'step': 1, 
+    'increment': 1104794, 'phase': EXPLICIT_PHASE, 
+    'kineticEnergy': 0.218351766467094, 'wallTime': 389.0})
+mdb.jobs['Z_Explicit_Correct_Stiff_Paper_WORKING_Video']._Message(ODB_FRAME, {
+    'phase': EXPLICIT_PHASE, 'step': 0, 'frame': 128, 
+    'jobName': 'Z_Explicit_Correct_Stiff_Paper_WORKING_Video'})
+mdb.jobs['Z_Explicit_Correct_Stiff_Paper_WORKING_Video']._Message(STATUS, {
+    'totalTime': 1.61250030994415, 'stableTimeIncrement': 1.41806390274724e-06, 
+    'stepTime': 1.61250030994415, 'totalEnergy': 0.0192558653652668, 
+    'jobName': 'Z_Explicit_Correct_Stiff_Paper_WORKING_Video', 'step': 1, 
+    'increment': 1113556, 'phase': EXPLICIT_PHASE, 
+    'kineticEnergy': 0.201052039861679, 'wallTime': 392.0})
+mdb.jobs['Z_Explicit_Correct_Stiff_Paper_WORKING_Video']._Message(ODB_FRAME, {
+    'phase': EXPLICIT_PHASE, 'step': 0, 'frame': 129, 
+    'jobName': 'Z_Explicit_Correct_Stiff_Paper_WORKING_Video'})
+mdb.jobs['Z_Explicit_Correct_Stiff_Paper_WORKING_Video']._Message(STATUS, {
+    'totalTime': 1.62500083446503, 'stableTimeIncrement': 1.41806663123134e-06, 
+    'stepTime': 1.62500083446503, 'totalEnergy': 0.018298452720046, 
+    'jobName': 'Z_Explicit_Correct_Stiff_Paper_WORKING_Video', 'step': 1, 
+    'increment': 1122339, 'phase': EXPLICIT_PHASE, 
+    'kineticEnergy': 0.121173679828644, 'wallTime': 395.0})
+mdb.jobs['Z_Explicit_Correct_Stiff_Paper_WORKING_Video']._Message(ODB_FRAME, {
+    'phase': EXPLICIT_PHASE, 'step': 0, 'frame': 130, 
+    'jobName': 'Z_Explicit_Correct_Stiff_Paper_WORKING_Video'})
+mdb.jobs['Z_Explicit_Correct_Stiff_Paper_WORKING_Video']._Message(STATUS, {
+    'totalTime': 1.63750088214874, 'stableTimeIncrement': 1.4180698144628e-06, 
+    'stepTime': 1.63750088214874, 'totalEnergy': 0.0174795873463154, 
+    'jobName': 'Z_Explicit_Correct_Stiff_Paper_WORKING_Video', 'step': 1, 
+    'increment': 1131091, 'phase': EXPLICIT_PHASE, 
+    'kineticEnergy': 0.138892412185669, 'wallTime': 398.0})
+mdb.jobs['Z_Explicit_Correct_Stiff_Paper_WORKING_Video']._Message(ODB_FRAME, {
+    'phase': EXPLICIT_PHASE, 'step': 0, 'frame': 131, 
+    'jobName': 'Z_Explicit_Correct_Stiff_Paper_WORKING_Video'})
+mdb.jobs['Z_Explicit_Correct_Stiff_Paper_WORKING_Video']._Message(STATUS, {
+    'totalTime': 1.65000104904175, 'stableTimeIncrement': 1.41807288400742e-06, 
+    'stepTime': 1.65000104904175, 'totalEnergy': 0.0166881624609232, 
+    'jobName': 'Z_Explicit_Correct_Stiff_Paper_WORKING_Video', 'step': 1, 
+    'increment': 1139855, 'phase': EXPLICIT_PHASE, 
+    'kineticEnergy': 0.164388447999954, 'wallTime': 401.0})
+mdb.jobs['Z_Explicit_Correct_Stiff_Paper_WORKING_Video']._Message(ODB_FRAME, {
+    'phase': EXPLICIT_PHASE, 'step': 0, 'frame': 132, 
+    'jobName': 'Z_Explicit_Correct_Stiff_Paper_WORKING_Video'})
+mdb.models['Box_Explicit_Compressed-20_Correct_Stiff_3D'].rootAssembly.translate(
+    instanceList=('Part-1-2', 'Part-1-3'), vector=(-6.945927, 0.0, 39.39231))
+mdb.jobs['Z_Explicit_Correct_Stiff_Paper_WORKING_Video']._Message(STATUS, {
+    'totalTime': 1.66250050067902, 'stableTimeIncrement': 1.41807470299682e-06, 
+    'stepTime': 1.66250050067902, 'totalEnergy': 0.0158087052404881, 
+    'jobName': 'Z_Explicit_Correct_Stiff_Paper_WORKING_Video', 'step': 1, 
+    'increment': 1148621, 'phase': EXPLICIT_PHASE, 
+    'kineticEnergy': 0.16869381070137, 'wallTime': 404.0})
+mdb.jobs['Z_Explicit_Correct_Stiff_Paper_WORKING_Video']._Message(ODB_FRAME, {
+    'phase': EXPLICIT_PHASE, 'step': 0, 'frame': 133, 
+    'jobName': 'Z_Explicit_Correct_Stiff_Paper_WORKING_Video'})
+mdb.jobs['Z_Explicit_Correct_Stiff_Paper_WORKING_Video']._Message(STATUS, {
+    'totalTime': 1.67500078678131, 'stableTimeIncrement': 1.41807299769425e-06, 
+    'stepTime': 1.67500078678131, 'totalEnergy': 0.0151691194623709, 
+    'jobName': 'Z_Explicit_Correct_Stiff_Paper_WORKING_Video', 'step': 1, 
+    'increment': 1157390, 'phase': EXPLICIT_PHASE, 
+    'kineticEnergy': 0.0621002875268459, 'wallTime': 407.0})
+mdb.jobs['Z_Explicit_Correct_Stiff_Paper_WORKING_Video']._Message(ODB_FRAME, {
+    'phase': EXPLICIT_PHASE, 'step': 0, 'frame': 134, 
+    'jobName': 'Z_Explicit_Correct_Stiff_Paper_WORKING_Video'})
+mdb.jobs['Z_Explicit_Correct_Stiff_Paper_WORKING_Video']._Message(STATUS, {
+    'totalTime': 1.68750059604645, 'stableTimeIncrement': 1.41807527143101e-06, 
+    'stepTime': 1.68750059604645, 'totalEnergy': 0.014492392539978, 
+    'jobName': 'Z_Explicit_Correct_Stiff_Paper_WORKING_Video', 'step': 1, 
+    'increment': 1166128, 'phase': EXPLICIT_PHASE, 
+    'kineticEnergy': 0.149256080389023, 'wallTime': 410.0})
+mdb.jobs['Z_Explicit_Correct_Stiff_Paper_WORKING_Video']._Message(ODB_FRAME, {
+    'phase': EXPLICIT_PHASE, 'step': 0, 'frame': 135, 
+    'jobName': 'Z_Explicit_Correct_Stiff_Paper_WORKING_Video'})
+mdb.jobs['Z_Explicit_Correct_Stiff_Paper_WORKING_Video']._Message(STATUS, {
+    'totalTime': 1.70000112056732, 'stableTimeIncrement': 1.41807845466246e-06, 
+    'stepTime': 1.70000112056732, 'totalEnergy': 0.0135881118476391, 
+    'jobName': 'Z_Explicit_Correct_Stiff_Paper_WORKING_Video', 'step': 1, 
+    'increment': 1174878, 'phase': EXPLICIT_PHASE, 
+    'kineticEnergy': 0.152761802077293, 'wallTime': 412.0})
+mdb.jobs['Z_Explicit_Correct_Stiff_Paper_WORKING_Video']._Message(ODB_FRAME, {
+    'phase': EXPLICIT_PHASE, 'step': 0, 'frame': 136, 
+    'jobName': 'Z_Explicit_Correct_Stiff_Paper_WORKING_Video'})
+mdb.jobs['Z_Explicit_Correct_Stiff_Paper_WORKING_Video']._Message(STATUS, {
+    'totalTime': 1.71250069141388, 'stableTimeIncrement': 1.41807709042041e-06, 
+    'stepTime': 1.71250069141388, 'totalEnergy': 0.0124670844525099, 
+    'jobName': 'Z_Explicit_Correct_Stiff_Paper_WORKING_Video', 'step': 1, 
+    'increment': 1183629, 'phase': EXPLICIT_PHASE, 
+    'kineticEnergy': 0.127629950642586, 'wallTime': 415.0})
+mdb.jobs['Z_Explicit_Correct_Stiff_Paper_WORKING_Video']._Message(ODB_FRAME, {
+    'phase': EXPLICIT_PHASE, 'step': 0, 'frame': 137, 
+    'jobName': 'Z_Explicit_Correct_Stiff_Paper_WORKING_Video'})
+mdb.jobs['Z_Explicit_Correct_Stiff_Paper_WORKING_Video']._Message(STATUS, {
+    'totalTime': 1.72500097751617, 'stableTimeIncrement': 1.41807777254144e-06, 
+    'stepTime': 1.72500097751617, 'totalEnergy': 0.011469716206193, 
+    'jobName': 'Z_Explicit_Correct_Stiff_Paper_WORKING_Video', 'step': 1, 
+    'increment': 1192391, 'phase': EXPLICIT_PHASE, 
+    'kineticEnergy': 0.0461125187575817, 'wallTime': 418.0})
+mdb.jobs['Z_Explicit_Correct_Stiff_Paper_WORKING_Video']._Message(ODB_FRAME, {
+    'phase': EXPLICIT_PHASE, 'step': 0, 'frame': 138, 
+    'jobName': 'Z_Explicit_Correct_Stiff_Paper_WORKING_Video'})
+mdb.jobs['Z_Explicit_Correct_Stiff_Paper_WORKING_Video']._Message(STATUS, {
+    'totalTime': 1.73750042915344, 'stableTimeIncrement': 1.41807799991511e-06, 
+    'stepTime': 1.73750042915344, 'totalEnergy': 0.0105932988226414, 
+    'jobName': 'Z_Explicit_Correct_Stiff_Paper_WORKING_Video', 'step': 1, 
+    'increment': 1201157, 'phase': EXPLICIT_PHASE, 
+    'kineticEnergy': 0.143275916576385, 'wallTime': 421.0})
+mdb.jobs['Z_Explicit_Correct_Stiff_Paper_WORKING_Video']._Message(ODB_FRAME, {
+    'phase': EXPLICIT_PHASE, 'step': 0, 'frame': 139, 
+    'jobName': 'Z_Explicit_Correct_Stiff_Paper_WORKING_Video'})
+mdb.jobs['Z_Explicit_Correct_Stiff_Paper_WORKING_Video']._Message(STATUS, {
+    'totalTime': 1.75000047683716, 'stableTimeIncrement': 1.41807925047033e-06, 
+    'stepTime': 1.75000047683716, 'totalEnergy': 0.00977697409689426, 
+    'jobName': 'Z_Explicit_Correct_Stiff_Paper_WORKING_Video', 'step': 1, 
+    'increment': 1209910, 'phase': EXPLICIT_PHASE, 
+    'kineticEnergy': 0.121359564363956, 'wallTime': 424.0})
+mdb.jobs['Z_Explicit_Correct_Stiff_Paper_WORKING_Video']._Message(ODB_FRAME, {
+    'phase': EXPLICIT_PHASE, 'step': 0, 'frame': 140, 
+    'jobName': 'Z_Explicit_Correct_Stiff_Paper_WORKING_Video'})
+mdb.jobs['Z_Explicit_Correct_Stiff_Paper_WORKING_Video']._Message(STATUS, {
+    'totalTime': 1.76250004768372, 'stableTimeIncrement': 1.41808095577289e-06, 
+    'stepTime': 1.76250004768372, 'totalEnergy': 0.0089621813967824, 
+    'jobName': 'Z_Explicit_Correct_Stiff_Paper_WORKING_Video', 'step': 1, 
+    'increment': 1218695, 'phase': EXPLICIT_PHASE, 
+    'kineticEnergy': 0.0533037632703781, 'wallTime': 426.0})
+mdb.jobs['Z_Explicit_Correct_Stiff_Paper_WORKING_Video']._Message(ODB_FRAME, {
+    'phase': EXPLICIT_PHASE, 'step': 0, 'frame': 141, 
+    'jobName': 'Z_Explicit_Correct_Stiff_Paper_WORKING_Video'})
+mdb.jobs['Z_Explicit_Correct_Stiff_Paper_WORKING_Video']._Message(STATUS, {
+    'totalTime': 1.77500057220459, 'stableTimeIncrement': 1.41807913678349e-06, 
+    'stepTime': 1.77500057220459, 'totalEnergy': 0.00810624938458204, 
+    'jobName': 'Z_Explicit_Correct_Stiff_Paper_WORKING_Video', 'step': 1, 
+    'increment': 1227455, 'phase': EXPLICIT_PHASE, 
+    'kineticEnergy': 0.0802226513624191, 'wallTime': 429.0})
+mdb.jobs['Z_Explicit_Correct_Stiff_Paper_WORKING_Video']._Message(ODB_FRAME, {
+    'phase': EXPLICIT_PHASE, 'step': 0, 'frame': 142, 
+    'jobName': 'Z_Explicit_Correct_Stiff_Paper_WORKING_Video'})
+mdb.jobs['Z_Explicit_Correct_Stiff_Paper_WORKING_Video']._Message(STATUS, {
+    'totalTime': 1.78750050067902, 'stableTimeIncrement': 1.41808050102554e-06, 
+    'stepTime': 1.78750050067902, 'totalEnergy': 0.00723719224333763, 
+    'jobName': 'Z_Explicit_Correct_Stiff_Paper_WORKING_Video', 'step': 1, 
+    'increment': 1236218, 'phase': EXPLICIT_PHASE, 
+    'kineticEnergy': 0.12515564262867, 'wallTime': 432.0})
+mdb.jobs['Z_Explicit_Correct_Stiff_Paper_WORKING_Video']._Message(ODB_FRAME, {
+    'phase': EXPLICIT_PHASE, 'step': 0, 'frame': 143, 
+    'jobName': 'Z_Explicit_Correct_Stiff_Paper_WORKING_Video'})
+mdb.jobs['Z_Explicit_Correct_Stiff_Paper_WORKING_Video']._Message(STATUS, {
+    'totalTime': 1.80000102519989, 'stableTimeIncrement': 1.41807811360195e-06, 
+    'stepTime': 1.80000102519989, 'totalEnergy': 0.0061474833637476, 
+    'jobName': 'Z_Explicit_Correct_Stiff_Paper_WORKING_Video', 'step': 1, 
+    'increment': 1245005, 'phase': EXPLICIT_PHASE, 
+    'kineticEnergy': 0.135913372039795, 'wallTime': 435.0})
+mdb.jobs['Z_Explicit_Correct_Stiff_Paper_WORKING_Video']._Message(ODB_FRAME, {
+    'phase': EXPLICIT_PHASE, 'step': 0, 'frame': 144, 
+    'jobName': 'Z_Explicit_Correct_Stiff_Paper_WORKING_Video'})
+mdb.jobs['Z_Explicit_Correct_Stiff_Paper_WORKING_Video']._Message(STATUS, {
+    'totalTime': 1.81250035762787, 'stableTimeIncrement': 1.41807868203614e-06, 
+    'stepTime': 1.81250035762787, 'totalEnergy': 0.00526436232030392, 
+    'jobName': 'Z_Explicit_Correct_Stiff_Paper_WORKING_Video', 'step': 1, 
+    'increment': 1253794, 'phase': EXPLICIT_PHASE, 
+    'kineticEnergy': 0.0313302353024483, 'wallTime': 438.0})
+mdb.jobs['Z_Explicit_Correct_Stiff_Paper_WORKING_Video']._Message(ODB_FRAME, {
+    'phase': EXPLICIT_PHASE, 'step': 0, 'frame': 145, 
+    'jobName': 'Z_Explicit_Correct_Stiff_Paper_WORKING_Video'})
+mdb.models['Box_Explicit_Compressed-20_Correct_Stiff_3D'].Part(name='Triangle', 
+    objectToCopy=
+    mdb.models['Box_Explicit_Compressed-20_Correct_Stiff_3D'].parts['Part-1'])
+mdb.jobs['Z_Explicit_Correct_Stiff_Paper_WORKING_Video']._Message(STATUS, {
+    'totalTime': 1.82500112056732, 'stableTimeIncrement': 1.35214941110462e-06, 
+    'stepTime': 1.82500112056732, 'totalEnergy': 0.00421872362494469, 
+    'jobName': 'Z_Explicit_Correct_Stiff_Paper_WORKING_Video', 'step': 1, 
+    'increment': 1262609, 'phase': EXPLICIT_PHASE, 
+    'kineticEnergy': 0.0907685160636902, 'wallTime': 441.0})
+mdb.jobs['Z_Explicit_Correct_Stiff_Paper_WORKING_Video']._Message(ODB_FRAME, {
+    'phase': EXPLICIT_PHASE, 'step': 0, 'frame': 146, 
+    'jobName': 'Z_Explicit_Correct_Stiff_Paper_WORKING_Video'})
+mdb.jobs['Z_Explicit_Correct_Stiff_Paper_WORKING_Video']._Message(STATUS, {
+    'totalTime': 1.83750081062317, 'stableTimeIncrement': 1.41807572617836e-06, 
+    'stepTime': 1.83750081062317, 'totalEnergy': 0.00323592312633991, 
+    'jobName': 'Z_Explicit_Correct_Stiff_Paper_WORKING_Video', 'step': 1, 
+    'increment': 1271387, 'phase': EXPLICIT_PHASE, 
+    'kineticEnergy': 0.100755944848061, 'wallTime': 443.0})
+mdb.jobs['Z_Explicit_Correct_Stiff_Paper_WORKING_Video']._Message(ODB_FRAME, {
+    'phase': EXPLICIT_PHASE, 'step': 0, 'frame': 147, 
+    'jobName': 'Z_Explicit_Correct_Stiff_Paper_WORKING_Video'})
+mdb.jobs['Z_Explicit_Correct_Stiff_Paper_WORKING_Video']._Message(STATUS, {
+    'totalTime': 1.85000038146973, 'stableTimeIncrement': 1.41807390718895e-06, 
+    'stepTime': 1.85000038146973, 'totalEnergy': 0.0022239563986659, 
+    'jobName': 'Z_Explicit_Correct_Stiff_Paper_WORKING_Video', 'step': 1, 
+    'increment': 1280184, 'phase': EXPLICIT_PHASE, 
+    'kineticEnergy': 0.094458244740963, 'wallTime': 446.0})
+mdb.jobs['Z_Explicit_Correct_Stiff_Paper_WORKING_Video']._Message(ODB_FRAME, {
+    'phase': EXPLICIT_PHASE, 'step': 0, 'frame': 148, 
+    'jobName': 'Z_Explicit_Correct_Stiff_Paper_WORKING_Video'})
+mdb.jobs['Z_Explicit_Correct_Stiff_Paper_WORKING_Video']._Message(STATUS, {
+    'totalTime': 1.86250066757202, 'stableTimeIncrement': 1.41807709042041e-06, 
+    'stepTime': 1.86250066757202, 'totalEnergy': 0.0012074091937393, 
+    'jobName': 'Z_Explicit_Correct_Stiff_Paper_WORKING_Video', 'step': 1, 
+    'increment': 1288964, 'phase': EXPLICIT_PHASE, 
+    'kineticEnergy': 0.0254467464983463, 'wallTime': 449.0})
+mdb.jobs['Z_Explicit_Correct_Stiff_Paper_WORKING_Video']._Message(ODB_FRAME, {
+    'phase': EXPLICIT_PHASE, 'step': 0, 'frame': 149, 
+    'jobName': 'Z_Explicit_Correct_Stiff_Paper_WORKING_Video'})
+mdb.jobs['Z_Explicit_Correct_Stiff_Paper_WORKING_Video']._Message(STATUS, {
+    'totalTime': 1.87500035762787, 'stableTimeIncrement': 1.41807709042041e-06, 
+    'stepTime': 1.87500035762787, 'totalEnergy': 0.000460119917988777, 
+    'jobName': 'Z_Explicit_Correct_Stiff_Paper_WORKING_Video', 'step': 1, 
+    'increment': 1297769, 'phase': EXPLICIT_PHASE, 
+    'kineticEnergy': 0.0659830346703529, 'wallTime': 452.0})
+mdb.jobs['Z_Explicit_Correct_Stiff_Paper_WORKING_Video']._Message(ODB_FRAME, {
+    'phase': EXPLICIT_PHASE, 'step': 0, 'frame': 150, 
+    'jobName': 'Z_Explicit_Correct_Stiff_Paper_WORKING_Video'})
+mdb.jobs['Z_Explicit_Correct_Stiff_Paper_WORKING_Video']._Message(STATUS, {
+    'totalTime': 1.88750016689301, 'stableTimeIncrement': 1.41807618092571e-06, 
+    'stepTime': 1.88750016689301, 'totalEnergy': -0.000538547523319721, 
+    'jobName': 'Z_Explicit_Correct_Stiff_Paper_WORKING_Video', 'step': 1, 
+    'increment': 1306589, 'phase': EXPLICIT_PHASE, 
+    'kineticEnergy': 0.0937580689787865, 'wallTime': 455.0})
+mdb.jobs['Z_Explicit_Correct_Stiff_Paper_WORKING_Video']._Message(ODB_FRAME, {
+    'phase': EXPLICIT_PHASE, 'step': 0, 'frame': 151, 
+    'jobName': 'Z_Explicit_Correct_Stiff_Paper_WORKING_Video'})
+mdb.jobs['Z_Explicit_Correct_Stiff_Paper_WORKING_Video']._Message(STATUS, {
+    'totalTime': 1.90000009536743, 'stableTimeIncrement': 1.41807731779409e-06, 
+    'stepTime': 1.90000009536743, 'totalEnergy': -0.00134812109172344, 
+    'jobName': 'Z_Explicit_Correct_Stiff_Paper_WORKING_Video', 'step': 1, 
+    'increment': 1315382, 'phase': EXPLICIT_PHASE, 
+    'kineticEnergy': 0.073026604950428, 'wallTime': 458.0})
+mdb.jobs['Z_Explicit_Correct_Stiff_Paper_WORKING_Video']._Message(ODB_FRAME, {
+    'phase': EXPLICIT_PHASE, 'step': 0, 'frame': 152, 
+    'jobName': 'Z_Explicit_Correct_Stiff_Paper_WORKING_Video'})
+del mdb.models['Box_Explicit_Compressed-20_Correct_Stiff_3D'].parts['Triangle'].features['Partition face-1']
+mdb.jobs['Z_Explicit_Correct_Stiff_Paper_WORKING_Video']._Message(STATUS, {
+    'totalTime': 1.91250133514404, 'stableTimeIncrement': 1.41807788622828e-06, 
+    'stepTime': 1.91250133514404, 'totalEnergy': -0.00264546601101756, 
+    'jobName': 'Z_Explicit_Correct_Stiff_Paper_WORKING_Video', 'step': 1, 
+    'increment': 1324205, 'phase': EXPLICIT_PHASE, 
+    'kineticEnergy': 0.0330713391304016, 'wallTime': 461.0})
+mdb.jobs['Z_Explicit_Correct_Stiff_Paper_WORKING_Video']._Message(ODB_FRAME, {
+    'phase': EXPLICIT_PHASE, 'step': 0, 'frame': 153, 
+    'jobName': 'Z_Explicit_Correct_Stiff_Paper_WORKING_Video'})
+mdb.jobs['Z_Explicit_Correct_Stiff_Paper_WORKING_Video']._Message(STATUS, {
+    'totalTime': 1.9250009059906, 'stableTimeIncrement': 1.41807879572298e-06, 
+    'stepTime': 1.9250009059906, 'totalEnergy': -0.00373031664639711, 
+    'jobName': 'Z_Explicit_Correct_Stiff_Paper_WORKING_Video', 'step': 1, 
+    'increment': 1333059, 'phase': EXPLICIT_PHASE, 
+    'kineticEnergy': 0.0437974482774734, 'wallTime': 464.0})
+mdb.jobs['Z_Explicit_Correct_Stiff_Paper_WORKING_Video']._Message(ODB_FRAME, {
+    'phase': EXPLICIT_PHASE, 'step': 0, 'frame': 154, 
+    'jobName': 'Z_Explicit_Correct_Stiff_Paper_WORKING_Video'})
+mdb.jobs['Z_Explicit_Correct_Stiff_Paper_WORKING_Video']._Message(STATUS, {
+    'totalTime': 1.9375011920929, 'stableTimeIncrement': 1.4180776588546e-06, 
+    'stepTime': 1.9375011920929, 'totalEnergy': -0.00446327961981297, 
+    'jobName': 'Z_Explicit_Correct_Stiff_Paper_WORKING_Video', 'step': 1, 
+    'increment': 1341851, 'phase': EXPLICIT_PHASE, 
+    'kineticEnergy': 0.0512608401477337, 'wallTime': 466.0})
+mdb.jobs['Z_Explicit_Correct_Stiff_Paper_WORKING_Video']._Message(ODB_FRAME, {
+    'phase': EXPLICIT_PHASE, 'step': 0, 'frame': 155, 
+    'jobName': 'Z_Explicit_Correct_Stiff_Paper_WORKING_Video'})
+mdb.models['Box_Explicit_Compressed-20_Correct_Stiff_3D'].ConstrainedSketch(
+    gridSpacing=4.59, name='__profile__', sheetSize=183.84, transform=
+    mdb.models['Box_Explicit_Compressed-20_Correct_Stiff_3D'].parts['Triangle'].MakeSketchTransform(
+    sketchPlane=mdb.models['Box_Explicit_Compressed-20_Correct_Stiff_3D'].parts['Triangle'].faces[0], 
+    sketchPlaneSide=SIDE1, 
+    sketchUpEdge=mdb.models['Box_Explicit_Compressed-20_Correct_Stiff_3D'].parts['Triangle'].edges[1], 
+    sketchOrientation=RIGHT, origin=(32.5, 32.5, 0.0)))
+mdb.models['Box_Explicit_Compressed-20_Correct_Stiff_3D'].parts['Triangle'].projectReferencesOntoSketch(
+    filter=COPLANAR_EDGES, sketch=
+    mdb.models['Box_Explicit_Compressed-20_Correct_Stiff_3D'].sketches['__profile__'])
+mdb.jobs['Z_Explicit_Correct_Stiff_Paper_WORKING_Video']._Message(STATUS, {
+    'totalTime': 1.95000028610229, 'stableTimeIncrement': 1.41807925047033e-06, 
+    'stepTime': 1.95000028610229, 'totalEnergy': -0.00517055206000805, 
+    'jobName': 'Z_Explicit_Correct_Stiff_Paper_WORKING_Video', 'step': 1, 
+    'increment': 1350625, 'phase': EXPLICIT_PHASE, 
+    'kineticEnergy': 0.0569605194032192, 'wallTime': 469.0})
+mdb.jobs['Z_Explicit_Correct_Stiff_Paper_WORKING_Video']._Message(ODB_FRAME, {
+    'phase': EXPLICIT_PHASE, 'step': 0, 'frame': 156, 
+    'jobName': 'Z_Explicit_Correct_Stiff_Paper_WORKING_Video'})
+mdb.models['Box_Explicit_Compressed-20_Correct_Stiff_3D'].sketches['__profile__'].Line(
+    point1=(-32.5, 32.5), point2=(32.5, -32.5))
+mdb.jobs['Z_Explicit_Correct_Stiff_Paper_WORKING_Video']._Message(STATUS, {
+    'totalTime': 1.96250057220459, 'stableTimeIncrement': 1.41808050102554e-06, 
+    'stepTime': 1.96250057220459, 'totalEnergy': -0.00615426944568753, 
+    'jobName': 'Z_Explicit_Correct_Stiff_Paper_WORKING_Video', 'step': 1, 
+    'increment': 1359447, 'phase': EXPLICIT_PHASE, 
+    'kineticEnergy': 0.0150971002876759, 'wallTime': 472.0})
+mdb.jobs['Z_Explicit_Correct_Stiff_Paper_WORKING_Video']._Message(ODB_FRAME, {
+    'phase': EXPLICIT_PHASE, 'step': 0, 'frame': 157, 
+    'jobName': 'Z_Explicit_Correct_Stiff_Paper_WORKING_Video'})
+mdb.jobs['Z_Explicit_Correct_Stiff_Paper_WORKING_Video']._Message(STATUS, {
+    'totalTime': 1.97500050067902, 'stableTimeIncrement': 1.41807879572298e-06, 
+    'stepTime': 1.97500050067902, 'totalEnergy': -0.00641219783574343, 
+    'jobName': 'Z_Explicit_Correct_Stiff_Paper_WORKING_Video', 'step': 1, 
+    'increment': 1368258, 'phase': EXPLICIT_PHASE, 
+    'kineticEnergy': 0.050550427287817, 'wallTime': 475.0})
+mdb.jobs['Z_Explicit_Correct_Stiff_Paper_WORKING_Video']._Message(ODB_FRAME, {
+    'phase': EXPLICIT_PHASE, 'step': 0, 'frame': 158, 
+    'jobName': 'Z_Explicit_Correct_Stiff_Paper_WORKING_Video'})
+mdb.models['Box_Explicit_Compressed-20_Correct_Stiff_3D'].sketches['__profile__'].Line(
+    point1=(32.5, 32.5), point2=(-32.5, -32.5))
+mdb.jobs['Z_Explicit_Correct_Stiff_Paper_WORKING_Video']._Message(STATUS, {
+    'totalTime': 1.98750019073486, 'stableTimeIncrement': 1.4180776588546e-06, 
+    'stepTime': 1.98750019073486, 'totalEnergy': -0.00665913661941886, 
+    'jobName': 'Z_Explicit_Correct_Stiff_Paper_WORKING_Video', 'step': 1, 
+    'increment': 1377097, 'phase': EXPLICIT_PHASE, 
+    'kineticEnergy': 0.0301986411213875, 'wallTime': 478.0})
+mdb.jobs['Z_Explicit_Correct_Stiff_Paper_WORKING_Video']._Message(ODB_FRAME, {
+    'phase': EXPLICIT_PHASE, 'step': 0, 'frame': 159, 
+    'jobName': 'Z_Explicit_Correct_Stiff_Paper_WORKING_Video'})
+mdb.models['Box_Explicit_Compressed-20_Correct_Stiff_3D'].parts['Triangle'].PartitionFaceBySketch(
+    faces=
+    mdb.models['Box_Explicit_Compressed-20_Correct_Stiff_3D'].parts['Triangle'].faces.getSequenceFromMask(
+    ('[#1 ]', ), ), sketch=
+    mdb.models['Box_Explicit_Compressed-20_Correct_Stiff_3D'].sketches['__profile__']
+    , sketchUpEdge=
+    mdb.models['Box_Explicit_Compressed-20_Correct_Stiff_3D'].parts['Triangle'].edges[1])
+del mdb.models['Box_Explicit_Compressed-20_Correct_Stiff_3D'].sketches['__profile__']
+mdb.jobs['Z_Explicit_Correct_Stiff_Paper_WORKING_Video']._Message(STATUS, {
+    'totalTime': 2.0000011920929, 'stableTimeIncrement': 1.41807811360195e-06, 
+    'stepTime': 2.0000011920929, 'totalEnergy': -0.00740038603544235, 
+    'jobName': 'Z_Explicit_Correct_Stiff_Paper_WORKING_Video', 'step': 1, 
+    'increment': 1385935, 'phase': EXPLICIT_PHASE, 
+    'kineticEnergy': 0.0630420371890068, 'wallTime': 481.0})
+mdb.jobs['Z_Explicit_Correct_Stiff_Paper_WORKING_Video']._Message(ODB_FRAME, {
+    'phase': EXPLICIT_PHASE, 'step': 0, 'frame': 160, 
+    'jobName': 'Z_Explicit_Correct_Stiff_Paper_WORKING_Video'})
+mdb.jobs['Z_Explicit_Correct_Stiff_Paper_WORKING_Video']._Message(STATUS, {
+    'totalTime': 2.01250100135803, 'stableTimeIncrement': 1.41807788622828e-06, 
+    'stepTime': 2.01250100135803, 'totalEnergy': -0.00823340564966202, 
+    'jobName': 'Z_Explicit_Correct_Stiff_Paper_WORKING_Video', 'step': 1, 
+    'increment': 1394673, 'phase': EXPLICIT_PHASE, 
+    'kineticEnergy': 0.0135991843417287, 'wallTime': 484.0})
+mdb.jobs['Z_Explicit_Correct_Stiff_Paper_WORKING_Video']._Message(ODB_FRAME, {
+    'phase': EXPLICIT_PHASE, 'step': 0, 'frame': 161, 
+    'jobName': 'Z_Explicit_Correct_Stiff_Paper_WORKING_Video'})
+mdb.jobs['Z_Explicit_Correct_Stiff_Paper_WORKING_Video']._Message(STATUS, {
+    'totalTime': 2.02500081062317, 'stableTimeIncrement': 1.41807652198622e-06, 
+    'stepTime': 2.02500081062317, 'totalEnergy': -0.00889141671359539, 
+    'jobName': 'Z_Explicit_Correct_Stiff_Paper_WORKING_Video', 'step': 1, 
+    'increment': 1403411, 'phase': EXPLICIT_PHASE, 
+    'kineticEnergy': 0.0429186224937439, 'wallTime': 486.0})
+mdb.jobs['Z_Explicit_Correct_Stiff_Paper_WORKING_Video']._Message(ODB_FRAME, {
+    'phase': EXPLICIT_PHASE, 'step': 0, 'frame': 162, 
+    'jobName': 'Z_Explicit_Correct_Stiff_Paper_WORKING_Video'})
+mdb.jobs['Z_Explicit_Correct_Stiff_Paper_WORKING_Video']._Message(STATUS, {
+    'totalTime': 2.03750061988831, 'stableTimeIncrement': 1.41807618092571e-06, 
+    'stepTime': 2.03750061988831, 'totalEnergy': -0.00953841116279364, 
+    'jobName': 'Z_Explicit_Correct_Stiff_Paper_WORKING_Video', 'step': 1, 
+    'increment': 1412149, 'phase': EXPLICIT_PHASE, 
+    'kineticEnergy': 0.0197120849043131, 'wallTime': 489.0})
+mdb.jobs['Z_Explicit_Correct_Stiff_Paper_WORKING_Video']._Message(ODB_FRAME, {
+    'phase': EXPLICIT_PHASE, 'step': 0, 'frame': 163, 
+    'jobName': 'Z_Explicit_Correct_Stiff_Paper_WORKING_Video'})
+mdb.models['Box_Explicit_Compressed-20_Correct_Stiff_3D'].parts['Triangle'].RemoveFaces(
+    deleteCells=False, faceList=
+    mdb.models['Box_Explicit_Compressed-20_Correct_Stiff_3D'].parts['Triangle'].faces.getSequenceFromMask(
+    mask=('[#b ]', ), ))
+mdb.jobs['Z_Explicit_Correct_Stiff_Paper_WORKING_Video']._Message(STATUS, {
+    'totalTime': 2.05000042915344, 'stableTimeIncrement': 1.41807572617836e-06, 
+    'stepTime': 2.05000042915344, 'totalEnergy': -0.0102663487195969, 
+    'jobName': 'Z_Explicit_Correct_Stiff_Paper_WORKING_Video', 'step': 1, 
+    'increment': 1420887, 'phase': EXPLICIT_PHASE, 
+    'kineticEnergy': 0.0313500836491585, 'wallTime': 492.0})
+mdb.jobs['Z_Explicit_Correct_Stiff_Paper_WORKING_Video']._Message(ODB_FRAME, {
+    'phase': EXPLICIT_PHASE, 'step': 0, 'frame': 164, 
+    'jobName': 'Z_Explicit_Correct_Stiff_Paper_WORKING_Video'})
+mdb.jobs['Z_Explicit_Correct_Stiff_Paper_WORKING_Video']._Message(STATUS, {
+    'totalTime': 2.06250023841858, 'stableTimeIncrement': 1.41807663567306e-06, 
+    'stepTime': 2.06250023841858, 'totalEnergy': -0.0107522197067738, 
+    'jobName': 'Z_Explicit_Correct_Stiff_Paper_WORKING_Video', 'step': 1, 
+    'increment': 1429625, 'phase': EXPLICIT_PHASE, 
+    'kineticEnergy': 0.0266143251210451, 'wallTime': 495.0})
+mdb.jobs['Z_Explicit_Correct_Stiff_Paper_WORKING_Video']._Message(ODB_FRAME, {
+    'phase': EXPLICIT_PHASE, 'step': 0, 'frame': 165, 
+    'jobName': 'Z_Explicit_Correct_Stiff_Paper_WORKING_Video'})
+mdb.jobs['Z_Explicit_Correct_Stiff_Paper_WORKING_Video']._Message(STATUS, {
+    'totalTime': 2.07500004768372, 'stableTimeIncrement': 1.41807322506793e-06, 
+    'stepTime': 2.07500004768372, 'totalEnergy': -0.0113907465711236, 
+    'jobName': 'Z_Explicit_Correct_Stiff_Paper_WORKING_Video', 'step': 1, 
+    'increment': 1438363, 'phase': EXPLICIT_PHASE, 
+    'kineticEnergy': 0.0113351494073868, 'wallTime': 498.0})
+mdb.jobs['Z_Explicit_Correct_Stiff_Paper_WORKING_Video']._Message(ODB_FRAME, {
+    'phase': EXPLICIT_PHASE, 'step': 0, 'frame': 166, 
+    'jobName': 'Z_Explicit_Correct_Stiff_Paper_WORKING_Video'})
+mdb.jobs['Z_Explicit_Correct_Stiff_Paper_WORKING_Video']._Message(STATUS, {
+    'totalTime': 2.08750128746033, 'stableTimeIncrement': 1.41807299769425e-06, 
+    'stepTime': 2.08750128746033, 'totalEnergy': -0.011676637455821, 
+    'jobName': 'Z_Explicit_Correct_Stiff_Paper_WORKING_Video', 'step': 1, 
+    'increment': 1447102, 'phase': EXPLICIT_PHASE, 
+    'kineticEnergy': 0.0383699685335159, 'wallTime': 501.0})
+mdb.jobs['Z_Explicit_Correct_Stiff_Paper_WORKING_Video']._Message(ODB_FRAME, {
+    'phase': EXPLICIT_PHASE, 'step': 0, 'frame': 167, 
+    'jobName': 'Z_Explicit_Correct_Stiff_Paper_WORKING_Video'})
+mdb.jobs['Z_Explicit_Correct_Stiff_Paper_WORKING_Video']._Message(STATUS, {
+    'totalTime': 2.10000109672546, 'stableTimeIncrement': 1.41807311138109e-06, 
+    'stepTime': 2.10000109672546, 'totalEnergy': -0.0122074102982879, 
+    'jobName': 'Z_Explicit_Correct_Stiff_Paper_WORKING_Video', 'step': 1, 
+    'increment': 1455840, 'phase': EXPLICIT_PHASE, 
+    'kineticEnergy': 0.0186836365610361, 'wallTime': 504.0})
+mdb.jobs['Z_Explicit_Correct_Stiff_Paper_WORKING_Video']._Message(ODB_FRAME, {
+    'phase': EXPLICIT_PHASE, 'step': 0, 'frame': 168, 
+    'jobName': 'Z_Explicit_Correct_Stiff_Paper_WORKING_Video'})
+mdb.jobs['Z_Explicit_Correct_Stiff_Paper_WORKING_Video']._Message(STATUS, {
+    'totalTime': 2.1125009059906, 'stableTimeIncrement': 1.41807208819955e-06, 
+    'stepTime': 2.1125009059906, 'totalEnergy': -0.0124197667464614, 
+    'jobName': 'Z_Explicit_Correct_Stiff_Paper_WORKING_Video', 'step': 1, 
+    'increment': 1464578, 'phase': EXPLICIT_PHASE, 
+    'kineticEnergy': 0.0111470017582178, 'wallTime': 507.0})
+mdb.jobs['Z_Explicit_Correct_Stiff_Paper_WORKING_Video']._Message(ODB_FRAME, {
+    'phase': EXPLICIT_PHASE, 'step': 0, 'frame': 169, 
+    'jobName': 'Z_Explicit_Correct_Stiff_Paper_WORKING_Video'})
+mdb.jobs['Z_Explicit_Correct_Stiff_Paper_WORKING_Video']._Message(STATUS, {
+    'totalTime': 2.12500071525574, 'stableTimeIncrement': 1.41807208819955e-06, 
+    'stepTime': 2.12500071525574, 'totalEnergy': -0.0127875981852412, 
+    'jobName': 'Z_Explicit_Correct_Stiff_Paper_WORKING_Video', 'step': 1, 
+    'increment': 1473316, 'phase': EXPLICIT_PHASE, 
+    'kineticEnergy': 0.0365486554801464, 'wallTime': 510.0})
+mdb.jobs['Z_Explicit_Correct_Stiff_Paper_WORKING_Video']._Message(ODB_FRAME, {
+    'phase': EXPLICIT_PHASE, 'step': 0, 'frame': 170, 
+    'jobName': 'Z_Explicit_Correct_Stiff_Paper_WORKING_Video'})
+mdb.jobs['Z_Explicit_Correct_Stiff_Paper_WORKING_Video']._Message(STATUS, {
+    'totalTime': 2.13750052452087, 'stableTimeIncrement': 1.41807458930998e-06, 
+    'stepTime': 2.13750052452087, 'totalEnergy': -0.0131462551653385, 
+    'jobName': 'Z_Explicit_Correct_Stiff_Paper_WORKING_Video', 'step': 1, 
+    'increment': 1482054, 'phase': EXPLICIT_PHASE, 
+    'kineticEnergy': 0.00406368030235171, 'wallTime': 513.0})
+mdb.jobs['Z_Explicit_Correct_Stiff_Paper_WORKING_Video']._Message(ODB_FRAME, {
+    'phase': EXPLICIT_PHASE, 'step': 0, 'frame': 171, 
+    'jobName': 'Z_Explicit_Correct_Stiff_Paper_WORKING_Video'})
+mdb.models['Box_Explicit_Compressed-20_Correct_Stiff_3D'].rootAssembly.Instance(
+    dependent=ON, name='Triangle-1', part=
+    mdb.models['Box_Explicit_Compressed-20_Correct_Stiff_3D'].parts['Triangle'])
+mdb.jobs['Z_Explicit_Correct_Stiff_Paper_WORKING_Video']._Message(STATUS, {
+    'totalTime': 2.15000033378601, 'stableTimeIncrement': 1.41807322506793e-06, 
+    'stepTime': 2.15000033378601, 'totalEnergy': -0.0135443350300193, 
+    'jobName': 'Z_Explicit_Correct_Stiff_Paper_WORKING_Video', 'step': 1, 
+    'increment': 1490792, 'phase': EXPLICIT_PHASE, 
+    'kineticEnergy': 0.0257175285369158, 'wallTime': 516.0})
+mdb.jobs['Z_Explicit_Correct_Stiff_Paper_WORKING_Video']._Message(ODB_FRAME, {
+    'phase': EXPLICIT_PHASE, 'step': 0, 'frame': 172, 
+    'jobName': 'Z_Explicit_Correct_Stiff_Paper_WORKING_Video'})
+mdb.jobs['Z_Explicit_Correct_Stiff_Paper_WORKING_Video']._Message(STATUS, {
+    'totalTime': 2.16250014305115, 'stableTimeIncrement': 1.41807402087579e-06, 
+    'stepTime': 2.16250014305115, 'totalEnergy': -0.0137437405064702, 
+    'jobName': 'Z_Explicit_Correct_Stiff_Paper_WORKING_Video', 'step': 1, 
+    'increment': 1499530, 'phase': EXPLICIT_PHASE, 
+    'kineticEnergy': 0.0223066695034504, 'wallTime': 519.0})
+mdb.jobs['Z_Explicit_Correct_Stiff_Paper_WORKING_Video']._Message(ODB_FRAME, {
+    'phase': EXPLICIT_PHASE, 'step': 0, 'frame': 173, 
+    'jobName': 'Z_Explicit_Correct_Stiff_Paper_WORKING_Video'})
+mdb.jobs['Z_Explicit_Correct_Stiff_Paper_WORKING_Video']._Message(STATUS, {
+    'totalTime': 2.17499995231628, 'stableTimeIncrement': 1.4180767493599e-06, 
+    'stepTime': 2.17499995231628, 'totalEnergy': -0.0139767937362194, 
+    'jobName': 'Z_Explicit_Correct_Stiff_Paper_WORKING_Video', 'step': 1, 
+    'increment': 1508268, 'phase': EXPLICIT_PHASE, 
+    'kineticEnergy': 0.00918499194085598, 'wallTime': 521.0})
+mdb.jobs['Z_Explicit_Correct_Stiff_Paper_WORKING_Video']._Message(ODB_FRAME, {
+    'phase': EXPLICIT_PHASE, 'step': 0, 'frame': 174, 
+    'jobName': 'Z_Explicit_Correct_Stiff_Paper_WORKING_Video'})
+mdb.jobs['Z_Explicit_Correct_Stiff_Paper_WORKING_Video']._Message(STATUS, {
+    'totalTime': 2.1875011920929, 'stableTimeIncrement': 1.41807549880468e-06, 
+    'stepTime': 2.1875011920929, 'totalEnergy': -0.0141869429498911, 
+    'jobName': 'Z_Explicit_Correct_Stiff_Paper_WORKING_Video', 'step': 1, 
+    'increment': 1517007, 'phase': EXPLICIT_PHASE, 
+    'kineticEnergy': 0.0358475744724274, 'wallTime': 524.0})
+mdb.jobs['Z_Explicit_Correct_Stiff_Paper_WORKING_Video']._Message(ODB_FRAME, {
+    'phase': EXPLICIT_PHASE, 'step': 0, 'frame': 175, 
+    'jobName': 'Z_Explicit_Correct_Stiff_Paper_WORKING_Video'})
+mdb.jobs['Z_Explicit_Correct_Stiff_Paper_WORKING_Video']._Message(STATUS, {
+    'totalTime': 2.20000100135803, 'stableTimeIncrement': 1.41807629461255e-06, 
+    'stepTime': 2.20000100135803, 'totalEnergy': -0.0143805267289281, 
+    'jobName': 'Z_Explicit_Correct_Stiff_Paper_WORKING_Video', 'step': 1, 
+    'increment': 1525745, 'phase': EXPLICIT_PHASE, 
+    'kineticEnergy': 0.00784171372652054, 'wallTime': 527.0})
+mdb.jobs['Z_Explicit_Correct_Stiff_Paper_WORKING_Video']._Message(ODB_FRAME, {
+    'phase': EXPLICIT_PHASE, 'step': 0, 'frame': 176, 
+    'jobName': 'Z_Explicit_Correct_Stiff_Paper_WORKING_Video'})
+mdb.jobs['Z_Explicit_Correct_Stiff_Paper_WORKING_Video']._Message(STATUS, {
+    'totalTime': 2.21250081062317, 'stableTimeIncrement': 1.41807788622828e-06, 
+    'stepTime': 2.21250081062317, 'totalEnergy': -0.0145517457276583, 
+    'jobName': 'Z_Explicit_Correct_Stiff_Paper_WORKING_Video', 'step': 1, 
+    'increment': 1534483, 'phase': EXPLICIT_PHASE, 
+    'kineticEnergy': 0.0176054984331131, 'wallTime': 530.0})
+mdb.jobs['Z_Explicit_Correct_Stiff_Paper_WORKING_Video']._Message(ODB_FRAME, {
+    'phase': EXPLICIT_PHASE, 'step': 0, 'frame': 177, 
+    'jobName': 'Z_Explicit_Correct_Stiff_Paper_WORKING_Video'})
+mdb.models['Box_Explicit_Compressed-20_Correct_Stiff_3D'].rootAssembly.translate(
+    instanceList=('Triangle-1', ), vector=(394.041569, 400.0, 49.679441))
+mdb.jobs['Z_Explicit_Correct_Stiff_Paper_WORKING_Video']._Message(STATUS, {
+    'totalTime': 2.22500061988831, 'stableTimeIncrement': 1.41807709042041e-06, 
+    'stepTime': 2.22500061988831, 'totalEnergy': -0.0147243086248636, 
+    'jobName': 'Z_Explicit_Correct_Stiff_Paper_WORKING_Video', 'step': 1, 
+    'increment': 1543221, 'phase': EXPLICIT_PHASE, 
+    'kineticEnergy': 0.0318290702998638, 'wallTime': 533.0})
+mdb.jobs['Z_Explicit_Correct_Stiff_Paper_WORKING_Video']._Message(ODB_FRAME, {
+    'phase': EXPLICIT_PHASE, 'step': 0, 'frame': 178, 
+    'jobName': 'Z_Explicit_Correct_Stiff_Paper_WORKING_Video'})
+mdb.jobs['Z_Explicit_Correct_Stiff_Paper_WORKING_Video']._Message(STATUS, {
+    'totalTime': 2.23750042915344, 'stableTimeIncrement': 1.35217180741165e-06, 
+    'stepTime': 2.23750042915344, 'totalEnergy': -0.0149382818490267, 
+    'jobName': 'Z_Explicit_Correct_Stiff_Paper_WORKING_Video', 'step': 1, 
+    'increment': 1551959, 'phase': EXPLICIT_PHASE, 
+    'kineticEnergy': 0.00384796736761928, 'wallTime': 536.0})
+mdb.jobs['Z_Explicit_Correct_Stiff_Paper_WORKING_Video']._Message(ODB_FRAME, {
+    'phase': EXPLICIT_PHASE, 'step': 0, 'frame': 179, 
+    'jobName': 'Z_Explicit_Correct_Stiff_Paper_WORKING_Video'})
+mdb.jobs['Z_Explicit_Correct_Stiff_Paper_WORKING_Video']._Message(STATUS, {
+    'totalTime': 2.25000023841858, 'stableTimeIncrement': 1.41807834097563e-06, 
+    'stepTime': 2.25000023841858, 'totalEnergy': -0.0151428142562509, 
+    'jobName': 'Z_Explicit_Correct_Stiff_Paper_WORKING_Video', 'step': 1, 
+    'increment': 1560697, 'phase': EXPLICIT_PHASE, 
+    'kineticEnergy': 0.0253680031746626, 'wallTime': 539.0})
+mdb.jobs['Z_Explicit_Correct_Stiff_Paper_WORKING_Video']._Message(ODB_FRAME, {
+    'phase': EXPLICIT_PHASE, 'step': 0, 'frame': 180, 
+    'jobName': 'Z_Explicit_Correct_Stiff_Paper_WORKING_Video'})
+mdb.jobs['Z_Explicit_Correct_Stiff_Paper_WORKING_Video']._Message(STATUS, {
+    'totalTime': 2.26250004768372, 'stableTimeIncrement': 1.41807811360195e-06, 
+    'stepTime': 2.26250004768372, 'totalEnergy': -0.0153030473738909, 
+    'jobName': 'Z_Explicit_Correct_Stiff_Paper_WORKING_Video', 'step': 1, 
+    'increment': 1569435, 'phase': EXPLICIT_PHASE, 
+    'kineticEnergy': 0.0263627246022224, 'wallTime': 542.0})
+mdb.jobs['Z_Explicit_Correct_Stiff_Paper_WORKING_Video']._Message(ODB_FRAME, {
+    'phase': EXPLICIT_PHASE, 'step': 0, 'frame': 181, 
+    'jobName': 'Z_Explicit_Correct_Stiff_Paper_WORKING_Video'})
+mdb.jobs['Z_Explicit_Correct_Stiff_Paper_WORKING_Video']._Message(STATUS, {
+    'totalTime': 2.27500128746033, 'stableTimeIncrement': 1.35216362195933e-06, 
+    'stepTime': 2.27500128746033, 'totalEnergy': -0.0154618294909596, 
+    'jobName': 'Z_Explicit_Correct_Stiff_Paper_WORKING_Video', 'step': 1, 
+    'increment': 1578174, 'phase': EXPLICIT_PHASE, 
+    'kineticEnergy': 0.00214419118128717, 'wallTime': 545.0})
+mdb.jobs['Z_Explicit_Correct_Stiff_Paper_WORKING_Video']._Message(ODB_FRAME, {
+    'phase': EXPLICIT_PHASE, 'step': 0, 'frame': 182, 
+    'jobName': 'Z_Explicit_Correct_Stiff_Paper_WORKING_Video'})
+mdb.jobs['Z_Explicit_Correct_Stiff_Paper_WORKING_Video']._Message(STATUS, {
+    'totalTime': 2.28750109672546, 'stableTimeIncrement': 1.41807720410725e-06, 
+    'stepTime': 2.28750109672546, 'totalEnergy': -0.0156247494742274, 
+    'jobName': 'Z_Explicit_Correct_Stiff_Paper_WORKING_Video', 'step': 1, 
+    'increment': 1586912, 'phase': EXPLICIT_PHASE, 
+    'kineticEnergy': 0.0301938280463219, 'wallTime': 548.0})
+mdb.jobs['Z_Explicit_Correct_Stiff_Paper_WORKING_Video']._Message(ODB_FRAME, {
+    'phase': EXPLICIT_PHASE, 'step': 0, 'frame': 183, 
+    'jobName': 'Z_Explicit_Correct_Stiff_Paper_WORKING_Video'})
+mdb.jobs['Z_Explicit_Correct_Stiff_Paper_WORKING_Video']._Message(STATUS, {
+    'totalTime': 2.3000009059906, 'stableTimeIncrement': 1.35217578645097e-06, 
+    'stepTime': 2.3000009059906, 'totalEnergy': -0.0157451257109642, 
+    'jobName': 'Z_Explicit_Correct_Stiff_Paper_WORKING_Video', 'step': 1, 
+    'increment': 1595650, 'phase': EXPLICIT_PHASE, 
+    'kineticEnergy': 0.0170824863016605, 'wallTime': 550.0})
+mdb.jobs['Z_Explicit_Correct_Stiff_Paper_WORKING_Video']._Message(ODB_FRAME, {
+    'phase': EXPLICIT_PHASE, 'step': 0, 'frame': 184, 
+    'jobName': 'Z_Explicit_Correct_Stiff_Paper_WORKING_Video'})
+mdb.jobs['Z_Explicit_Correct_Stiff_Paper_WORKING_Video']._Message(STATUS, {
+    'totalTime': 2.31250071525574, 'stableTimeIncrement': 1.35216464514087e-06, 
+    'stepTime': 2.31250071525574, 'totalEnergy': -0.0159113630652428, 
+    'jobName': 'Z_Explicit_Correct_Stiff_Paper_WORKING_Video', 'step': 1, 
+    'increment': 1604388, 'phase': EXPLICIT_PHASE, 
+    'kineticEnergy': 0.00828605890274048, 'wallTime': 553.0})
+mdb.jobs['Z_Explicit_Correct_Stiff_Paper_WORKING_Video']._Message(ODB_FRAME, {
+    'phase': EXPLICIT_PHASE, 'step': 0, 'frame': 185, 
+    'jobName': 'Z_Explicit_Correct_Stiff_Paper_WORKING_Video'})
+mdb.jobs['Z_Explicit_Correct_Stiff_Paper_WORKING_Video']._Message(STATUS, {
+    'totalTime': 2.32500052452087, 'stableTimeIncrement': 1.41807424824947e-06, 
+    'stepTime': 2.32500052452087, 'totalEnergy': -0.0160768255591393, 
+    'jobName': 'Z_Explicit_Correct_Stiff_Paper_WORKING_Video', 'step': 1, 
+    'increment': 1613126, 'phase': EXPLICIT_PHASE, 
+    'kineticEnergy': 0.0330731384456158, 'wallTime': 556.0})
+mdb.jobs['Z_Explicit_Correct_Stiff_Paper_WORKING_Video']._Message(ODB_FRAME, {
+    'phase': EXPLICIT_PHASE, 'step': 0, 'frame': 186, 
+    'jobName': 'Z_Explicit_Correct_Stiff_Paper_WORKING_Video'})
+mdb.jobs['Z_Explicit_Correct_Stiff_Paper_WORKING_Video']._Message(STATUS, {
+    'totalTime': 2.33750033378601, 'stableTimeIncrement': 1.35217806018773e-06, 
+    'stepTime': 2.33750033378601, 'totalEnergy': -0.0162043254822493, 
+    'jobName': 'Z_Explicit_Correct_Stiff_Paper_WORKING_Video', 'step': 1, 
+    'increment': 1621864, 'phase': EXPLICIT_PHASE, 
+    'kineticEnergy': 0.010036239400506, 'wallTime': 559.0})
+mdb.jobs['Z_Explicit_Correct_Stiff_Paper_WORKING_Video']._Message(ODB_FRAME, {
+    'phase': EXPLICIT_PHASE, 'step': 0, 'frame': 187, 
+    'jobName': 'Z_Explicit_Correct_Stiff_Paper_WORKING_Video'})
+mdb.jobs['Z_Explicit_Correct_Stiff_Paper_WORKING_Video']._Message(STATUS, {
+    'totalTime': 2.35000014305115, 'stableTimeIncrement': 1.41807356612844e-06, 
+    'stepTime': 2.35000014305115, 'totalEnergy': -0.0163343288004398, 
+    'jobName': 'Z_Explicit_Correct_Stiff_Paper_WORKING_Video', 'step': 1, 
+    'increment': 1630602, 'phase': EXPLICIT_PHASE, 
+    'kineticEnergy': 0.011922987177968, 'wallTime': 562.0})
+mdb.jobs['Z_Explicit_Correct_Stiff_Paper_WORKING_Video']._Message(ODB_FRAME, {
+    'phase': EXPLICIT_PHASE, 'step': 0, 'frame': 188, 
+    'jobName': 'Z_Explicit_Correct_Stiff_Paper_WORKING_Video'})
+mdb.jobs['Z_Explicit_Correct_Stiff_Paper_WORKING_Video']._Message(STATUS, {
+    'totalTime': 2.36249995231628, 'stableTimeIncrement': 1.4180725429469e-06, 
+    'stepTime': 2.36249995231628, 'totalEnergy': -0.0165013521909714, 
+    'jobName': 'Z_Explicit_Correct_Stiff_Paper_WORKING_Video', 'step': 1, 
+    'increment': 1639340, 'phase': EXPLICIT_PHASE, 
+    'kineticEnergy': 0.0285366885364056, 'wallTime': 565.0})
+mdb.jobs['Z_Explicit_Correct_Stiff_Paper_WORKING_Video']._Message(ODB_FRAME, {
+    'phase': EXPLICIT_PHASE, 'step': 0, 'frame': 189, 
+    'jobName': 'Z_Explicit_Correct_Stiff_Paper_WORKING_Video'})
+mdb.jobs['Z_Explicit_Correct_Stiff_Paper_WORKING_Video']._Message(STATUS, {
+    'totalTime': 2.3750011920929, 'stableTimeIncrement': 1.41807390718895e-06, 
+    'stepTime': 2.3750011920929, 'totalEnergy': -0.01665841601789, 
+    'jobName': 'Z_Explicit_Correct_Stiff_Paper_WORKING_Video', 'step': 1, 
+    'increment': 1648079, 'phase': EXPLICIT_PHASE, 
+    'kineticEnergy': 0.00355946156196296, 'wallTime': 567.0})
+mdb.jobs['Z_Explicit_Correct_Stiff_Paper_WORKING_Video']._Message(ODB_FRAME, {
+    'phase': EXPLICIT_PHASE, 'step': 0, 'frame': 190, 
+    'jobName': 'Z_Explicit_Correct_Stiff_Paper_WORKING_Video'})
+mdb.jobs['Z_Explicit_Correct_Stiff_Paper_WORKING_Video']._Message(STATUS, {
+    'totalTime': 2.38750100135803, 'stableTimeIncrement': 1.35216998842225e-06, 
+    'stepTime': 2.38750100135803, 'totalEnergy': -0.0167932938784361, 
+    'jobName': 'Z_Explicit_Correct_Stiff_Paper_WORKING_Video', 'step': 1, 
+    'increment': 1656817, 'phase': EXPLICIT_PHASE, 
+    'kineticEnergy': 0.0153626194223762, 'wallTime': 570.0})
+mdb.jobs['Z_Explicit_Correct_Stiff_Paper_WORKING_Video']._Message(ODB_FRAME, {
+    'phase': EXPLICIT_PHASE, 'step': 0, 'frame': 191, 
+    'jobName': 'Z_Explicit_Correct_Stiff_Paper_WORKING_Video'})
+mdb.jobs['Z_Explicit_Correct_Stiff_Paper_WORKING_Video']._Message(STATUS, {
+    'totalTime': 2.40000081062317, 'stableTimeIncrement': 1.41807333875477e-06, 
+    'stepTime': 2.40000081062317, 'totalEnergy': -0.0168903488665819, 
+    'jobName': 'Z_Explicit_Correct_Stiff_Paper_WORKING_Video', 'step': 1, 
+    'increment': 1665555, 'phase': EXPLICIT_PHASE, 
+    'kineticEnergy': 0.0301548764109612, 'wallTime': 573.0})
+mdb.jobs['Z_Explicit_Correct_Stiff_Paper_WORKING_Video']._Message(ODB_FRAME, {
+    'phase': EXPLICIT_PHASE, 'step': 0, 'frame': 192, 
+    'jobName': 'Z_Explicit_Correct_Stiff_Paper_WORKING_Video'})
+mdb.jobs['Z_Explicit_Correct_Stiff_Paper_WORKING_Video']._Message(STATUS, {
+    'totalTime': 2.41250061988831, 'stableTimeIncrement': 1.35217123897746e-06, 
+    'stepTime': 2.41250061988831, 'totalEnergy': -0.0169948078691959, 
+    'jobName': 'Z_Explicit_Correct_Stiff_Paper_WORKING_Video', 'step': 1, 
+    'increment': 1674293, 'phase': EXPLICIT_PHASE, 
+    'kineticEnergy': 0.00812309328466654, 'wallTime': 576.0})
+mdb.jobs['Z_Explicit_Correct_Stiff_Paper_WORKING_Video']._Message(ODB_FRAME, {
+    'phase': EXPLICIT_PHASE, 'step': 0, 'frame': 193, 
+    'jobName': 'Z_Explicit_Correct_Stiff_Paper_WORKING_Video'})
+mdb.models['Box_Explicit_Compressed-20_Correct_Stiff_3D'].rootAssembly.EdgeToEdge(
+    fixedAxis=
+    mdb.models['Box_Explicit_Compressed-20_Correct_Stiff_3D'].rootAssembly.instances['Part-1-2'].edges[6]
+    , flip=OFF, movableAxis=
+    mdb.models['Box_Explicit_Compressed-20_Correct_Stiff_3D'].rootAssembly.instances['Triangle-1'].edges[2])
+mdb.jobs['Z_Explicit_Correct_Stiff_Paper_WORKING_Video']._Message(STATUS, {
+    'totalTime': 2.42500042915344, 'stableTimeIncrement': 1.41807413456263e-06, 
+    'stepTime': 2.42500042915344, 'totalEnergy': -0.0171004328876734, 
+    'jobName': 'Z_Explicit_Correct_Stiff_Paper_WORKING_Video', 'step': 1, 
+    'increment': 1683031, 'phase': EXPLICIT_PHASE, 
+    'kineticEnergy': 0.00916609819978476, 'wallTime': 579.0})
+mdb.jobs['Z_Explicit_Correct_Stiff_Paper_WORKING_Video']._Message(ODB_FRAME, {
+    'phase': EXPLICIT_PHASE, 'step': 0, 'frame': 194, 
+    'jobName': 'Z_Explicit_Correct_Stiff_Paper_WORKING_Video'})
+mdb.jobs['Z_Explicit_Correct_Stiff_Paper_WORKING_Video']._Message(STATUS, {
+    'totalTime': 2.43750023841858, 'stableTimeIncrement': 1.41807458930998e-06, 
+    'stepTime': 2.43750023841858, 'totalEnergy': -0.0172063857316971, 
+    'jobName': 'Z_Explicit_Correct_Stiff_Paper_WORKING_Video', 'step': 1, 
+    'increment': 1691769, 'phase': EXPLICIT_PHASE, 
+    'kineticEnergy': 0.0312716700136662, 'wallTime': 582.0})
+mdb.jobs['Z_Explicit_Correct_Stiff_Paper_WORKING_Video']._Message(ODB_FRAME, {
+    'phase': EXPLICIT_PHASE, 'step': 0, 'frame': 195, 
+    'jobName': 'Z_Explicit_Correct_Stiff_Paper_WORKING_Video'})
+mdb.jobs['Z_Explicit_Correct_Stiff_Paper_WORKING_Video']._Message(STATUS, {
+    'totalTime': 2.45000004768372, 'stableTimeIncrement': 1.35217567276413e-06, 
+    'stepTime': 2.45000004768372, 'totalEnergy': -0.0173172522336245, 
+    'jobName': 'Z_Explicit_Correct_Stiff_Paper_WORKING_Video', 'step': 1, 
+    'increment': 1700507, 'phase': EXPLICIT_PHASE, 
+    'kineticEnergy': 0.00596556020900607, 'wallTime': 585.0})
+mdb.jobs['Z_Explicit_Correct_Stiff_Paper_WORKING_Video']._Message(ODB_FRAME, {
+    'phase': EXPLICIT_PHASE, 'step': 0, 'frame': 196, 
+    'jobName': 'Z_Explicit_Correct_Stiff_Paper_WORKING_Video'})
+mdb.jobs['Z_Explicit_Correct_Stiff_Paper_WORKING_Video']._Message(STATUS, {
+    'totalTime': 2.46250128746033, 'stableTimeIncrement': 1.4180758398652e-06, 
+    'stepTime': 2.46250128746033, 'totalEnergy': -0.0174400992691517, 
+    'jobName': 'Z_Explicit_Correct_Stiff_Paper_WORKING_Video', 'step': 1, 
+    'increment': 1709246, 'phase': EXPLICIT_PHASE, 
+    'kineticEnergy': 0.0165535397827625, 'wallTime': 588.0})
+mdb.jobs['Z_Explicit_Correct_Stiff_Paper_WORKING_Video']._Message(ODB_FRAME, {
+    'phase': EXPLICIT_PHASE, 'step': 0, 'frame': 197, 
+    'jobName': 'Z_Explicit_Correct_Stiff_Paper_WORKING_Video'})
+mdb.jobs['Z_Explicit_Correct_Stiff_Paper_WORKING_Video']._Message(STATUS, {
+    'totalTime': 2.47500109672546, 'stableTimeIncrement': 1.41807618092571e-06, 
+    'stepTime': 2.47500109672546, 'totalEnergy': -0.0175411216914654, 
+    'jobName': 'Z_Explicit_Correct_Stiff_Paper_WORKING_Video', 'step': 1, 
+    'increment': 1717984, 'phase': EXPLICIT_PHASE, 
+    'kineticEnergy': 0.029557853937149, 'wallTime': 591.0})
+mdb.jobs['Z_Explicit_Correct_Stiff_Paper_WORKING_Video']._Message(ODB_FRAME, {
+    'phase': EXPLICIT_PHASE, 'step': 0, 'frame': 198, 
+    'jobName': 'Z_Explicit_Correct_Stiff_Paper_WORKING_Video'})
+mdb.jobs['Z_Explicit_Correct_Stiff_Paper_WORKING_Video']._Message(STATUS, {
+    'totalTime': 2.4875009059906, 'stableTimeIncrement': 1.35216976104857e-06, 
+    'stepTime': 2.4875009059906, 'totalEnergy': -0.0176480486989021, 
+    'jobName': 'Z_Explicit_Correct_Stiff_Paper_WORKING_Video', 'step': 1, 
+    'increment': 1726722, 'phase': EXPLICIT_PHASE, 
+    'kineticEnergy': 0.00725163612514734, 'wallTime': 593.0})
+mdb.jobs['Z_Explicit_Correct_Stiff_Paper_WORKING_Video']._Message(ODB_FRAME, {
+    'phase': EXPLICIT_PHASE, 'step': 0, 'frame': 199, 
+    'jobName': 'Z_Explicit_Correct_Stiff_Paper_WORKING_Video'})
+mdb.jobs['Z_Explicit_Correct_Stiff_Paper_WORKING_Video']._Message(STATUS, {
+    'totalTime': 2.5, 'stableTimeIncrement': 1.3521625987778e-06, 
+    'stepTime': 2.5, 'totalEnergy': -0.0177553910762072, 
+    'jobName': 'Z_Explicit_Correct_Stiff_Paper_WORKING_Video', 'step': 1, 
+    'increment': 1735461, 'phase': EXPLICIT_PHASE, 
+    'kineticEnergy': 0.0134064368903637, 'wallTime': 596.0})
+mdb.jobs['Z_Explicit_Correct_Stiff_Paper_WORKING_Video']._Message(ODB_FRAME, {
+    'phase': EXPLICIT_PHASE, 'step': 0, 'frame': 200, 
+    'jobName': 'Z_Explicit_Correct_Stiff_Paper_WORKING_Video'})
+mdb.jobs['Z_Explicit_Correct_Stiff_Paper_WORKING_Video']._Message(COMPLETED, {
+    'phase': EXPLICIT_PHASE, 'message': 'Phase complete', 
+    'jobName': 'Z_Explicit_Correct_Stiff_Paper_WORKING_Video'})
+mdb.jobs['Z_Explicit_Correct_Stiff_Paper_WORKING_Video']._Message(JOB_COMPLETED
+    , {'time': 'Thu Jan 11 13:30:28 2024', 
+    'jobName': 'Z_Explicit_Correct_Stiff_Paper_WORKING_Video'})
+mdb.models['Box_Explicit_Compressed-20_Correct_Stiff_3D'].rootAssembly.translate(
+    instanceList=('Triangle-1', ), vector=(0.0, 0.0, 10.0))
+del mdb.models['Box_Explicit_Compressed-20_Correct_Stiff_3D'].rootAssembly.features['Edge to Edge-1']
+mdb.models['Box_Explicit_Compressed-20_Correct_Stiff_3D'].rootAssembly.translate(
+    instanceList=('Triangle-1', ), vector=(0.0, 50.0, 0.0))
+mdb.models['Box_Explicit_Compressed-20_Correct_Stiff_3D'].rootAssembly.CoincidentPoint(
+    fixedPoint=
+    mdb.models['Box_Explicit_Compressed-20_Correct_Stiff_3D'].rootAssembly.instances['Part-1-2'].vertices[2]
+    , movablePoint=
+    mdb.models['Box_Explicit_Compressed-20_Correct_Stiff_3D'].rootAssembly.instances['Triangle-1'].vertices[0])
+mdb.models['Box_Explicit_Compressed-20_Correct_Stiff_3D'].rootAssembly.CoincidentPoint(
+    fixedPoint=
+    mdb.models['Box_Explicit_Compressed-20_Correct_Stiff_3D'].rootAssembly.instances['Part-1-2'].vertices[5]
+    , movablePoint=
+    mdb.models['Box_Explicit_Compressed-20_Correct_Stiff_3D'].rootAssembly.instances['Triangle-1'].vertices[2])
+del mdb.models['Box_Explicit_Compressed-20_Correct_Stiff_3D'].rootAssembly.features['Coincident Point-2']
+mdb.models['Box_Explicit_Compressed-20_Correct_Stiff_3D'].rootAssembly.rotate(
+    angle=-45.0, axisDirection=(-10.0, 0.0, 0.0), axisPoint=(459.041569, 465.0, 
+    49.679441), instanceList=('Triangle-1', ))
+mdb.models['Box_Explicit_Compressed-20_Correct_Stiff_3D'].rootAssembly.CoincidentPoint(
+    fixedPoint=
+    mdb.models['Box_Explicit_Compressed-20_Correct_Stiff_3D'].rootAssembly.instances['Part-1-3'].vertices[5]
+    , movablePoint=
+    mdb.models['Box_Explicit_Compressed-20_Correct_Stiff_3D'].rootAssembly.instances['Triangle-1'].vertices[1])
+del mdb.models['Box_Explicit_Compressed-20_Correct_Stiff_3D'].rootAssembly.features['Coincident Point-2']
+mdb.models['Box_Explicit_Compressed-20_Correct_Stiff_3D'].rootAssembly.CoincidentPoint(
+    fixedPoint=
+    mdb.models['Box_Explicit_Compressed-20_Correct_Stiff_3D'].rootAssembly.instances['Part-1-3'].vertices[5]
+    , movablePoint=
+    mdb.models['Box_Explicit_Compressed-20_Correct_Stiff_3D'].rootAssembly.instances['Triangle-1'].vertices[2])
+del mdb.models['Box_Explicit_Compressed-20_Correct_Stiff_3D'].rootAssembly.features['Coincident Point-2']
+mdb.models['Box_Explicit_Compressed-20_Correct_Stiff_3D'].rootAssembly.CoincidentPoint(
+    fixedPoint=
+    mdb.models['Box_Explicit_Compressed-20_Correct_Stiff_3D'].rootAssembly.instances['Part-1-2'].vertices[5]
+    , movablePoint=
+    mdb.models['Box_Explicit_Compressed-20_Correct_Stiff_3D'].rootAssembly.instances['Triangle-1'].vertices[2])
+mdb.models['Box_Explicit_Compressed-20_Correct_Stiff_3D'].rootAssembly.rotate(
+    angle=-45.0, axisDirection=(-9.848078, 0.0, -1.736482), axisPoint=(
+    458.054073, 465.0, 60.966573), instanceList=('Triangle-1', ))
+mdb.models['Box_Explicit_Compressed-20_Correct_Stiff_3D'].rootAssembly.rotate(
+    angle=-45.0, axisDirection=(-9.848078, 0.0, -1.736482), axisPoint=(
+    458.054073, 465.0, 60.966573), instanceList=('Triangle-1', ))
+del mdb.models['Box_Explicit_Compressed-20_Correct_Stiff_3D'].rootAssembly.features['Coincident Point-2']
+mdb.models['Box_Explicit_Compressed-20_Correct_Stiff_3D'].rootAssembly.CoincidentPoint(
+    fixedPoint=
+    mdb.models['Box_Explicit_Compressed-20_Correct_Stiff_3D'].rootAssembly.instances['Part-1-2'].vertices[5]
+    , movablePoint=
+    mdb.models['Box_Explicit_Compressed-20_Correct_Stiff_3D'].rootAssembly.instances['Triangle-1'].vertices[2])
+#* FeatureError: The constraint cannot be applied because it conflicts 
+#* with existing position constraints.
+del mdb.models['Box_Explicit_Compressed-20_Correct_Stiff_3D'].rootAssembly.features['Coincident Point-1']
+mdb.models['Box_Explicit_Compressed-20_Correct_Stiff_3D'].rootAssembly.rotate(
+    angle=45.0, axisDirection=(-9.698463, -1.736482, -1.710101), axisPoint=(
+    458.72033, 441.555896, 96.768296), instanceList=('Triangle-1', ))
+mdb.models['Box_Explicit_Compressed-20_Correct_Stiff_3D'].rootAssembly.CoincidentPoint(
+    fixedPoint=
+    mdb.models['Box_Explicit_Compressed-20_Correct_Stiff_3D'].rootAssembly.instances['Part-1-2'].vertices[2]
+    , movablePoint=
+    mdb.models['Box_Explicit_Compressed-20_Correct_Stiff_3D'].rootAssembly.instances['Triangle-1'].vertices[0])
+mdb.models['Box_Explicit_Compressed-20_Correct_Stiff_3D'].rootAssembly.CoincidentPoint(
+    fixedPoint=
+    mdb.models['Box_Explicit_Compressed-20_Correct_Stiff_3D'].rootAssembly.instances['Part-1-2'].vertices[5]
+    , movablePoint=
+    mdb.models['Box_Explicit_Compressed-20_Correct_Stiff_3D'].rootAssembly.instances['Triangle-1'].vertices[2])
+mdb.models['Box_Explicit_Compressed-20_Correct_Stiff_3D'].rootAssembly.rotate(
+    angle=80.0, axisDirection=(-9.848078, 0.0, -1.736482), axisPoint=(
+    426.047821, 465.0, 55.323007), instanceList=('Triangle-1', ))
+del mdb.models['Box_Explicit_Compressed-20_Correct_Stiff_3D'].rootAssembly.features['Coincident Point-2']
+del mdb.models['Box_Explicit_Compressed-20_Correct_Stiff_3D'].rootAssembly.features['Coincident Point-1']
+mdb.models['Box_Explicit_Compressed-20_Correct_Stiff_3D'].rootAssembly.CoincidentPoint(
+    fixedPoint=
+    mdb.models['Box_Explicit_Compressed-20_Correct_Stiff_3D'].rootAssembly.instances['Part-1-2'].vertices[2]
+    , movablePoint=
+    mdb.models['Box_Explicit_Compressed-20_Correct_Stiff_3D'].rootAssembly.instances['Triangle-1'].vertices[0])
+mdb.models['Box_Explicit_Compressed-20_Correct_Stiff_3D'].rootAssembly.CoincidentPoint(
+    fixedPoint=
+    mdb.models['Box_Explicit_Compressed-20_Correct_Stiff_3D'].rootAssembly.instances['Part-1-2'].vertices[5]
+    , movablePoint=
+    mdb.models['Box_Explicit_Compressed-20_Correct_Stiff_3D'].rootAssembly.instances['Triangle-1'].vertices[2])
+#* FeatureError: The constraint cannot be applied because it conflicts 
+#* with existing position constraints.
+del mdb.models['Box_Explicit_Compressed-20_Correct_Stiff_3D'].rootAssembly.features['Coincident Point-1']
+mdb.models['Box_Explicit_Compressed-20_Correct_Stiff_3D'].rootAssembly.CoincidentPoint(
+    fixedPoint=
+    mdb.models['Box_Explicit_Compressed-20_Correct_Stiff_3D'].rootAssembly.instances['Part-1-2'].vertices[5]
+    , movablePoint=
+    mdb.models['Box_Explicit_Compressed-20_Correct_Stiff_3D'].rootAssembly.instances['Triangle-1'].vertices[2])
+mdb.models['Box_Explicit_Compressed-20_Correct_Stiff_3D'].rootAssembly.CoincidentPoint(
+    fixedPoint=
+    mdb.models['Box_Explicit_Compressed-20_Correct_Stiff_3D'].rootAssembly.instances['Part-1-2'].vertices[2]
+    , movablePoint=
+    mdb.models['Box_Explicit_Compressed-20_Correct_Stiff_3D'].rootAssembly.instances['Triangle-1'].vertices[0])
+#* FeatureError: The constraint cannot be applied because it conflicts 
+#* with existing position constraints.
+del mdb.models['Box_Explicit_Compressed-20_Correct_Stiff_3D'].rootAssembly.features['Coincident Point-1']
+mdb.models['Box_Explicit_Compressed-20_Correct_Stiff_3D'].rootAssembly.EdgeToEdge(
+    fixedAxis=
+    mdb.models['Box_Explicit_Compressed-20_Correct_Stiff_3D'].rootAssembly.instances['Part-1-2'].edges[6]
+    , flip=OFF, movableAxis=
+    mdb.models['Box_Explicit_Compressed-20_Correct_Stiff_3D'].rootAssembly.instances['Triangle-1'].edges[2])
+del mdb.models['Box_Explicit_Compressed-20_Correct_Stiff_3D'].rootAssembly.features['Edge to Edge-1']
+del mdb.models['Box_Explicit_Compressed-20_Correct_Stiff_3D'].rootAssembly.features['Triangle-1']
+mdb.models['Box_Explicit_Compressed-20_Correct_Stiff_3D'].rootAssembly.Instance(
+    dependent=ON, name='Triangle-1', part=
+    mdb.models['Box_Explicit_Compressed-20_Correct_Stiff_3D'].parts['Triangle'])
+mdb.models['Box_Explicit_Compressed-20_Correct_Stiff_3D'].rootAssembly.rotate(
+    angle=90.0, axisDirection=(-10.0, 0.0, 0.0), axisPoint=(65.0, 65.0, 0.0), 
+    instanceList=('Triangle-1', ))
+mdb.models['Box_Explicit_Compressed-20_Correct_Stiff_3D'].rootAssembly.rotate(
+    angle=10.0, axisDirection=(0.0, 10.0, 0.0), axisPoint=(0.0, 0.0, 0.0), 
+    instanceList=('Triangle-1', ))
+mdb.models['Box_Explicit_Compressed-20_Correct_Stiff_3D'].rootAssembly.translate(
+    instanceList=('Triangle-1', ), vector=(400.987496, 400.0, 10.287132))
+mdb.models['Box_Explicit_Compressed-20_Correct_Stiff_3D'].rootAssembly.rotate(
+    angle=-80.0, axisDirection=(-9.848078, 0.0, 1.736482), axisPoint=(465.0, 
+    465.0, -1.0), instanceList=('Triangle-1', ))
+mdb.models['Box_Explicit_Compressed-20_Correct_Stiff_3D'].rootAssembly.Instance(
+    dependent=ON, name='Triangle-2', part=
+    mdb.models['Box_Explicit_Compressed-20_Correct_Stiff_3D'].parts['Triangle'])
+mdb.models['Box_Explicit_Compressed-20_Correct_Stiff_3D'].rootAssembly.rotate(
+    angle=90.0, axisDirection=(-10.0, 0.0, 0.0), axisPoint=(65.0, 65.0, 0.0), 
+    instanceList=('Triangle-2', ))
+mdb.models['Box_Explicit_Compressed-20_Correct_Stiff_3D'].rootAssembly.rotate(
+    angle=180.0, axisDirection=(-10.0, 0.0, 0.0), axisPoint=(65.0, 65.0, 0.0), 
+    instanceList=('Triangle-2', ))
+mdb.models['Box_Explicit_Compressed-20_Correct_Stiff_3D'].rootAssembly.translate(
+    instanceList=('Triangle-2', ), vector=(0.0, 0.0, 40.0))
+mdb.models['Box_Explicit_Compressed-20_Correct_Stiff_3D'].rootAssembly.rotate(
+    angle=-10.0, axisDirection=(0.0, 10.0, 0.0), axisPoint=(0.0, 0.0, 0.0), 
+    instanceList=('Triangle-2', ))
+mdb.models['Box_Explicit_Compressed-20_Correct_Stiff_3D'].rootAssembly.rotate(
+    angle=80.0, axisDirection=(-9.848078, 0.0, -1.736482), axisPoint=(
+    57.066577, 65.0, 50.679442), instanceList=('Triangle-2', ))
+mdb.models['Box_Explicit_Compressed-20_Correct_Stiff_3D'].rootAssembly.translate(
+    instanceList=('Triangle-2', ), vector=(400.987496, 399.999999, 10.287132))
+mdb.models['Box_Explicit_Compressed-20_Correct_Stiff_3D'].rootAssembly.translate(
+    instanceList=('Part-1-3', 'Triangle-2', 'Part-1-2'), vector=(6.945927, 0.0, 
+    -39.392309))
+mdb.models['Box_Explicit_Compressed-20_Correct_Stiff_3D'].rootAssembly.translate(
+    instanceList=('Triangle-2', 'Part-1-2', 'Part-1-3'), vector=(0.0, 0.0, 
+    20.0))
+# Save by vasco on 2024_01_11-13.58.26; build 2022 2021_09_15-19.57.30 176069
+from part import *
+from material import *
+from section import *
+from assembly import *
+from step import *
+from interaction import *
+from load import *
+from mesh import *
+from optimization import *
+from job import *
+from sketch import *
+from visualization import *
+from connectorBehavior import *
+mdb.models['Box_Explicit_Compressed-20_Correct_Stiff_3D'].rootAssembly.Instance(
+    dependent=ON, name='Triangle-3', part=
+    mdb.models['Box_Explicit_Compressed-20_Correct_Stiff_3D'].parts['Triangle'])
+mdb.models['Box_Explicit_Compressed-20_Correct_Stiff_3D'].rootAssembly.rotate(
+    angle=90.0, axisDirection=(-10.0, 0.0, 0.0), axisPoint=(65.0, 65.0, 0.0), 
+    instanceList=('Triangle-3', ))
+mdb.models['Box_Explicit_Compressed-20_Correct_Stiff_3D'].rootAssembly.rotate(
+    angle=10.0, axisDirection=(0.0, 10.0, 0.0), axisPoint=(0.0, 0.0, 0.0), 
+    instanceList=('Triangle-3', ))
+mdb.models['Box_Explicit_Compressed-20_Correct_Stiff_3D'].rootAssembly.translate(
+    instanceList=('Triangle-3', ), vector=(400.987496, 335.0, 10.287132))
+mdb.models['Box_Explicit_Compressed-20_Correct_Stiff_3D'].rootAssembly.rotate(
+    angle=80.0, axisDirection=(-9.848078, 0.0, 1.736482), axisPoint=(465.0, 
+    400.0, -1.0), instanceList=('Triangle-3', ))
+mdb.models['Box_Explicit_Compressed-20_Correct_Stiff_3D'].rootAssembly.features['Triangle-3'].suppress(
+    )
+mdb.models['Box_Explicit_Compressed-20_Correct_Stiff_3D'].rootAssembly.Instance(
+    dependent=ON, name='Triangle-4', part=
+    mdb.models['Box_Explicit_Compressed-20_Correct_Stiff_3D'].parts['Triangle'])
+mdb.models['Box_Explicit_Compressed-20_Correct_Stiff_3D'].rootAssembly.rotate(
+    angle=90.0, axisDirection=(-10.0, 0.0, 0.0), axisPoint=(65.0, 65.0, 0.0), 
+    instanceList=('Triangle-4', ))
+mdb.models['Box_Explicit_Compressed-20_Correct_Stiff_3D'].rootAssembly.rotate(
+    angle=-10.0, axisDirection=(0.0, 10.0, 0.0), axisPoint=(0.0, 0.0, 0.0), 
+    instanceList=('Triangle-4', ))
+mdb.models['Box_Explicit_Compressed-20_Correct_Stiff_3D'].rootAssembly.rotate(
+    angle=-80.0, axisDirection=(-9.848078, 0.0, -1.736482), axisPoint=(
+    64.012504, 65.0, 11.287132), instanceList=('Triangle-4', ))
+mdb.models['Box_Explicit_Compressed-20_Correct_Stiff_3D'].rootAssembly.translate(
+    instanceList=('Triangle-4', ), vector=(465.0, 400.0, -1.0))
+mdb.models['Box_Explicit_Compressed-20_Correct_Stiff_3D'].rootAssembly.Instance(
+    dependent=ON, name='Triangle-5', part=
+    mdb.models['Box_Explicit_Compressed-20_Correct_Stiff_3D'].parts['Triangle'])
+mdb.models['Box_Explicit_Compressed-20_Correct_Stiff_3D'].rootAssembly.rotate(
+    angle=90.0, axisDirection=(-10.0, 0.0, 0.0), axisPoint=(65.0, 65.0, 0.0), 
+    instanceList=('Triangle-5', ))
+mdb.models['Box_Explicit_Compressed-20_Correct_Stiff_3D'].rootAssembly.rotate(
+    angle=10.0, axisDirection=(0.0, 10.0, 0.0), axisPoint=(0.0, 0.0, 0.0), 
+    instanceList=('Triangle-5', ))
+mdb.models['Box_Explicit_Compressed-20_Correct_Stiff_3D'].rootAssembly.rotate(
+    angle=80.0, axisDirection=(-9.848078, 0.0, 1.736482), axisPoint=(64.012504, 
+    65.0, -11.287132), instanceList=('Triangle-5', ))
+mdb.models['Box_Explicit_Compressed-20_Correct_Stiff_3D'].rootAssembly.translate(
+    instanceList=('Triangle-5', ), vector=(465.0, 400.0, 41.574264))
+mdb.models['Box_Explicit_Compressed-20_Correct_Stiff_3D'].rootAssembly.rotate(
+    angle=-80.0, axisDirection=(-9.848078, 0.0, 1.736482), axisPoint=(
+    529.012504, 465.0, 30.287132), instanceList=('Triangle-5', ))
+mdb.models['Box_Explicit_Compressed-20_Correct_Stiff_3D'].rootAssembly.rotate(
+    angle=180.0, axisDirection=(-9.848078, 0.0, 1.736482), axisPoint=(
+    529.012504, 465.0, 30.287132), instanceList=('Triangle-5', ))
+mdb.models['Box_Explicit_Compressed-20_Correct_Stiff_3D'].rootAssembly.rotate(
+    angle=80.0, axisDirection=(-9.848077, 0.0, 1.736482), axisPoint=(
+    529.012504, 465.0, 30.287132), instanceList=('Triangle-5', ))
+mdb.models['Box_Explicit_Compressed-20_Correct_Stiff_3D'].rootAssembly.translate(
+    instanceList=('Part-1-3', 'Part-1-2', 'Triangle-2', 'Triangle-5'), vector=(
+    0.0, 1e-06, -20.0))
+# Save by vasco on 2024_01_11-14.05.31; build 2022 2021_09_15-19.57.30 176069
+from part import *
+from material import *
+from section import *
+from assembly import *
+from step import *
+from interaction import *
+from load import *
+from mesh import *
+from optimization import *
+from job import *
+from sketch import *
+from visualization import *
+from connectorBehavior import *
+mdb.models['Box_Explicit_Compressed-20_Correct_Stiff_3D'].rootAssembly.translate(
+    instanceList=('Triangle-5', 'Triangle-2', 'Part-1-2', 'Part-1-3'), vector=(
+    0.0, 0.0, 60.0))
+mdb.models['Box_Explicit_Compressed-20_Correct_Stiff_3D'].rootAssembly.Set(
+    edges=
+    mdb.models['Box_Explicit_Compressed-20_Correct_Stiff_3D'].rootAssembly.instances['Triangle-1'].edges.getSequenceFromMask(
+    ('[#4 ]', ), ), name='Hinge_Triangle_O_1')
+mdb.models['Box_Explicit_Compressed-20_Correct_Stiff_3D'].rootAssembly.Set(
+    edges=
+    mdb.models['Box_Explicit_Compressed-20_Correct_Stiff_3D'].rootAssembly.instances['Triangle-4'].edges.getSequenceFromMask(
+    ('[#4 ]', ), ), name='Hinge_Triangle_O_2')
+mdb.models['Box_Explicit_Compressed-20_Correct_Stiff_3D'].rootAssembly.Set(
+    edges=
+    mdb.models['Box_Explicit_Compressed-20_Correct_Stiff_3D'].rootAssembly.instances['Triangle-2'].edges.getSequenceFromMask(
+    ('[#4 ]', ), ), name='Hinge_Triangle_O_3')
+mdb.models['Box_Explicit_Compressed-20_Correct_Stiff_3D'].rootAssembly.Set(
+    edges=
+    mdb.models['Box_Explicit_Compressed-20_Correct_Stiff_3D'].rootAssembly.instances['Triangle-5'].edges.getSequenceFromMask(
+    ('[#4 ]', ), ), name='Hinge_Triangle_O_4')
+mdb.models['Box_Explicit_Compressed-20_Correct_Stiff_3D'].rootAssembly.Set(
+    edges=
+    mdb.models['Box_Explicit_Compressed-20_Correct_Stiff_3D'].rootAssembly.instances['Part-1-1'].edges.getSequenceFromMask(
+    ('[#42 ]', ), ), name='Hinge_Triangle_I_1')
+mdb.models['Box_Explicit_Compressed-20_Correct_Stiff_3D'].rootAssembly.features['Triangle-5'].suppress(
+    )
+mdb.models['Box_Explicit_Compressed-20_Correct_Stiff_3D'].rootAssembly.features['Triangle-4'].suppress(
+    )
+mdb.models['Box_Explicit_Compressed-20_Correct_Stiff_3D'].rootAssembly.features['Triangle-2'].suppress(
+    )
+mdb.models['Box_Explicit_Compressed-20_Correct_Stiff_3D'].rootAssembly.translate(
+    instanceList=('Part-1-3', 'Part-1-2'), vector=(0.0, -1e-06, -60.0))
+mdb.models['Box_Explicit_Compressed-20_Correct_Stiff_3D'].Tie(adjust=ON, main=
+    mdb.models['Box_Explicit_Compressed-20_Correct_Stiff_3D'].rootAssembly.sets['Hinge_Triangle_O_1']
+    , name='Hinge5_T', positionToleranceMethod=COMPUTED, secondary=
+    mdb.models['Box_Explicit_Compressed-20_Correct_Stiff_3D'].rootAssembly.sets['Hinge_Triangle_I_1']
+    , thickness=ON, tieRotations=OFF)
+mdb.models['Box_Explicit_Compressed-20_Correct_Stiff_3D'].fieldOutputRequests['F-Output-1'].setValues(
+    numIntervals=50)
+mdb.Job(name='Z_Z_Triangle', objectToCopy=
+    mdb.jobs['Z_Explicit_Correct_Stiff_Paper_WORKING_Video'])
+mdb.jobs['Z_Z_Triangle'].setValues(model=
+    'Box_Explicit_Compressed-20_Correct_Stiff_3D')
+mdb.jobs.changeKey(fromName='Z_Z_Triangle', toName='Z_Z_Triangle_1')
+mdb.models['Box_Explicit_Compressed-20_Correct_Stiff_3D'].parts['Triangle'].generateMesh(
+    )
+mdb.models['Box_Explicit_Compressed-20_Correct_Stiff_3D'].parts['Triangle'].deleteMesh(
+    regions=
+    mdb.models['Box_Explicit_Compressed-20_Correct_Stiff_3D'].parts['Triangle'].faces.getSequenceFromMask(
+    ('[#1 ]', ), ))
+mdb.models['Box_Explicit_Compressed-20_Correct_Stiff_3D'].parts['Triangle'].setMeshControls(
+    elemShape=QUAD, regions=
+    mdb.models['Box_Explicit_Compressed-20_Correct_Stiff_3D'].parts['Triangle'].faces.getSequenceFromMask(
+    ('[#1 ]', ), ), technique=STRUCTURED)
+mdb.models['Box_Explicit_Compressed-20_Correct_Stiff_3D'].parts['Triangle'].generateMesh(
+    )
+mdb.models['Box_Explicit_Compressed-20_Correct_Stiff_3D'].parts['Triangle'].deleteMesh(
+    )
+mdb.models['Box_Explicit_Compressed-20_Correct_Stiff_3D'].parts['Triangle'].seedPart(
+    deviationFactor=0.1, minSizeFactor=0.1, size=3.0)
+mdb.models['Box_Explicit_Compressed-20_Correct_Stiff_3D'].parts['Triangle'].generateMesh(
+    )
+mdb.models['Box_Explicit_Compressed-20_Correct_Stiff_3D'].rootAssembly.regenerate(
+    )
+mdb.jobs['Z_Z_Triangle_1'].submit(consistencyChecking=OFF)
+mdb.jobs['Z_Z_Triangle_1']._Message(STARTED, {'phase': BATCHPRE_PHASE, 
+    'clientHost': 'HP-Omen_Vasco', 'handle': 0, 'jobName': 'Z_Z_Triangle_1'})
+mdb.jobs['Z_Z_Triangle_1']._Message(WARNING, {'phase': BATCHPRE_PHASE, 
+    'message': 'THE FIRST ORIENTATION SPECIFIED ON THE *CONNECTOR SECTION OPTION WILL BE IGNORED.', 
+    'jobName': 'Z_Z_Triangle_1'})
+mdb.jobs['Z_Z_Triangle_1']._Message(WARNING, {'phase': BATCHPRE_PHASE, 
+    'message': '16 elements are distorted. Either the isoparametric angles are out of the suggested limits or the triangular or tetrahedral quality measure is bad. The elements have been identified in element set WarnElemDistorted.', 
+    'jobName': 'Z_Z_Triangle_1'})
+mdb.jobs['Z_Z_Triangle_1']._Message(WARNING, {'phase': BATCHPRE_PHASE, 
+    'message': 'RIGID ELEMENTS WILL NOT BE CONSIDERED IN THE APPLICATION OF  GRAV LOADS.', 
+    'jobName': 'Z_Z_Triangle_1'})
+mdb.jobs['Z_Z_Triangle_1']._Message(WARNING, {'phase': BATCHPRE_PHASE, 
+    'message': 'OUTPUT REQUEST STATUS IS NOT AVAILABLE FOR ELEMENT TYPE R3D4', 
+    'jobName': 'Z_Z_Triangle_1'})
+mdb.jobs['Z_Z_Triangle_1']._Message(WARNING, {'phase': BATCHPRE_PHASE, 
+    'message': 'OUTPUT REQUEST STATUS IS NOT AVAILABLE FOR ELEMENT TYPE R3D4', 
+    'jobName': 'Z_Z_Triangle_1'})
+mdb.jobs['Z_Z_Triangle_1']._Message(WARNING, {'phase': BATCHPRE_PHASE, 
+    'message': '121 nodes have dof on which incorrect boundary conditions may have been specified. The nodes have been identified in node set WarnNodeBCIncorrectDof.', 
+    'jobName': 'Z_Z_Triangle_1'})
+mdb.jobs['Z_Z_Triangle_1']._Message(COMPLETED, {'phase': BATCHPRE_PHASE, 
+    'message': 'Analysis phase complete', 'jobName': 'Z_Z_Triangle_1'})
+mdb.jobs['Z_Z_Triangle_1']._Message(STARTED, {'phase': PACKAGER_PHASE, 
+    'clientHost': 'HP-Omen_Vasco', 'handle': 26804, 
+    'jobName': 'Z_Z_Triangle_1'})
+mdb.jobs['Z_Z_Triangle_1']._Message(WARNING, {'phase': PACKAGER_PHASE, 
+    'message': 'There are 406 warning messages in the data (.dat) file.  Please check the data file for possible errors in the input file.', 
+    'jobName': 'Z_Z_Triangle_1'})
+mdb.jobs['Z_Z_Triangle_1']._Message(WARNING, {'phase': PACKAGER_PHASE, 
+    'message': 'The thickness used in the general contact algorithm for elements in element set WarnElemGContThickReduce has been reduced. See the status file for further details.', 
+    'jobName': 'Z_Z_Triangle_1'})
+mdb.jobs['Z_Z_Triangle_1']._Message(WARNING, {'phase': PACKAGER_PHASE, 
+    'message': 'Each of the nodes in node set WarnNodeBcAtRbSecondaryNode have prescribed boundary conditions and belong to rigid bodies but are not rigid body reference nodes. The boundary conditions at these nodes will not constrain the motion of the rigid bodies. See the status file for further details.', 
+    'jobName': 'Z_Z_Triangle_1'})
+mdb.jobs['Z_Z_Triangle_1']._Message(WARNING, {'phase': PACKAGER_PHASE, 
+    'message': 'Disconnected surfaces in the general contact domains are tied together, but the the surface connectivity is not altered, creating a seam in the contact surface.  Nodes along the tied surface perimeters have been added to node set WarnNodePerimTieSeam.', 
+    'jobName': 'Z_Z_Triangle_1'})
+mdb.jobs['Z_Z_Triangle_1']._Message(COMPLETED, {'phase': PACKAGER_PHASE, 
+    'message': 'Phase complete', 'jobName': 'Z_Z_Triangle_1'})
+mdb.jobs['Z_Z_Triangle_1']._Message(STARTED, {'phase': EXPLICIT_PHASE, 
+    'clientHost': 'HP-Omen_Vasco', 'handle': 22628, 
+    'jobName': 'Z_Z_Triangle_1'})
+mdb.jobs['Z_Z_Triangle_1']._Message(STATUS, {'totalTime': 0.0, 
+    'stableTimeIncrement': 1.60123363457387e-07, 'stepTime': 0.0, 
+    'totalEnergy': 0.0, 'jobName': 'Z_Z_Triangle_1', 'step': 1, 'increment': 0, 
+    'phase': EXPLICIT_PHASE, 'kineticEnergy': 0.0, 'wallTime': 0.0})
+mdb.jobs['Z_Z_Triangle_1']._Message(ODB_FRAME, {'phase': EXPLICIT_PHASE, 
+    'step': 0, 'frame': 0, 'jobName': 'Z_Z_Triangle_1'})
+mdb.jobs['Z_Z_Triangle_1']._Message(WARNING, {'phase': EXPLICIT_PHASE, 
+    'message': 'The nodes in node set WarnNodeCoincidRefPlane-Step1 arenearly coincident with the reference plane of a double-sided element. Refer to the status and message file for further details.', 
+    'jobName': 'Z_Z_Triangle_1'})
+mdb.jobs['Z_Z_Triangle_1']._Message(WARNING, {'phase': EXPLICIT_PHASE, 
+    'message': 'The nodes in node set WarnNodePinchedTiedSurf-Step1 arepinched between tied surfaces. Refer to the status and message file for further details.', 
+    'jobName': 'Z_Z_Triangle_1'})
+mdb.jobs['Z_Z_Triangle_1']._Message(STATUS, {'totalTime': 0.050000075250864, 
+    'stableTimeIncrement': 2.44659275949743e-07, 'stepTime': 0.050000075250864, 
+    'totalEnergy': 0.0953896939754486, 'jobName': 'Z_Z_Triangle_1', 'step': 1, 
+    'increment': 204100, 'phase': EXPLICIT_PHASE, 
+    'kineticEnergy': 4.27699279785156, 'wallTime': 93.0})
+mdb.jobs['Z_Z_Triangle_1']._Message(ODB_FRAME, {'phase': EXPLICIT_PHASE, 
+    'step': 0, 'frame': 1, 'jobName': 'Z_Z_Triangle_1'})
+mdb.jobs['Z_Z_Triangle_1']._Message(STATUS, {'totalTime': 0.100000023841858, 
+    'stableTimeIncrement': 2.44428520090878e-07, 'stepTime': 0.100000023841858, 
+    'totalEnergy': 0.101886324584484, 'jobName': 'Z_Z_Triangle_1', 'step': 1, 
+    'increment': 407460, 'phase': EXPLICIT_PHASE, 
+    'kineticEnergy': 1.73092758655548, 'wallTime': 188.0})
+mdb.jobs['Z_Z_Triangle_1']._Message(ODB_FRAME, {'phase': EXPLICIT_PHASE, 
+    'step': 0, 'frame': 2, 'jobName': 'Z_Z_Triangle_1'})
+mdb.models['Box_Explicit_Compressed-20_Correct_Stiff_3D'].rootAssembly.features['Triangle-2'].resume(
+    )
+mdb.jobs['Z_Z_Triangle_1']._Message(STATUS, {'totalTime': 0.150000035762787, 
+    'stableTimeIncrement': 2.40382092897562e-07, 'stepTime': 0.150000035762787, 
+    'totalEnergy': 0.0970817357301712, 'jobName': 'Z_Z_Triangle_1', 'step': 1, 
+    'increment': 615273, 'phase': EXPLICIT_PHASE, 
+    'kineticEnergy': 0.721748352050781, 'wallTime': 284.0})
+mdb.jobs['Z_Z_Triangle_1']._Message(ODB_FRAME, {'phase': EXPLICIT_PHASE, 
+    'step': 0, 'frame': 3, 'jobName': 'Z_Z_Triangle_1'})
+mdb.models['Box_Explicit_Compressed-20_Correct_Stiff_3D'].rootAssembly.Set(
+    edges=
+    mdb.models['Box_Explicit_Compressed-20_Correct_Stiff_3D'].rootAssembly.instances['Triangle-2'].edges.getSequenceFromMask(
+    ('[#4 ]', ), ), name='Hinge_Triangle_I_2')
+mdb.models['Box_Explicit_Compressed-20_Correct_Stiff_3D'].rootAssembly.Set(
+    edges=
+    mdb.models['Box_Explicit_Compressed-20_Correct_Stiff_3D'].rootAssembly.instances['Triangle-2'].edges.getSequenceFromMask(
+    ('[#1 ]', ), ), name='Hinge_Triangle_I_I_1')
+mdb.models['Box_Explicit_Compressed-20_Correct_Stiff_3D'].rootAssembly.Set(
+    edges=
+    mdb.models['Box_Explicit_Compressed-20_Correct_Stiff_3D'].rootAssembly.instances['Triangle-1'].edges.getSequenceFromMask(
+    ('[#1 ]', ), ), name='Hinge_Triangle_I_I_2')
+# Save by vasco on 2024_01_11-14.19.47; build 2022 2021_09_15-19.57.30 176069
+from part import *
+from material import *
+from section import *
+from assembly import *
+from step import *
+from interaction import *
+from load import *
+from mesh import *
+from optimization import *
+from job import *
+from sketch import *
+from visualization import *
+from connectorBehavior import *
+mdb.jobs['Z_Z_Triangle_1']._Message(STATUS, {'totalTime': 0.20000022649765, 
+    'stableTimeIncrement': 2.40382092897562e-07, 'stepTime': 0.20000022649765, 
+    'totalEnergy': 0.0887972116470337, 'jobName': 'Z_Z_Triangle_1', 'step': 1, 
+    'increment': 824989, 'phase': EXPLICIT_PHASE, 
+    'kineticEnergy': 0.371005833148956, 'wallTime': 380.0})
+mdb.jobs['Z_Z_Triangle_1']._Message(ODB_FRAME, {'phase': EXPLICIT_PHASE, 
+    'step': 0, 'frame': 4, 'jobName': 'Z_Z_Triangle_1'})
+mdb.models['Box_Explicit_Compressed-20_Correct_Stiff_3D'].Tie(adjust=ON, main=
+    mdb.models['Box_Explicit_Compressed-20_Correct_Stiff_3D'].rootAssembly.sets['Hinge_Triangle_O_3']
+    , name='Hinge_6_T', positionToleranceMethod=COMPUTED, secondary=
+    mdb.models['Box_Explicit_Compressed-20_Correct_Stiff_3D'].rootAssembly.sets['Hinge_Triangle_I_2']
+    , thickness=ON, tieRotations=OFF)
+mdb.models['Box_Explicit_Compressed-20_Correct_Stiff_3D'].Tie(adjust=ON, main=
+    mdb.models['Box_Explicit_Compressed-20_Correct_Stiff_3D'].rootAssembly.sets['Hinge_Triangle_I_I_1']
+    , name='Hinge_7_T_I_I', positionToleranceMethod=COMPUTED, secondary=
+    mdb.models['Box_Explicit_Compressed-20_Correct_Stiff_3D'].rootAssembly.sets['Hinge_Triangle_I_I_2']
+    , thickness=ON, tieRotations=OFF)
+mdb.models['Box_Explicit_Compressed-20_Correct_Stiff_3D'].rootAssembly.translate(
+    instanceList=('Triangle-2', ), vector=(0.0, 0.0, -60.0))
+# Save by vasco on 2024_01_11-14.21.11; build 2022 2021_09_15-19.57.30 176069
+from part import *
+from material import *
+from section import *
+from assembly import *
+from step import *
+from interaction import *
+from load import *
+from mesh import *
+from optimization import *
+from job import *
+from sketch import *
+from visualization import *
+from connectorBehavior import *
+mdb.jobs['Z_Z_Triangle_1']._Message(ERROR, {'phase': EXPLICIT_PHASE, 
+    'message': 'Process terminated by external request (SIGTERM or SIGINT received).', 
+    'jobName': 'Z_Z_Triangle_1'})
+mdb.jobs['Z_Z_Triangle_1']._Message(INTERRUPTED, {'phase': EXPLICIT_PHASE, 
+    'message': 'Analysis terminated by external signal', 
+    'jobName': 'Z_Z_Triangle_1'})
+mdb.jobs['Z_Z_Triangle_1']._Message(ERROR, {
+    'message': 'Abaqus/Explicit Analysis exited with an error - Please see the  status file for possible error messages if the file exists.', 
+    'jobName': 'Z_Z_Triangle_1'})
+mdb.jobs['Z_Z_Triangle_1']._Message(JOB_ABORTED, {
+    'message': 'Abaqus/Explicit Analysis exited with an error - Please see the  status file for possible error messages if the file exists.', 
+    'jobName': 'Z_Z_Triangle_1'})
+mdb.jobs['Z_Z_Triangle_1'].setValues(activateLoadBalancing=False, numCpus=8, 
+    numDomains=8, numThreadsPerMpiProcess=1)
+mdb.jobs['Z_Z_Triangle_1'].submit(consistencyChecking=OFF)
+mdb.jobs['Z_Z_Triangle_1']._Message(STARTED, {'phase': BATCHPRE_PHASE, 
+    'clientHost': 'HP-Omen_Vasco', 'handle': 0, 'jobName': 'Z_Z_Triangle_1'})
+mdb.jobs['Z_Z_Triangle_1']._Message(WARNING, {'phase': BATCHPRE_PHASE, 
+    'message': 'THE FIRST ORIENTATION SPECIFIED ON THE *CONNECTOR SECTION OPTION WILL BE IGNORED.', 
+    'jobName': 'Z_Z_Triangle_1'})
+mdb.jobs['Z_Z_Triangle_1']._Message(WARNING, {'phase': BATCHPRE_PHASE, 
+    'message': '32 elements are distorted. Either the isoparametric angles are out of the suggested limits or the triangular or tetrahedral quality measure is bad. The elements have been identified in element set WarnElemDistorted.', 
+    'jobName': 'Z_Z_Triangle_1'})
+mdb.jobs['Z_Z_Triangle_1']._Message(WARNING, {'phase': BATCHPRE_PHASE, 
+    'message': 'RIGID ELEMENTS WILL NOT BE CONSIDERED IN THE APPLICATION OF  GRAV LOADS.', 
+    'jobName': 'Z_Z_Triangle_1'})
+mdb.jobs['Z_Z_Triangle_1']._Message(WARNING, {'phase': BATCHPRE_PHASE, 
+    'message': 'OUTPUT REQUEST STATUS IS NOT AVAILABLE FOR ELEMENT TYPE R3D4', 
+    'jobName': 'Z_Z_Triangle_1'})
+mdb.jobs['Z_Z_Triangle_1']._Message(WARNING, {'phase': BATCHPRE_PHASE, 
+    'message': 'OUTPUT REQUEST STATUS IS NOT AVAILABLE FOR ELEMENT TYPE R3D4', 
+    'jobName': 'Z_Z_Triangle_1'})
+mdb.jobs['Z_Z_Triangle_1']._Message(WARNING, {'phase': BATCHPRE_PHASE, 
+    'message': '121 nodes have dof on which incorrect boundary conditions may have been specified. The nodes have been identified in node set WarnNodeBCIncorrectDof.', 
+    'jobName': 'Z_Z_Triangle_1'})
+mdb.jobs['Z_Z_Triangle_1']._Message(COMPLETED, {'phase': BATCHPRE_PHASE, 
+    'message': 'Analysis phase complete', 'jobName': 'Z_Z_Triangle_1'})
+mdb.jobs['Z_Z_Triangle_1']._Message(STARTED, {'phase': PACKAGER_PHASE, 
+    'clientHost': 'HP-Omen_Vasco', 'handle': 12192, 
+    'jobName': 'Z_Z_Triangle_1'})
+mdb.jobs['Z_Z_Triangle_1']._Message(WARNING, {'phase': PACKAGER_PHASE, 
+    'message': 'There are 407 warning messages in the data (.dat) file.  Please check the data file for possible errors in the input file.', 
+    'jobName': 'Z_Z_Triangle_1'})
+mdb.jobs['Z_Z_Triangle_1']._Message(WARNING, {'phase': PACKAGER_PHASE, 
+    'message': 'The thickness used in the general contact algorithm for elements in element set WarnElemGContThickReduce has been reduced. See the status file for further details.', 
+    'jobName': 'Z_Z_Triangle_1'})
+mdb.jobs['Z_Z_Triangle_1']._Message(WARNING, {'phase': PACKAGER_PHASE, 
+    'message': 'Each of the nodes in node set WarnNodeBcAtRbSecondaryNode have prescribed boundary conditions and belong to rigid bodies but are not rigid body reference nodes. The boundary conditions at these nodes will not constrain the motion of the rigid bodies. See the status file for further details.', 
+    'jobName': 'Z_Z_Triangle_1'})
+mdb.jobs['Z_Z_Triangle_1']._Message(WARNING, {'phase': PACKAGER_PHASE, 
+    'message': 'Disconnected surfaces in the general contact domains are tied together, but the the surface connectivity is not altered, creating a seam in the contact surface.  Nodes along the tied surface perimeters have been added to node set WarnNodePerimTieSeam.', 
+    'jobName': 'Z_Z_Triangle_1'})
+mdb.jobs['Z_Z_Triangle_1']._Message(COMPLETED, {'phase': PACKAGER_PHASE, 
+    'message': 'Phase complete', 'jobName': 'Z_Z_Triangle_1'})
+mdb.jobs['Z_Z_Triangle_1']._Message(STARTED, {'phase': EXPLICIT_PHASE, 
+    'clientHost': 'HP-Omen_Vasco', 'handle': 29816, 
+    'jobName': 'Z_Z_Triangle_1'})
+mdb.jobs['Z_Z_Triangle_1']._Message(STATUS, {'totalTime': 0.0, 
+    'stableTimeIncrement': 1.60123192927131e-07, 'stepTime': 0.0, 
+    'totalEnergy': 0.0, 'jobName': 'Z_Z_Triangle_1', 'step': 1, 'increment': 0, 
+    'phase': EXPLICIT_PHASE, 'kineticEnergy': 0.0, 'wallTime': 0.0})
+mdb.jobs['Z_Z_Triangle_1']._Message(ODB_FRAME, {'phase': EXPLICIT_PHASE, 
+    'step': 0, 'frame': 0, 'jobName': 'Z_Z_Triangle_1'})
+mdb.jobs['Z_Z_Triangle_1']._Message(WARNING, {'phase': EXPLICIT_PHASE, 
+    'message': 'The nodes in node set WarnNodeCoincidRefPlane-Step1 arenearly coincident with the reference plane of a double-sided element. Refer to the status and message file for further details.', 
+    'jobName': 'Z_Z_Triangle_1'})
+mdb.jobs['Z_Z_Triangle_1']._Message(WARNING, {'phase': EXPLICIT_PHASE, 
+    'message': 'The nodes in node set WarnNodePinchedTiedSurf-Step1 arepinched between tied surfaces. Refer to the status and message file for further details.', 
+    'jobName': 'Z_Z_Triangle_1'})
+mdb.jobs['Z_Z_Triangle_1']._Message(STATUS, {'totalTime': 0.0500000491738319, 
+    'stableTimeIncrement': 2.44774298607808e-07, 
+    'stepTime': 0.0500000491738319, 'totalEnergy': -7.83325231168419e-05, 
+    'jobName': 'Z_Z_Triangle_1', 'step': 1, 'increment': 204091, 
+    'phase': EXPLICIT_PHASE, 'kineticEnergy': 4.80686712265015, 
+    'wallTime': 106.0})
+mdb.jobs['Z_Z_Triangle_1']._Message(ODB_FRAME, {'phase': EXPLICIT_PHASE, 
+    'step': 0, 'frame': 1, 'jobName': 'Z_Z_Triangle_1'})
+mdb.jobs['Z_Z_Triangle_1']._Message(STATUS, {'totalTime': 0.100000061094761, 
+    'stableTimeIncrement': 2.16307384448555e-07, 'stepTime': 0.100000061094761, 
+    'totalEnergy': 17.0584030151367, 'jobName': 'Z_Z_Triangle_1', 'step': 1, 
+    'increment': 424072, 'phase': EXPLICIT_PHASE, 
+    'kineticEnergy': 30.3088779449463, 'wallTime': 222.0})
+mdb.jobs['Z_Z_Triangle_1']._Message(ODB_FRAME, {'phase': EXPLICIT_PHASE, 
+    'step': 0, 'frame': 2, 'jobName': 'Z_Z_Triangle_1'})
+mdb.jobs['Z_Z_Triangle_1']._Message(ERROR, {'phase': EXPLICIT_PHASE, 
+    'message': 'Process terminated by external request (SIGTERM or SIGINT received).', 
+    'jobName': 'Z_Z_Triangle_1'})
+mdb.jobs['Z_Z_Triangle_1']._Message(INTERRUPTED, {'phase': EXPLICIT_PHASE, 
+    'message': 'Analysis terminated by external signal', 
+    'jobName': 'Z_Z_Triangle_1'})
+mdb.jobs['Z_Z_Triangle_1']._Message(ERROR, {
+    'message': 'Abaqus/Explicit Analysis exited with an error - Please see the  status file for possible error messages if the file exists.', 
+    'jobName': 'Z_Z_Triangle_1'})
+mdb.jobs['Z_Z_Triangle_1']._Message(JOB_ABORTED, {
+    'message': 'Abaqus/Explicit Analysis exited with an error - Please see the  status file for possible error messages if the file exists.', 
+    'jobName': 'Z_Z_Triangle_1'})
+mdb.models['Box_Explicit_Compressed-20_Correct_Stiff_3D'].parts['Triangle'].deleteMesh(
+    )
+mdb.models['Box_Explicit_Compressed-20_Correct_Stiff_3D'].parts['Triangle'].seedPart(
+    deviationFactor=0.1, minSizeFactor=0.1, size=6.0)
+mdb.models['Box_Explicit_Compressed-20_Correct_Stiff_3D'].parts['Triangle'].generateMesh(
+    )
+mdb.models['Box_Explicit_Compressed-20_Correct_Stiff_3D'].rootAssembly.regenerate(
+    )
+del mdb.models['Box_Explicit_Compressed-20_Correct_Stiff_3D'].constraints['Hinge_6_T']
+mdb.models['Box_Explicit_Compressed-20_Correct_Stiff_3D'].rootAssembly.Set(
+    edges=
+    mdb.models['Box_Explicit_Compressed-20_Correct_Stiff_3D'].rootAssembly.instances['Part-1-2'].edges.getSequenceFromMask(
+    ('[#42 ]', ), ), name='Hinge_Triangle_O_3')
+mdb.models['Box_Explicit_Compressed-20_Correct_Stiff_3D'].Tie(adjust=ON, main=
+    mdb.models['Box_Explicit_Compressed-20_Correct_Stiff_3D'].rootAssembly.sets['Hinge_Triangle_O_3']
+    , name='Hinge_6_T', positionToleranceMethod=COMPUTED, secondary=
+    mdb.models['Box_Explicit_Compressed-20_Correct_Stiff_3D'].rootAssembly.sets['Hinge_Triangle_I_2']
+    , thickness=ON, tieRotations=OFF)
+mdb.Job(name='Z_Z_Triangle_2', objectToCopy=mdb.jobs['Z_Z_Triangle_1'])
+mdb.jobs['Z_Z_Triangle_2'].submit(consistencyChecking=OFF)
+# Save by vasco on 2024_01_11-14.32.36; build 2022 2021_09_15-19.57.30 176069
+from part import *
+from material import *
+from section import *
+from assembly import *
+from step import *
+from interaction import *
+from load import *
+from mesh import *
+from optimization import *
+from job import *
+from sketch import *
+from visualization import *
+from connectorBehavior import *
+mdb.jobs['Z_Z_Triangle_2']._Message(STARTED, {'phase': BATCHPRE_PHASE, 
+    'clientHost': 'HP-Omen_Vasco', 'handle': 0, 'jobName': 'Z_Z_Triangle_2'})
+mdb.jobs['Z_Z_Triangle_2']._Message(WARNING, {'phase': BATCHPRE_PHASE, 
+    'message': 'THE FIRST ORIENTATION SPECIFIED ON THE *CONNECTOR SECTION OPTION WILL BE IGNORED.', 
+    'jobName': 'Z_Z_Triangle_2'})
+mdb.jobs['Z_Z_Triangle_2']._Message(WARNING, {'phase': BATCHPRE_PHASE, 
+    'message': '4 elements are distorted. Either the isoparametric angles are out of the suggested limits or the triangular or tetrahedral quality measure is bad. The elements have been identified in element set WarnElemDistorted.', 
+    'jobName': 'Z_Z_Triangle_2'})
+mdb.jobs['Z_Z_Triangle_2']._Message(WARNING, {'phase': BATCHPRE_PHASE, 
+    'message': 'RIGID ELEMENTS WILL NOT BE CONSIDERED IN THE APPLICATION OF  GRAV LOADS.', 
+    'jobName': 'Z_Z_Triangle_2'})
+mdb.jobs['Z_Z_Triangle_2']._Message(WARNING, {'phase': BATCHPRE_PHASE, 
+    'message': 'OUTPUT REQUEST STATUS IS NOT AVAILABLE FOR ELEMENT TYPE R3D4', 
+    'jobName': 'Z_Z_Triangle_2'})
+mdb.jobs['Z_Z_Triangle_2']._Message(WARNING, {'phase': BATCHPRE_PHASE, 
+    'message': 'OUTPUT REQUEST STATUS IS NOT AVAILABLE FOR ELEMENT TYPE R3D4', 
+    'jobName': 'Z_Z_Triangle_2'})
+mdb.jobs['Z_Z_Triangle_2']._Message(WARNING, {'phase': BATCHPRE_PHASE, 
+    'message': '121 nodes have dof on which incorrect boundary conditions may have been specified. The nodes have been identified in node set WarnNodeBCIncorrectDof.', 
+    'jobName': 'Z_Z_Triangle_2'})
+mdb.jobs['Z_Z_Triangle_2']._Message(COMPLETED, {'phase': BATCHPRE_PHASE, 
+    'message': 'Analysis phase complete', 'jobName': 'Z_Z_Triangle_2'})
+mdb.jobs['Z_Z_Triangle_2']._Message(STARTED, {'phase': PACKAGER_PHASE, 
+    'clientHost': 'HP-Omen_Vasco', 'handle': 2152, 
+    'jobName': 'Z_Z_Triangle_2'})
+mdb.jobs['Z_Z_Triangle_2']._Message(WARNING, {'phase': PACKAGER_PHASE, 
+    'message': 'There are 406 warning messages in the data (.dat) file.  Please check the data file for possible errors in the input file.', 
+    'jobName': 'Z_Z_Triangle_2'})
+mdb.jobs['Z_Z_Triangle_2']._Message(ERROR, {'phase': PACKAGER_PHASE, 
+    'message': 'A facet that is part of a general contact surface has coincident nodes. A facet with coincident nodes cannot be part of a general contact surface. See nodes 1 and 8 on element 1 of instance TRIANGLE-2. Please check the nodal coordinates of nodes of this element. Also, please check if these nodes are slave nodes in a *TIE definition. Adjusting the slave node coordinates of improperly defined *TIE definitions may cause excessive distortions of the underlying elements resulting in collapsed facets. If the nodes are slave nodes in a *TIE definition, please check the *TIE definition for consistency, making sure that there are no common nodes between the slave and master surfaces.', 
+    'jobName': 'Z_Z_Triangle_2'})
+mdb.jobs['Z_Z_Triangle_2']._Message(ERROR, {'phase': PACKAGER_PHASE, 
+    'message': 'For a contact surface, the facets of the elements in element set ErrElemFacetCoin3d have coincident nodes. The mesh must defined so that surfaces do not have coincident nodes (sometimes the redundant nodes can simply be removed from the mesh by equivalencing in the preprocessor).', 
+    'jobName': 'Z_Z_Triangle_2'})
+mdb.jobs['Z_Z_Triangle_2']._Message(WARNING, {'phase': PACKAGER_PHASE, 
+    'message': 'The thickness used in the general contact algorithm for elements in element set WarnElemGContThickReduce has been reduced. See the status file for further details.', 
+    'jobName': 'Z_Z_Triangle_2'})
+mdb.jobs['Z_Z_Triangle_2']._Message(WARNING, {'phase': PACKAGER_PHASE, 
+    'message': 'Warped double-sided quadrilateral elements included in general contact whose fold orientation is inconsistent with adjacent elements have been added to element set WarnElemWarpedFaceFold.', 
+    'jobName': 'Z_Z_Triangle_2'})
+mdb.jobs['Z_Z_Triangle_2']._Message(WARNING, {'phase': PACKAGER_PHASE, 
+    'message': 'Disconnected surfaces in the general contact domains are tied together, but the the surface connectivity is not altered, creating a seam in the contact surface.  Nodes along the tied surface perimeters have been added to node set WarnNodePerimTieSeam.', 
+    'jobName': 'Z_Z_Triangle_2'})
+mdb.jobs['Z_Z_Triangle_2']._Message(ABORTED, {'phase': PACKAGER_PHASE, 
+    'message': 'Analysis failed due to Errors', 'jobName': 'Z_Z_Triangle_2'})
+mdb.jobs['Z_Z_Triangle_2']._Message(ERROR, {
+    'message': 'Abaqus/Explicit Packager exited with an error - Please see the  status file for possible error messages if the file exists.', 
+    'jobName': 'Z_Z_Triangle_2'})
+mdb.jobs['Z_Z_Triangle_2']._Message(JOB_ABORTED, {
+    'message': 'Abaqus/Explicit Packager exited with an error - Please see the  status file for possible error messages if the file exists.', 
+    'jobName': 'Z_Z_Triangle_2'})
+del mdb.models['Box_Explicit_Compressed-20_Correct_Stiff_3D'].constraints['Hinge_6_T']
+# Save by vasco on 2024_01_11-14.34.28; build 2022 2021_09_15-19.57.30 176069
+from part import *
+from material import *
+from section import *
+from assembly import *
+from step import *
+from interaction import *
+from load import *
+from mesh import *
+from optimization import *
+from job import *
+from sketch import *
+from visualization import *
+from connectorBehavior import *
+mdb.jobs['Z_Z_Triangle_2'].submit(consistencyChecking=OFF)
+mdb.jobs['Z_Z_Triangle_2']._Message(STARTED, {'phase': BATCHPRE_PHASE, 
+    'clientHost': 'HP-Omen_Vasco', 'handle': 0, 'jobName': 'Z_Z_Triangle_2'})
+mdb.jobs['Z_Z_Triangle_2']._Message(WARNING, {'phase': BATCHPRE_PHASE, 
+    'message': 'THE FIRST ORIENTATION SPECIFIED ON THE *CONNECTOR SECTION OPTION WILL BE IGNORED.', 
+    'jobName': 'Z_Z_Triangle_2'})
+mdb.jobs['Z_Z_Triangle_2']._Message(WARNING, {'phase': BATCHPRE_PHASE, 
+    'message': '4 elements are distorted. Either the isoparametric angles are out of the suggested limits or the triangular or tetrahedral quality measure is bad. The elements have been identified in element set WarnElemDistorted.', 
+    'jobName': 'Z_Z_Triangle_2'})
+mdb.jobs['Z_Z_Triangle_2']._Message(WARNING, {'phase': BATCHPRE_PHASE, 
+    'message': 'RIGID ELEMENTS WILL NOT BE CONSIDERED IN THE APPLICATION OF  GRAV LOADS.', 
+    'jobName': 'Z_Z_Triangle_2'})
+mdb.jobs['Z_Z_Triangle_2']._Message(WARNING, {'phase': BATCHPRE_PHASE, 
+    'message': 'OUTPUT REQUEST STATUS IS NOT AVAILABLE FOR ELEMENT TYPE R3D4', 
+    'jobName': 'Z_Z_Triangle_2'})
+mdb.jobs['Z_Z_Triangle_2']._Message(WARNING, {'phase': BATCHPRE_PHASE, 
+    'message': 'OUTPUT REQUEST STATUS IS NOT AVAILABLE FOR ELEMENT TYPE R3D4', 
+    'jobName': 'Z_Z_Triangle_2'})
+mdb.jobs['Z_Z_Triangle_2']._Message(WARNING, {'phase': BATCHPRE_PHASE, 
+    'message': '121 nodes have dof on which incorrect boundary conditions may have been specified. The nodes have been identified in node set WarnNodeBCIncorrectDof.', 
+    'jobName': 'Z_Z_Triangle_2'})
+mdb.jobs['Z_Z_Triangle_2']._Message(COMPLETED, {'phase': BATCHPRE_PHASE, 
+    'message': 'Analysis phase complete', 'jobName': 'Z_Z_Triangle_2'})
+mdb.jobs['Z_Z_Triangle_2']._Message(STARTED, {'phase': PACKAGER_PHASE, 
+    'clientHost': 'HP-Omen_Vasco', 'handle': 25184, 
+    'jobName': 'Z_Z_Triangle_2'})
+mdb.jobs['Z_Z_Triangle_2']._Message(WARNING, {'phase': PACKAGER_PHASE, 
+    'message': 'There are 406 warning messages in the data (.dat) file.  Please check the data file for possible errors in the input file.', 
+    'jobName': 'Z_Z_Triangle_2'})
+mdb.jobs['Z_Z_Triangle_2']._Message(WARNING, {'phase': PACKAGER_PHASE, 
+    'message': 'Each of the nodes in node set WarnNodeBcAtRbSecondaryNode have prescribed boundary conditions and belong to rigid bodies but are not rigid body reference nodes. The boundary conditions at these nodes will not constrain the motion of the rigid bodies. See the status file for further details.', 
+    'jobName': 'Z_Z_Triangle_2'})
+mdb.jobs['Z_Z_Triangle_2']._Message(WARNING, {'phase': PACKAGER_PHASE, 
+    'message': 'Disconnected surfaces in the general contact domains are tied together, but the the surface connectivity is not altered, creating a seam in the contact surface.  Nodes along the tied surface perimeters have been added to node set WarnNodePerimTieSeam.', 
+    'jobName': 'Z_Z_Triangle_2'})
+mdb.jobs['Z_Z_Triangle_2']._Message(COMPLETED, {'phase': PACKAGER_PHASE, 
+    'message': 'Phase complete', 'jobName': 'Z_Z_Triangle_2'})
+mdb.jobs['Z_Z_Triangle_2']._Message(STARTED, {'phase': EXPLICIT_PHASE, 
+    'clientHost': 'HP-Omen_Vasco', 'handle': 19500, 
+    'jobName': 'Z_Z_Triangle_2'})
+mdb.jobs['Z_Z_Triangle_2']._Message(STATUS, {'totalTime': 0.0, 
+    'stableTimeIncrement': 3.93961698819112e-07, 'stepTime': 0.0, 
+    'totalEnergy': 0.0, 'jobName': 'Z_Z_Triangle_2', 'step': 1, 'increment': 0, 
+    'phase': EXPLICIT_PHASE, 'kineticEnergy': 0.0, 'wallTime': 0.0})
+mdb.jobs['Z_Z_Triangle_2']._Message(ODB_FRAME, {'phase': EXPLICIT_PHASE, 
+    'step': 0, 'frame': 0, 'jobName': 'Z_Z_Triangle_2'})
+mdb.jobs['Z_Z_Triangle_2']._Message(WARNING, {'phase': EXPLICIT_PHASE, 
+    'message': 'The nodes in node set WarnNodeCoincidRefPlane-Step1 arenearly coincident with the reference plane of a double-sided element. Refer to the status and message file for further details.', 
+    'jobName': 'Z_Z_Triangle_2'})
+mdb.jobs['Z_Z_Triangle_2']._Message(WARNING, {'phase': EXPLICIT_PHASE, 
+    'message': 'The nodes in node set WarnNodePinchedTiedSurf-Step1 arepinched between tied surfaces. Refer to the status and message file for further details.', 
+    'jobName': 'Z_Z_Triangle_2'})
+mdb.models['Box_Explicit_Compressed-20_Correct_Stiff_3D'].Tie(adjust=ON, main=
+    mdb.models['Box_Explicit_Compressed-20_Correct_Stiff_3D'].rootAssembly.sets['Hinge_Triangle_I_2']
+    , name='Hinge_6_T', positionToleranceMethod=COMPUTED, secondary=
+    mdb.models['Box_Explicit_Compressed-20_Correct_Stiff_3D'].rootAssembly.sets['Hinge_Triangle_O_3']
+    , thickness=ON, tieRotations=OFF)
+mdb.jobs['Z_Z_Triangle_2']._Message(STATUS, {'totalTime': 0.050000287592411, 
+    'stableTimeIncrement': 5.3280251677279e-07, 'stepTime': 0.050000287592411, 
+    'totalEnergy': 0.000402624194975942, 'jobName': 'Z_Z_Triangle_2', 
+    'step': 1, 'increment': 91380, 'phase': EXPLICIT_PHASE, 
+    'kineticEnergy': 4.78010988235474, 'wallTime': 37.0})
+mdb.jobs['Z_Z_Triangle_2']._Message(ODB_FRAME, {'phase': EXPLICIT_PHASE, 
+    'step': 0, 'frame': 1, 'jobName': 'Z_Z_Triangle_2'})
+mdb.jobs['Z_Z_Triangle_2']._Message(STATUS, {'totalTime': 0.100000388920307, 
+    'stableTimeIncrement': 5.04894671848888e-07, 'stepTime': 0.100000388920307, 
+    'totalEnergy': -0.000515804218593985, 'jobName': 'Z_Z_Triangle_2', 
+    'step': 1, 'increment': 187181, 'phase': EXPLICIT_PHASE, 
+    'kineticEnergy': 3.48299288749695, 'wallTime': 75.0})
+mdb.jobs['Z_Z_Triangle_2']._Message(ODB_FRAME, {'phase': EXPLICIT_PHASE, 
+    'step': 0, 'frame': 2, 'jobName': 'Z_Z_Triangle_2'})
+mdb.jobs['Z_Z_Triangle_2']._Message(ERROR, {'phase': EXPLICIT_PHASE, 
+    'message': 'Process terminated by external request (SIGTERM or SIGINT received).', 
+    'jobName': 'Z_Z_Triangle_2'})
+mdb.jobs['Z_Z_Triangle_2']._Message(INTERRUPTED, {'phase': EXPLICIT_PHASE, 
+    'message': 'Analysis terminated by external signal', 
+    'jobName': 'Z_Z_Triangle_2'})
+mdb.jobs['Z_Z_Triangle_2']._Message(ERROR, {
+    'message': 'Abaqus/Explicit Analysis exited with an error - Please see the  status file for possible error messages if the file exists.', 
+    'jobName': 'Z_Z_Triangle_2'})
+mdb.jobs['Z_Z_Triangle_2']._Message(JOB_ABORTED, {
+    'message': 'Abaqus/Explicit Analysis exited with an error - Please see the  status file for possible error messages if the file exists.', 
+    'jobName': 'Z_Z_Triangle_2'})
+mdb.Job(name='Z_Z_Triangle_3', objectToCopy=mdb.jobs['Z_Z_Triangle_2'])
+mdb.jobs['Z_Z_Triangle_3'].submit(consistencyChecking=OFF)
+mdb.jobs['Z_Z_Triangle_3']._Message(STARTED, {'phase': BATCHPRE_PHASE, 
+    'clientHost': 'HP-Omen_Vasco', 'handle': 0, 'jobName': 'Z_Z_Triangle_3'})
+mdb.jobs['Z_Z_Triangle_3']._Message(WARNING, {'phase': BATCHPRE_PHASE, 
+    'message': 'THE FIRST ORIENTATION SPECIFIED ON THE *CONNECTOR SECTION OPTION WILL BE IGNORED.', 
+    'jobName': 'Z_Z_Triangle_3'})
+mdb.jobs['Z_Z_Triangle_3']._Message(WARNING, {'phase': BATCHPRE_PHASE, 
+    'message': '4 elements are distorted. Either the isoparametric angles are out of the suggested limits or the triangular or tetrahedral quality measure is bad. The elements have been identified in element set WarnElemDistorted.', 
+    'jobName': 'Z_Z_Triangle_3'})
+mdb.jobs['Z_Z_Triangle_3']._Message(WARNING, {'phase': BATCHPRE_PHASE, 
+    'message': 'RIGID ELEMENTS WILL NOT BE CONSIDERED IN THE APPLICATION OF  GRAV LOADS.', 
+    'jobName': 'Z_Z_Triangle_3'})
+mdb.jobs['Z_Z_Triangle_3']._Message(WARNING, {'phase': BATCHPRE_PHASE, 
+    'message': 'OUTPUT REQUEST STATUS IS NOT AVAILABLE FOR ELEMENT TYPE R3D4', 
+    'jobName': 'Z_Z_Triangle_3'})
+mdb.jobs['Z_Z_Triangle_3']._Message(WARNING, {'phase': BATCHPRE_PHASE, 
+    'message': 'OUTPUT REQUEST STATUS IS NOT AVAILABLE FOR ELEMENT TYPE R3D4', 
+    'jobName': 'Z_Z_Triangle_3'})
+mdb.jobs['Z_Z_Triangle_3']._Message(WARNING, {'phase': BATCHPRE_PHASE, 
+    'message': '121 nodes have dof on which incorrect boundary conditions may have been specified. The nodes have been identified in node set WarnNodeBCIncorrectDof.', 
+    'jobName': 'Z_Z_Triangle_3'})
+mdb.jobs['Z_Z_Triangle_3']._Message(COMPLETED, {'phase': BATCHPRE_PHASE, 
+    'message': 'Analysis phase complete', 'jobName': 'Z_Z_Triangle_3'})
+mdb.jobs['Z_Z_Triangle_3']._Message(STARTED, {'phase': PACKAGER_PHASE, 
+    'clientHost': 'HP-Omen_Vasco', 'handle': 28408, 
+    'jobName': 'Z_Z_Triangle_3'})
+mdb.jobs['Z_Z_Triangle_3']._Message(WARNING, {'phase': PACKAGER_PHASE, 
+    'message': 'There are 406 warning messages in the data (.dat) file.  Please check the data file for possible errors in the input file.', 
+    'jobName': 'Z_Z_Triangle_3'})
+mdb.jobs['Z_Z_Triangle_3']._Message(WARNING, {'phase': PACKAGER_PHASE, 
+    'message': 'Each of the nodes in node set WarnNodeBcAtRbSecondaryNode have prescribed boundary conditions and belong to rigid bodies but are not rigid body reference nodes. The boundary conditions at these nodes will not constrain the motion of the rigid bodies. See the status file for further details.', 
+    'jobName': 'Z_Z_Triangle_3'})
+mdb.jobs['Z_Z_Triangle_3']._Message(WARNING, {'phase': PACKAGER_PHASE, 
+    'message': 'Disconnected surfaces in the general contact domains are tied together, but the the surface connectivity is not altered, creating a seam in the contact surface.  Nodes along the tied surface perimeters have been added to node set WarnNodePerimTieSeam.', 
+    'jobName': 'Z_Z_Triangle_3'})
+mdb.jobs['Z_Z_Triangle_3']._Message(COMPLETED, {'phase': PACKAGER_PHASE, 
+    'message': 'Phase complete', 'jobName': 'Z_Z_Triangle_3'})
+mdb.jobs['Z_Z_Triangle_3']._Message(STARTED, {'phase': EXPLICIT_PHASE, 
+    'clientHost': 'HP-Omen_Vasco', 'handle': 28736, 
+    'jobName': 'Z_Z_Triangle_3'})
+mdb.jobs['Z_Z_Triangle_3']._Message(STATUS, {'totalTime': 0.0, 
+    'stableTimeIncrement': 3.93961698819112e-07, 'stepTime': 0.0, 
+    'totalEnergy': 0.0, 'jobName': 'Z_Z_Triangle_3', 'step': 1, 'increment': 0, 
+    'phase': EXPLICIT_PHASE, 'kineticEnergy': 0.0, 'wallTime': 0.0})
+mdb.jobs['Z_Z_Triangle_3']._Message(ODB_FRAME, {'phase': EXPLICIT_PHASE, 
+    'step': 0, 'frame': 0, 'jobName': 'Z_Z_Triangle_3'})
+mdb.jobs['Z_Z_Triangle_3']._Message(WARNING, {'phase': EXPLICIT_PHASE, 
+    'message': 'The nodes in node set WarnNodeCoincidRefPlane-Step1 arenearly coincident with the reference plane of a double-sided element. Refer to the status and message file for further details.', 
+    'jobName': 'Z_Z_Triangle_3'})
+mdb.jobs['Z_Z_Triangle_3']._Message(WARNING, {'phase': EXPLICIT_PHASE, 
+    'message': 'The nodes in node set WarnNodePinchedTiedSurf-Step1 arepinched between tied surfaces. Refer to the status and message file for further details.', 
+    'jobName': 'Z_Z_Triangle_3'})
+mdb.jobs['Z_Z_Triangle_3']._Message(STATUS, {'totalTime': 0.0500004142522812, 
+    'stableTimeIncrement': 5.1865845307475e-07, 'stepTime': 0.0500004142522812, 
+    'totalEnergy': 0.000262281391769648, 'jobName': 'Z_Z_Triangle_3', 
+    'step': 1, 'increment': 91922, 'phase': EXPLICIT_PHASE, 
+    'kineticEnergy': 4.41541576385498, 'wallTime': 37.0})
+mdb.jobs['Z_Z_Triangle_3']._Message(ODB_FRAME, {'phase': EXPLICIT_PHASE, 
+    'step': 0, 'frame': 1, 'jobName': 'Z_Z_Triangle_3'})
+mdb.jobs['Z_Z_Triangle_3']._Message(STATUS, {'totalTime': 0.100000098347664, 
+    'stableTimeIncrement': 5.07186541653937e-07, 'stepTime': 0.100000098347664, 
+    'totalEnergy': 0.00104707852005959, 'jobName': 'Z_Z_Triangle_3', 'step': 1, 
+    'increment': 190094, 'phase': EXPLICIT_PHASE, 
+    'kineticEnergy': 2.40249872207642, 'wallTime': 76.0})
+mdb.jobs['Z_Z_Triangle_3']._Message(ODB_FRAME, {'phase': EXPLICIT_PHASE, 
+    'step': 0, 'frame': 2, 'jobName': 'Z_Z_Triangle_3'})
+mdb.jobs['Z_Z_Triangle_3']._Message(STATUS, {'totalTime': 0.15000031888485, 
+    'stableTimeIncrement': 4.95814333589806e-07, 'stepTime': 0.15000031888485, 
+    'totalEnergy': 0.00152342906221747, 'jobName': 'Z_Z_Triangle_3', 'step': 1, 
+    'increment': 290863, 'phase': EXPLICIT_PHASE, 
+    'kineticEnergy': 1.9224990606308, 'wallTime': 117.0})
+mdb.jobs['Z_Z_Triangle_3']._Message(ODB_FRAME, {'phase': EXPLICIT_PHASE, 
+    'step': 0, 'frame': 3, 'jobName': 'Z_Z_Triangle_3'})
+mdb.jobs['Z_Z_Triangle_3']._Message(STATUS, {'totalTime': 0.200000271201134, 
+    'stableTimeIncrement': 4.94829180297529e-07, 'stepTime': 0.200000271201134, 
+    'totalEnergy': 0.00125950668007135, 'jobName': 'Z_Z_Triangle_3', 'step': 1, 
+    'increment': 392543, 'phase': EXPLICIT_PHASE, 
+    'kineticEnergy': 0.543450236320496, 'wallTime': 159.0})
+mdb.jobs['Z_Z_Triangle_3']._Message(ODB_FRAME, {'phase': EXPLICIT_PHASE, 
+    'step': 0, 'frame': 4, 'jobName': 'Z_Z_Triangle_3'})
+mdb.jobs['Z_Z_Triangle_3']._Message(STATUS, {'totalTime': 0.250000238418579, 
+    'stableTimeIncrement': 4.94829180297529e-07, 'stepTime': 0.250000238418579, 
+    'totalEnergy': 0.0011689206585288, 'jobName': 'Z_Z_Triangle_3', 'step': 1, 
+    'increment': 494223, 'phase': EXPLICIT_PHASE, 
+    'kineticEnergy': 1.43716931343079, 'wallTime': 201.0})
+mdb.jobs['Z_Z_Triangle_3']._Message(ODB_FRAME, {'phase': EXPLICIT_PHASE, 
+    'step': 0, 'frame': 5, 'jobName': 'Z_Z_Triangle_3'})
+mdb.jobs['Z_Z_Triangle_3']._Message(STATUS, {'totalTime': 0.300000488758087, 
+    'stableTimeIncrement': 4.94829180297529e-07, 'stepTime': 0.300000488758087, 
+    'totalEnergy': 0.00158789753913879, 'jobName': 'Z_Z_Triangle_3', 'step': 1, 
+    'increment': 592913, 'phase': EXPLICIT_PHASE, 
+    'kineticEnergy': 2.65526127815247, 'wallTime': 240.0})
+mdb.jobs['Z_Z_Triangle_3']._Message(ODB_FRAME, {'phase': EXPLICIT_PHASE, 
+    'step': 0, 'frame': 6, 'jobName': 'Z_Z_Triangle_3'})
+mdb.jobs['Z_Z_Triangle_3']._Message(STATUS, {'totalTime': 0.350000232458115, 
+    'stableTimeIncrement': 4.94829180297529e-07, 'stepTime': 0.350000232458115, 
+    'totalEnergy': 0.00194278452545404, 'jobName': 'Z_Z_Triangle_3', 'step': 1, 
+    'increment': 691602, 'phase': EXPLICIT_PHASE, 
+    'kineticEnergy': 3.22159910202026, 'wallTime': 279.0})
+mdb.jobs['Z_Z_Triangle_3']._Message(ODB_FRAME, {'phase': EXPLICIT_PHASE, 
+    'step': 0, 'frame': 7, 'jobName': 'Z_Z_Triangle_3'})
+mdb.jobs['Z_Z_Triangle_3']._Message(STATUS, {'totalTime': 0.400000482797623, 
+    'stableTimeIncrement': 4.94573555442912e-07, 'stepTime': 0.400000482797623, 
+    'totalEnergy': 0.00138192297890782, 'jobName': 'Z_Z_Triangle_3', 'step': 1, 
+    'increment': 790292, 'phase': EXPLICIT_PHASE, 
+    'kineticEnergy': 2.32238578796387, 'wallTime': 320.0})
+mdb.jobs['Z_Z_Triangle_3']._Message(ODB_FRAME, {'phase': EXPLICIT_PHASE, 
+    'step': 0, 'frame': 8, 'jobName': 'Z_Z_Triangle_3'})
+mdb.jobs['Z_Z_Triangle_3']._Message(STATUS, {'totalTime': 0.45000022649765, 
+    'stableTimeIncrement': 4.94573555442912e-07, 'stepTime': 0.45000022649765, 
+    'totalEnergy': -0.000642191444057971, 'jobName': 'Z_Z_Triangle_3', 
+    'step': 1, 'increment': 888981, 'phase': EXPLICIT_PHASE, 
+    'kineticEnergy': 1.63646650314331, 'wallTime': 359.0})
+mdb.jobs['Z_Z_Triangle_3']._Message(ODB_FRAME, {'phase': EXPLICIT_PHASE, 
+    'step': 0, 'frame': 9, 'jobName': 'Z_Z_Triangle_3'})
+mdb.jobs['Z_Z_Triangle_3']._Message(STATUS, {'totalTime': 0.500000476837158, 
+    'stableTimeIncrement': 4.94573555442912e-07, 'stepTime': 0.500000476837158, 
+    'totalEnergy': -0.00398094952106476, 'jobName': 'Z_Z_Triangle_3', 
+    'step': 1, 'increment': 987671, 'phase': EXPLICIT_PHASE, 
+    'kineticEnergy': 1.27096569538116, 'wallTime': 398.0})
+mdb.jobs['Z_Z_Triangle_3']._Message(ODB_FRAME, {'phase': EXPLICIT_PHASE, 
+    'step': 0, 'frame': 10, 'jobName': 'Z_Z_Triangle_3'})
+mdb.jobs['Z_Z_Triangle_3']._Message(STATUS, {'totalTime': 0.550000190734863, 
+    'stableTimeIncrement': 4.94573555442912e-07, 'stepTime': 0.550000190734863, 
+    'totalEnergy': -0.00728660821914673, 'jobName': 'Z_Z_Triangle_3', 
+    'step': 1, 'increment': 1092528, 'phase': EXPLICIT_PHASE, 
+    'kineticEnergy': 1.06462907791138, 'wallTime': 441.0})
+mdb.jobs['Z_Z_Triangle_3']._Message(ODB_FRAME, {'phase': EXPLICIT_PHASE, 
+    'step': 0, 'frame': 11, 'jobName': 'Z_Z_Triangle_3'})
+mdb.jobs['Z_Z_Triangle_3']._Message(STATUS, {'totalTime': 0.600000381469727, 
+    'stableTimeIncrement': 4.94573555442912e-07, 'stepTime': 0.600000381469727, 
+    'totalEnergy': -0.0118913138285279, 'jobName': 'Z_Z_Triangle_3', 'step': 1, 
+    'increment': 1197386, 'phase': EXPLICIT_PHASE, 
+    'kineticEnergy': 1.15954971313477, 'wallTime': 484.0})
+mdb.jobs['Z_Z_Triangle_3']._Message(ODB_FRAME, {'phase': EXPLICIT_PHASE, 
+    'step': 0, 'frame': 12, 'jobName': 'Z_Z_Triangle_3'})
+mdb.jobs['Z_Z_Triangle_3']._Message(STATUS, {'totalTime': 0.650000095367432, 
+    'stableTimeIncrement': 4.94573555442912e-07, 'stepTime': 0.650000095367432, 
+    'totalEnergy': -0.0149861248210073, 'jobName': 'Z_Z_Triangle_3', 'step': 1, 
+    'increment': 1302243, 'phase': EXPLICIT_PHASE, 
+    'kineticEnergy': 0.695694327354431, 'wallTime': 527.0})
+mdb.jobs['Z_Z_Triangle_3']._Message(ODB_FRAME, {'phase': EXPLICIT_PHASE, 
+    'step': 0, 'frame': 13, 'jobName': 'Z_Z_Triangle_3'})
+mdb.jobs['Z_Z_Triangle_3']._Message(STATUS, {'totalTime': 0.700000286102295, 
+    'stableTimeIncrement': 4.94573555442912e-07, 'stepTime': 0.700000286102295, 
+    'totalEnergy': -0.0158686097711325, 'jobName': 'Z_Z_Triangle_3', 'step': 1, 
+    'increment': 1407101, 'phase': EXPLICIT_PHASE, 
+    'kineticEnergy': 0.847539722919464, 'wallTime': 569.0})
+mdb.jobs['Z_Z_Triangle_3']._Message(ODB_FRAME, {'phase': EXPLICIT_PHASE, 
+    'step': 0, 'frame': 14, 'jobName': 'Z_Z_Triangle_3'})
+mdb.jobs['Z_Z_Triangle_3']._Message(STATUS, {'totalTime': 0.75, 
+    'stableTimeIncrement': 4.94573555442912e-07, 'stepTime': 0.75, 
+    'totalEnergy': 0.00684343045577407, 'jobName': 'Z_Z_Triangle_3', 'step': 1, 
+    'increment': 1511958, 'phase': EXPLICIT_PHASE, 
+    'kineticEnergy': 0.739576399326324, 'wallTime': 614.0})
+mdb.jobs['Z_Z_Triangle_3']._Message(ODB_FRAME, {'phase': EXPLICIT_PHASE, 
+    'step': 0, 'frame': 15, 'jobName': 'Z_Z_Triangle_3'})
+mdb.jobs['Z_Z_Triangle_3']._Message(ERROR, {'phase': EXPLICIT_PHASE, 
+    'message': 'Process terminated by external request (SIGTERM or SIGINT received).', 
+    'jobName': 'Z_Z_Triangle_3'})
+mdb.jobs['Z_Z_Triangle_3']._Message(INTERRUPTED, {'phase': EXPLICIT_PHASE, 
+    'message': 'Analysis terminated by external signal', 
+    'jobName': 'Z_Z_Triangle_3'})
+mdb.jobs['Z_Z_Triangle_3']._Message(ERROR, {
+    'message': 'Abaqus/Explicit Analysis exited with an error - Please see the  status file for possible error messages if the file exists.', 
+    'jobName': 'Z_Z_Triangle_3'})
+mdb.jobs['Z_Z_Triangle_3']._Message(JOB_ABORTED, {
+    'message': 'Abaqus/Explicit Analysis exited with an error - Please see the  status file for possible error messages if the file exists.', 
+    'jobName': 'Z_Z_Triangle_3'})
+# Save by vasco on 2024_01_11-14.50.57; build 2022 2021_09_15-19.57.30 176069
+from part import *
+from material import *
+from section import *
+from assembly import *
+from step import *
+from interaction import *
+from load import *
+from mesh import *
+from optimization import *
+from job import *
+from sketch import *
+from visualization import *
+from connectorBehavior import *
+mdb.Model(name='Box_Explicit_Compressed-20_Correct_Stiff_3D_Full', 
+    objectToCopy=mdb.models['Box_Explicit_Compressed-20_Correct_Stiff_3D'])
+mdb.models['Box_Explicit_Compressed-20_Correct_Stiff_3D_Full'].rootAssembly.Instance(
+    dependent=ON, name='Triangle-6', part=
+    mdb.models['Box_Explicit_Compressed-20_Correct_Stiff_3D_Full'].parts['Triangle'])
+mdb.models['Box_Explicit_Compressed-20_Correct_Stiff_3D_Full'].rootAssembly.resumeFeatures(
+    ('Triangle-5', 'Triangle-3', 'Triangle-4'))
+mdb.models['Box_Explicit_Compressed-20_Correct_Stiff_3D_Full'].rootAssembly.translate(
+    instanceList=('Triangle-5', ), vector=(0.0, -1e-06, -60.0))
+mdb.models['Box_Explicit_Compressed-20_Correct_Stiff_3D_Full'].rootAssembly.sets.changeKey(
+    fromName='Hinge_Triangle_I_2', toName='Hinge_Triangle_I_2__11')
+mdb.models['Box_Explicit_Compressed-20_Correct_Stiff_3D_Full'].rootAssembly.sets.changeKey(
+    fromName='Hinge_Triangle_O_3', toName='Hinge_Triangle_O_311')
+mdb.models['Box_Explicit_Compressed-20_Correct_Stiff_3D_Full'].rootAssembly.sets.changeKey(
+    fromName='Hinge_Triangle_I_2__11', toName='Hinge_Triangle_O_3')
+del mdb.models['Box_Explicit_Compressed-20_Correct_Stiff_3D_Full'].rootAssembly.sets['Hinge_Triangle_O_311']
+del mdb.models['Box_Explicit_Compressed-20_Correct_Stiff_3D_Full'].constraints['Hinge_6_T']
+mdb.models['Box_Explicit_Compressed-20_Correct_Stiff_3D_Full'].rootAssembly.Set(
+    edges=
+    mdb.models['Box_Explicit_Compressed-20_Correct_Stiff_3D_Full'].rootAssembly.instances['Part-1-2'].edges.getSequenceFromMask(
+    ('[#42 ]', ), ), name='Hinge_Triangle_I_2')
+mdb.models['Box_Explicit_Compressed-20_Correct_Stiff_3D_Full'].rootAssembly.Set(
+    edges=
+    mdb.models['Box_Explicit_Compressed-20_Correct_Stiff_3D_Full'].rootAssembly.instances['Part-2-1'].edges.getSequenceFromMask(
+    ('[#42 ]', ), ), name='Hinge_Triangle_I_3')
+mdb.models['Box_Explicit_Compressed-20_Correct_Stiff_3D_Full'].rootAssembly.Set(
+    edges=
+    mdb.models['Box_Explicit_Compressed-20_Correct_Stiff_3D_Full'].rootAssembly.instances['Part-1-3'].edges.getSequenceFromMask(
+    ('[#42 ]', ), ), name='Hinge_Triangle_I_4')
+mdb.models['Box_Explicit_Compressed-20_Correct_Stiff_3D_Full'].rootAssembly.Set(
+    edges=
+    mdb.models['Box_Explicit_Compressed-20_Correct_Stiff_3D_Full'].rootAssembly.instances['Part-1-1'].edges.getSequenceFromMask(
+    ('[#600 ]', ), ), name='Hinge_Triangle_I_5')
+mdb.models['Box_Explicit_Compressed-20_Correct_Stiff_3D_Full'].rootAssembly.Set(
+    edges=
+    mdb.models['Box_Explicit_Compressed-20_Correct_Stiff_3D_Full'].rootAssembly.instances['Part-1-2'].edges.getSequenceFromMask(
+    ('[#600 ]', ), ), name='Hinge_Triangle_I_6')
+mdb.models['Box_Explicit_Compressed-20_Correct_Stiff_3D_Full'].rootAssembly.Set(
+    edges=
+    mdb.models['Box_Explicit_Compressed-20_Correct_Stiff_3D_Full'].rootAssembly.instances['Part-1-3'].edges.getSequenceFromMask(
+    ('[#600 ]', ), ), name='Hinge_Triangle_I_7')
+mdb.models['Box_Explicit_Compressed-20_Correct_Stiff_3D_Full'].rootAssembly.Set(
+    edges=
+    mdb.models['Box_Explicit_Compressed-20_Correct_Stiff_3D_Full'].rootAssembly.instances['Part-2-1'].edges.getSequenceFromMask(
+    ('[#600 ]', ), ), name='Hinge_Triangle_I_8')
+# Save by vasco on 2024_01_11-15.11.59; build 2022 2021_09_15-19.57.30 176069
+# Save by vasco on 2024_01_11-15.28.49; build 2022 2021_09_15-19.57.30 176069
+# Save by vasco on 2024_01_11-15.28.55; build 2022 2021_09_15-19.57.30 176069

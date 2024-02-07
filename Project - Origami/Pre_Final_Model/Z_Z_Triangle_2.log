@@ -1,0 +1,39 @@
+Analysis initiated from SIMULIA established products
+Abaqus JOB Z_Z_Triangle_2
+Abaqus 2022
+Abaqus License Manager checked out the following licenses:
+Abaqus/Explicit checked out 12 tokens from Flexnet server HP-Omen_Vasco.
+<9987 out of 9999 licenses remain available>.
+Begin Analysis Input File Processor
+11/01/2024 14:34:48
+Run pre.exe
+11/01/2024 14:34:53
+End Analysis Input File Processor
+Begin Abaqus/Explicit Packager
+11/01/2024 14:34:53
+Run package.exe
+11/01/2024 14:34:58
+End Abaqus/Explicit Packager
+Begin Abaqus/Explicit Analysis
+11/01/2024 14:34:58
+Run explicit.exe
+
+job aborted:
+[ranks] message
+
+[0] application aborted
+aborting MPI_COMM_WORLD (comm=0x44000000), error 1, comm rank 0
+
+[1-7] terminated
+
+---- error analysis -----
+
+[0] on HP-OMEN_VASCO
+C:\Users\vasco\AppData\Local\Temp\vasco_Z_Z_Triangle_2_22872\Z_Z_Triangle_2_explicit.exe_oonjbq.bat aborted the job. abort code 1
+
+---- error analysis -----
+11/01/2024 14:36:45
+NOTE: A separate message file has been written per processor.
+Abaqus Error: Abaqus/Explicit Analysis exited with an error - Please see the 
+status file for possible error messages if the file exists.
+Abaqus/Analysis exited with errors
